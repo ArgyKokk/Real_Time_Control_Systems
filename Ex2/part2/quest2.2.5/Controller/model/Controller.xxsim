@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http:///nl/utwente/ram/xxsim/xml/model/xml.ecore">
+<modelConfiguration>
+	<schemeVersion>
+		<major>1</major>
+		<minor>0</minor>
+		<revision>0</revision>
+		<patch>3</patch>
+	</schemeVersion>
+	<general>
+		<name>Controller</name>
+		<description></description>
+		<creationDate>2019-05-26T19:05:05.0Z</creationDate>
+		<modelDir></modelDir>
+		<originalModel>C:\Program Files (x86)\20-sim 4.7\ex2.emx</originalModel>
+		<additional>Universiteit Twente, 20-sim 4.7 Campus License</additional>
+			<version>
+				<major>4</major>
+				<minor>7</minor>
+				<revision>0</revision>
+				<patch>8692</patch>
+			</version>
+	</general>
+	<run>
+		<startTime>2.0</startTime>
+		<finishTime>10.0</finishTime>
+		<stepSize>0.01</stepSize>
+	</run>
+	<modelVariables count="5">
+		<modelVariable id="1">
+			<name>SP</name>
+			<kind>input</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>V</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="2">
+			<name>MV</name>
+			<kind>input</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>V</name>
+				<index>1</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="3">
+			<name>output</name>
+			<kind>output</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>V</name>
+				<index>2</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="4">
+			<name>K</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>1.0</value>
+			<description>Proportional gain</description>
+			<physical>
+				<unit>
+					<name></name>
+				</unit>
+				<quantity>magnitude</quantity>
+			</physical>
+			<storage>
+				<name>P</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="5">
+			<name>error</name>
+			<kind>variable</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<storage>
+				<name>V</name>
+				<index>3</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+	</modelVariables>
+	<storage>
+		<name>ivc_ex2</name>
+		<size>40</size>
+		<tables>
+			<table>
+				<name>P</name>
+				<size>8</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>1</count>
+			</table>
+			<table>
+				<name>V</name>
+				<size>32</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>4</count>
+			</table>
+		</tables>
+	</storage>
+	<icons>
+		<icon>89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff6100000006624b474400ff00ff00ffa0bda793000000097048597300000ec400000ec401952b0e1b0000018249444154388d9593bd4e24311084bff6da73034203b7821542a4fb0444888c9417e04591780432028836429a0809921d8118ff745f606e8fd5f1db5207b654e5aa6ab7c418adef7b524afcb44208c862b1b010025dd7318ee3b7c14dd3b05c2ef1a51476767e339d4e81aaa294da229fbfaeaa781101466e6f1377779994e0f8b8b0bd6de4fc3181991163c4bd1e1181eb6b47df0bce1966df6b0f9092d17585d3d3cc7cae6c6d19ef65ea7db59512a8be21c819f6f795d92c338e10e3ff60e7e0e14148096633c34c31b37f1652329e9f8d52de973a99185757132e2e024f4fac6cba2fe7b50aad4a3f3acab4ada1fa6a0baa9fc9c4689a7a9bb3a05a417f2b46383949eced2931ca7a06de1bf7f7f0f8e850157677958d0d23847592e9d4a87fad82570a9a46b9b9715c5efea26d8df9bc707616315b27783b99b5318ea3717858383f8f0c836373d3f0be4afd389335023838c8e49c11015578791144ec6b0255a56d3dce35abb445a0693e19097517bcf775178661c0cc7eb4d221048661e00f9d3d161e3c7e3a710000000049454e44ae426082</icon>
+	</icons>
+</modelConfiguration>
+</DocumentRoot>
+

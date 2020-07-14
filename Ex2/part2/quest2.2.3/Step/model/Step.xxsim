@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http:///nl/utwente/ram/xxsim/xml/model/xml.ecore">
+<modelConfiguration>
+	<schemeVersion>
+		<major>1</major>
+		<minor>0</minor>
+		<revision>0</revision>
+		<patch>3</patch>
+	</schemeVersion>
+	<general>
+		<name>Step</name>
+		<description></description>
+		<creationDate>2019-05-26T19:05:05.0Z</creationDate>
+		<modelDir></modelDir>
+		<originalModel>C:\Program Files (x86)\20-sim 4.7\ex2.emx</originalModel>
+		<additional>Universiteit Twente, 20-sim 4.7 Campus License</additional>
+			<version>
+				<major>4</major>
+				<minor>7</minor>
+				<revision>0</revision>
+				<patch>8692</patch>
+			</version>
+	</general>
+	<run>
+		<startTime>2.0</startTime>
+		<finishTime>10.0</finishTime>
+		<stepSize>0.01</stepSize>
+	</run>
+	<modelVariables count="3">
+		<modelVariable id="1">
+			<name>output</name>
+			<kind>output</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>V</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="2">
+			<name>amplitude</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>1.0</value>
+			<storage>
+				<name>P</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="3">
+			<name>start_time</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>2.0</value>
+			<physical>
+				<unit>
+					<name>s</name>
+				</unit>
+				<quantity>time</quantity>
+			</physical>
+			<storage>
+				<name>P</name>
+				<index>1</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+	</modelVariables>
+	<storage>
+		<name>ivc_ex2</name>
+		<size>32</size>
+		<tables>
+			<table>
+				<name>P</name>
+				<size>16</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>2</count>
+			</table>
+			<table>
+				<name>V</name>
+				<size>16</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>2</count>
+			</table>
+		</tables>
+	</storage>
+	<icons>
+		<icon>89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff6100000006624b474400ff00ff00ffa0bda793000000097048597300000ec400000ec401952b0e1b0000019349444154388d95934f4a1c4118c57ff5a7ab246d1a143773812c32398a9e6270e901c4a5e021e604b374372b2f30e04a08a80708ca4848db697baaa7bf2f8b8e26031de23c28a85abc1fafbe7a65b4176559b2ad8aa2c0a79498cfe794658988bcdbec9c23cf737c5dd72c974b2693096ddbbe1b906519d3e9146f8cc139474a89f57abd550aef7d0f005055aaaa22c688b5f6bf66554555b1af076b2d8bc582aafa89b5108210e3f03246de92fabfa92925443a54e1f6d6d234f03be0864623e5e04050d51ea0aa6fc4dd5de1f232e3e2225014c2d048cece561c1e0e2400700eeeee2c27272b8e8f5f787e1e8800344dd804a82aa088285906ce29c6e8e01554ff0cd1038808d63a620ce4b91282e27dc039c3cece70820d80f79ec7c76f5c5f7f45f533373796bdbd7baeaeeea9eb61c0783cee7b00608c4164c5c343c3f9f9078c311c1d553c3dfd20a561c06b6b3df4cfb7bf3fe2f474428c16efbf93659f70eecba019a0eb3adab6c58bf4a550558ae223aafdbe6d3b527af92720c648d775989492ce66339aa6d9ea1f586b0921f00be095de64fc49ea660000000049454e44ae426082</icon>
+	</icons>
+</modelConfiguration>
+</DocumentRoot>
+

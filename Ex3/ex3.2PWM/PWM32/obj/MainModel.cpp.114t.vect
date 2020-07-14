@@ -1,0 +1,2757 @@
+
+;; Function virtual int LUNA::CSP::CSPConstruct::compareTo(LUNA::CSP::CSPConstruct*) (_ZN4LUNA3CSP12CSPConstruct9compareToEPS1_, funcdef_no=1424, decl_uid=35390, symbol_order=418)
+
+virtual int LUNA::CSP::CSPConstruct::compareTo(LUNA::CSP::CSPConstruct*) (struct CSPConstruct * const this, struct CSPConstruct * obj)
+{
+  int _3;
+  int (*__vtbl_ptr_type) () * _5;
+  int (*__vtbl_ptr_type) () _6;
+  int _8;
+  int _9;
+
+  <bb 2>:
+  _3 = this_2(D)->m_priority;
+  _5 = obj_4(D)->D.35429._vptr.TreeNode;
+  _6 = MEM[(int (*__vtbl_ptr_type) () *)_5 + 20B];
+  _8 = OBJ_TYPE_REF(_6;(struct CSPConstruct)obj_4(D)->5) (obj_4(D));
+  _9 = _3 - _8;
+  return _9;
+
+}
+
+
+
+;; Function virtual LUNA::Threading::priority_t LUNA::CSP::CSPConstruct::getPriority() (_ZN4LUNA3CSP12CSPConstruct11getPriorityEv, funcdef_no=1425, decl_uid=35395, symbol_order=419)
+
+virtual LUNA::Threading::priority_t LUNA::CSP::CSPConstruct::getPriority() (struct CSPConstruct * const this)
+{
+  priority_t _3;
+
+  <bb 2>:
+  _3 = this_2(D)->m_priority;
+  return _3;
+
+}
+
+
+
+;; Function virtual int LUNA::CSP::CSPConstruct::logDoneAndValue() (_ZN4LUNA3CSP12CSPConstruct15logDoneAndValueEv, funcdef_no=1427, decl_uid=35401, symbol_order=421)
+
+virtual int LUNA::CSP::CSPConstruct::logDoneAndValue() (struct CSPConstruct * const this)
+{
+  <bb 2>:
+  return 0;
+
+}
+
+
+
+;; Function virtual int LUNA::CSP::CSProcess::setPriority(LUNA::Threading::priority_t) (_ZN4LUNA3CSP9CSProcess11setPriorityEi, funcdef_no=1976, decl_uid=42448, symbol_order=471)
+
+virtual int LUNA::CSP::CSProcess::setPriority(LUNA::Threading::priority_t) (struct CSProcess * const this, priority_t priority)
+{
+  int ret;
+  struct IThread * _4;
+  int (*__vtbl_ptr_type) () * _5;
+  int (*__vtbl_ptr_type) () _6;
+
+  <bb 2>:
+  _4 = this_3(D)->D.42484.m_thread;
+  _5 = _4->D.35164._vptr.Uncopyable;
+  _6 = MEM[(int (*__vtbl_ptr_type) () *)_5 + 12B];
+  ret_9 = OBJ_TYPE_REF(_6;(struct IThread)_4->3) (_4, priority_7(D));
+  if (ret_9 == 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  this_3(D)->D.42485.m_priority = priority_7(D);
+
+  <bb 4>:
+  return ret_9;
+
+}
+
+
+
+;; Function virtual LUNA::Threading::priority_t LUNA::CSP::CSProcess::getPriority() (_ZN4LUNA3CSP9CSProcess11getPriorityEv, funcdef_no=1977, decl_uid=42450, symbol_order=474)
+
+virtual LUNA::Threading::priority_t LUNA::CSP::CSProcess::getPriority() (struct CSProcess * const this)
+{
+  priority_t _3;
+
+  <bb 2>:
+  _3 = this_2(D)->D.42485.m_priority;
+  return _3;
+
+}
+
+
+
+;; Function virtual int LUNA::CSP::CSProcess::logRunningAndValue() (_ZN4LUNA3CSP9CSProcess18logRunningAndValueEv, funcdef_no=1986, decl_uid=42464, symbol_order=493)
+
+virtual int LUNA::CSP::CSProcess::logRunningAndValue() (struct CSProcess * const this)
+{
+  <bb 2>:
+  return 0;
+
+}
+
+
+
+;; Function LUNA::Utility::TreeNode<T>::~TreeNode() [with T = LUNA::CSP::CSPConstruct*] (_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEED2Ev, funcdef_no=4253, decl_uid=35357, symbol_order=1274)
+
+LUNA::Utility::TreeNode<T>::~TreeNode() [with T = LUNA::CSP::CSPConstruct*] (struct TreeNode * const this)
+{
+  <bb 2>:
+  *this_2(D) ={v} {CLOBBER};
+  return this_2(D);
+
+}
+
+
+
+;; Function int LUNA::CSP::Recursion<CSPType>::setPriority(LUNA::Threading::priority_t) [with CSPType = LUNA::CSP::CSProcess; LUNA::Threading::priority_t = int] (_ZN4LUNA3CSP9RecursionINS0_9CSProcessEE11setPriorityEi, funcdef_no=4651, decl_uid=83200, symbol_order=2520)
+
+int LUNA::CSP::Recursion<CSPType>::setPriority(LUNA::Threading::priority_t) [with CSPType = LUNA::CSP::CSProcess; LUNA::Threading::priority_t = int] (struct Recursion * const this, priority_t priority)
+{
+  struct CSPConstruct * _3;
+  int (*__vtbl_ptr_type) () * _4;
+  int (*__vtbl_ptr_type) () _5;
+  int _8;
+
+  <bb 2>:
+  _3 = this_2(D)->m_to_activate;
+  _4 = _3->D.35429._vptr.TreeNode;
+  _5 = MEM[(int (*__vtbl_ptr_type) () *)_4 + 16B];
+  _8 = OBJ_TYPE_REF(_5;(struct CSPConstruct)_3->4) (_3, priority_6(D));
+  return _8;
+
+}
+
+
+
+;; Function LUNA::Utility::TreeNode<T>::~TreeNode() [with T = LUNA::CSP::CSPConstruct*] (_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEED0Ev, funcdef_no=4255, decl_uid=35351, symbol_order=1276)
+
+LUNA::Utility::TreeNode<T>::~TreeNode() [with T = LUNA::CSP::CSPConstruct*] (struct TreeNode * const this)
+{
+  <bb 2>:
+  *this_2(D) ={v} {CLOBBER};
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSProcess::setIThread(LUNA::Threading::IThread*) (_ZN4LUNA3CSP9CSProcess10setIThreadEPNS_9Threading7IThreadE, funcdef_no=1978, decl_uid=42453, symbol_order=477)
+
+virtual void LUNA::CSP::CSProcess::setIThread(LUNA::Threading::IThread*) (struct CSProcess * const this, struct IThread * thread)
+{
+  struct Runnable * _2;
+
+  <bb 2>:
+  _2 = &this_1(D)->D.42484;
+  LUNA::Runnable::setIThread (_2, thread_4(D));
+  return;
+
+}
+
+
+
+;; Function LUNA::CSP::Recursion<CSPType>::~Recursion() [with CSPType = LUNA::CSP::CSProcess] (_ZN4LUNA3CSP9RecursionINS0_9CSProcessEED2Ev, funcdef_no=4336, decl_uid=83247, symbol_order=1357)
+
+LUNA::CSP::Recursion<CSPType>::~Recursion() [with CSPType = LUNA::CSP::CSProcess] (struct Recursion * const this)
+{
+  struct IThreadBlocker * _7;
+  int (*__vtbl_ptr_type) () * _8;
+  int (*__vtbl_ptr_type) () _9;
+  int (*__vtbl_ptr_type) () * _12;
+  int (*__vtbl_ptr_type) () _13;
+  struct Runnable * _15;
+  bool (*<Tdf5c>) (union _Any_data &, const union _Any_data &, _Manager_operation) _18;
+  union _Any_data * _19;
+  struct ILockable * _33;
+
+  <bb 2>:
+  this_4(D)->D.83250.D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN4LUNA3CSP9RecursionINS0_9CSProcessEEE + 8B];
+  this_4(D)->D.83250.D.42485.D.35429._vptr.TreeNode = &MEM[(void *)&_ZTVN4LUNA3CSP9RecursionINS0_9CSProcessEEE + 68B];
+  _7 = this_4(D)->m_blocker;
+  if (_7 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 3>:
+  _8 = _7->D.41986._vptr.Uncopyable;
+  _9 = MEM[(int (*__vtbl_ptr_type) () *)_8 + 4B];
+  OBJ_TYPE_REF(_9;(struct IThreadBlocker)_7->1) (_7);
+  goto <bb 8>;
+
+  <bb 4>:
+  _12 = _33->_vptr.ILockable;
+  _13 = MEM[(int (*__vtbl_ptr_type) () *)_12 + 12B];
+  OBJ_TYPE_REF(_13;(struct ILockable)_33->3) (_33);
+
+  <bb 5>:
+  _18 = MEM[(struct _Function_base *)this_4(D) + 72B]._M_manager;
+  if (_18 != 0B)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 6>:
+  _19 = &MEM[(struct _Function_base *)this_4(D) + 72B]._M_functor;
+  _18 (_19, _19, 3);
+
+  <bb 7>:
+  MEM[(struct function *)this_4(D) + 72B] ={v} {CLOBBER};
+  MEM[(struct CSProcess *)this_4(D)].D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN4LUNA3CSP9CSProcessE + 8B];
+  MEM[(struct CSPConstruct *)this_4(D) + 8B] ={v} {CLOBBER};
+  _15 = &MEM[(struct CSProcess *)this_4(D)].D.42484;
+  LUNA::Runnable::~Runnable (_15);
+  *this_4(D) ={v} {CLOBBER};
+  return this_4(D);
+
+  <bb 8>:
+  _33 = this_4(D)->m_lock;
+  if (_33 != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+}
+
+
+
+;; Function int LUNA::CSP::RaMstix::RaMstixPWMChannel<DataType>::write(LUNA::CSP::IWriter*) [with DataType = double] (_ZN4LUNA3CSP7RaMstix17RaMstixPWMChannelIdE5writeEPNS0_7IWriterE, funcdef_no=4649, decl_uid=83430, symbol_order=2518)
+
+int LUNA::CSP::RaMstix::RaMstixPWMChannel<DataType>::write(LUNA::CSP::IWriter*) [with DataType = double] (struct RaMstixPWMChannel * const this, struct IWriter * writer)
+{
+  double value;
+  int (*__vtbl_ptr_type) () * _4;
+  int (*__vtbl_ptr_type) () _5;
+  void * _7;
+  unsigned char _10;
+  int _12;
+  unsigned char _13;
+  unsigned int _14;
+
+  <bb 2>:
+  _4 = writer_3(D)->D.46813.D.42484._vptr.Runnable;
+  _5 = MEM[(int (*__vtbl_ptr_type) () *)_4 + 48B];
+  _7 = OBJ_TYPE_REF(_5;(struct IWriter)writer_3(D)->12) (writer_3(D));
+  value_8 = MEM[(double *)_7];
+  _10 = this_9(D)->m_transform;
+  if (_10 == 1)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  value_11 = -value_8;
+
+  <bb 4>:
+  # value_1 = PHI <value_8(2), value_11(3)>
+  _12 = this_9(D)->m_fd;
+  _13 = this_9(D)->m_nr;
+  _14 = (unsigned int) _13;
+  ramstixSetPWMValue (_12, _14, value_1);
+  return 0;
+
+}
+
+
+
+;; Function LUNA::CSP::RaMstix::RaMstixPWMChannel<DataType>::~RaMstixPWMChannel() [with DataType = double] (_ZN4LUNA3CSP7RaMstix17RaMstixPWMChannelIdED2Ev, funcdef_no=4349, decl_uid=83465, symbol_order=1374)
+
+LUNA::CSP::RaMstix::RaMstixPWMChannel<DataType>::~RaMstixPWMChannel() [with DataType = double] (struct RaMstixPWMChannel * const this)
+{
+  int _4;
+  unsigned char _5;
+  unsigned int _6;
+
+  <bb 2>:
+  this_2(D)->D.83468._vptr.ChannelIn = &MEM[(void *)&_ZTVN4LUNA3CSP7RaMstix17RaMstixPWMChannelIdEE + 8B];
+  _4 = this_2(D)->m_fd;
+  _5 = this_2(D)->m_nr;
+  _6 = (unsigned int) _5;
+  ramstixSetPWMValue (_4, _6, 0.0);
+  *this_2(D) ={v} {CLOBBER};
+  return this_2(D);
+
+}
+
+
+
+;; Function LUNA::CSP::RaMstix::RaMstixPWMChannel<DataType>::~RaMstixPWMChannel() [with DataType = double] (_ZN4LUNA3CSP7RaMstix17RaMstixPWMChannelIdED0Ev, funcdef_no=4351, decl_uid=83459, symbol_order=1376)
+
+LUNA::CSP::RaMstix::RaMstixPWMChannel<DataType>::~RaMstixPWMChannel() [with DataType = double] (struct RaMstixPWMChannel * const this)
+{
+  int _5;
+  unsigned char _6;
+  unsigned int _7;
+
+  <bb 2>:
+  this_2(D)->D.83468._vptr.ChannelIn = &MEM[(void *)&_ZTVN4LUNA3CSP7RaMstix17RaMstixPWMChannelIdEE + 8B];
+  _5 = this_2(D)->m_fd;
+  _6 = this_2(D)->m_nr;
+  _7 = (unsigned int) _6;
+  ramstixSetPWMValue (_5, _7, 0.0);
+  *this_2(D) ={v} {CLOBBER};
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function LUNA::CSP::Parallel::~Parallel() (_ZN4LUNA3CSP8ParallelD2Ev, funcdef_no=3724, decl_uid=68910, symbol_order=1005)
+
+LUNA::CSP::Parallel::~Parallel() (struct Parallel * const this)
+{
+  struct AtomicInt * _4;
+
+  <bb 2>:
+  this_2(D)->D.68913.D.35429._vptr.TreeNode = &MEM[(void *)&_ZTVN4LUNA3CSP8ParallelE + 8B];
+  _4 = &this_2(D)->m_done_counter;
+  LUNA::Atomic::AtomicInt::~AtomicInt (_4);
+  *this_2(D) ={v} {CLOBBER};
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual LUNA::CSP::Parallel::~Parallel() (_ZN4LUNA3CSP8ParallelD0Ev, funcdef_no=3726, decl_uid=68904, symbol_order=1007)
+
+virtual LUNA::CSP::Parallel::~Parallel() (struct Parallel * const this)
+{
+  struct AtomicInt * _5;
+
+  <bb 2>:
+  this_2(D)->D.68913.D.35429._vptr.TreeNode = &MEM[(void *)&_ZTVN4LUNA3CSP8ParallelE + 8B];
+  _5 = &this_2(D)->m_done_counter;
+  LUNA::Atomic::AtomicInt::~AtomicInt (_5);
+  *this_2(D) ={v} {CLOBBER};
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual bool LUNA::CSP::CSProcess::nextIteration() (_ZN4LUNA3CSP9CSProcess13nextIterationEv, funcdef_no=1980, decl_uid=42457, symbol_order=481)
+
+virtual bool LUNA::CSP::CSProcess::nextIteration() (struct CSProcess * const this)
+{
+  bool D.91889;
+  bool _2;
+  struct IThread * _6;
+  int (*__vtbl_ptr_type) () * _7;
+  int (*__vtbl_ptr_type) () _8;
+  bool _10;
+  bool _11;
+  struct IThreadBlocker * _14;
+  int (*__vtbl_ptr_type) () * _15;
+  int (*__vtbl_ptr_type) () _16;
+  struct IThread * _17;
+  bool _18;
+  bool _19;
+
+  <bb 2>:
+  _6 = this_5(D)->D.42484.m_thread;
+  _7 = _6->D.35164._vptr.Uncopyable;
+  _8 = MEM[(int (*__vtbl_ptr_type) () *)_7 + 60B];
+  _10 = OBJ_TYPE_REF(_8;(struct IThread)_6->15) (_6);
+  if (_10 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _11 = this_5(D)->D.42485.m_exit;
+  if (_11 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+  # _2 = PHI <_19(5), 0(3), 0(2)>
+  return _2;
+
+  <bb 5>:
+  _14 = this_5(D)->m_activate;
+  _15 = _14->D.41986._vptr.Uncopyable;
+  _16 = MEM[(int (*__vtbl_ptr_type) () *)_15 + 8B];
+  _17 = this_5(D)->D.42484.m_thread;
+  OBJ_TYPE_REF(_16;(struct IThreadBlocker)_14->2) (_14, _17, 0B);
+  _18 = this_5(D)->D.42485.m_exit;
+  _19 = ~_18;
+  goto <bb 4>;
+
+}
+
+
+
+;; Function void LUNA::Utility::TreeNode<T>::append_child(LUNA::Utility::TreeNode<T>::tree_node_t*) [with T = LUNA::CSP::CSPConstruct*] (_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEE12append_childEPS5_.part.2, funcdef_no=4655, decl_uid=90244, symbol_order=2682) (unlikely executed)
+
+void LUNA::Utility::TreeNode<T>::append_child(LUNA::Utility::TreeNode<T>::tree_node_t*) [with T = LUNA::CSP::CSPConstruct*] ()
+{
+  struct TreeNode * const this;
+  struct tree_node_t * x;
+  static const char __PRETTY_FUNCTION__[217] = "void LUNA::Utility::TreeNode<T>::append_child(LUNA::Utility::TreeNode<T>::tree_node_t*) [with T = LUNA::CSP::CSPConstruct*; LUNA::Utility::TreeNode<T>::tree_node_t = LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>]";
+
+  <bb 2>:
+  __assert_fail ("first_child == __null", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Tree.h", 126, &__PRETTY_FUNCTION__);
+
+}
+
+
+
+;; Function void LUNA::Utility::TreeNode<T>::append_child(LUNA::Utility::TreeNode<T>::tree_node_t*) [with T = LUNA::CSP::CSPConstruct*; LUNA::Utility::TreeNode<T>::tree_node_t = LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>] (_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEE12append_childEPS5_, funcdef_no=4270, decl_uid=35327, symbol_order=1291)
+
+void LUNA::Utility::TreeNode<T>::append_child(LUNA::Utility::TreeNode<T>::tree_node_t*) [with T = LUNA::CSP::CSPConstruct*; LUNA::Utility::TreeNode<T>::tree_node_t = LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>] (struct TreeNode * const this, struct tree_node_t * x)
+{
+  struct TreeNode * _6;
+  struct TreeNode * _8;
+
+  <bb 2>:
+  x_3(D)->parent = this_4(D);
+  _6 = this_4(D)->last_child;
+  if (_6 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _6->next_sibling = x_3(D);
+  goto <bb 7>;
+
+  <bb 4>:
+  _8 = this_4(D)->first_child;
+  if (_8 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>::_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEE12append_childEPS5_.part.2 ();
+
+  <bb 6>:
+  this_4(D)->first_child = x_3(D);
+
+  <bb 7>:
+  x_3(D)->prev_sibling = _6;
+  this_4(D)->last_child = x_3(D);
+  x_3(D)->next_sibling = 0B;
+  return;
+
+}
+
+
+
+;; Function static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::Threading::OSScheduler] (_ZN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE16DestroySingletonEv, funcdef_no=4457, decl_uid=79274, symbol_order=1486)
+
+static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::Threading::OSScheduler] ()
+{
+  bool m_destroyed.76_3;
+  struct OSScheduler * m_instance.77_4;
+  int (*__vtbl_ptr_type) () * _5;
+  int (*__vtbl_ptr_type) () _6;
+
+  <bb 2>:
+  m_destroyed.76_3 = m_destroyed;
+  if (m_destroyed.76_3 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  __assert_fail ("!m_destroyed", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Singleton.h", 152, &__PRETTY_FUNCTION__);
+
+  <bb 4>:
+  m_instance.77_4 ={v} m_instance;
+  if (m_instance.77_4 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _5 = m_instance.77_4->D.79350.D.34993._vptr.Uncopyable;
+  _6 = MEM[(int (*__vtbl_ptr_type) () *)_5 + 4B];
+  OBJ_TYPE_REF(_6;(struct OSScheduler)m_instance.77_4->1) (m_instance.77_4);
+
+  <bb 6>:
+  m_instance ={v} 0B;
+  m_destroyed = 1;
+  return;
+
+}
+
+
+
+;; Function static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::EmergencyManager] (_ZN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE16DestroySingletonEv, funcdef_no=4406, decl_uid=42318, symbol_order=1431)
+
+static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::EmergencyManager] ()
+{
+  bool m_destroyed.67_3;
+  struct EmergencyManager * m_instance.68_4;
+
+  <bb 2>:
+  m_destroyed.67_3 = m_destroyed;
+  if (m_destroyed.67_3 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  __assert_fail ("!m_destroyed", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Singleton.h", 152, &__PRETTY_FUNCTION__);
+
+  <bb 4>:
+  m_instance.68_4 ={v} m_instance;
+  if (m_instance.68_4 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  LUNA::EmergencyManager::~EmergencyManager (m_instance.68_4);
+  operator delete (m_instance.68_4);
+
+  <bb 6>:
+  m_instance ={v} 0B;
+  m_destroyed = 1;
+  return;
+
+}
+
+
+
+;; Function static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::RaMstix::RaMstixManager] (_ZN4LUNA7Utility15SingletonHolderINS_7RaMstix14RaMstixManagerEE16DestroySingletonEv, funcdef_no=4527, decl_uid=82912, symbol_order=1557)
+
+static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::RaMstix::RaMstixManager] ()
+{
+  bool m_destroyed.86_3;
+  struct RaMstixManager * m_instance.87_4;
+  int _10;
+
+  <bb 2>:
+  m_destroyed.86_3 = m_destroyed;
+  if (m_destroyed.86_3 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  __assert_fail ("!m_destroyed", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Singleton.h", 152, &__PRETTY_FUNCTION__);
+
+  <bb 4>:
+  m_instance.87_4 ={v} m_instance;
+  if (m_instance.87_4 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _10 = m_instance.87_4->m_fd;
+  closeGPMCFPGA (_10);
+  *m_instance.87_4 ={v} {CLOBBER};
+  operator delete (m_instance.87_4);
+
+  <bb 6>:
+  m_instance ={v} 0B;
+  m_destroyed = 1;
+  return;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSPConstruct::done() (_ZN4LUNA3CSP12CSPConstruct4doneEv, funcdef_no=1426, decl_uid=35399, symbol_order=420)
+
+virtual void LUNA::CSP::CSPConstruct::done() (struct CSPConstruct * const this)
+{
+  bool _3;
+  struct TreeNode * _6;
+  struct CSPConstruct * _7;
+  int (*__vtbl_ptr_type) () * _8;
+  int (*__vtbl_ptr_type) () _9;
+
+  <bb 2>:
+  _3 = this_2(D)->m_exit;
+  if (_3 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _6 = this_2(D)->D.35429.parent;
+  if (_6 != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+  _7 = _6->data;
+  _8 = _7->D.35429._vptr.TreeNode;
+  _9 = MEM[(int (*__vtbl_ptr_type) () *)_8 + 28B];
+  OBJ_TYPE_REF(_9;(struct CSPConstruct)_7->7) (_7);
+
+  <bb 5>:
+  return;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::Parallel::done() (_ZN4LUNA3CSP8Parallel4doneEv, funcdef_no=3720, decl_uid=68883, symbol_order=1001)
+
+virtual void LUNA::CSP::Parallel::done() (struct Parallel * const this)
+{
+  struct AtomicInt * _2;
+  bool _5;
+  struct TreeNode * _7;
+  bool _9;
+  struct CSPConstruct * _10;
+  int (*__vtbl_ptr_type) () * _11;
+  int (*__vtbl_ptr_type) () _12;
+
+  <bb 2>:
+  _2 = &this_1(D)->m_done_counter;
+  _5 = LUNA::Atomic::AtomicInt::decAndTest (_2);
+  if (_5 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 6>;
+
+  <bb 3>:
+  _9 = MEM[(struct CSPConstruct *)this_1(D)].m_exit;
+  if (_9 != 0)
+    goto <bb 6>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  _7 = MEM[(struct CSPConstruct *)this_1(D)].D.35429.parent;
+  if (_7 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _10 = _7->data;
+  _11 = _10->D.35429._vptr.TreeNode;
+  _12 = MEM[(int (*__vtbl_ptr_type) () *)_11 + 28B];
+  OBJ_TYPE_REF(_12;(struct CSPConstruct)_10->7) (_10);
+
+  <bb 6>:
+  return;
+
+}
+
+
+
+;; Function LUNA::CSP::Recursion<CSPType>::~Recursion() [with CSPType = LUNA::CSP::CSProcess] (_ZN4LUNA3CSP9RecursionINS0_9CSProcessEED0Ev, funcdef_no=4338, decl_uid=83241, symbol_order=1361)
+
+LUNA::CSP::Recursion<CSPType>::~Recursion() [with CSPType = LUNA::CSP::CSProcess] (struct Recursion * const this)
+{
+  void * D.91946;
+  struct IThreadBlocker * _5;
+  int (*__vtbl_ptr_type) () * _6;
+  int (*__vtbl_ptr_type) () _7;
+  int (*__vtbl_ptr_type) () * _9;
+  int (*__vtbl_ptr_type) () _10;
+  bool (*<Tdf5c>) (union _Any_data &, const union _Any_data &, _Manager_operation) _11;
+  union _Any_data * _12;
+  struct Runnable * _13;
+  struct ILockable * _34;
+
+  <bb 2>:
+  this_2(D)->D.83250.D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN4LUNA3CSP9RecursionINS0_9CSProcessEEE + 8B];
+  this_2(D)->D.83250.D.42485.D.35429._vptr.TreeNode = &MEM[(void *)&_ZTVN4LUNA3CSP9RecursionINS0_9CSProcessEEE + 68B];
+  _5 = this_2(D)->m_blocker;
+  if (_5 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 3>:
+  _6 = _5->D.41986._vptr.Uncopyable;
+  _7 = MEM[(int (*__vtbl_ptr_type) () *)_6 + 4B];
+  OBJ_TYPE_REF(_7;(struct IThreadBlocker)_5->1) (_5);
+  goto <bb 8>;
+
+  <bb 4>:
+  _9 = _34->_vptr.ILockable;
+  _10 = MEM[(int (*__vtbl_ptr_type) () *)_9 + 12B];
+  OBJ_TYPE_REF(_10;(struct ILockable)_34->3) (_34);
+
+  <bb 5>:
+  _11 = MEM[(struct _Function_base *)this_2(D) + 72B]._M_manager;
+  if (_11 != 0B)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 6>:
+  _12 = &MEM[(struct _Function_base *)this_2(D) + 72B]._M_functor;
+  _11 (_12, _12, 3);
+
+  <bb 7>:
+  MEM[(struct function *)this_2(D) + 72B] ={v} {CLOBBER};
+  MEM[(struct CSProcess *)this_2(D)].D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN4LUNA3CSP9CSProcessE + 8B];
+  MEM[(struct CSPConstruct *)this_2(D) + 8B] ={v} {CLOBBER};
+  _13 = &MEM[(struct CSProcess *)this_2(D)].D.42484;
+  LUNA::Runnable::~Runnable (_13);
+  *this_2(D) ={v} {CLOBBER};
+  operator delete (this_2(D));
+  return this_2(D);
+
+  <bb 8>:
+  _34 = this_2(D)->m_lock;
+  if (_34 != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+}
+
+
+
+;; Function MainModel::MainModel::~MainModel() (_ZN9MainModel9MainModelD2Ev, funcdef_no=4192, decl_uid=83291, symbol_order=1193)
+
+MainModel::MainModel::~MainModel() (struct MainModel * const this)
+{
+  void * D.91960;
+  void * D.91958;
+  struct Model32 * _8;
+  int (*__vtbl_ptr_type) () * _9;
+  int (*__vtbl_ptr_type) () _10;
+  struct RaMstixPWMChannel * _12;
+  int (*__vtbl_ptr_type) () * _13;
+  int (*__vtbl_ptr_type) () _14;
+  struct PeriodicTimerChannel * _16;
+  int (*__vtbl_ptr_type) () * _17;
+  int (*__vtbl_ptr_type) () _18;
+  void * PROF_23;
+  struct IThreadBlocker * _24;
+  int _25;
+  unsigned char _26;
+  unsigned int _27;
+  int (*__vtbl_ptr_type) () * _29;
+  int (*__vtbl_ptr_type) () _30;
+  struct ILockable * _31;
+  int (*__vtbl_ptr_type) () * _32;
+  int (*__vtbl_ptr_type) () _33;
+  bool (*<Tdf5c>) (union _Any_data &, const union _Any_data &, _Manager_operation) _34;
+  union _Any_data * _35;
+  struct Runnable * _36;
+  struct ILockable * _63;
+  struct ILockable * _67;
+
+  <bb 2>:
+  this_5(D)->D.83294.D.83250.D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN9MainModel9MainModelE + 8B];
+  this_5(D)->D.83294.D.83250.D.42485.D.35429._vptr.TreeNode = &MEM[(void *)&_ZTVN9MainModel9MainModelE + 68B];
+  _8 = this_5(D)->myPWM;
+  if (_8 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _9 = _8->D.83153.D.74220.D.35429._vptr.TreeNode;
+  _10 = MEM[(int (*__vtbl_ptr_type) () *)_9 + 4B];
+  OBJ_TYPE_REF(_10;(struct Model32)_8->1) (_8);
+
+  <bb 4>:
+  _12 = this_5(D)->myPWMpt_out_to_pwm_portChannel;
+  if (_12 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 8>;
+
+  <bb 5>:
+  _13 = _12->D.83468._vptr.ChannelIn;
+  _14 = MEM[(int (*__vtbl_ptr_type) () *)_13 + 12B];
+  PROF_23 = [obj_type_ref] OBJ_TYPE_REF(_14;(struct RaMstixPWMChannel)_12->3);
+  if (PROF_23 == __deleting_dtor )
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 6>:
+  _12->D.83468._vptr.ChannelIn = &MEM[(void *)&_ZTVN4LUNA3CSP7RaMstix17RaMstixPWMChannelIdEE + 8B];
+  _25 = _12->m_fd;
+  _26 = _12->m_nr;
+  _27 = (unsigned int) _26;
+  ramstixSetPWMValue (_25, _27, 0.0);
+  *_12 ={v} {CLOBBER};
+  operator delete (_12);
+  goto <bb 8>;
+
+  <bb 7>:
+  OBJ_TYPE_REF(_14;(struct RaMstixPWMChannel)_12->3) (_12);
+
+  <bb 8>:
+  _16 = this_5(D)->myPWMpt_timer_to_timerChannel;
+  if (_16 != 0B)
+    goto <bb 9>;
+  else
+    goto <bb 17>;
+
+  <bb 9>:
+  _17 = _16->D.78286._vptr.ChannelIn;
+  _18 = MEM[(int (*__vtbl_ptr_type) () *)_17 + 12B];
+  OBJ_TYPE_REF(_18;(struct PeriodicTimerChannel)_16->3) (_16);
+  goto <bb 17>;
+
+  <bb 10>:
+  _29 = _24->D.41986._vptr.Uncopyable;
+  _30 = MEM[(int (*__vtbl_ptr_type) () *)_29 + 4B];
+  OBJ_TYPE_REF(_30;(struct IThreadBlocker)_24->1) (_24);
+  _63 = MEM[(struct Recursion *)this_5(D)].m_lock;
+  if (_63 != 0B)
+    goto <bb 13>;
+  else
+    goto <bb 11>;
+
+  <bb 11>:
+  goto <bb 14>;
+
+  <bb 12>:
+  _31 = MEM[(struct Recursion *)this_5(D)].m_lock;
+  if (_31 != 0B)
+    goto <bb 13>;
+  else
+    goto <bb 11>;
+
+  <bb 13>:
+  # _67 = PHI <_31(12), _63(10)>
+  _32 = _67->_vptr.ILockable;
+  _33 = MEM[(int (*__vtbl_ptr_type) () *)_32 + 12B];
+  OBJ_TYPE_REF(_33;(struct ILockable)_67->3) (_67);
+
+  <bb 14>:
+  _34 = MEM[(struct _Function_base *)this_5(D) + 72B]._M_manager;
+  if (_34 != 0B)
+    goto <bb 15>;
+  else
+    goto <bb 16>;
+
+  <bb 15>:
+  _35 = &MEM[(struct _Function_base *)this_5(D) + 72B]._M_functor;
+  _34 (_35, _35, 3);
+
+  <bb 16>:
+  MEM[(struct function *)this_5(D) + 72B] ={v} {CLOBBER};
+  MEM[(struct CSProcess *)this_5(D)].D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN4LUNA3CSP9CSProcessE + 8B];
+  MEM[(struct CSPConstruct *)this_5(D) + 8B] ={v} {CLOBBER};
+  _36 = &MEM[(struct CSProcess *)this_5(D)].D.42484;
+  LUNA::Runnable::~Runnable (_36);
+  *this_5(D) ={v} {CLOBBER};
+  return this_5(D);
+
+  <bb 17>:
+  MEM[(struct Recursion *)this_5(D)].D.83250.D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN4LUNA3CSP9RecursionINS0_9CSProcessEEE + 8B];
+  MEM[(struct Recursion *)this_5(D)].D.83250.D.42485.D.35429._vptr.TreeNode = &MEM[(void *)&_ZTVN4LUNA3CSP9RecursionINS0_9CSProcessEEE + 68B];
+  _24 = MEM[(struct Recursion *)this_5(D)].m_blocker;
+  if (_24 != 0B)
+    goto <bb 10>;
+  else
+    goto <bb 12>;
+
+}
+
+
+
+;; Function virtual MainModel::MainModel::~MainModel() (_ZN9MainModel9MainModelD0Ev, funcdef_no=4194, decl_uid=83285, symbol_order=1197)
+
+virtual MainModel::MainModel::~MainModel() (struct MainModel * const this)
+{
+  <bb 2>:
+  MainModel::MainModel::~MainModel (this_2(D));
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual int LUNA::CSP::Parallel::setPriority(LUNA::Threading::priority_t) (_ZN4LUNA3CSP8Parallel11setPriorityEi, funcdef_no=3722, decl_uid=68889, symbol_order=1003)
+
+virtual int LUNA::CSP::Parallel::setPriority(LUNA::Threading::priority_t) (struct Parallel * const this, priority_t priority)
+{
+  struct tree_node_t * riter$node;
+  struct tree_node_t * iter$node;
+  priority_t old;
+  int ret;
+  struct CSPConstruct * _11;
+  int (*__vtbl_ptr_type) () * _12;
+  int (*__vtbl_ptr_type) () _13;
+  struct CSPConstruct * _17;
+  int (*__vtbl_ptr_type) () * _18;
+  int (*__vtbl_ptr_type) () _19;
+
+  <bb 2>:
+  old_9 = this_8(D)->D.68913.m_priority;
+  iter$node_23 = MEM[(struct TreeNode *)this_8(D)].first_child;
+  if (iter$node_23 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 15>;
+
+  <bb 3>:
+
+  <bb 4>:
+  # iter$node_39 = PHI <iter$node_23(3), iter$node_29(11)>
+  _11 = MEM[(struct CSPConstruct * &)iter$node_39 + 24];
+  _12 = _11->D.35429._vptr.TreeNode;
+  _13 = MEM[(int (*__vtbl_ptr_type) () *)_12 + 16B];
+  ret_16 = OBJ_TYPE_REF(_13;(struct CSPConstruct)_11->4) (_11, priority_14(D));
+  if (ret_16 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 10>;
+
+  <bb 5>:
+  # ret_32 = PHI <ret_16(4)>
+  # iter$node_5 = PHI <iter$node_39(4)>
+  riter$node_25 = MEM[(struct TreeNode *)this_8(D)].first_child;
+  if (iter$node_5 != riter$node_25)
+    goto <bb 6>;
+  else
+    goto <bb 16>;
+
+  <bb 6>:
+  if (riter$node_25 == 0B)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+  <bb 7>:
+  __assert_fail ("node != __null", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Tree.h", 213, &__PRETTY_FUNCTION__);
+
+  <bb 8>:
+
+  <bb 9>:
+  # riter$node_26 = PHI <riter$node_25(8), riter$node_27(14)>
+  _17 = MEM[(struct CSPConstruct * &)riter$node_26 + 24];
+  _18 = _17->D.35429._vptr.TreeNode;
+  _19 = MEM[(int (*__vtbl_ptr_type) () *)_18 + 16B];
+  OBJ_TYPE_REF(_19;(struct CSPConstruct)_17->4) (_17, old_9);
+  riter$node_27 = riter$node_26->next_sibling;
+  if (iter$node_5 != riter$node_27)
+    goto <bb 13>;
+  else
+    goto <bb 16>;
+
+  <bb 10>:
+  iter$node_29 = iter$node_39->next_sibling;
+  if (iter$node_29 != 0B)
+    goto <bb 11>;
+  else
+    goto <bb 15>;
+
+  <bb 11>:
+  goto <bb 4>;
+
+  <bb 12>:
+  # ret_22 = PHI <ret_32(16), 0(15)>
+  return ret_22;
+
+  <bb 13>:
+  if (riter$node_27 == 0B)
+    goto <bb 7>;
+  else
+    goto <bb 14>;
+
+  <bb 14>:
+  goto <bb 9>;
+
+  <bb 15>:
+  this_8(D)->D.68913.m_priority = priority_14(D);
+  goto <bb 12>;
+
+  <bb 16>:
+  goto <bb 12>;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSPConstruct::exit() (_ZN4LUNA3CSP12CSPConstruct4exitEv, funcdef_no=1428, decl_uid=35403, symbol_order=422)
+
+virtual void LUNA::CSP::CSPConstruct::exit() (struct CSPConstruct * const this)
+{
+  struct tree_node_t * iter$node;
+  struct CSPConstruct * _5;
+  int (*__vtbl_ptr_type) () * _6;
+  int (*__vtbl_ptr_type) () _7;
+
+  <bb 2>:
+  this_3(D)->m_exit = 1;
+  iter$node_9 = MEM[(struct TreeNode *)this_3(D)].first_child;
+  if (iter$node_9 != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  return;
+
+  <bb 4>:
+
+  <bb 5>:
+  # iter$node_12 = PHI <iter$node_9(4), iter$node_11(6)>
+  _5 = MEM[(struct CSPConstruct * &)iter$node_12 + 24];
+  _6 = _5->D.35429._vptr.TreeNode;
+  _7 = MEM[(int (*__vtbl_ptr_type) () *)_6 + 36B];
+  OBJ_TYPE_REF(_7;(struct CSPConstruct)_5->9) (_5);
+  iter$node_11 = iter$node_12->next_sibling;
+  if (iter$node_11 != 0B)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  goto <bb 3>;
+
+  <bb 6>:
+  goto <bb 5>;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSProcess::exit() (_ZN4LUNA3CSP9CSProcess4exitEv, funcdef_no=1981, decl_uid=42459, symbol_order=482)
+
+virtual void LUNA::CSP::CSProcess::exit() (struct CSProcess * const this)
+{
+  struct tree_node_t * iter$node;
+  struct IThreadBlocker * _4;
+  struct IThreadBlocker * _5;
+  int (*__vtbl_ptr_type) () * _6;
+  int (*__vtbl_ptr_type) () _7;
+  bool _9;
+  struct CSPConstruct * _15;
+  int (*__vtbl_ptr_type) () * _16;
+  int (*__vtbl_ptr_type) () _17;
+  int (*__vtbl_ptr_type) () * _22;
+  int (*__vtbl_ptr_type) () _23;
+
+  <bb 2>:
+  MEM[(struct CSPConstruct *)this_1(D) + 8B].m_exit = 1;
+  iter$node_12 = MEM[(struct TreeNode *)this_1(D) + 8B].first_child;
+  if (iter$node_12 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 3>:
+
+  <bb 4>:
+  # iter$node_19 = PHI <iter$node_12(3), iter$node_18(5)>
+  _15 = MEM[(struct CSPConstruct * &)iter$node_19 + 24];
+  _16 = _15->D.35429._vptr.TreeNode;
+  _17 = MEM[(int (*__vtbl_ptr_type) () *)_16 + 36B];
+  OBJ_TYPE_REF(_17;(struct CSPConstruct)_15->9) (_15);
+  iter$node_18 = iter$node_19->next_sibling;
+  if (iter$node_18 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 9>;
+
+  <bb 5>:
+  goto <bb 4>;
+
+  <bb 6>:
+  _4 = this_1(D)->m_activate;
+  _22 = _4->D.41986._vptr.Uncopyable;
+  _23 = MEM[(int (*__vtbl_ptr_type) () *)_22 + 12B];
+  OBJ_TYPE_REF(_23;(struct IThreadBlocker)_4->3) (_4, 0B);
+
+  <bb 7>:
+  return;
+
+  <bb 9>:
+
+  <bb 8>:
+  _5 = this_1(D)->m_activate;
+  _6 = _5->D.41986._vptr.Uncopyable;
+  _7 = MEM[(int (*__vtbl_ptr_type) () *)_6 + 16B];
+  _9 = OBJ_TYPE_REF(_7;(struct IThreadBlocker)_5->4) (_5);
+  if (_9 != 0)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+}
+
+
+
+;; Function void LUNA::Platform::printf(const char*, ...) (_ZN4LUNA8Platform6printfEPKcz, funcdef_no=1311, decl_uid=34403, symbol_order=375)
+
+void LUNA::Platform::printf(const char*, ...) (const char * format)
+{
+  void * valist$__ap;
+  struct __gnuc_va_list __arg;
+  struct va_list valist;
+  struct va_list var_args;
+  struct _IO_FILE * stdout.33_7;
+
+  <bb 2>:
+  __builtin_va_start (&var_args, 0);
+  valist$__ap_4 = MEM[(struct  *)&var_args];
+  MEM[(struct  *)&__arg] = valist$__ap_4;
+  stdout.33_7 = stdout;
+  vfprintf (stdout.33_7, format_3(D), __arg);
+  __builtin_va_end (&var_args);
+  var_args ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function void LUNA::log(LUNA::loglevel_enum, const char*, ...) (_ZN4LUNA3logENS_13loglevel_enumEPKcz, funcdef_no=1312, decl_uid=34408, symbol_order=376)
+
+void LUNA::log(LUNA::loglevel_enum, const char*, ...) (loglevel_enum loglevel, const char * format)
+{
+  void * valist$__ap;
+  struct __gnuc_va_list __arg;
+  struct va_list valist;
+  struct va_list var_args;
+  int loglevel.32_8;
+  struct _IO_FILE * stdout.33_9;
+
+  <bb 2>:
+  __builtin_va_start (&var_args, 0);
+  valist$__ap_5 = MEM[(struct  *)&var_args];
+  loglevel.32_8 = (int) loglevel_3(D);
+  printf ("<%i> ", loglevel.32_8);
+  MEM[(struct  *)&__arg] = valist$__ap_5;
+  stdout.33_9 = stdout;
+  vfprintf (stdout.33_9, format_4(D), __arg);
+  __builtin_va_end (&var_args);
+  var_args ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function void LUNA::log(bool, LUNA::loglevel_enum, const char*, ...) (_ZN4LUNA3logEbNS_13loglevel_enumEPKcz, funcdef_no=1314, decl_uid=34419, symbol_order=378)
+
+void LUNA::log(bool, LUNA::loglevel_enum, const char*, ...) (bool condition, loglevel_enum loglevel, const char * format)
+{
+  void * valist$__ap;
+  struct __gnuc_va_list __arg;
+  struct va_list valist;
+  struct va_list var_args;
+  int loglevel.32_10;
+  struct _IO_FILE * stdout.33_11;
+
+  <bb 2>:
+  if (condition_2(D) != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  __builtin_va_start (&var_args, 0);
+  valist$__ap_7 = MEM[(struct  *)&var_args];
+  loglevel.32_10 = (int) loglevel_5(D);
+  printf ("<%i> ", loglevel.32_10);
+  MEM[(struct  *)&__arg] = valist$__ap_7;
+  stdout.33_11 = stdout;
+  vfprintf (stdout.33_11, format_6(D), __arg);
+  __builtin_va_end (&var_args);
+  var_args ={v} {CLOBBER};
+
+  <bb 4>:
+  return;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSProcess::activate() (_ZN4LUNA3CSP9CSProcess8activateEv, funcdef_no=1979, decl_uid=42455, symbol_order=478)
+
+virtual void LUNA::CSP::CSProcess::activate() (struct CSProcess * const this)
+{
+  static const char __FUNCTION__[9] = "activate";
+  struct IThread * _3;
+  bool _4;
+  const char * _5;
+  struct IThreadBlocker * _7;
+  int (*__vtbl_ptr_type) () * _8;
+  int (*__vtbl_ptr_type) () _9;
+
+  <bb 2>:
+  _3 = this_2(D)->D.42484.m_thread;
+  _4 = _3 == 0B;
+  _5 = MEM[(const char * *)this_2(D) + 48B];
+  LUNA::log (_4, 5, "[%s]::%s - No thread assigned, and therefore cannot be run.\n", _5, &__FUNCTION__);
+  _7 = this_2(D)->m_activate;
+  _8 = _7->D.41986._vptr.Uncopyable;
+  _9 = MEM[(int (*__vtbl_ptr_type) () *)_8 + 12B];
+  OBJ_TYPE_REF(_9;(struct IThreadBlocker)_7->3) (_7, 0B);
+  return;
+
+}
+
+
+
+;; Function void LUNA::not_implemented(const char*, ...) (_ZN4LUNA15not_implementedEPKcz, funcdef_no=2117, decl_uid=47053, symbol_order=572)
+
+void LUNA::not_implemented(const char*, ...) (const char * arg_string)
+{
+  void * valist$__ap;
+  struct __gnuc_va_list __arg;
+  struct va_list valist;
+  struct va_list var_args;
+  struct _IO_FILE * stdout.33_8;
+
+  <bb 2>:
+  __builtin_va_start (&var_args, 0);
+  LUNA::Platform::printf ("NOT_IMPLEMENTED: ");
+  valist$__ap_5 = MEM[(struct  *)&var_args];
+  MEM[(struct  *)&__arg] = valist$__ap_5;
+  stdout.33_8 = stdout;
+  vfprintf (stdout.33_8, arg_string_4(D), __arg);
+  __builtin_va_end (&var_args);
+  var_args ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function LUNA::CSP::IWriter* LUNA::CSP::RaMstix::RaMstixPWMChannel<DataType>::find_ready_writer() [with DataType = double] (_ZN4LUNA3CSP7RaMstix17RaMstixPWMChannelIdE17find_ready_writerEv, funcdef_no=4650, decl_uid=83433, symbol_order=2519)
+
+LUNA::CSP::IWriter* LUNA::CSP::RaMstix::RaMstixPWMChannel<DataType>::find_ready_writer() [with DataType = double] (struct RaMstixPWMChannel * const this)
+{
+  <bb 2>:
+  LUNA::not_implemented ("RaMstixPWMChannel::find_ready_writer, because it does not make sense.\n");
+  return 0B;
+
+}
+
+
+
+;; Function LUNA::CSP::Parallel::Parallel(LUNA::CSP::CSPConstruct*, ...) (_ZN4LUNA3CSP8ParallelC2EPNS0_12CSPConstructEz, funcdef_no=3717, decl_uid=68901, symbol_order=998)
+
+LUNA::CSP::Parallel::Parallel(LUNA::CSP::CSPConstruct*, ...) (struct Parallel * const this, struct CSPConstruct * child_process1)
+{
+  void * arg___ap_lsm.469;
+  struct va_list arg;
+  struct CSPConstruct * _4;
+  struct AtomicInt * _8;
+  void * _14;
+  struct TreeNode * pretmp_23;
+  struct TreeNode * prephitmp_36;
+  struct TreeNode * _41;
+
+  <bb 2>:
+  _4 = &this_3(D)->D.68913;
+  MEM[(struct TreeNode *)this_3(D)].parent = 0B;
+  MEM[(struct TreeNode *)this_3(D)].first_child = 0B;
+  MEM[(struct TreeNode *)this_3(D)].last_child = 0B;
+  MEM[(struct TreeNode *)this_3(D)].prev_sibling = 0B;
+  MEM[(struct TreeNode *)this_3(D)].next_sibling = 0B;
+  MEM[(struct TreeNode *)this_3(D)].data = _4;
+  MEM[(struct CSPConstruct *)this_3(D)].m_guard = 0B;
+  MEM[(struct CSPConstruct *)this_3(D)].m_exit = 0;
+  MEM[(struct CSPConstruct *)this_3(D)].m_priority = -1;
+  MEM[(const char * *)this_3(D) + 40B] = "CSPConstruct";
+  MEM[(const char * *)this_3(D) + 44B] = "CSPConstruct";
+  this_3(D)->D.68913.D.35429._vptr.TreeNode = &MEM[(void *)&_ZTVN4LUNA3CSP8ParallelE + 8B];
+  _8 = &this_3(D)->m_done_counter;
+  LUNA::Atomic::AtomicInt::AtomicInt (_8, 0);
+
+  <bb 3>:
+  MEM[(const char * *)this_3(D) + 40B] = "Parallel";
+  MEM[(const char * *)this_3(D) + 44B] = "Parallel";
+  __builtin_va_start (&arg, 0);
+  if (child_process1_11(D) != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  __builtin_va_end (&arg);
+  arg ={v} {CLOBBER};
+  return this_3(D);
+
+  <bb 5>:
+  pretmp_23 = MEM[(struct TreeNode *)this_3(D)].last_child;
+  arg___ap_lsm.469_38 = arg.__ap;
+
+  <bb 6>:
+  # child_process1_6 = PHI <child_process1_11(D)(5), child_process1_16(12)>
+  # prephitmp_36 = PHI <pretmp_23(5), child_process1_6(12)>
+  # arg___ap_lsm.469_15 = PHI <arg___ap_lsm.469_38(5), _14(12)>
+  MEM[(struct tree_node_t *)child_process1_6].parent = _4;
+  if (prephitmp_36 != 0B)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+  <bb 7>:
+  prephitmp_36->next_sibling = child_process1_6;
+  goto <bb 11>;
+
+  <bb 8>:
+  _41 = MEM[(struct TreeNode *)this_3(D)].first_child;
+  if (_41 != 0B)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 9>:
+  # arg___ap_lsm.469_51 = PHI <arg___ap_lsm.469_15(8)>
+  arg.__ap = arg___ap_lsm.469_51;
+  LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>::_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEE12append_childEPS5_.part.2 ();
+
+  <bb 10>:
+  MEM[(struct TreeNode *)this_3(D)].first_child = child_process1_6;
+
+  <bb 11>:
+  MEM[(struct tree_node_t *)child_process1_6].prev_sibling = prephitmp_36;
+  MEM[(struct TreeNode *)this_3(D)].last_child = child_process1_6;
+  MEM[(struct tree_node_t *)child_process1_6].next_sibling = 0B;
+  _14 = arg___ap_lsm.469_15 + 4;
+  child_process1_16 = MEM[(struct CSPConstruct * *)arg___ap_lsm.469_15];
+  if (child_process1_16 != 0B)
+    goto <bb 12>;
+  else
+    goto <bb 4>;
+
+  <bb 12>:
+  goto <bb 6>;
+
+<L7>:
+  MEM[(struct CSPConstruct *)this_3(D)] ={v} {CLOBBER};
+  resx 1
+
+}
+
+
+
+;; Function void std::vector<_Tp, _Alloc>::_M_emplace_back_aux(_Args&& ...) [with _Args = {const int&}; _Tp = int; _Alloc = std::allocator<int>] (_ZNSt6vectorIiSaIiEE19_M_emplace_back_auxIIRKiEEEvDpOT_, funcdef_no=4438, decl_uid=85158, symbol_order=1464)
+
+void std::vector<_Tp, _Alloc>::_M_emplace_back_aux(_Args&& ...) [with _Args = {const int&}; _Tp = int; _Alloc = std::allocator<int>] (struct vector * const this, const int & __args#0)
+{
+  int * D.92089;
+  const unsigned int D.92087;
+  const size_type __len;
+  size_type D.92086;
+  size_type __n;
+  int * __first$_M_current;
+  int * __new_finish;
+  sizetype _5;
+  sizetype _6;
+  unsigned int _7;
+  int * _8;
+  int * _15;
+  unsigned int _17;
+  int * const prephitmp_22;
+  int _24;
+  int _26;
+  int pretmp_27;
+  int * const pretmp_31;
+  unsigned int prephitmp_35;
+  int * const _39;
+  int * const _40;
+  int _41;
+  int _42;
+  int _43;
+  int _44;
+  size_type _45;
+  unsigned int pretmp_46;
+  unsigned int prephitmp_48;
+  int * const pretmp_53;
+  sizetype _59;
+  int * const prephitmp_60;
+  unsigned int _61;
+  int pretmp_64;
+  int * prephitmp_66;
+  int * pretmp_67;
+  int * _68;
+  int prephitmp_70;
+  int pretmp_71;
+  unsigned int _72;
+  unsigned int _74;
+  unsigned int prephitmp_75;
+  int * pretmp_76;
+  int * prephitmp_77;
+
+  <bb 2>:
+  _39 = MEM[(int * *)this_2(D)];
+  _40 = MEM[(int * *)this_2(D) + 4B];
+  _41 = (int) _40;
+  _42 = (int) _39;
+  _43 = _41 - _42;
+  _44 = _43 /[ex] 4;
+  _45 = (size_type) _44;
+  if (_45 == 0)
+    goto <bb 19>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  __len_50 = _45 + _45;
+  if (_45 > __len_50)
+    goto <bb 6>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  if (__len_50 > 1073741823)
+    goto <bb 6>;
+  else
+    goto <bb 5>;
+
+  <bb 5>:
+  pretmp_46 = __len_50 * 4;
+  goto <bb 19>;
+
+  <bb 6>:
+  # prephitmp_75 = PHI <4294967292(4), prephitmp_35(19), 4294967292(3)>
+  __new_finish_52 = operator new (prephitmp_75);
+  pretmp_53 = MEM[(int * *)this_2(D)];
+  pretmp_31 = MEM[(int * *)this_2(D) + 4B];
+  pretmp_64 = (int) pretmp_31;
+  pretmp_27 = (int) pretmp_53;
+  pretmp_71 = pretmp_64 - pretmp_27;
+  pretmp_67 = __new_finish_52 + 4;
+
+  <bb 7>:
+  # __new_finish_18 = PHI <0B(19), __new_finish_52(6)>
+  # prephitmp_22 = PHI <_39(19), pretmp_53(6)>
+  # prephitmp_60 = PHI <_40(19), pretmp_31(6)>
+  # prephitmp_48 = PHI <prephitmp_35(19), prephitmp_75(6)>
+  # prephitmp_70 = PHI <_43(19), pretmp_71(6)>
+  # prephitmp_66 = PHI <4B(19), pretmp_67(6)>
+  _7 = (unsigned int) prephitmp_70;
+  _8 = __new_finish_18 + _7;
+  _24 = *__args#0_9(D);
+  if (_8 != 0B)
+    goto <bb 8>;
+  else
+    goto <bb 9>;
+
+  <bb 8>:
+  *_8 = _24;
+
+  <bb 9>:
+  if (prephitmp_22 != prephitmp_60)
+    goto <bb 10>;
+  else
+    goto <bb 16>;
+
+  <bb 10>:
+
+  <bb 11>:
+  # __first$_M_current_47 = PHI <prephitmp_22(10), __first$_M_current_28(14)>
+  # __new_finish_57 = PHI <__new_finish_18(10), __new_finish_29(14)>
+  _26 = *__first$_M_current_47;
+  if (__new_finish_57 != 0B)
+    goto <bb 12>;
+  else
+    goto <bb 13>;
+
+  <bb 12>:
+  *__new_finish_57 = _26;
+
+  <bb 13>:
+  __first$_M_current_28 = __first$_M_current_47 + 4;
+  __new_finish_29 = __new_finish_57 + 4;
+  if (__first$_M_current_28 != prephitmp_60)
+    goto <bb 14>;
+  else
+    goto <bb 15>;
+
+  <bb 14>:
+  goto <bb 11>;
+
+  <bb 15>:
+  _17 = (unsigned int) prephitmp_60;
+  _68 = prephitmp_22 + 4;
+  _61 = (unsigned int) _68;
+  _72 = _17 - _61;
+  _74 = _72 /[ex] 4;
+  _59 = _74 & 1073741823;
+  _5 = _59 + 1;
+  _6 = _5 * 4;
+  __new_finish_73 = __new_finish_18 + _6;
+  pretmp_76 = __new_finish_73 + 4;
+
+  <bb 16>:
+  # prephitmp_77 = PHI <pretmp_76(15), prephitmp_66(9)>
+  if (prephitmp_22 != 0B)
+    goto <bb 17>;
+  else
+    goto <bb 18>;
+
+  <bb 17>:
+  operator delete (prephitmp_22);
+
+  <bb 18>:
+  this_2(D)->D.70481._M_impl._M_start = __new_finish_18;
+  this_2(D)->D.70481._M_impl._M_finish = prephitmp_77;
+  _15 = __new_finish_18 + prephitmp_48;
+  this_2(D)->D.70481._M_impl._M_end_of_storage = _15;
+  return;
+
+  <bb 19>:
+  # __len_33 = PHI <__len_50(5), 1(2)>
+  # prephitmp_35 = PHI <pretmp_46(5), 4(2)>
+  if (__len_33 != 0)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::Parallel::activate() (_ZN4LUNA3CSP8Parallel8activateEv, funcdef_no=3719, decl_uid=68881, symbol_order=1000)
+
+virtual void LUNA::CSP::Parallel::activate() (struct Parallel * const this)
+{
+  int * const __first;
+  int * const __last;
+  int * __i$_M_current;
+  struct __normal_iterator __first;
+  struct __normal_iterator __last;
+  struct tree_node_t * SR.376;
+  struct tree_node_t * iter$node;
+  unsigned int ret;
+  struct tree_node_t * pos;
+  unsigned int ret;
+  struct tree_node_t * pos;
+  unsigned int ret;
+  struct tree_node_t * pos;
+  int j;
+  int i;
+  int i;
+  struct vector temp;
+  static const char __FUNCTION__[9] = "activate";
+  struct __normal_iterator D.89250;
+  struct __normal_iterator D.89249;
+  int * const pretmp_3;
+  int * prephitmp_7;
+  struct AtomicInt * _9;
+  int _12;
+  bool _13;
+  const char * _14;
+  unsigned int i.26_20;
+  int i.23_23;
+  int i.24_24;
+  unsigned int i.31_30;
+  int * pretmp_33;
+  struct CSPConstruct * _37;
+  int (*__vtbl_ptr_type) () * _38;
+  int (*__vtbl_ptr_type) () _39;
+  int * _42;
+  int pretmp_43;
+  struct TreeNode * _45;
+  int * pretmp_55;
+  int * const prephitmp_57;
+  int * const prephitmp_73;
+  int pretmp_74;
+  int * pretmp_76;
+  unsigned int _84;
+  int * const prephitmp_89;
+  int * const pretmp_90;
+  int * prephitmp_93;
+  int prephitmp_96;
+  int * _99;
+  int * prephitmp_100;
+  int * _101;
+  int _104;
+  int _106;
+  int _108;
+  difference_type _109;
+  int _110;
+  int _111;
+  unsigned int __n.45_112;
+  unsigned int _113;
+  int * _114;
+  int __tmp.46_115;
+  int _116;
+  value_type & _124;
+  int _125;
+  int * const prephitmp_130;
+  int * prephitmp_131;
+  int * const pretmp_132;
+  unsigned int i.31_139;
+  unsigned int i.26_142;
+  struct TreeNode * _145;
+  int prephitmp_148;
+  int i.23_153;
+  int * prephitmp_156;
+  struct TreeNode * _157;
+  int * prephitmp_167;
+
+  <bb 2>:
+  _9 = &this_8(D)->m_done_counter;
+  _12 = LUNA::Atomic::AtomicInt::read (_9);
+  _13 = _12 != 0;
+  _14 = MEM[(const char * *)this_8(D) + 40B];
+  LUNA::log (_13, 5, "[%s]::%s - parallel tasks not finished before next iteration.\n", _14, &__FUNCTION__);
+  pos_47 = MEM[(struct TreeNode *)this_8(D)].first_child;
+  if (pos_47 == 0B)
+    goto <bb 9>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _145 = MEM[(struct TreeNode * *)this_8(D) + 12B];
+  if (pos_47 != _145)
+    goto <bb 4>;
+  else
+    goto <bb 8>;
+
+  <bb 4>:
+
+  <bb 5>:
+  # ret_141 = PHI <1(4), ret_49(6)>
+  # pos_159 = PHI <pos_47(4), pos_51(6)>
+  ret_49 = ret_141 + 1;
+  pos_51 = pos_159->next_sibling;
+  if (pos_51 != _145)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 6>:
+  goto <bb 5>;
+
+  <bb 7>:
+  # ret_155 = PHI <ret_49(5)>
+  pretmp_43 = (int) ret_155;
+
+  <bb 8>:
+  # prephitmp_148 = PHI <pretmp_43(7), 1(3)>
+
+  <bb 9>:
+  # prephitmp_96 = PHI <0(2), prephitmp_148(8)>
+  LUNA::Atomic::AtomicInt::set (_9, prephitmp_96);
+  MEM[(struct _Vector_impl *)&temp]._M_start = 0B;
+  MEM[(struct _Vector_impl *)&temp]._M_finish = 0B;
+  MEM[(struct _Vector_impl *)&temp]._M_end_of_storage = 0B;
+  i = 0;
+  pos_146 = MEM[(struct TreeNode * *)this_8(D) + 8B];
+  if (pos_146 == 0B)
+    goto <bb 27>;
+  else
+    goto <bb 10>;
+
+  <bb 10>:
+  goto <bb 20>;
+
+  <bb 11>:
+  _99 = temp.D.70481._M_impl._M_end_of_storage;
+  if (prephitmp_7 != _99)
+    goto <bb 12>;
+  else
+    goto <bb 15>;
+
+  <bb 12>:
+  if (prephitmp_7 != 0B)
+    goto <bb 13>;
+  else
+    goto <bb 14>;
+
+  <bb 13>:
+  *prephitmp_7 = i.23_153;
+
+  <bb 14>:
+  _101 = prephitmp_7 + 4;
+  temp.D.70481._M_impl._M_finish = _101;
+  goto <bb 17>;
+
+  <bb 15>:
+  std::vector<int>::_M_emplace_back_aux<const int&> (&temp, &i);
+
+  <bb 16>:
+  pretmp_132 = MEM[(int * const &)&temp + 4];
+
+  <bb 17>:
+  # prephitmp_130 = PHI <pretmp_132(16), _101(14)>
+  i.23_23 = i;
+  i.24_24 = i.23_23 + 1;
+  i = i.24_24;
+  i.26_20 = (unsigned int) i.24_24;
+  pos_21 = MEM[(struct TreeNode * *)this_8(D) + 8B];
+  if (pos_21 == 0B)
+    goto <bb 18>;
+  else
+    goto <bb 19>;
+
+  <bb 18>:
+  # prephitmp_73 = PHI <prephitmp_130(17)>
+  pretmp_3 = MEM[(int * const &)&temp];
+  goto <bb 27>;
+
+  <bb 19>:
+
+  <bb 20>:
+  # pos_63 = PHI <pos_146(10), pos_21(19)>
+  # i.23_153 = PHI <0(10), i.24_24(19)>
+  # i.26_142 = PHI <0(10), i.26_20(19)>
+  # prephitmp_7 = PHI <0B(10), prephitmp_130(19)>
+  _157 = MEM[(struct TreeNode * *)this_8(D) + 12B];
+  if (pos_63 != _157)
+    goto <bb 21>;
+  else
+    goto <bb 25>;
+
+  <bb 21>:
+
+  <bb 22>:
+  # ret_160 = PHI <1(21), ret_56(23)>
+  # pos_161 = PHI <pos_63(21), pos_58(23)>
+  ret_56 = ret_160 + 1;
+  pos_58 = pos_161->next_sibling;
+  if (pos_58 != _157)
+    goto <bb 23>;
+  else
+    goto <bb 24>;
+
+  <bb 23>:
+  goto <bb 22>;
+
+  <bb 24>:
+  # ret_147 = PHI <ret_56(22)>
+
+  <bb 25>:
+  # ret_134 = PHI <ret_147(24), 1(20)>
+  if (ret_134 > i.26_142)
+    goto <bb 11>;
+  else
+    goto <bb 26>;
+
+  <bb 26>:
+  # prephitmp_156 = PHI <prephitmp_7(25)>
+  pretmp_90 = MEM[(int * const &)&temp];
+
+  <bb 27>:
+  # prephitmp_89 = PHI <prephitmp_156(26), prephitmp_73(18), 0B(9)>
+  # prephitmp_57 = PHI <pretmp_90(26), pretmp_3(18), 0B(9)>
+  i ={v} {CLOBBER};
+  if (prephitmp_57 != prephitmp_89)
+    goto <bb 28>;
+  else
+    goto <bb 35>;
+
+  <bb 28>:
+  __i$_M_current_103 = prephitmp_57 + 4;
+  if (prephitmp_89 != __i$_M_current_103)
+    goto <bb 29>;
+  else
+    goto <bb 35>;
+
+  <bb 29>:
+  pretmp_74 = (int) prephitmp_57;
+
+  <bb 30>:
+  # __i$_M_current_138 = PHI <__i$_M_current_103(29), __i$_M_current_117(33)>
+  _104 = rand ();
+  _106 = (int) __i$_M_current_138;
+  _108 = _106 - pretmp_74;
+  _109 = _108 /[ex] 4;
+  _110 = _109 + 1;
+  _111 = _104 % _110;
+  __n.45_112 = (unsigned int) _111;
+  _113 = __n.45_112 * 4;
+  _114 = prephitmp_57 + _113;
+  if (__i$_M_current_138 != _114)
+    goto <bb 31>;
+  else
+    goto <bb 32>;
+
+  <bb 31>:
+  __tmp.46_115 = MEM[(type &)__i$_M_current_138];
+  _116 = MEM[(type &)_114];
+  *__i$_M_current_138 = _116;
+  *_114 = __tmp.46_115;
+
+  <bb 32>:
+  __i$_M_current_117 = __i$_M_current_138 + 4;
+  if (prephitmp_89 != __i$_M_current_117)
+    goto <bb 33>;
+  else
+    goto <bb 34>;
+
+  <bb 33>:
+  goto <bb 30>;
+
+  <bb 34>:
+  pretmp_55 = MEM[(struct _Vector_base *)&temp]._M_impl._M_start;
+
+  <bb 35>:
+  # prephitmp_131 = PHI <pretmp_55(34), prephitmp_57(27), prephitmp_57(28)>
+  iter$node_149 = MEM[(struct TreeNode * *)this_8(D) + 8B];
+  if (iter$node_149 == 0B)
+    goto <bb 57>;
+  else
+    goto <bb 36>;
+
+  <bb 36>:
+  goto <bb 50>;
+
+  <bb 37>:
+  _84 = i.31_139 * 4;
+  _124 = prephitmp_100 + _84;
+  _125 = *_124;
+  if (_125 > 0)
+    goto <bb 38>;
+  else
+    goto <bb 43>;
+
+  <bb 38>:
+  goto <bb 40>;
+
+  <bb 39>:
+  # j_170 = PHI <j_36(41), j_48(64)>
+  # iter$node_163 = PHI <iter$node_64(41), 0B(64)>
+
+  <bb 40>:
+  # j_143 = PHI <j_170(39), 0(38)>
+  # iter$node_150 = PHI <iter$node_163(39), iter$node_32(38)>
+  if (iter$node_150 != 0B)
+    goto <bb 41>;
+  else
+    goto <bb 64>;
+
+  <bb 41>:
+  iter$node_64 = iter$node_150->next_sibling;
+  j_36 = j_143 + 1;
+  if (j_36 < _125)
+    goto <bb 39>;
+  else
+    goto <bb 42>;
+
+  <bb 42>:
+  # iter$node_137 = PHI <iter$node_64(41)>
+
+  <bb 43>:
+  # iter$node_136 = PHI <iter$node_137(42), iter$node_32(37)>
+  if (iter$node_136 == 0B)
+    goto <bb 44>;
+  else
+    goto <bb 45>;
+
+  <bb 44>:
+  __assert_fail ("node != __null", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Tree.h", 213, &__PRETTY_FUNCTION__);
+
+  <bb 45>:
+  _37 = MEM[(struct CSPConstruct * &)iter$node_136 + 24];
+  _38 = _37->D.35429._vptr.TreeNode;
+  _39 = MEM[(int (*__vtbl_ptr_type) () *)_38 + 24B];
+  OBJ_TYPE_REF(_39;(struct CSPConstruct)_37->6) (_37);
+  goto <bb 47>;
+
+<L22>:
+  goto <bb 61> (<L19>);
+
+  <bb 47>:
+  i_41 = i_144 + 1;
+  i.31_30 = (unsigned int) i_41;
+  iter$node_31 = MEM[(struct TreeNode * *)this_8(D) + 8B];
+  if (iter$node_31 == 0B)
+    goto <bb 48>;
+  else
+    goto <bb 49>;
+
+  <bb 48>:
+  pretmp_33 = MEM[(struct _Vector_base *)&temp]._M_impl._M_start;
+  goto <bb 57>;
+
+  <bb 49>:
+  pretmp_76 = MEM[(struct _Vector_base *)&temp]._M_impl._M_start;
+
+  <bb 50>:
+  # iter$node_32 = PHI <iter$node_149(36), iter$node_31(49)>
+  # i_144 = PHI <0(36), i_41(49)>
+  # i.31_139 = PHI <0(36), i.31_30(49)>
+  # prephitmp_100 = PHI <prephitmp_131(36), pretmp_76(49)>
+  _45 = MEM[(struct TreeNode * *)this_8(D) + 12B];
+  if (iter$node_32 != _45)
+    goto <bb 51>;
+  else
+    goto <bb 55>;
+
+  <bb 51>:
+
+  <bb 52>:
+  # ret_140 = PHI <1(51), ret_69(53)>
+  # iter$node_151 = PHI <iter$node_32(51), iter$node_71(53)>
+  ret_69 = ret_140 + 1;
+  iter$node_71 = iter$node_151->next_sibling;
+  if (_45 != iter$node_71)
+    goto <bb 53>;
+  else
+    goto <bb 54>;
+
+  <bb 53>:
+  goto <bb 52>;
+
+  <bb 54>:
+  # ret_94 = PHI <ret_69(52)>
+
+  <bb 55>:
+  # ret_135 = PHI <ret_94(54), 1(50)>
+  if (ret_135 > i.31_139)
+    goto <bb 37>;
+  else
+    goto <bb 56>;
+
+  <bb 56>:
+  # prephitmp_93 = PHI <prephitmp_100(55)>
+
+  <bb 57>:
+  # prephitmp_167 = PHI <prephitmp_93(56), pretmp_33(48), prephitmp_131(35)>
+  if (prephitmp_167 != 0B)
+    goto <bb 58>;
+  else
+    goto <bb 59>;
+
+  <bb 58>:
+  operator delete (prephitmp_167);
+
+  <bb 59>:
+  temp ={v} {CLOBBER};
+  temp ={v} {CLOBBER};
+  return;
+
+<L21>:
+
+<L19>:
+  i ={v} {CLOBBER};
+  _42 = MEM[(struct _Vector_base *)&temp]._M_impl._M_start;
+  if (_42 != 0B)
+    goto <bb 62>;
+  else
+    goto <bb 63>;
+
+  <bb 62>:
+  operator delete (_42);
+
+  <bb 63>:
+  temp ={v} {CLOBBER};
+  resx 2
+
+  <bb 64>:
+  j_48 = j_143 + 1;
+  if (j_48 < _125)
+    goto <bb 39>;
+  else
+    goto <bb 44>;
+
+}
+
+
+
+;; Function void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_erase(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type) [with _Key = int; _Val = std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>; _KeyOfValue = std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type = std::_Rb_tree_node<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >*] (_ZNSt8_Rb_treeIiSt4pairIKiPFPN4LUNA9Threading14IThreadBlockerEvEESt10_Select1stIS8_ESt4lessIiESaIS8_EE8_M_eraseEPSt13_Rb_tree_nodeIS8_E, funcdef_no=4536, decl_uid=43876, symbol_order=1566)
+
+void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_erase(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type) [with _Key = int; _Val = std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>; _KeyOfValue = std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type = std::_Rb_tree_node<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >*] (struct _Rb_tree * const this, struct _Rb_tree_node * __x)
+{
+  struct _Rb_tree_node_base * _5;
+
+  <bb 2>:
+  if (__x_3(D) != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  return;
+
+  <bb 4>:
+
+  <bb 5>:
+  # __x_12 = PHI <__x_3(D)(4), __x_8(6)>
+  _5 = MEM[(struct _Rb_tree_node_base * *)__x_12 + 12B];
+  std::_Rb_tree<int, std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>, std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >, std::less<int>, std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> > >::_M_erase (this_6(D), _5);
+  __x_8 = MEM[(struct _Rb_tree_node_base * *)__x_12 + 8B];
+  operator delete (__x_12);
+  if (__x_8 != 0B)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  goto <bb 3>;
+
+  <bb 6>:
+  goto <bb 5>;
+
+}
+
+
+
+;; Function static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::Utility::GenericFactory<LUNA::Threading::IThreadBlocker, int>] (_ZN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE16DestroySingletonEv, funcdef_no=4401, decl_uid=42532, symbol_order=1426)
+
+static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::Utility::GenericFactory<LUNA::Threading::IThreadBlocker, int>] ()
+{
+  bool m_destroyed.56_3;
+  struct GenericFactory * m_instance.57_4;
+  struct _Rep_type * _10;
+  struct _Rb_tree_node_base * _11;
+
+  <bb 2>:
+  m_destroyed.56_3 = m_destroyed;
+  if (m_destroyed.56_3 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  __assert_fail ("!m_destroyed", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Singleton.h", 152, &__PRETTY_FUNCTION__);
+
+  <bb 4>:
+  m_instance.57_4 ={v} m_instance;
+  if (m_instance.57_4 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _10 = &MEM[(struct map *)m_instance.57_4]._M_t;
+  _11 = MEM[(struct _Rb_tree_node_base * *)m_instance.57_4 + 8B];
+  std::_Rb_tree<int, std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>, std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >, std::less<int>, std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> > >::_M_erase (_10, _11);
+  *m_instance.57_4 ={v} {CLOBBER};
+  operator delete (m_instance.57_4);
+
+  <bb 6>:
+  m_instance ={v} 0B;
+  m_destroyed = 1;
+  return;
+
+}
+
+
+
+;; Function (static initializers for src/MainModel.cpp) (_GLOBAL__sub_I__ZN9MainModel9MainModelC2Ev, funcdef_no=4652, decl_uid=88818, symbol_order=2523) (executed once)
+
+(static initializers for src/MainModel.cpp) ()
+{
+  int _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE.88_3;
+  int _4;
+  int _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE.89_5;
+  int _6;
+  int _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE.90_7;
+  int _8;
+  int _ZGVN4LUNA7Utility15SingletonHolderINS_7RaMstix14RaMstixManagerEE6m_lockE.91_9;
+  int _10;
+
+  <bb 2>:
+  std::ios_base::Init::Init (&__ioinit);
+  __aeabi_atexit (&__ioinit, __comp_dtor , &__dso_handle);
+  _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE.88_3 = _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE;
+  _4 = _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE.88_3 & 1;
+  if (_4 == 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE = 1;
+  LUNA::locksync::Mutex::Mutex (&m_lock, 1, 0);
+  __aeabi_atexit (&m_lock, __comp_dtor , &__dso_handle);
+
+  <bb 4>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE.89_5 = _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE;
+  _6 = _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE.89_5 & 1;
+  if (_6 == 0)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE = 1;
+  LUNA::locksync::Mutex::Mutex (&m_lock, 1, 0);
+  __aeabi_atexit (&m_lock, __comp_dtor , &__dso_handle);
+
+  <bb 6>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE.90_7 = _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE;
+  _8 = _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE.90_7 & 1;
+  if (_8 == 0)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+  <bb 7>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE = 1;
+  LUNA::locksync::Mutex::Mutex (&m_lock, 1, 0);
+  __aeabi_atexit (&m_lock, __comp_dtor , &__dso_handle);
+
+  <bb 8>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_7RaMstix14RaMstixManagerEE6m_lockE.91_9 = _ZGVN4LUNA7Utility15SingletonHolderINS_7RaMstix14RaMstixManagerEE6m_lockE;
+  _10 = _ZGVN4LUNA7Utility15SingletonHolderINS_7RaMstix14RaMstixManagerEE6m_lockE.91_9 & 1;
+  if (_10 == 0)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 9>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_7RaMstix14RaMstixManagerEE6m_lockE = 1;
+  LUNA::locksync::Mutex::Mutex (&m_lock, 1, 0);
+  __aeabi_atexit (&m_lock, __comp_dtor , &__dso_handle);
+
+  <bb 10>:
+  return;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSProcess::preRun() (_ZN4LUNA3CSP9CSProcess6preRunEv, funcdef_no=1975, decl_uid=42445, symbol_order=470)
+
+virtual void LUNA::CSP::CSProcess::preRun() (struct CSProcess * const this)
+{
+  struct _Rb_tree_node_base * SR.523;
+  struct _Rb_tree_node_base * SR.522;
+  struct EmergencyManager * D.92202;
+  struct IThreadBlocker * D.92189;
+  struct iterator D.92185;
+  struct _Rb_tree_node * __y;
+  struct iterator D.92181;
+  struct _Rb_tree_node_base * SR.350;
+  struct IThreadBlocker * D.92179;
+  struct GenericFactory * D.92176;
+  static const char __FUNCTION__[7] = "preRun";
+  const int D.44663;
+  struct IThread * _10;
+  int (*__vtbl_ptr_type) () * _11;
+  int (*__vtbl_ptr_type) () _12;
+  int _14;
+  const char * _20;
+  struct IThread * _22;
+  int _25;
+  struct IThread * _26;
+  int (*__vtbl_ptr_type) () * _27;
+  int (*__vtbl_ptr_type) () _28;
+  int _30;
+  int _31;
+  struct GenericFactory * m_instance.51_34;
+  struct GenericFactory * m_instance.53_35;
+  bool m_destroyed.54_36;
+  void * _37;
+  struct _Rb_tree_node_base * _38;
+  struct GenericFactory * _39;
+  struct IThreadBlocker * (*<T8397>) (void) _42;
+  struct IThreadBlocker * _43;
+  const int _48;
+  const int _55;
+  struct EmergencyManager * m_instance.62_59;
+  struct EmergencyManager * m_instance.64_60;
+  bool m_destroyed.65_61;
+  void * _62;
+  struct EmergencyManager * _63;
+  int (*__vtbl_ptr_type) () * _64;
+  int (*__vtbl_ptr_type) () _65;
+  int _66;
+
+  <bb 2>:
+  __builtin_puts (&"Setting thread mode for mode switches"[0]);
+  pthread_setmode_np (16384, 0, 0B);
+  m_instance.51_34 ={v} m_instance;
+  if (m_instance.51_34 == 0B)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 3>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.53_35 ={v} m_instance;
+  if (m_instance.53_35 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 7>;
+
+  <bb 4>:
+  m_destroyed.54_36 = m_destroyed;
+  if (m_destroyed.54_36 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 6>:
+  _37 = operator new (24);
+  MEM[(struct _Rb_tree_impl *)_37]._M_header._M_color = 0;
+  MEM[(struct _Rb_tree_impl *)_37]._M_header._M_parent = 0B;
+  MEM[(struct _Rb_tree_impl *)_37]._M_node_count = 0;
+  _38 = &MEM[(struct _Rb_tree_impl *)_37]._M_header;
+  MEM[(struct _Rb_tree_impl *)_37]._M_header._M_left = _38;
+  MEM[(struct _Rb_tree_impl *)_37]._M_header._M_right = _38;
+  m_instance ={v} _37;
+  atexit (DestroySingleton);
+
+  <bb 7>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 8>:
+  _39 ={v} m_instance;
+  _10 = this_9(D)->D.42484.m_thread;
+  _11 = _10->D.35164._vptr.Uncopyable;
+  _12 = MEM[(int (*__vtbl_ptr_type) () *)_11 + 28B];
+  _14 = OBJ_TYPE_REF(_12;(struct IThread)_10->7) (_10);
+  __y_16 = MEM[(struct _Rb_tree_node_base * *)_39 + 8B];
+  __y_46 = &MEM[(struct _Rb_tree *)_39]._M_impl._M_header;
+  if (__y_16 != 0B)
+    goto <bb 9>;
+  else
+    goto <bb 18>;
+
+  <bb 9>:
+
+  <bb 10>:
+  # __y_108 = PHI <__y_16(9), __y_57(14)>
+  # __y_87 = PHI <__y_46(9), __y_56(14)>
+  _48 = MEM[(const int &)__y_108 + 16];
+  if (_14 <= _48)
+    goto <bb 11>;
+  else
+    goto <bb 12>;
+
+  <bb 11>:
+  __y_50 = MEM[(struct _Rb_tree_node_base * *)__y_108 + 8B];
+  goto <bb 13>;
+
+  <bb 12>:
+  __y_51 = MEM[(struct _Rb_tree_node_base * *)__y_108 + 12B];
+
+  <bb 13>:
+  # __y_57 = PHI <__y_50(11), __y_51(12)>
+  # __y_56 = PHI <__y_108(11), __y_87(12)>
+  if (__y_57 != 0B)
+    goto <bb 14>;
+  else
+    goto <bb 15>;
+
+  <bb 14>:
+  goto <bb 10>;
+
+  <bb 15>:
+  # __y_107 = PHI <__y_56(13)>
+  if (__y_46 == __y_107)
+    goto <bb 18>;
+  else
+    goto <bb 16>;
+
+  <bb 16>:
+  _55 = MEM[(const int &)__y_107 + 16];
+  if (_14 < _55)
+    goto <bb 18>;
+  else
+    goto <bb 17>;
+
+  <bb 17>:
+  _42 = MEM[(struct pair *)__y_107 + 16B].second;
+  _43 = _42 ();
+  this_9(D)->m_activate = _43;
+  if (_43 == 0B)
+    goto <bb 19>;
+  else
+    goto <bb 28>;
+
+  <bb 18>:
+  LUNA::log (5, "GenericFactory::CreateObject - identifier type not known.\n");
+  this_9(D)->m_activate = 0B;
+
+  <bb 19>:
+  _20 = MEM[(const char * *)this_9(D) + 48B];
+  LUNA::log (5, "[%s]::%s - createThreadBlocker failed.\n", _20, &__FUNCTION__);
+  m_instance.62_59 ={v} m_instance;
+  if (m_instance.62_59 == 0B)
+    goto <bb 20>;
+  else
+    goto <bb 26>;
+
+  <bb 20>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.64_60 ={v} m_instance;
+  if (m_instance.64_60 == 0B)
+    goto <bb 21>;
+  else
+    goto <bb 25>;
+
+  <bb 21>:
+  m_destroyed.65_61 = m_destroyed;
+  if (m_destroyed.65_61 != 0)
+    goto <bb 22>;
+  else
+    goto <bb 23>;
+
+  <bb 22>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 23>:
+  _62 = operator new (72);
+  LUNA::EmergencyManager::EmergencyManager (_62);
+
+  <bb 24>:
+  m_instance ={v} _62;
+  atexit (DestroySingleton);
+
+  <bb 25>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 26>:
+  _63 ={v} m_instance;
+  LUNA::EmergencyManager::emergencyShutdown (_63);
+  goto <bb 28>;
+
+<L17>:
+  operator delete (_62);
+  resx 3
+
+  <bb 28>:
+  _25 = this_9(D)->D.42485.m_priority;
+  if (_25 != -1)
+    goto <bb 29>;
+  else
+    goto <bb 30>;
+
+  <bb 29>:
+  _26 = this_9(D)->D.42484.m_thread;
+  _27 = _26->D.35164._vptr.Uncopyable;
+  _28 = MEM[(int (*__vtbl_ptr_type) () *)_27 + 12B];
+  _30 = OBJ_TYPE_REF(_28;(struct IThread)_26->3) (_26, _25);
+  if (_30 != 0)
+    goto <bb 31>;
+  else
+    goto <bb 32>;
+
+  <bb 30>:
+  _22 = this_9(D)->D.42484.m_thread;
+  _64 = _22->D.35164._vptr.Uncopyable;
+  _65 = MEM[(int (*__vtbl_ptr_type) () *)_64 + 16B];
+  _66 = OBJ_TYPE_REF(_65;(struct IThread)_22->4) (_22);
+  this_9(D)->D.42485.m_priority = _66;
+
+  <bb 31>:
+  return;
+
+  <bb 32>:
+  _31 = this_9(D)->D.42485.m_priority;
+  if (_31 == -1)
+    goto <bb 30>;
+  else
+    goto <bb 31>;
+
+}
+
+
+
+;; Function MainModel::MainModel::MainModel() (_ZN9MainModel9MainModelC2Ev, funcdef_no=4189, decl_uid=83283, symbol_order=1190)
+
+MainModel::MainModel::MainModel() (struct MainModel * const this)
+{
+  struct RaMstixManager * D.92249;
+  struct RaMstixManager * D.92246;
+  struct RaMstixPWMChannel * D.92243;
+  struct OSScheduler * D.92234;
+  struct CSProcess * D.92233;
+  struct Recursion * D.92230;
+  struct period_t D.83622;
+  struct Recursion * _3;
+  void * _12;
+  struct RaMstixManager * m_instance.81_13;
+  void * _17;
+  void * _22;
+  struct RaMstixPWMChannel * _23;
+  struct PeriodicTimerChannel * _24;
+  void * _28;
+  struct Model32 * _29;
+  struct CSPConstruct * _32;
+  struct Parallel * _33;
+  struct CSPConstruct * _55;
+  struct OSScheduler * m_instance.71_57;
+  struct OSScheduler * m_instance.73_58;
+  bool m_destroyed.74_59;
+  void * _60;
+  struct OSScheduler * _61;
+  int _68;
+  int _72;
+  unsigned char _73;
+  unsigned int _74;
+  struct RaMstixManager * m_instance.83_78;
+  bool m_destroyed.84_79;
+  void * _80;
+  struct RaMstixManager * _81;
+  int _82;
+  int _83;
+  struct TreeNode * _85;
+  unsigned int pretmp_90;
+  unsigned int prephitmp_97;
+  struct TreeNode * pretmp_101;
+  struct TreeNode * prephitmp_102;
+  uint8_t pretmp_161;
+
+  <bb 2>:
+  _3 = &this_2(D)->D.83294;
+  LUNA::Runnable::Runnable (_3);
+  _55 = &MEM[(struct CSProcess *)this_2(D)].D.42485;
+  MEM[(struct TreeNode *)this_2(D) + 8B].parent = 0B;
+  MEM[(struct TreeNode *)this_2(D) + 8B].first_child = 0B;
+  MEM[(struct TreeNode *)this_2(D) + 8B].last_child = 0B;
+  MEM[(struct TreeNode *)this_2(D) + 8B].prev_sibling = 0B;
+  MEM[(struct TreeNode *)this_2(D) + 8B].next_sibling = 0B;
+  MEM[(struct TreeNode *)this_2(D) + 8B].data = _55;
+  MEM[(struct CSPConstruct *)this_2(D) + 8B].m_guard = 0B;
+  MEM[(struct CSPConstruct *)this_2(D) + 8B].m_exit = 0;
+  MEM[(struct CSPConstruct *)this_2(D) + 8B].m_priority = -1;
+  MEM[(struct Recursion *)this_2(D)].m_to_activate = 0B;
+  MEM[(struct Recursion *)this_2(D)].m_condition_type = 3;
+  MEM[(struct _Function_base *)this_2(D) + 72B]._M_manager = 0B;
+  MEM[(struct Recursion *)this_2(D)].m_callback_process = 0B;
+  MEM[(struct Recursion *)this_2(D)].m_recursion_counter = 0;
+  MEM[(struct Recursion *)this_2(D)].m_lock = 0B;
+  MEM[(struct Recursion *)this_2(D)].m_blocker = 0B;
+  MEM[(const char * *)this_2(D) + 52B] = "Recursion";
+  this_2(D)->D.83294.D.83250.D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN9MainModel9MainModelE + 8B];
+  this_2(D)->D.83294.D.83250.D.42485.D.35429._vptr.TreeNode = &MEM[(void *)&_ZTVN9MainModel9MainModelE + 68B];
+  MEM[(const char * *)this_2(D) + 48B] = "MainModel";
+  m_instance.71_57 ={v} m_instance;
+  if (m_instance.71_57 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _61 ={v} m_instance;
+  LUNA::Threading::OSScheduler::setSchedulerPolicy (_61, 1);
+  goto <bb 19>;
+
+  <bb 4>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+
+  <bb 5>:
+  m_instance.73_58 ={v} m_instance;
+  if (m_instance.73_58 == 0B)
+    goto <bb 6>;
+  else
+    goto <bb 14>;
+
+  <bb 6>:
+  m_destroyed.74_59 = m_destroyed;
+  if (m_destroyed.74_59 != 0)
+    goto <bb 7>;
+  else
+    goto <bb 10>;
+
+  <bb 7>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  goto <bb 9>;
+
+<L16>:
+  goto <bb 76> (<L7>);
+
+  <bb 9>:
+  m_destroyed = 0;
+
+  <bb 10>:
+  _60 = operator new (16);
+  goto <bb 12>;
+
+<L17>:
+  goto <bb 76> (<L7>);
+
+  <bb 12>:
+  LUNA::Threading::OSScheduler::OSScheduler (_60);
+
+  <bb 13>:
+  m_instance ={v} _60;
+  atexit (DestroySingleton);
+
+  <bb 14>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+  goto <bb 3>;
+
+<L18>:
+  goto <bb 76> (<L7>);
+
+<L19>:
+  goto <bb 76> (<L7>);
+
+<L10>:
+  operator delete (_60);
+  resx 15
+
+<L20>:
+  goto <bb 76> (<L7>);
+
+  <bb 19>:
+  _12 = operator new (12);
+  goto <bb 21>;
+
+<L21>:
+  goto <bb 76> (<L7>);
+
+  <bb 21>:
+  MEM[(struct RaMstixPWMChannel *)_12].D.83468._vptr.ChannelIn = &MEM[(void *)&_ZTVN4LUNA3CSP7RaMstix17RaMstixPWMChannelIdEE + 8B];
+  MEM[(struct RaMstixPWMChannel *)_12].m_nr = 2;
+  MEM[(struct RaMstixPWMChannel *)_12].m_transform = 0;
+  MEM[(struct RaMstixPWMChannel *)_12].m_fd = -1;
+  m_instance.81_13 ={v} m_instance;
+  if (m_instance.81_13 == 0B)
+    goto <bb 22>;
+  else
+    goto <bb 40>;
+
+  <bb 22>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+
+  <bb 23>:
+  m_instance.83_78 ={v} m_instance;
+  if (m_instance.83_78 == 0B)
+    goto <bb 24>;
+  else
+    goto <bb 37>;
+
+  <bb 24>:
+  m_destroyed.84_79 = m_destroyed;
+  if (m_destroyed.84_79 != 0)
+    goto <bb 25>;
+  else
+    goto <bb 28>;
+
+  <bb 25>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  goto <bb 27>;
+
+<L23>:
+  goto <bb 50> (<L12>);
+
+  <bb 27>:
+  m_destroyed = 0;
+
+  <bb 28>:
+  _80 = operator new (4);
+  goto <bb 30>;
+
+<L24>:
+  goto <bb 50> (<L12>);
+
+  <bb 30>:
+  MEM[(struct RaMstixManager *)_80].m_fd = -1;
+  _82 = openGPMCFPGA ("/dev/rtdm/rt_gpmc_fpga");
+
+  <bb 31>:
+  MEM[(struct RaMstixManager *)_80].m_fd = _82;
+  if (_82 < 0)
+    goto <bb 33>;
+  else
+    goto <bb 32>;
+
+  <bb 32>:
+  m_instance ={v} _80;
+  atexit (DestroySingleton);
+  goto <bb 37>;
+
+  <bb 33>:
+  printf ("Error opening FPGA. fd: %d \n", _82);
+  goto <bb 35>;
+
+<L26>:
+  goto <bb 43> (<L13>);
+
+  <bb 35>:
+  _83 = MEM[(struct RaMstixManager *)_80].m_fd;
+  LUNA::log (5, "RaMstixDigitalAnalogChannel - Error opening FPGA. fd: %d \n", _83);
+  goto <bb 32>;
+
+<L27>:
+  goto <bb 43> (<L13>);
+
+  <bb 37>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+  goto <bb 39>;
+
+<L28>:
+  goto <bb 50> (<L12>);
+
+  <bb 39>:
+  pretmp_161 = MEM[(struct RaMstixPWMChannel *)_12].m_nr;
+  pretmp_90 = (unsigned int) pretmp_161;
+
+  <bb 40>:
+  # prephitmp_97 = PHI <2(21), pretmp_90(39)>
+  _81 ={v} m_instance;
+  _68 = _81->m_fd;
+  MEM[(struct RaMstixPWMChannel *)_12].m_fd = _68;
+  ramstixSetPWMFrequency (_68, prephitmp_97, 2.1e+4);
+  goto <bb 45>;
+
+<L29>:
+  goto <bb 50> (<L12>);
+
+<L25>:
+
+<L13>:
+  operator delete (_80);
+  resx 17
+
+<L30>:
+  goto <bb 50> (<L12>);
+
+  <bb 45>:
+  _72 = MEM[(struct RaMstixPWMChannel *)_12].m_fd;
+  _73 = MEM[(struct RaMstixPWMChannel *)_12].m_nr;
+  _74 = (unsigned int) _73;
+  ramstixInitPWMOut (_72, _74, 2, 0, 0);
+  goto <bb 47> (<L11>);
+
+<L31>:
+  goto <bb 50> (<L12>);
+
+<L11>:
+  this_2(D)->myPWMpt_out_to_pwm_portChannel = _12;
+  MEM[(struct period_t *)&D.83622] = 0;
+  MEM[(struct period_t *)&D.83622 + 8B] = 0;
+  _17 = operator new (96);
+  goto <bb 51>;
+
+<L32>:
+  goto <bb 76> (<L7>);
+
+<L22>:
+
+<L12>:
+  MEM[(struct ChannelIn *)_12] ={v} {CLOBBER};
+  resx 16
+
+  <bb 51>:
+  LUNA::CSP::PeriodicTimerChannel::PeriodicTimerChannel (_17, D.83622, 0);
+
+  <bb 52>:
+  this_2(D)->myPWMpt_timer_to_timerChannel = _17;
+  D.83622 ={v} {CLOBBER};
+  _22 = operator new (104);
+  goto <bb 54>;
+
+<L33>:
+  goto <bb 76> (<L7>);
+
+  <bb 54>:
+  _23 = this_2(D)->myPWMpt_out_to_pwm_portChannel;
+  _24 = this_2(D)->myPWMpt_timer_to_timerChannel;
+  Model32::Model32::Model32 (_22, _23, _24);
+
+  <bb 55>:
+  this_2(D)->myPWM = _22;
+  MEM[(const char * *)_22 + 40B] = "PWM";
+  _28 = operator new (52);
+  goto <bb 57>;
+
+<L34>:
+  goto <bb 76> (<L7>);
+
+  <bb 57>:
+  _29 = this_2(D)->myPWM;
+  LUNA::CSP::Parallel::Parallel (_28, _29, 0);
+
+  <bb 58>:
+  this_2(D)->parallelGroup = _28;
+  MEM[(const char * *)_28 + 40B] = "parallelGroup";
+  _33 = this_2(D)->parallelGroup;
+  _32 = MEM[(struct Recursion *)this_2(D)].m_to_activate;
+  if (_32 != 0B)
+    goto <bb 60>;
+  else
+    goto <bb 59>;
+
+  <bb 59>:
+  pretmp_101 = MEM[(struct TreeNode *)this_2(D) + 8B].last_child;
+  goto <bb 61>;
+
+  <bb 60>:
+  _32->D.35429.parent = 0B;
+  _32->D.35429.prev_sibling = 0B;
+  MEM[(struct Recursion *)this_2(D)].D.83250.D.42485.D.35429.first_child = 0B;
+  MEM[(struct Recursion *)this_2(D)].D.83250.D.42485.D.35429.last_child = 0B;
+
+  <bb 61>:
+  # prephitmp_102 = PHI <pretmp_101(59), 0B(60)>
+  MEM[(struct Recursion *)this_2(D)].m_to_activate = _33;
+  MEM[(struct tree_node_t *)_33].parent = _55;
+  if (prephitmp_102 != 0B)
+    goto <bb 62>;
+  else
+    goto <bb 63>;
+
+  <bb 62>:
+  prephitmp_102->next_sibling = _33;
+  goto <bb 66>;
+
+  <bb 63>:
+  _85 = MEM[(struct TreeNode *)this_2(D) + 8B].first_child;
+  if (_85 != 0B)
+    goto <bb 64>;
+  else
+    goto <bb 65>;
+
+  <bb 64>:
+  LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>::_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEE12append_childEPS5_.part.2 ();
+
+  <bb 65>:
+  MEM[(struct TreeNode *)this_2(D) + 8B].first_child = _33;
+
+  <bb 66>:
+  MEM[(struct tree_node_t *)_33].prev_sibling = prephitmp_102;
+  MEM[(struct TreeNode *)this_2(D) + 8B].last_child = _33;
+  MEM[(struct tree_node_t *)_33].next_sibling = 0B;
+  MEM[(ConditionType *)this_2(D) + 68B] = 3;
+  return this_2(D);
+
+<L2>:
+  operator delete (_12);
+  resx 3
+
+<L35>:
+  goto <bb 76> (<L7>);
+
+<L3>:
+  operator delete (_17);
+  resx 6
+
+<L36>:
+  goto <bb 76> (<L7>);
+
+<L5>:
+  operator delete (_22);
+  resx 9
+
+<L37>:
+  goto <bb 76> (<L7>);
+
+<L6>:
+  operator delete (_28);
+  resx 11
+
+<L38>:
+  goto <bb 76> (<L7>);
+
+<L15>:
+
+<L7>:
+  D.83622 ={v} {CLOBBER};
+  LUNA::CSP::Recursion<LUNA::CSP::CSProcess>::~Recursion (_3);
+  resx 1
+
+}
+
+

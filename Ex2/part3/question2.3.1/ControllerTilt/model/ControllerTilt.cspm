@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI file-version="3" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:csp="http:///nl/utwente/ce/terra/csp/model/csp.ecore" xmlns:fmi="http:///nl/utwente/ce/terra/fmi/model/fmi.ecore">
+  <csp:CSPDiagram>
+    <objects xsi:type="csp:CSPPort" link="/0/@links.0" name="steerIO" constraints="75,75,10,10"/>
+    <objects xsi:type="csp:CSPWriter" name="w_steerIO" constraints="140,60,30,30" compositionalRelations="/0/@compositionalRelations.0" link="/0/@links.0" variable="/0/@properties.2/@variables.0"/>
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="/0/@links.1" name="measIO" constraints="75,155,10,10"/>
+    <objects xsi:type="csp:CSPReader" name="r_measIO" constraints="140,140,30,30" compositionalRelations="/0/@compositionalRelations.0 /0/@compositionalRelations.1" link="/0/@links.1" variable="/0/@properties.2/@variables.1"/>
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="/0/@links.2" name="SetPointTilt" constraints="75,235,10,10"/>
+    <objects xsi:type="csp:CSPReader" name="r_SetPointTilt" constraints="140,220,30,30" compositionalRelations="/0/@compositionalRelations.1" link="/0/@links.2" variable="/0/@properties.2/@variables.2"/>
+    <objects xsi:type="csp:CSPCompositionalGroup" name="FMUSEQ" constraints="100,20,440,280" relations="/0/@compositionalRelations.2"/>
+    <objects xsi:type="csp:CSPCompositionalGroup" name="IO" constraints="120,40,80,240" compositionalRelations="/0/@compositionalRelations.2" relations="/0/@compositionalRelations.0 /0/@compositionalRelations.1"/>
+    <objects xsi:type="csp:CSPModel" name="FMI_ControllerTilt" constraints="285,135,70,50" compositionalRelations="/0/@compositionalRelations.2">
+      <submodel xsi:type="csp:CSPDiagram">
+        <properties xsi:type="csp:CSPVariablesProperty">
+          <variables name="steerIO" linkedParent="/0/@properties.2/@variables.0"/>
+          <variables name="measIO" linkedParent="/0/@properties.2/@variables.1"/>
+          <variables name="SetPointTilt" linkedParent="/0/@properties.2/@variables.2"/>
+        </properties>
+      </submodel>
+      <configuration xsi:type="fmi:FMIModel" callbackFunctions="/1">
+        <headerFiles>fmi2Functions.h</headerFiles>
+        <headerFiles>logger.h</headerFiles>
+        <sourceFiles>src/logger.cpp</sourceFiles>
+        <portMapping name="steerIO" direction="OUTPUT" dataType="REAL" reference="16"/>
+        <portMapping name="measIO" dataType="REAL" reference="17"/>
+        <portMapping name="SetPointTilt" dataType="REAL" reference="18"/>
+        <parameterRealMapping name="ControllerTilt_PID_Tilt_kp" value="10.0"/>
+        <parameterRealMapping name="ControllerTilt_PID_Tilt_tauD" reference="1" value="5.0"/>
+        <parameterRealMapping name="ControllerTilt_PID_Tilt_beta" reference="2" value="0.1"/>
+        <parameterRealMapping name="ControllerTilt_PID_Tilt_tauI" reference="3" value="1000.0"/>
+        <parameterRealMapping name="MA_Tilt_Conversion_K" reference="4" value="0.003141592"/>
+        <parameterRealMapping name="MA_Tilt_Limit_maximum" reference="5" value="1.0"/>
+        <parameterRealMapping name="MA_Tilt_Limit_minimum" reference="6" value="-1.0"/>
+        <parameterRealMapping name="ControllerTilt_PID_Tilt_uD_previous_initial" reference="7" initial="true"/>
+        <parameterRealMapping name="ControllerTilt_PID_Tilt_error_previous_initial" reference="8" initial="true"/>
+        <parameterRealMapping name="ControllerTilt_PID_Tilt_uI_previous_initial" reference="9" initial="true"/>
+        <modelDescription modelName="ControllerTilt" guid="{68349200-7a34-4758-b26a-17605c9946e0}" generationTool="20-sim 4.7.0"/>
+        <simulationProperties stopTime="20.0" stepSize="0.01"/>
+        <FMUProperties modelIdentifier="ControllerTilt" canHandleVariableCommunicationStepSize="true" canNotUseMemoryManagementFunctions="true" canGetAndSetFMUstate="true"/>
+      </configuration>
+    </objects>
+    <properties xsi:type="cpc:CPCSharedDiagramProperty" componentName="ControllerTilt"/>
+    <properties xsi:type="cpc:CPCUnitsProperty">
+      <units name="IO_Real" type="real" unit="fmi_Real"/>
+      <units name="IO_boolean" type="boolean" unit="fmi_boolean"/>
+      <units name="IO_integer" type="integer" unit="fmi_integer"/>
+    </properties>
+    <properties xsi:type="csp:CSPVariablesProperty">
+      <variables name="v_steerIO" type="/0/@properties.1/@units.0"/>
+      <variables name="v_measIO" type="/0/@properties.1/@units.0"/>
+      <variables name="v_SetPointTilt" type="/0/@properties.1/@units.0"/>
+    </properties>
+    <links xsi:type="csp:CSPChannel" ports="/0/@objects.0 /0/@objects.1"/>
+    <links xsi:type="csp:CSPChannel" ports="/0/@objects.2 /0/@objects.3"/>
+    <links xsi:type="csp:CSPChannel" ports="/0/@objects.4 /0/@objects.5"/>
+    <compositionalRelations compositeObjects="/0/@objects.1 /0/@objects.3" compositionalGroup="/0/@objects.7"/>
+    <compositionalRelations compositeObjects="/0/@objects.3 /0/@objects.5" compositionalGroup="/0/@objects.7"/>
+    <compositionalRelations compositeObjects="/0/@objects.7 /0/@objects.8" type="SEQUENTIAL" compositionalGroup="/0/@objects.6"/>
+  </csp:CSPDiagram>
+  <fmi:FMICallbackFunctions/>
+</xmi:XMI>

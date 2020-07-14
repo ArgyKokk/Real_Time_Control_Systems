@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csp:CSPDiagram file-version="3" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:cpp="http:///nl/utwente/ce/terra/cpp/model/cpp.ecore" xmlns:csp="http:///nl/utwente/ce/terra/csp/model/csp.ecore">
+  <objects xsi:type="csp:CSPModel" name="cpp_encoder" constraints="269,132,96,50" compositionalRelations="//@compositionalRelations.0">
+    <submodel xsi:type="csp:CSPDiagram">
+      <properties xsi:type="csp:CSPVariablesProperty">
+        <variables name="In_En" linkedParent="//@properties.2/@variables.1"/>
+      </properties>
+    </submodel>
+    <configuration xsi:type="cpp:CPPCodeBlockConfiguration"/>
+  </objects>
+  <objects xsi:type="csp:CSPWriter" name="wr_timer" constraints="306,55,30,30" compositionalRelations="//@compositionalRelations.1" link="//@links.0" variable="//@properties.2/@variables.0"/>
+  <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.1" unitType="//@properties.1/@units.1" name="pt_out" constraints="611,153,10,10"/>
+  <objects xsi:type="csp:CSPPort" link="//@links.0" name="pt_timer" constraints="317,-6,10,10"/>
+  <objects xsi:type="csp:CSPReader" name="reader_encoder" constraints="501,142,30,30" compositionalRelations="//@compositionalRelations.0" link="//@links.1" variable="//@properties.2/@variables.1"/>
+  <objects xsi:type="csp:CSPCompositionalGroup" name="SEQUENTIAL" constraints="244,107,312,100" compositionalRelations="//@compositionalRelations.1" relations="//@compositionalRelations.0"/>
+  <objects xsi:type="csp:CSPCompositionalGroup" name="SEQUENTIAL_ALL" constraints="219,30,362,202" relations="//@compositionalRelations.1"/>
+  <properties xsi:type="cpc:CPCSharedDiagramProperty" componentName="ModelEn"/>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="time" type="time period"/>
+    <units name="encoder" type="integer" unit=""/>
+  </properties>
+  <properties xsi:type="csp:CSPVariablesProperty">
+    <variables name="timeDummy" type="//@properties.1/@units.0"/>
+    <variables name="encoder" type="//@properties.1/@units.1"/>
+  </properties>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.1 //@objects.3"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.2 //@objects.4"/>
+  <compositionalRelations compositeObjects="//@objects.4 //@objects.0" type="SEQUENTIAL" compositionalGroup="//@objects.5"/>
+  <compositionalRelations compositeObjects="//@objects.1 //@objects.5" type="SEQUENTIAL" compositionalGroup="//@objects.6"/>
+</csp:CSPDiagram>

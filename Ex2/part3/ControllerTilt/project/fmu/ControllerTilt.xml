@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fmiModelDescription fmiVersion="2.0" modelName="ControllerTilt" guid="{68349200-7a34-4758-b26a-17605c9946e0}" generationTool="20-sim 4.7.0" numberOfEventIndicators="0" variableNamingConvention="structured" copyright="Controllab Products B.V." license="-">
+<CoSimulation modelIdentifier="ControllerTilt" needsExecutionTool="false" canHandleVariableCommunicationStepSize="true" canInterpolateInputs="false" maxOutputDerivativeOrder="0" canRunAsynchronuously="false" canBeInstantiatedOnlyOncePerProcess="false" canNotUseMemoryManagementFunctions="true" canGetAndSetFMUstate="true" canSerializeFMUstate="false" providesDirectionalDerivative="false">
+<SourceFiles>
+<File name="EulerAngles.c" />
+<File name="fmi2Functions.c" />
+<File name="MotionProfiles.c" />
+<File name="xxfuncs.c" />
+<File name="xxinteg.c" />
+<File name="xxinverse.c" />
+<File name="xxmatrix.c" />
+<File name="xxmodel.c" />
+<File name="xxsubmod.c" />
+<File name="xxTable2D.c" />
+</SourceFiles>
+</CoSimulation>
+<DefaultExperiment startTime="0.0" stopTime="20.0" stepSize="0.01" />
+<ModelVariables>
+<ScalarVariable name="ControllerTilt.PID_Tilt.output" valueReference="10" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.kp" valueReference="0" description="Proportional gain" variability="tunable" causality="parameter">
+<Real start="10.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.tauD" valueReference="1" description="Derivative time constant: tauD &gt; 0" variability="tunable" causality="parameter">
+<Real start="5.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.beta" valueReference="2" description="Tameness constant: 0 &lt; beta &lt;&lt; 1" variability="tunable" causality="parameter">
+<Real start="0.1" />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.tauI" valueReference="3" description="Integral time constant: tauI &gt; 0" variability="tunable" causality="parameter">
+<Real start="1000.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PlusMinus.output" valueReference="23" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PlusMinus.plus1" valueReference="12" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PlusMinus.minus1" valueReference="13" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.MeasuredTilt" valueReference="13" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.SteeringTilt" valueReference="10" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.SetPointTilt" valueReference="12" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.Conversion.input" valueReference="15" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.Conversion.output" valueReference="13" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.Conversion.K" valueReference="4" description="gain" variability="tunable" causality="parameter">
+<Real start="0.003141592" />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.Limit.input" valueReference="10" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.Limit.output" valueReference="14" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.Limit.maximum" valueReference="5" variability="tunable" causality="parameter">
+<Real start="1.0" />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.Limit.minimum" valueReference="6" variability="tunable" causality="parameter">
+<Real start="-1.0" />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.measIO" valueReference="15" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.steerIO" valueReference="14" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.measLC" valueReference="13" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Tilt.steerLC" valueReference="10" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="steerIO" valueReference="16" variability="continuous" causality="output">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="measIO" valueReference="17" variability="continuous" causality="input">
+<Real start="0.0" />
+</ScalarVariable>
+<ScalarVariable name="SetPointTilt" valueReference="18" variability="continuous" causality="input">
+<Real start="0.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.uD_previous" valueReference="19" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.uD_previous_initial" valueReference="7" variability="fixed" causality="parameter">
+<Real start="0.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.error" valueReference="23" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.error_previous" valueReference="20" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.error_previous_initial" valueReference="8" variability="fixed" causality="parameter">
+<Real start="0.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.uI_previous" valueReference="21" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerTilt.PID_Tilt.uI_previous_initial" valueReference="9" variability="fixed" causality="parameter">
+<Real start="0.0" />
+</ScalarVariable>
+</ModelVariables>
+<ModelStructure>
+<Outputs>
+<Unknown index="23" />
+</Outputs>
+</ModelStructure>
+</fmiModelDescription>

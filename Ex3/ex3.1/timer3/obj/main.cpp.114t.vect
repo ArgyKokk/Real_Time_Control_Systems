@@ -1,0 +1,5698 @@
+
+;; Function LUNA::Uncopyable::~Uncopyable() (_ZN4LUNA10UncopyableD2Ev, funcdef_no=1389, decl_uid=34941, symbol_order=386)
+
+LUNA::Uncopyable::~Uncopyable() (struct Uncopyable * const this)
+{
+  <bb 2>:
+  *this_2(D) ={v} {CLOBBER};
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual int LUNA::CSP::CSPConstruct::compareTo(LUNA::CSP::CSPConstruct*) (_ZN4LUNA3CSP12CSPConstruct9compareToEPS1_, funcdef_no=1424, decl_uid=35390, symbol_order=418)
+
+virtual int LUNA::CSP::CSPConstruct::compareTo(LUNA::CSP::CSPConstruct*) (struct CSPConstruct * const this, struct CSPConstruct * obj)
+{
+  int _3;
+  int (*__vtbl_ptr_type) () * _5;
+  int (*__vtbl_ptr_type) () _6;
+  int _8;
+  int _9;
+
+  <bb 2>:
+  _3 = this_2(D)->m_priority;
+  _5 = obj_4(D)->D.35429._vptr.TreeNode;
+  _6 = MEM[(int (*__vtbl_ptr_type) () *)_5 + 20B];
+  _8 = OBJ_TYPE_REF(_6;(struct CSPConstruct)obj_4(D)->5) (obj_4(D));
+  _9 = _3 - _8;
+  return _9;
+
+}
+
+
+
+;; Function virtual LUNA::Threading::priority_t LUNA::CSP::CSPConstruct::getPriority() (_ZN4LUNA3CSP12CSPConstruct11getPriorityEv, funcdef_no=1425, decl_uid=35395, symbol_order=419)
+
+virtual LUNA::Threading::priority_t LUNA::CSP::CSPConstruct::getPriority() (struct CSPConstruct * const this)
+{
+  priority_t _3;
+
+  <bb 2>:
+  _3 = this_2(D)->m_priority;
+  return _3;
+
+}
+
+
+
+;; Function virtual int LUNA::CSP::CSPConstruct::logDoneAndValue() (_ZN4LUNA3CSP12CSPConstruct15logDoneAndValueEv, funcdef_no=1427, decl_uid=35401, symbol_order=421)
+
+virtual int LUNA::CSP::CSPConstruct::logDoneAndValue() (struct CSPConstruct * const this)
+{
+  <bb 2>:
+  return 0;
+
+}
+
+
+
+;; Function virtual LUNA::Threading::priority_t LUNA::CSP::CSProcess::getPriority() (_ZN4LUNA3CSP9CSProcess11getPriorityEv, funcdef_no=1977, decl_uid=42450, symbol_order=474)
+
+virtual LUNA::Threading::priority_t LUNA::CSP::CSProcess::getPriority() (struct CSProcess * const this)
+{
+  priority_t _3;
+
+  <bb 2>:
+  _3 = this_2(D)->D.42485.m_priority;
+  return _3;
+
+}
+
+
+
+;; Function virtual int LUNA::CSP::CSProcess::logRunningAndValue() (_ZN4LUNA3CSP9CSProcess18logRunningAndValueEv, funcdef_no=1986, decl_uid=42464, symbol_order=493)
+
+virtual int LUNA::CSP::CSProcess::logRunningAndValue() (struct CSProcess * const this)
+{
+  <bb 2>:
+  return 0;
+
+}
+
+
+
+;; Function LUNA::Utility::TreeNode<T>::~TreeNode() [with T = LUNA::CSP::CSPConstruct*] (_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEED2Ev, funcdef_no=4252, decl_uid=35357, symbol_order=1270)
+
+LUNA::Utility::TreeNode<T>::~TreeNode() [with T = LUNA::CSP::CSPConstruct*] (struct TreeNode * const this)
+{
+  <bb 2>:
+  *this_2(D) ={v} {CLOBBER};
+  return this_2(D);
+
+}
+
+
+
+;; Function LUNA::Utility::TreeNode<T>::~TreeNode() [with T = LUNA::CSP::CSPConstruct*] (_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEED0Ev, funcdef_no=4254, decl_uid=35351, symbol_order=1272)
+
+LUNA::Utility::TreeNode<T>::~TreeNode() [with T = LUNA::CSP::CSPConstruct*] (struct TreeNode * const this)
+{
+  <bb 2>:
+  *this_2(D) ={v} {CLOBBER};
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual LUNA::Uncopyable::~Uncopyable() (_ZN4LUNA10UncopyableD0Ev, funcdef_no=1391, decl_uid=34935, symbol_order=388)
+
+virtual LUNA::Uncopyable::~Uncopyable() (struct Uncopyable * const this)
+{
+  <bb 2>:
+  *this_2(D) ={v} {CLOBBER};
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSProcess::setIThread(LUNA::Threading::IThread*) (_ZN4LUNA3CSP9CSProcess10setIThreadEPNS_9Threading7IThreadE, funcdef_no=1978, decl_uid=42453, symbol_order=477)
+
+virtual void LUNA::CSP::CSProcess::setIThread(LUNA::Threading::IThread*) (struct CSProcess * const this, struct IThread * thread)
+{
+  struct Runnable * _2;
+
+  <bb 2>:
+  _2 = &this_1(D)->D.42484;
+  LUNA::Runnable::setIThread (_2, thread_4(D));
+  return;
+
+}
+
+
+
+;; Function LUNA::CSP::Terminator::~Terminator() (_ZN4LUNA3CSP10TerminatorD2Ev, funcdef_no=3937, decl_uid=75003, symbol_order=1063)
+
+LUNA::CSP::Terminator::~Terminator() (struct Terminator * const this)
+{
+  struct Runnable * _7;
+
+  <bb 2>:
+  MEM[(struct CSProcess *)this_2(D)].D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN4LUNA3CSP9CSProcessE + 8B];
+  MEM[(struct CSPConstruct *)this_2(D) + 8B] ={v} {CLOBBER};
+  _7 = &MEM[(struct CSProcess *)this_2(D)].D.42484;
+  LUNA::Runnable::~Runnable (_7);
+  *this_2(D) ={v} {CLOBBER};
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual LUNA::CSP::Terminator::~Terminator() (_ZN4LUNA3CSP10TerminatorD0Ev, funcdef_no=3939, decl_uid=74997, symbol_order=1067)
+
+virtual LUNA::CSP::Terminator::~Terminator() (struct Terminator * const this)
+{
+  struct Runnable * _5;
+
+  <bb 2>:
+  MEM[(struct CSProcess *)this_2(D)].D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN4LUNA3CSP9CSProcessE + 8B];
+  MEM[(struct CSPConstruct *)this_2(D) + 8B] ={v} {CLOBBER};
+  _5 = &MEM[(struct CSProcess *)this_2(D)].D.42484;
+  LUNA::Runnable::~Runnable (_5);
+  *this_2(D) ={v} {CLOBBER};
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function LUNA::Threading::IThreadBlocker* LUNA::Threading::{anonymous}::CreateOSThreadBlocker() (_ZN4LUNA9Threading12_GLOBAL__N_121CreateOSThreadBlockerEv, funcdef_no=4191, decl_uid=83497, symbol_order=1189)
+
+LUNA::Threading::IThreadBlocker* LUNA::Threading::{anonymous}::CreateOSThreadBlocker() ()
+{
+  void * _3;
+
+  <bb 2>:
+  _3 = operator new (16);
+  LUNA::Threading::OSThreadBlocker::OSThreadBlocker (_3);
+
+  <bb 3>:
+  return _3;
+
+<L1>:
+  operator delete (_3);
+  resx 1
+
+}
+
+
+
+;; Function virtual bool LUNA::CSP::CSProcess::nextIteration() (_ZN4LUNA3CSP9CSProcess13nextIterationEv, funcdef_no=1980, decl_uid=42457, symbol_order=481)
+
+virtual bool LUNA::CSP::CSProcess::nextIteration() (struct CSProcess * const this)
+{
+  bool D.97039;
+  bool _2;
+  struct IThread * _6;
+  int (*__vtbl_ptr_type) () * _7;
+  int (*__vtbl_ptr_type) () _8;
+  bool _10;
+  bool _11;
+  struct IThreadBlocker * _14;
+  int (*__vtbl_ptr_type) () * _15;
+  int (*__vtbl_ptr_type) () _16;
+  struct IThread * _17;
+  bool _18;
+  bool _19;
+
+  <bb 2>:
+  _6 = this_5(D)->D.42484.m_thread;
+  _7 = _6->D.35164._vptr.Uncopyable;
+  _8 = MEM[(int (*__vtbl_ptr_type) () *)_7 + 60B];
+  _10 = OBJ_TYPE_REF(_8;(struct IThread)_6->15) (_6);
+  if (_10 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _11 = this_5(D)->D.42485.m_exit;
+  if (_11 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+  # _2 = PHI <_19(5), 0(3), 0(2)>
+  return _2;
+
+  <bb 5>:
+  _14 = this_5(D)->m_activate;
+  _15 = _14->D.41986._vptr.Uncopyable;
+  _16 = MEM[(int (*__vtbl_ptr_type) () *)_15 + 8B];
+  _17 = this_5(D)->D.42484.m_thread;
+  OBJ_TYPE_REF(_16;(struct IThreadBlocker)_14->2) (_14, _17, 0B);
+  _18 = this_5(D)->D.42485.m_exit;
+  _19 = ~_18;
+  goto <bb 4>;
+
+}
+
+
+
+;; Function void LUNA::Utility::TreeNode<T>::append_child(LUNA::Utility::TreeNode<T>::tree_node_t*) [with T = LUNA::CSP::CSPConstruct*; LUNA::Utility::TreeNode<T>::tree_node_t = LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>] (_ZN4LUNA7Utility8TreeNodeIPNS_3CSP12CSPConstructEE12append_childEPS5_, funcdef_no=4269, decl_uid=35327, symbol_order=1287)
+
+void LUNA::Utility::TreeNode<T>::append_child(LUNA::Utility::TreeNode<T>::tree_node_t*) [with T = LUNA::CSP::CSPConstruct*; LUNA::Utility::TreeNode<T>::tree_node_t = LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>] (struct TreeNode * const this, struct tree_node_t * x)
+{
+  struct TreeNode * _6;
+  struct TreeNode * _8;
+
+  <bb 2>:
+  x_3(D)->parent = this_4(D);
+  _6 = this_4(D)->last_child;
+  if (_6 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _6->next_sibling = x_3(D);
+  goto <bb 7>;
+
+  <bb 4>:
+  _8 = this_4(D)->first_child;
+  if (_8 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  __assert_fail ("first_child == __null", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Tree.h", 126, &__PRETTY_FUNCTION__);
+
+  <bb 6>:
+  this_4(D)->first_child = x_3(D);
+
+  <bb 7>:
+  x_3(D)->prev_sibling = _6;
+  this_4(D)->last_child = x_3(D);
+  x_3(D)->next_sibling = 0B;
+  return;
+
+}
+
+
+
+;; Function static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::Threading::OSScheduler] (_ZN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE16DestroySingletonEv, funcdef_no=4466, decl_uid=79274, symbol_order=1486)
+
+static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::Threading::OSScheduler] ()
+{
+  bool m_destroyed.71_3;
+  struct OSScheduler * m_instance.72_4;
+  int (*__vtbl_ptr_type) () * _5;
+  int (*__vtbl_ptr_type) () _6;
+
+  <bb 2>:
+  m_destroyed.71_3 = m_destroyed;
+  if (m_destroyed.71_3 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  __assert_fail ("!m_destroyed", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Singleton.h", 152, &__PRETTY_FUNCTION__);
+
+  <bb 4>:
+  m_instance.72_4 ={v} m_instance;
+  if (m_instance.72_4 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _5 = m_instance.72_4->D.79350.D.34993._vptr.Uncopyable;
+  _6 = MEM[(int (*__vtbl_ptr_type) () *)_5 + 4B];
+  OBJ_TYPE_REF(_6;(struct OSScheduler)m_instance.72_4->1) (m_instance.72_4);
+
+  <bb 6>:
+  m_instance ={v} 0B;
+  m_destroyed = 1;
+  return;
+
+}
+
+
+
+;; Function static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::EmergencyManager] (_ZN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE16DestroySingletonEv, funcdef_no=4419, decl_uid=42318, symbol_order=1437)
+
+static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::EmergencyManager] ()
+{
+  bool m_destroyed.63_3;
+  struct EmergencyManager * m_instance.64_4;
+
+  <bb 2>:
+  m_destroyed.63_3 = m_destroyed;
+  if (m_destroyed.63_3 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  __assert_fail ("!m_destroyed", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Singleton.h", 152, &__PRETTY_FUNCTION__);
+
+  <bb 4>:
+  m_instance.64_4 ={v} m_instance;
+  if (m_instance.64_4 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  LUNA::EmergencyManager::~EmergencyManager (m_instance.64_4);
+  operator delete (m_instance.64_4);
+
+  <bb 6>:
+  m_instance ={v} 0B;
+  m_destroyed = 1;
+  return;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSPConstruct::done() (_ZN4LUNA3CSP12CSPConstruct4doneEv, funcdef_no=1426, decl_uid=35399, symbol_order=420)
+
+virtual void LUNA::CSP::CSPConstruct::done() (struct CSPConstruct * const this)
+{
+  bool _3;
+  struct TreeNode * _6;
+  struct CSPConstruct * _7;
+  int (*__vtbl_ptr_type) () * _8;
+  int (*__vtbl_ptr_type) () _9;
+
+  <bb 2>:
+  _3 = this_2(D)->m_exit;
+  if (_3 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _6 = this_2(D)->D.35429.parent;
+  if (_6 != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+  _7 = _6->data;
+  _8 = _7->D.35429._vptr.TreeNode;
+  _9 = MEM[(int (*__vtbl_ptr_type) () *)_8 + 28B];
+  OBJ_TYPE_REF(_9;(struct CSPConstruct)_7->7) (_7);
+
+  <bb 5>:
+  return;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::Terminator::done() (_ZN4LUNA3CSP10Terminator4doneEv, funcdef_no=3934, decl_uid=74979, symbol_order=1056)
+
+virtual void LUNA::CSP::Terminator::done() (struct Terminator * const this)
+{
+  struct IThreadBlocker * _5;
+  int (*__vtbl_ptr_type) () * _6;
+  int (*__vtbl_ptr_type) () _7;
+  bool _9;
+  struct TreeNode * _11;
+  struct CSPConstruct * _12;
+  int (*__vtbl_ptr_type) () * _13;
+  int (*__vtbl_ptr_type) () _14;
+
+  <bb 2>:
+  _9 = MEM[(struct CSPConstruct *)this_1(D) + 8B].m_exit;
+  if (_9 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _11 = MEM[(struct CSPConstruct *)this_1(D) + 8B].D.35429.parent;
+  if (_11 != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+  _12 = _11->data;
+  _13 = _12->D.35429._vptr.TreeNode;
+  _14 = MEM[(int (*__vtbl_ptr_type) () *)_13 + 28B];
+  OBJ_TYPE_REF(_14;(struct CSPConstruct)_12->7) (_12);
+
+  <bb 5>:
+  _5 = this_1(D)->m_wait_for_done;
+  _6 = _5->D.41986._vptr.Uncopyable;
+  _7 = MEM[(int (*__vtbl_ptr_type) () *)_6 + 12B];
+  OBJ_TYPE_REF(_7;(struct IThreadBlocker)_5->3) (_5, 0B);
+  return;
+
+}
+
+
+
+;; Function virtual void* LUNA::CSP::Terminator::run() (_ZN4LUNA3CSP10Terminator3runEv, funcdef_no=3932, decl_uid=74975, symbol_order=1052)
+
+virtual void* LUNA::CSP::Terminator::run() (struct Terminator * const this)
+{
+  bool D.97091;
+  bool D.97089;
+  bool D.97087;
+  bool D.97085;
+  struct IThreadBlocker * _5;
+  struct CSPConstruct * _7;
+  int (*__vtbl_ptr_type) () * _8;
+  int (*__vtbl_ptr_type) () _9;
+  struct IThreadBlocker * _11;
+  struct IThread * _12;
+  int (*__vtbl_ptr_type) () * _13;
+  int (*__vtbl_ptr_type) () _14;
+  bool _15;
+  bool _16;
+  int (*__vtbl_ptr_type) () * _20;
+  int (*__vtbl_ptr_type) () _21;
+  struct IThread * _22;
+  bool _23;
+  struct IThread * _26;
+  int (*__vtbl_ptr_type) () * _27;
+  int (*__vtbl_ptr_type) () _28;
+  bool _29;
+  bool _30;
+  int (*__vtbl_ptr_type) () * _34;
+  int (*__vtbl_ptr_type) () _35;
+  struct IThread * _36;
+
+  <bb 2>:
+  _12 = MEM[(struct CSProcess *)this_2(D)].D.42484.m_thread;
+  _13 = _12->D.35164._vptr.Uncopyable;
+  _14 = MEM[(int (*__vtbl_ptr_type) () *)_13 + 60B];
+  _15 = OBJ_TYPE_REF(_14;(struct IThread)_12->15) (_12);
+  if (_15 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  goto <bb 6>;
+
+  <bb 4>:
+  _16 = MEM[(struct CSProcess *)this_2(D)].D.42485.m_exit;
+  if (_16 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 9>;
+
+  <bb 5>:
+  _7 = this_2(D)->m_process;
+  _8 = _7->D.35429._vptr.TreeNode;
+  _9 = MEM[(int (*__vtbl_ptr_type) () *)_8 + 24B];
+  OBJ_TYPE_REF(_9;(struct CSPConstruct)_7->6) (_7);
+
+  <bb 6>:
+  _26 = MEM[(struct CSProcess *)this_2(D)].D.42484.m_thread;
+  _27 = _26->D.35164._vptr.Uncopyable;
+  _28 = MEM[(int (*__vtbl_ptr_type) () *)_27 + 60B];
+  _29 = OBJ_TYPE_REF(_28;(struct IThread)_26->15) (_26);
+  if (_29 != 0)
+    goto <bb 8>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  _30 = MEM[(struct CSProcess *)this_2(D)].D.42485.m_exit;
+  if (_30 != 0)
+    goto <bb 8>;
+  else
+    goto <bb 10>;
+
+  <bb 8>:
+  return 0B;
+
+  <bb 9>:
+  _5 = MEM[(struct CSProcess *)this_2(D)].m_activate;
+  _20 = _5->D.41986._vptr.Uncopyable;
+  _21 = MEM[(int (*__vtbl_ptr_type) () *)_20 + 8B];
+  _22 = MEM[(struct CSProcess *)this_2(D)].D.42484.m_thread;
+  OBJ_TYPE_REF(_21;(struct IThreadBlocker)_5->2) (_5, _22, 0B);
+  _23 = MEM[(struct CSProcess *)this_2(D)].D.42485.m_exit;
+  if (_23 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+  <bb 10>:
+  _11 = MEM[(struct CSProcess *)this_2(D)].m_activate;
+  _34 = _11->D.41986._vptr.Uncopyable;
+  _35 = MEM[(int (*__vtbl_ptr_type) () *)_34 + 8B];
+  _36 = MEM[(struct CSProcess *)this_2(D)].D.42484.m_thread;
+  OBJ_TYPE_REF(_35;(struct IThreadBlocker)_11->2) (_11, _36, 0B);
+  goto <bb 8>;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSProcess::exit() (_ZN4LUNA3CSP9CSProcess4exitEv, funcdef_no=1981, decl_uid=42459, symbol_order=482)
+
+virtual void LUNA::CSP::CSProcess::exit() (struct CSProcess * const this)
+{
+  struct tree_node_t * iter$node;
+  struct IThreadBlocker * _4;
+  struct IThreadBlocker * _5;
+  int (*__vtbl_ptr_type) () * _6;
+  int (*__vtbl_ptr_type) () _7;
+  bool _9;
+  struct CSPConstruct * _15;
+  int (*__vtbl_ptr_type) () * _16;
+  int (*__vtbl_ptr_type) () _17;
+  int (*__vtbl_ptr_type) () * _22;
+  int (*__vtbl_ptr_type) () _23;
+
+  <bb 2>:
+  MEM[(struct CSPConstruct *)this_1(D) + 8B].m_exit = 1;
+  iter$node_12 = MEM[(struct TreeNode *)this_1(D) + 8B].first_child;
+  if (iter$node_12 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 3>:
+
+  <bb 4>:
+  # iter$node_19 = PHI <iter$node_12(3), iter$node_18(5)>
+  _15 = MEM[(struct CSPConstruct * &)iter$node_19 + 24];
+  _16 = _15->D.35429._vptr.TreeNode;
+  _17 = MEM[(int (*__vtbl_ptr_type) () *)_16 + 36B];
+  OBJ_TYPE_REF(_17;(struct CSPConstruct)_15->9) (_15);
+  iter$node_18 = iter$node_19->next_sibling;
+  if (iter$node_18 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 9>;
+
+  <bb 5>:
+  goto <bb 4>;
+
+  <bb 6>:
+  _4 = this_1(D)->m_activate;
+  _22 = _4->D.41986._vptr.Uncopyable;
+  _23 = MEM[(int (*__vtbl_ptr_type) () *)_22 + 12B];
+  OBJ_TYPE_REF(_23;(struct IThreadBlocker)_4->3) (_4, 0B);
+
+  <bb 7>:
+  return;
+
+  <bb 9>:
+
+  <bb 8>:
+  _5 = this_1(D)->m_activate;
+  _6 = _5->D.41986._vptr.Uncopyable;
+  _7 = MEM[(int (*__vtbl_ptr_type) () *)_6 + 16B];
+  _9 = OBJ_TYPE_REF(_7;(struct IThreadBlocker)_5->4) (_5);
+  if (_9 != 0)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSPConstruct::exit() (_ZN4LUNA3CSP12CSPConstruct4exitEv, funcdef_no=1428, decl_uid=35403, symbol_order=422)
+
+virtual void LUNA::CSP::CSPConstruct::exit() (struct CSPConstruct * const this)
+{
+  struct tree_node_t * iter$node;
+  struct CSPConstruct * _5;
+  int (*__vtbl_ptr_type) () * _6;
+  int (*__vtbl_ptr_type) () _7;
+
+  <bb 2>:
+  this_3(D)->m_exit = 1;
+  iter$node_9 = MEM[(struct TreeNode *)this_3(D)].first_child;
+  if (iter$node_9 != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  return;
+
+  <bb 4>:
+
+  <bb 5>:
+  # iter$node_12 = PHI <iter$node_9(4), iter$node_11(6)>
+  _5 = MEM[(struct CSPConstruct * &)iter$node_12 + 24];
+  _6 = _5->D.35429._vptr.TreeNode;
+  _7 = MEM[(int (*__vtbl_ptr_type) () *)_6 + 36B];
+  OBJ_TYPE_REF(_7;(struct CSPConstruct)_5->9) (_5);
+  iter$node_11 = iter$node_12->next_sibling;
+  if (iter$node_11 != 0B)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  goto <bb 3>;
+
+  <bb 6>:
+  goto <bb 5>;
+
+}
+
+
+
+;; Function void signalHandler(int) (_Z13signalHandleri, funcdef_no=4192, decl_uid=83534, symbol_order=1194)
+
+void signalHandler(int) (int signum)
+{
+  struct tree_node_t * iter$node;
+  struct Terminator * term.1_2;
+  int (*__vtbl_ptr_type) () * _3;
+  int (*__vtbl_ptr_type) () _4;
+  void * PROF_6;
+  struct CSPConstruct * _9;
+  struct IThreadBlocker * _11;
+  int (*__vtbl_ptr_type) () * _12;
+  int (*__vtbl_ptr_type) () _13;
+  bool _14;
+  struct CSPConstruct * _18;
+  int (*__vtbl_ptr_type) () * _19;
+  int (*__vtbl_ptr_type) () _20;
+  struct IThreadBlocker * _25;
+  int (*__vtbl_ptr_type) () * _26;
+  int (*__vtbl_ptr_type) () _27;
+
+  <bb 2>:
+  term.1_2 = term;
+  _3 = term.1_2->D.75006.D.42484._vptr.Runnable;
+  _4 = MEM[(int (*__vtbl_ptr_type) () *)_3 + 40B];
+  PROF_6 = [obj_type_ref] OBJ_TYPE_REF(_4;(struct Terminator)term.1_2->10);
+  if (PROF_6 == exit)
+    goto <bb 3>;
+  else
+    goto <bb 9>;
+
+  <bb 3>:
+  MEM[(struct CSPConstruct *)term.1_2 + 8B].m_exit = 1;
+  iter$node_15 = MEM[(struct TreeNode *)term.1_2 + 8B].first_child;
+  if (iter$node_15 != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 11>;
+
+  <bb 4>:
+
+  <bb 5>:
+  # iter$node_45 = PHI <iter$node_15(4), iter$node_21(6)>
+  _18 = MEM[(struct CSPConstruct * &)iter$node_45 + 24];
+  _19 = _18->D.35429._vptr.TreeNode;
+  _20 = MEM[(int (*__vtbl_ptr_type) () *)_19 + 36B];
+  OBJ_TYPE_REF(_20;(struct CSPConstruct)_18->9) (_18);
+  iter$node_21 = iter$node_45->next_sibling;
+  if (iter$node_21 != 0B)
+    goto <bb 6>;
+  else
+    goto <bb 12>;
+
+  <bb 6>:
+  goto <bb 5>;
+
+  <bb 7>:
+  _25 = MEM[(struct CSProcess *)term.1_2].m_activate;
+  _26 = _25->D.41986._vptr.Uncopyable;
+  _27 = MEM[(int (*__vtbl_ptr_type) () *)_26 + 12B];
+  OBJ_TYPE_REF(_27;(struct IThreadBlocker)_25->3) (_25, 0B);
+
+  <bb 8>:
+  _9 = term.1_2->m_process;
+  LUNA::CSP::stopRecursions (_9);
+  goto <bb 10>;
+
+  <bb 9>:
+  OBJ_TYPE_REF(_4;(struct Terminator)term.1_2->10) (term.1_2);
+
+  <bb 10>:
+  return;
+
+  <bb 12>:
+
+  <bb 11>:
+  _11 = MEM[(struct CSProcess *)term.1_2].m_activate;
+  _12 = _11->D.41986._vptr.Uncopyable;
+  _13 = MEM[(int (*__vtbl_ptr_type) () *)_12 + 16B];
+  _14 = OBJ_TYPE_REF(_13;(struct IThreadBlocker)_11->4) (_11);
+  if (_14 != 0)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::Terminator::exit() (_ZN4LUNA3CSP10Terminator4exitEv, funcdef_no=3935, decl_uid=74981, symbol_order=1059)
+
+virtual void LUNA::CSP::Terminator::exit() (struct Terminator * const this)
+{
+  struct tree_node_t * iter$node;
+  struct CSPConstruct * _5;
+  struct IThreadBlocker * _8;
+  int (*__vtbl_ptr_type) () * _9;
+  int (*__vtbl_ptr_type) () _10;
+  bool _11;
+  struct CSPConstruct * _14;
+  int (*__vtbl_ptr_type) () * _15;
+  int (*__vtbl_ptr_type) () _16;
+  struct IThreadBlocker * _21;
+  int (*__vtbl_ptr_type) () * _22;
+  int (*__vtbl_ptr_type) () _23;
+
+  <bb 2>:
+  MEM[(struct CSPConstruct *)this_1(D) + 8B].m_exit = 1;
+  iter$node_4 = MEM[(struct TreeNode *)this_1(D) + 8B].first_child;
+  if (iter$node_4 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 3>:
+
+  <bb 4>:
+  # iter$node_39 = PHI <iter$node_4(3), iter$node_17(5)>
+  _14 = MEM[(struct CSPConstruct * &)iter$node_39 + 24];
+  _15 = _14->D.35429._vptr.TreeNode;
+  _16 = MEM[(int (*__vtbl_ptr_type) () *)_15 + 36B];
+  OBJ_TYPE_REF(_16;(struct CSPConstruct)_14->9) (_14);
+  iter$node_17 = iter$node_39->next_sibling;
+  if (iter$node_17 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 9>;
+
+  <bb 5>:
+  goto <bb 4>;
+
+  <bb 6>:
+  _21 = MEM[(struct CSProcess *)this_1(D)].m_activate;
+  _22 = _21->D.41986._vptr.Uncopyable;
+  _23 = MEM[(int (*__vtbl_ptr_type) () *)_22 + 12B];
+  OBJ_TYPE_REF(_23;(struct IThreadBlocker)_21->3) (_21, 0B);
+
+  <bb 7>:
+  _5 = this_1(D)->m_process;
+  LUNA::CSP::stopRecursions (_5);
+  return;
+
+  <bb 9>:
+
+  <bb 8>:
+  _8 = MEM[(struct CSProcess *)this_1(D)].m_activate;
+  _9 = _8->D.41986._vptr.Uncopyable;
+  _10 = MEM[(int (*__vtbl_ptr_type) () *)_9 + 16B];
+  _11 = OBJ_TYPE_REF(_10;(struct IThreadBlocker)_8->4) (_8);
+  if (_11 != 0)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+}
+
+
+
+;; Function void LUNA::log(LUNA::loglevel_enum, const char*, ...) (_ZN4LUNA3logENS_13loglevel_enumEPKcz, funcdef_no=1312, decl_uid=34408, symbol_order=376)
+
+void LUNA::log(LUNA::loglevel_enum, const char*, ...) (loglevel_enum loglevel, const char * format)
+{
+  void * valist$__ap;
+  struct __gnuc_va_list __arg;
+  struct va_list valist;
+  struct va_list var_args;
+  int loglevel.10_8;
+  struct _IO_FILE * stdout.11_9;
+
+  <bb 2>:
+  __builtin_va_start (&var_args, 0);
+  valist$__ap_5 = MEM[(struct  *)&var_args];
+  loglevel.10_8 = (int) loglevel_3(D);
+  printf ("<%i> ", loglevel.10_8);
+  MEM[(struct  *)&__arg] = valist$__ap_5;
+  stdout.11_9 = stdout;
+  vfprintf (stdout.11_9, format_4(D), __arg);
+  __builtin_va_end (&var_args);
+  var_args ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function LUNA::locksync::AutoLock<LockT>::~AutoLock() [with LockT = LUNA::locksync::Mutex] (_ZN4LUNA8locksync8AutoLockINS0_5MutexEED2Ev, funcdef_no=4565, decl_uid=88681, symbol_order=1586)
+
+LUNA::locksync::AutoLock<LockT>::~AutoLock() [with LockT = LUNA::locksync::Mutex] (struct AutoLock * const this)
+{
+  struct Mutex * _5;
+  int (*__vtbl_ptr_type) () * _9;
+  int (*__vtbl_ptr_type) () _10;
+  int _11;
+
+  <bb 2>:
+  this_3(D)->D.88684._vptr.Uncopyable = &MEM[(void *)&_ZTVN4LUNA8locksync8AutoLockINS0_5MutexEEE + 8B];
+  _5 = this_3(D)->m_lock;
+  _9 = _5->D.41844._vptr.Uncopyable;
+  _10 = MEM[(int (*__vtbl_ptr_type) () *)_9 + 12B];
+  _11 = OBJ_TYPE_REF(_10;(struct Mutex)_5->3) (_5);
+  if (_11 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 4>:
+  *this_3(D) ={v} {CLOBBER};
+  return this_3(D);
+
+}
+
+
+
+;; Function LUNA::locksync::AutoLock<LockT>::~AutoLock() [with LockT = LUNA::locksync::Mutex] (_ZN4LUNA8locksync8AutoLockINS0_5MutexEED0Ev, funcdef_no=4567, decl_uid=88675, symbol_order=1588)
+
+LUNA::locksync::AutoLock<LockT>::~AutoLock() [with LockT = LUNA::locksync::Mutex] (struct AutoLock * const this)
+{
+  void * D.97201;
+  struct Mutex * _5;
+  int (*__vtbl_ptr_type) () * _6;
+  int (*__vtbl_ptr_type) () _7;
+  int _8;
+
+  <bb 2>:
+  this_2(D)->D.88684._vptr.Uncopyable = &MEM[(void *)&_ZTVN4LUNA8locksync8AutoLockINS0_5MutexEEE + 8B];
+  _5 = this_2(D)->m_lock;
+  _6 = _5->D.41844._vptr.Uncopyable;
+  _7 = MEM[(int (*__vtbl_ptr_type) () *)_6 + 12B];
+  _8 = OBJ_TYPE_REF(_7;(struct Mutex)_5->3) (_5);
+  if (_8 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 4>:
+  *this_2(D) ={v} {CLOBBER};
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function long unsigned int LUNA::Threading::BasicOSThread<impl>::getId() [with ThreadImpl = LUNA::Threading::PThreadImplementation] (_ZN4LUNA9Threading13BasicOSThreadINS0_21PThreadImplementationEE5getIdEv, funcdef_no=4485, decl_uid=79597, symbol_order=1505)
+
+long unsigned int LUNA::Threading::BasicOSThread<impl>::getId() [with ThreadImpl = LUNA::Threading::PThreadImplementation] (struct BasicOSThread * const this)
+{
+  void * D.97219;
+  struct AutoLock * D.97215;
+  struct AutoLock l;
+  long unsigned int iftmp.138_1;
+  struct LockType * _3;
+  ThreadState _6;
+  long unsigned int iftmp.138_7;
+  int _12;
+  int _15;
+
+  <bb 2>:
+  _3 = &this_2(D)->m_lock;
+  _12 = LUNA::locksync::Mutex::lock (_3);
+
+  <bb 3>:
+  if (_12 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  _6 ={v} this_2(D)->m_state;
+  if (_6 == 0)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 5>:
+  LUNA::log (0, "AutoLock couldn\'t acquire the lock.\n");
+  goto <bb 4>;
+
+<L10>:
+  goto <bb 8> (<L8>);
+
+<L9>:
+
+<L8>:
+  resx 4
+
+  <bb 9>:
+  iftmp.138_7 = this_2(D)->m_thread;
+
+  <bb 10>:
+  # iftmp.138_1 = PHI <iftmp.138_7(9), 1000(4)>
+  _15 = LUNA::locksync::Mutex::unlock (_3);
+  if (_15 != 0)
+    goto <bb 11>;
+  else
+    goto <bb 12>;
+
+  <bb 11>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 12>:
+  l ={v} {CLOBBER};
+  l ={v} {CLOBBER};
+  return iftmp.138_1;
+
+}
+
+
+
+;; Function static void* LUNA::Threading::BasicOSThread<impl>::internalRun(void*) [with ThreadImpl = LUNA::Threading::PThreadImplementation] (_ZN4LUNA9Threading13BasicOSThreadINS0_21PThreadImplementationEE11internalRunEPv, funcdef_no=4574, decl_uid=79630, symbol_order=1595)
+
+static void* LUNA::Threading::BasicOSThread<impl>::internalRun(void*) [with ThreadImpl = LUNA::Threading::PThreadImplementation] (void * arg)
+{
+  void * D.97235;
+  struct AutoLock * D.97231;
+  int ret;
+  int ret;
+  struct AutoLock l;
+  void * result;
+  struct BasicOSThread * thread;
+  int oldstate;
+  static const char __FUNCTION__[12] = "internalRun";
+  void * _1;
+  ThreadState iftmp.106_2;
+  ThreadState _11;
+  struct Runnable * _13;
+  int (*__vtbl_ptr_type) () * _14;
+  int (*__vtbl_ptr_type) () _15;
+  struct Runnable * _19;
+  int (*__vtbl_ptr_type) () * _20;
+  int (*__vtbl_ptr_type) () _21;
+  struct Runnable * _24;
+  int (*__vtbl_ptr_type) () * _25;
+  int (*__vtbl_ptr_type) () _26;
+  struct LockType * _28;
+  struct Mutex * _29;
+  ThreadState _30;
+  struct Runnable * _32;
+  union pthread_barrier_t * _38;
+  unsigned int ret.131_40;
+  unsigned int _41;
+  unsigned int ret.131_44;
+  unsigned int _45;
+  int (*__vtbl_ptr_type) () * _48;
+  int (*__vtbl_ptr_type) () _49;
+  int _50;
+  int (*__vtbl_ptr_type) () * _51;
+  int (*__vtbl_ptr_type) () _52;
+  int _53;
+
+  <bb 2>:
+  oldstate = 0;
+  pthread_setcancelstate (1, &oldstate);
+  thread_10 = MEM[(struct thread_start_tuple *)arg_9(D)].thread;
+  _11 ={v} thread_10->m_state;
+  if (_11 == -1)
+    goto <bb 17>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _38 = &MEM[(struct thread_start_tuple *)arg_9(D)].barrier;
+  ret_39 = pthread_barrier_wait (_38);
+  ret.131_40 = (unsigned int) ret_39;
+  _41 = ret.131_40 + 1;
+  if (_41 > 1)
+    goto <bb 19>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  _13 = thread_10->m_run;
+  _14 = _13->_vptr.Runnable;
+  _15 = *_14;
+  OBJ_TYPE_REF(_15;(struct Runnable)_13->0) (_13);
+  ret_43 = pthread_barrier_wait (_38);
+  ret.131_44 = (unsigned int) ret_43;
+  _45 = ret.131_44 + 1;
+  if (_45 > 1)
+    goto <bb 20>;
+  else
+    goto <bb 5>;
+
+  <bb 5>:
+  _19 = thread_10->m_run;
+  _20 = _19->_vptr.Runnable;
+  _21 = MEM[(int (*__vtbl_ptr_type) () *)_20 + 4B];
+  result_23 = OBJ_TYPE_REF(_21;(struct Runnable)_19->1) (_19);
+  _24 = thread_10->m_run;
+  _25 = _24->_vptr.Runnable;
+  _26 = MEM[(int (*__vtbl_ptr_type) () *)_25 + 8B];
+  OBJ_TYPE_REF(_26;(struct Runnable)_24->2) (_24);
+  _28 = &thread_10->m_lock;
+  l.D.88684._vptr.Uncopyable = &MEM[(void *)&_ZTVN4LUNA8locksync8AutoLockINS0_5MutexEEE + 8B];
+  l.m_lock = _28;
+  _48 = MEM[(struct Mutex *)thread_10 + 68B].D.41844._vptr.Uncopyable;
+  _49 = MEM[(int (*__vtbl_ptr_type) () *)_48 + 8B];
+  _50 = OBJ_TYPE_REF(_49;(struct Mutex)_28->2) (_28);
+
+  <bb 6>:
+  if (_50 != 0)
+    goto <bb 8>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  _30 ={v} thread_10->m_state;
+  if (_30 == -1)
+    goto <bb 10>;
+  else
+    goto <bb 13>;
+
+  <bb 8>:
+  LUNA::log (0, "AutoLock couldn\'t acquire the lock.\n");
+  goto <bb 7>;
+
+<L25>:
+  goto <bb 12> (<L23>);
+
+  <bb 10>:
+  goto <bb 13>;
+
+<L24>:
+
+<L23>:
+  resx 7
+
+  <bb 13>:
+  # iftmp.106_2 = PHI <-1(10), 1(7)>
+  thread_10->m_state ={v} iftmp.106_2;
+  _32 = thread_10->m_run;
+  LUNA::Runnable::setIThread (_32, 0B);
+
+  <bb 14>:
+  l.D.88684._vptr.Uncopyable = &MEM[(void *)&_ZTVN4LUNA8locksync8AutoLockINS0_5MutexEEE + 8B];
+  _29 = l.m_lock;
+  _51 = _29->D.41844._vptr.Uncopyable;
+  _52 = MEM[(int (*__vtbl_ptr_type) () *)_51 + 12B];
+  _53 = OBJ_TYPE_REF(_52;(struct Mutex)_29->3) (_29);
+  if (_53 != 0)
+    goto <bb 15>;
+  else
+    goto <bb 16>;
+
+  <bb 15>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 16>:
+  l ={v} {CLOBBER};
+  l ={v} {CLOBBER};
+
+  <bb 17>:
+  # _1 = PHI <0B(2), result_23(16)>
+  oldstate ={v} {CLOBBER};
+  return _1;
+
+<L19>:
+  LUNA::locksync::AutoLock<LUNA::locksync::Mutex>::~AutoLock (&l);
+  resx 3
+
+  <bb 19>:
+  LUNA::log (5, "%s - Sync failed.\n", &__FUNCTION__);
+  goto <bb 4>;
+
+  <bb 20>:
+  LUNA::log (5, "%s - Sync failed.\n", &__FUNCTION__);
+  goto <bb 5>;
+
+}
+
+
+
+;; Function int LUNA::Threading::BasicOSThread<impl>::join(void**) [with ThreadImpl = LUNA::Threading::PThreadImplementation] (_ZN4LUNA9Threading13BasicOSThreadINS0_21PThreadImplementationEE4joinEPPv, funcdef_no=4486, decl_uid=79618, symbol_order=1506)
+
+int LUNA::Threading::BasicOSThread<impl>::join(void**) [with ThreadImpl = LUNA::Threading::PThreadImplementation] (struct BasicOSThread * const this, void * * retvalue)
+{
+  void * D.97266;
+  void * D.97264;
+  struct AutoLock * D.97260;
+  struct AutoLock l;
+  thread_t stopid;
+  int _1;
+  bool _7;
+  struct LockType * _9;
+  long unsigned int _18;
+  long unsigned int _20;
+  int _21;
+  int _25;
+  int _28;
+  int _31;
+
+  <bb 2>:
+  _7 = this_6(D)->m_attr.joinable;
+  if (_7 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  LUNA::log (5, "%s - Called for a detached thread.\n");
+  goto <bb 21>;
+
+  <bb 4>:
+  _9 = &this_6(D)->m_lock;
+  _25 = LUNA::locksync::Mutex::lock (_9);
+
+  <bb 5>:
+  if (_25 != 0)
+    goto <bb 7>;
+  else
+    goto <bb 6>;
+
+  <bb 6>:
+  stopid_11 = this_6(D)->m_thread;
+  if (stopid_11 == 4294967295)
+    goto <bb 11>;
+  else
+    goto <bb 16>;
+
+  <bb 7>:
+  LUNA::log (0, "AutoLock couldn\'t acquire the lock.\n");
+  goto <bb 6>;
+
+<L33>:
+  goto <bb 10> (<L31>);
+
+<L32>:
+
+<L31>:
+  resx 4
+
+  <bb 11>:
+  if (retvalue_12(D) != 0B)
+    goto <bb 12>;
+  else
+    goto <bb 13>;
+
+  <bb 12>:
+  *retvalue_12(D) = 0B;
+
+  <bb 13>:
+  _28 = LUNA::locksync::Mutex::unlock (_9);
+  if (_28 != 0)
+    goto <bb 14>;
+  else
+    goto <bb 15>;
+
+  <bb 14>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 15>:
+  l ={v} {CLOBBER};
+  l ={v} {CLOBBER};
+  goto <bb 21>;
+
+  <bb 16>:
+  _31 = LUNA::locksync::Mutex::unlock (_9);
+  if (_31 != 0)
+    goto <bb 17>;
+  else
+    goto <bb 18>;
+
+  <bb 17>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 18>:
+  l ={v} {CLOBBER};
+  l ={v} {CLOBBER};
+  _20 = pthread_self ();
+  if (stopid_11 != _20)
+    goto <bb 19>;
+  else
+    goto <bb 21>;
+
+  <bb 19>:
+  _21 = pthread_join (stopid_11, retvalue_12(D));
+  if (_21 != 0)
+    goto <bb 20>;
+  else
+    goto <bb 21>;
+
+  <bb 20>:
+  _18 = this_6(D)->m_thread;
+  LUNA::log (0, "BasicOSThread::join() thread_impl::join failed, thread id %d.\n", _18);
+
+  <bb 21>:
+  # _1 = PHI <1002(3), 0(15), _21(19), 1001(18), _21(20)>
+  return _1;
+
+}
+
+
+
+;; Function void LUNA::log_local(LUNA::loglevel_enum, const char*, ...) (_ZN4LUNA9log_localENS_13loglevel_enumEPKcz, funcdef_no=1313, decl_uid=34413, symbol_order=377)
+
+void LUNA::log_local(LUNA::loglevel_enum, const char*, ...) (loglevel_enum loglevel, const char * format)
+{
+  void * valist$__ap;
+  struct __gnuc_va_list __arg;
+  struct va_list valist;
+  struct va_list var_args;
+  int loglevel.10_8;
+  struct _IO_FILE * stdout.11_9;
+
+  <bb 2>:
+  __builtin_va_start (&var_args, 0);
+  valist$__ap_5 = MEM[(struct  *)&var_args];
+  loglevel.10_8 = (int) loglevel_3(D);
+  printf ("<%i> ", loglevel.10_8);
+  MEM[(struct  *)&__arg] = valist$__ap_5;
+  stdout.11_9 = stdout;
+  vfprintf (stdout.11_9, format_4(D), __arg);
+  __builtin_va_end (&var_args);
+  var_args ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function void LUNA::log(bool, LUNA::loglevel_enum, const char*, ...) (_ZN4LUNA3logEbNS_13loglevel_enumEPKcz, funcdef_no=1314, decl_uid=34419, symbol_order=378)
+
+void LUNA::log(bool, LUNA::loglevel_enum, const char*, ...) (bool condition, loglevel_enum loglevel, const char * format)
+{
+  void * valist$__ap;
+  struct __gnuc_va_list __arg;
+  struct va_list valist;
+  struct va_list var_args;
+  int loglevel.10_10;
+  struct _IO_FILE * stdout.11_11;
+
+  <bb 2>:
+  if (condition_2(D) != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  __builtin_va_start (&var_args, 0);
+  valist$__ap_7 = MEM[(struct  *)&var_args];
+  loglevel.10_10 = (int) loglevel_5(D);
+  printf ("<%i> ", loglevel.10_10);
+  MEM[(struct  *)&__arg] = valist$__ap_7;
+  stdout.11_11 = stdout;
+  vfprintf (stdout.11_11, format_6(D), __arg);
+  __builtin_va_end (&var_args);
+  var_args ={v} {CLOBBER};
+
+  <bb 4>:
+  return;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSProcess::activate() (_ZN4LUNA3CSP9CSProcess8activateEv, funcdef_no=1979, decl_uid=42455, symbol_order=478)
+
+virtual void LUNA::CSP::CSProcess::activate() (struct CSProcess * const this)
+{
+  static const char __FUNCTION__[9] = "activate";
+  struct IThread * _3;
+  bool _4;
+  const char * _5;
+  struct IThreadBlocker * _7;
+  int (*__vtbl_ptr_type) () * _8;
+  int (*__vtbl_ptr_type) () _9;
+
+  <bb 2>:
+  _3 = this_2(D)->D.42484.m_thread;
+  _4 = _3 == 0B;
+  _5 = MEM[(const char * *)this_2(D) + 48B];
+  LUNA::log (_4, 5, "[%s]::%s - No thread assigned, and therefore cannot be run.\n", _5, &__FUNCTION__);
+  _7 = this_2(D)->m_activate;
+  _8 = _7->D.41986._vptr.Uncopyable;
+  _9 = MEM[(int (*__vtbl_ptr_type) () *)_8 + 12B];
+  OBJ_TYPE_REF(_9;(struct IThreadBlocker)_7->3) (_7, 0B);
+  return;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::Terminator::activate() (_ZN4LUNA3CSP10Terminator8activateEv, funcdef_no=3933, decl_uid=74977, symbol_order=1053)
+
+virtual void LUNA::CSP::Terminator::activate() (struct Terminator * const this)
+{
+  struct tree_node_t * iter$node;
+  struct IThreadBlocker * _6;
+  int (*__vtbl_ptr_type) () * _7;
+  int (*__vtbl_ptr_type) () _8;
+  struct IThread * _9;
+  int (*__vtbl_ptr_type) () * _11;
+  int (*__vtbl_ptr_type) () _12;
+  void * PROF_14;
+  struct IThread * _16;
+  bool _17;
+  const char * _18;
+  struct IThreadBlocker * _19;
+  int (*__vtbl_ptr_type) () * _20;
+  int (*__vtbl_ptr_type) () _21;
+  struct CSPConstruct * _22;
+  struct IThreadBlocker * _24;
+  int (*__vtbl_ptr_type) () * _25;
+  int (*__vtbl_ptr_type) () _26;
+  bool _27;
+  struct CSPConstruct * _31;
+  int (*__vtbl_ptr_type) () * _32;
+  int (*__vtbl_ptr_type) () _33;
+  struct IThreadBlocker * _38;
+  int (*__vtbl_ptr_type) () * _39;
+  int (*__vtbl_ptr_type) () _40;
+
+  <bb 2>:
+  sleep (1);
+  _16 = MEM[(struct CSProcess *)this_3(D)].D.42484.m_thread;
+  _17 = _16 == 0B;
+  _18 = MEM[(const char * *)this_3(D) + 48B];
+  LUNA::log (_17, 5, "[%s]::%s - No thread assigned, and therefore cannot be run.\n", _18, &__FUNCTION__);
+  _19 = MEM[(struct CSProcess *)this_3(D)].m_activate;
+  _20 = _19->D.41986._vptr.Uncopyable;
+  _21 = MEM[(int (*__vtbl_ptr_type) () *)_20 + 12B];
+  OBJ_TYPE_REF(_21;(struct IThreadBlocker)_19->3) (_19, 0B);
+  _6 = this_3(D)->m_wait_for_done;
+  _7 = _6->D.41986._vptr.Uncopyable;
+  _8 = MEM[(int (*__vtbl_ptr_type) () *)_7 + 8B];
+  _9 = this_3(D)->D.75006.D.42484.m_thread;
+  OBJ_TYPE_REF(_8;(struct IThreadBlocker)_6->2) (_6, _9, 0B);
+  _11 = this_3(D)->D.75006.D.42484._vptr.Runnable;
+  _12 = MEM[(int (*__vtbl_ptr_type) () *)_11 + 40B];
+  PROF_14 = [obj_type_ref] OBJ_TYPE_REF(_12;(struct Terminator)this_3(D)->10);
+  if (PROF_14 == exit)
+    goto <bb 3>;
+  else
+    goto <bb 9>;
+
+  <bb 3>:
+  MEM[(struct CSPConstruct *)this_3(D) + 8B].m_exit = 1;
+  iter$node_28 = MEM[(struct TreeNode *)this_3(D) + 8B].first_child;
+  if (iter$node_28 != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 11>;
+
+  <bb 4>:
+
+  <bb 5>:
+  # iter$node_61 = PHI <iter$node_28(4), iter$node_34(6)>
+  _31 = MEM[(struct CSPConstruct * &)iter$node_61 + 24];
+  _32 = _31->D.35429._vptr.TreeNode;
+  _33 = MEM[(int (*__vtbl_ptr_type) () *)_32 + 36B];
+  OBJ_TYPE_REF(_33;(struct CSPConstruct)_31->9) (_31);
+  iter$node_34 = iter$node_61->next_sibling;
+  if (iter$node_34 != 0B)
+    goto <bb 6>;
+  else
+    goto <bb 12>;
+
+  <bb 6>:
+  goto <bb 5>;
+
+  <bb 7>:
+  _38 = MEM[(struct CSProcess *)this_3(D)].m_activate;
+  _39 = _38->D.41986._vptr.Uncopyable;
+  _40 = MEM[(int (*__vtbl_ptr_type) () *)_39 + 12B];
+  OBJ_TYPE_REF(_40;(struct IThreadBlocker)_38->3) (_38, 0B);
+
+  <bb 8>:
+  _22 = this_3(D)->m_process;
+  LUNA::CSP::stopRecursions (_22);
+  goto <bb 10>;
+
+  <bb 9>:
+  OBJ_TYPE_REF(_12;(struct Terminator)this_3(D)->10) (this_3(D));
+
+  <bb 10>:
+  return;
+
+  <bb 12>:
+
+  <bb 11>:
+  _24 = MEM[(struct CSProcess *)this_3(D)].m_activate;
+  _25 = _24->D.41986._vptr.Uncopyable;
+  _26 = MEM[(int (*__vtbl_ptr_type) () *)_25 + 16B];
+  _27 = OBJ_TYPE_REF(_26;(struct IThreadBlocker)_24->4) (_24);
+  if (_27 != 0)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+}
+
+
+
+;; Function LUNA::Utility::Set<typename iterator::value_type> LUNA::Utility::collectValues(iterator) [with iterator = LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>::depth_first_iterator; typename iterator::value_type = LUNA::CSP::CSPConstruct*] (_ZN4LUNA7Utility13collectValuesINS0_8TreeNodeIPNS_3CSP12CSPConstructEE20depth_first_iteratorEEENS0_3SetINT_10value_typeEEES9_, funcdef_no=4342, decl_uid=83923, symbol_order=1360)
+
+LUNA::Utility::Set<typename iterator::value_type> LUNA::Utility::collectValues(iterator) [with iterator = LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>::depth_first_iterator; typename iterator::value_type = LUNA::CSP::CSPConstruct*] (struct depth_first_iterator first)
+{
+  struct tree_node_t * first$D83874$node;
+  bool D.97359;
+  struct CSPConstruct * * new_set;
+  bool D.97355;
+  struct depth_first_iterator & D.97350;
+  unsigned int i;
+  bool D.97348;
+  bool D.97343;
+  struct CSPConstruct * * new_set;
+  bool D.97339;
+  struct Set * D.97334;
+  unsigned int counted;
+  const unsigned int pretmp_3;
+  const unsigned int pretmp_10;
+  const unsigned int _11;
+  double _12;
+  double _13;
+  unsigned int _14;
+  unsigned int pretmp_15;
+  struct CSPConstruct * _18;
+  const unsigned int prephitmp_25;
+  struct CSPConstruct * * _28;
+  unsigned int prephitmp_30;
+  void * _31;
+  unsigned int _32;
+  unsigned int _33;
+  size_t iftmp.81_34;
+  struct CSPConstruct * * _37;
+  unsigned int _38;
+  unsigned int _39;
+  struct CSPConstruct * * _40;
+  struct CSPConstruct * * _44;
+  unsigned int _46;
+  struct CSPConstruct * * _47;
+  struct CSPConstruct * _48;
+  unsigned int _53;
+  struct CSPConstruct * * _54;
+  unsigned int _55;
+  struct TreeNode * _56;
+  const unsigned int prephitmp_60;
+  struct TreeNode * _64;
+  unsigned int pretmp_65;
+  size_t iftmp.81_66;
+  const unsigned int prephitmp_68;
+  struct CSPConstruct * * _69;
+  unsigned int _70;
+  unsigned int _71;
+  struct CSPConstruct * * _72;
+  const unsigned int pretmp_124;
+  unsigned int prephitmp_130;
+  struct CSPConstruct * _135;
+  unsigned int prephitmp_137;
+  const unsigned int prephitmp_140;
+
+  <bb 2>:
+  first$D83874$node_45 = MEM[(struct depth_first_iterator *)&first];
+  ret_8(D)->m_size = 10;
+  ret_8(D)->m_count = 0;
+  _31 = operator new [] (40);
+  ret_8(D)->m_set = _31;
+  _32 = ret_8(D)->m_size;
+  _33 = _32 * 4;
+  memset (_31, 0, _33);
+  pretmp_65 = ret_8(D)->m_count;
+  goto <bb 30>;
+
+  <bb 3>:
+  _12 = (double) counted_2;
+  _13 = _12 * 1.5e+0;
+  _14 = (unsigned int) _13;
+  if (_14 < prephitmp_30)
+    goto <bb 44>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  if (_14 <= 532676608)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  iftmp.81_34 = _14 * 4;
+  new_set_35 = operator new [] (iftmp.81_34);
+  goto <bb 8>;
+
+  <bb 6>:
+  __cxa_throw_bad_array_new_length ();
+
+<L19>:
+  goto <bb 41> (<L14>);
+
+  <bb 8>:
+  memset (new_set_35, 0, iftmp.81_34);
+  _37 = ret_8(D)->m_set;
+  _38 = ret_8(D)->m_count;
+  _39 = _38 * 4;
+  memcpy (new_set_35, _37, _39);
+  _40 = ret_8(D)->m_set;
+  if (_40 != 0B)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 9>:
+  operator delete [] (_40);
+
+  <bb 10>:
+  ret_8(D)->m_set = new_set_35;
+  ret_8(D)->m_size = _14;
+  pretmp_124 = MEM[(unsigned int *)ret_8(D) + 8B];
+  goto <bb 48>;
+
+  <bb 11>:
+  pretmp_10 = MEM[(unsigned int *)ret_8(D) + 4B];
+  pretmp_3 = MEM[(unsigned int *)ret_8(D) + 8B];
+
+  <bb 12>:
+  # prephitmp_60 = PHI <pretmp_10(11), prephitmp_68(48)>
+  # prephitmp_140 = PHI <pretmp_3(11), prephitmp_25(48)>
+  _18 = MEM[(struct CSPConstruct * &)first$D83874$node_102 + 24];
+  if (prephitmp_60 != prephitmp_140)
+    goto <bb 13>;
+  else
+    goto <bb 19>;
+
+  <bb 13>:
+  _44 = MEM[(struct CSPConstruct * * *)ret_8(D)];
+  if (prephitmp_140 != 0)
+    goto <bb 14>;
+  else
+    goto <bb 49>;
+
+  <bb 14>:
+  _135 = *_44;
+  if (_18 == _135)
+    goto <bb 19>;
+  else
+    goto <bb 15>;
+
+  <bb 15>:
+  goto <bb 18>;
+
+  <bb 16>:
+  _46 = i_49 * 4;
+  _47 = _44 + _46;
+  _48 = *_47;
+  if (_18 == _48)
+    goto <bb 19>;
+  else
+    goto <bb 17>;
+
+  <bb 17>:
+
+  <bb 18>:
+  # i_136 = PHI <0(15), i_49(17)>
+  i_49 = i_136 + 1;
+  if (i_49 < prephitmp_140)
+    goto <bb 16>;
+  else
+    goto <bb 49>;
+
+  <bb 19>:
+  __builtin_puts (&"Error!"[0]);
+  goto <bb 21>;
+
+<L20>:
+  goto <bb 41> (<L14>);
+
+  <bb 21>:
+  pretmp_15 = ret_8(D)->m_count;
+
+  <bb 22>:
+  # counted_1 = PHI <counted_21(49), counted_2(21)>
+  # prephitmp_130 = PHI <_55(49), pretmp_15(21)>
+  first$D83874$node_57 = first$D83874$node_102->first_child;
+  if (first$D83874$node_57 != 0B)
+    goto <bb 29>;
+  else
+    goto <bb 23>;
+
+  <bb 23>:
+  goto <bb 27>;
+
+  <bb 24>:
+  first$D83874$node_61 = first$D83874$node_106->parent;
+  if (first$D83874$node_61 == 0B)
+    goto <bb 25>;
+  else
+    goto <bb 26>;
+
+  <bb 25>:
+  # first$D83874$node_138 = PHI <first$D83874$node_61(24)>
+  goto <bb 29>;
+
+  <bb 26>:
+
+  <bb 27>:
+  # first$D83874$node_106 = PHI <first$D83874$node_102(23), first$D83874$node_61(26)>
+  _64 = first$D83874$node_106->next_sibling;
+  if (_64 == 0B)
+    goto <bb 24>;
+  else
+    goto <bb 28>;
+
+  <bb 28>:
+  # _56 = PHI <_64(27)>
+
+  <bb 29>:
+  # first$D83874$node_104 = PHI <_56(28), first$D83874$node_138(25), first$D83874$node_57(22)>
+
+  <bb 30>:
+  # counted_2 = PHI <0(2), counted_1(29)>
+  # first$D83874$node_102 = PHI <first$D83874$node_45(2), first$D83874$node_104(29)>
+  # prephitmp_30 = PHI <pretmp_65(2), prephitmp_130(29)>
+  if (first$D83874$node_102 != 0B)
+    goto <bb 47>;
+  else
+    goto <bb 46>;
+
+  <bb 31>:
+  if (counted_134 <= 532676608)
+    goto <bb 32>;
+  else
+    goto <bb 34>;
+
+  <bb 32>:
+  iftmp.81_66 = counted_134 * 4;
+  new_set_67 = operator new [] (iftmp.81_66);
+  goto <bb 36>;
+
+<L21>:
+  goto <bb 41> (<L14>);
+
+  <bb 34>:
+  __cxa_throw_bad_array_new_length ();
+
+<L22>:
+  goto <bb 41> (<L14>);
+
+  <bb 36>:
+  memset (new_set_67, 0, iftmp.81_66);
+  _69 = ret_8(D)->m_set;
+  _70 = ret_8(D)->m_count;
+  _71 = _70 * 4;
+  memcpy (new_set_67, _69, _71);
+  _72 = ret_8(D)->m_set;
+  if (_72 != 0B)
+    goto <bb 37>;
+  else
+    goto <bb 38>;
+
+  <bb 37>:
+  operator delete [] (_72);
+
+  <bb 38>:
+  ret_8(D)->m_set = new_set_67;
+  ret_8(D)->m_size = counted_134;
+
+  <bb 39>:
+  return ret_8(D);
+
+<L18>:
+
+<L14>:
+  _28 = ret_8(D)->m_set;
+  if (_28 != 0B)
+    goto <bb 42>;
+  else
+    goto <bb 43>;
+
+  <bb 42>:
+  operator delete [] (_28);
+
+  <bb 43>:
+  resx 2
+
+  <bb 44>:
+  __builtin_puts (&"Error!"[0]);
+  goto <bb 11>;
+
+<L23>:
+  goto <bb 41> (<L14>);
+
+  <bb 46>:
+  # counted_134 = PHI <counted_2(30)>
+  # prephitmp_137 = PHI <prephitmp_30(30)>
+  if (counted_134 < prephitmp_137)
+    goto <bb 39>;
+  else
+    goto <bb 31>;
+
+  <bb 47>:
+  _11 = MEM[(unsigned int *)ret_8(D) + 4B];
+  if (counted_2 == _11)
+    goto <bb 3>;
+  else
+    goto <bb 48>;
+
+  <bb 48>:
+  # prephitmp_68 = PHI <_14(10), _11(47)>
+  # prephitmp_25 = PHI <pretmp_124(10), prephitmp_30(47)>
+  goto <bb 12>;
+
+  <bb 49>:
+  _53 = prephitmp_140 * 4;
+  _54 = _44 + _53;
+  *_54 = _18;
+  _55 = prephitmp_140 + 1;
+  ret_8(D)->m_count = _55;
+  counted_21 = counted_2 + 1;
+  goto <bb 22>;
+
+}
+
+
+
+;; Function void LUNA::Threading::createThreads(LUNA::Utility::Set<InputType*>*, LUNA::Utility::Set<LUNA::Threading::OSThread*>*, LUNA::Threading::Thread_attr*) [with InputType = LUNA::CSP::CSProcess] (_ZN4LUNA9Threading13createThreadsINS_3CSP9CSProcessEEEvPNS_7Utility3SetIPT_EEPNS5_IPNS0_8OSThreadEEEPNS0_11Thread_attrE, funcdef_no=4361, decl_uid=84018, symbol_order=1379)
+
+void LUNA::Threading::createThreads(LUNA::Utility::Set<InputType*>*, LUNA::Utility::Set<LUNA::Threading::OSThread*>*, LUNA::Threading::Thread_attr*) [with InputType = LUNA::CSP::CSProcess] (struct Set * input, struct Set * output, struct Thread_attr * thread_attr)
+{
+  unsigned int i;
+  bool D.97415;
+  bool D.97411;
+  struct OSThread * * new_set;
+  bool D.97407;
+  unsigned int i;
+  const unsigned int _8;
+  const unsigned int _10;
+  const unsigned int _11;
+  unsigned int _12;
+  struct CSProcess * * _17;
+  struct Runnable * _18;
+  void * _20;
+  const unsigned int prephitmp_23;
+  int (*__vtbl_ptr_type) () * _27;
+  int (*__vtbl_ptr_type) () _28;
+  unsigned int _32;
+  struct CSProcess * & _33;
+  size_t iftmp.88_35;
+  struct OSThread * * _38;
+  unsigned int _39;
+  unsigned int _40;
+  struct OSThread * * _41;
+  const unsigned int _43;
+  const unsigned int _44;
+  struct OSThread * * _45;
+  unsigned int _47;
+  struct OSThread * * _48;
+  struct OSThread * _49;
+  unsigned int _54;
+  struct OSThread * * _55;
+  unsigned int _56;
+  const unsigned int pretmp_57;
+  void * _74;
+  struct OSThread * _80;
+
+  <bb 2>:
+  _8 = MEM[(unsigned int *)input_7(D) + 8B];
+  _10 = MEM[(unsigned int *)output_9(D) + 4B];
+  _11 = MEM[(unsigned int *)output_9(D) + 8B];
+  _12 = _10 - _11;
+  if (_8 > _12)
+    goto <bb 3>;
+  else
+    goto <bb 9>;
+
+  <bb 3>:
+  if (_8 < _11)
+    goto <bb 25>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  if (_8 <= 532676608)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  iftmp.88_35 = _8 * 4;
+  new_set_36 = operator new [] (iftmp.88_35);
+  memset (new_set_36, 0, iftmp.88_35);
+  _38 = output_9(D)->m_set;
+  _39 = output_9(D)->m_count;
+  _40 = _39 * 4;
+  memcpy (new_set_36, _38, _40);
+  _41 = output_9(D)->m_set;
+  if (_41 != 0B)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+  <bb 6>:
+  __cxa_throw_bad_array_new_length ();
+
+  <bb 7>:
+  operator delete [] (_41);
+
+  <bb 8>:
+  output_9(D)->m_set = new_set_36;
+  output_9(D)->m_size = _8;
+  pretmp_57 = MEM[(unsigned int *)input_7(D) + 8B];
+
+  <bb 9>:
+  # prephitmp_23 = PHI <_8(2), pretmp_57(8)>
+  if (prephitmp_23 != 0)
+    goto <bb 11>;
+  else
+    goto <bb 10>;
+
+  <bb 10>:
+  goto <bb 23>;
+
+  <bb 11>:
+
+  <bb 12>:
+  # i_72 = PHI <0(11), i_30(22)>
+  _17 = MEM[(struct CSProcess * * *)input_7(D)];
+  _32 = i_72 * 4;
+  _33 = _17 + _32;
+  _18 = *_33;
+  _20 = operator new (112);
+  LUNA::Threading::OSThread::OSThread (_20, _18, thread_attr_21(D));
+
+  <bb 13>:
+  _43 = MEM[(unsigned int *)output_9(D) + 4B];
+  _44 = MEM[(unsigned int *)output_9(D) + 8B];
+  if (_43 != _44)
+    goto <bb 14>;
+  else
+    goto <bb 20>;
+
+  <bb 14>:
+  _45 = MEM[(struct OSThread * * *)output_9(D)];
+  if (_44 != 0)
+    goto <bb 15>;
+  else
+    goto <bb 26>;
+
+  <bb 15>:
+  _80 = *_45;
+  if (_20 == _80)
+    goto <bb 20>;
+  else
+    goto <bb 16>;
+
+  <bb 16>:
+  goto <bb 19>;
+
+  <bb 17>:
+  _47 = i_50 * 4;
+  _48 = _45 + _47;
+  _49 = *_48;
+  if (_20 == _49)
+    goto <bb 20>;
+  else
+    goto <bb 18>;
+
+  <bb 18>:
+
+  <bb 19>:
+  # i_82 = PHI <0(16), i_50(18)>
+  i_50 = i_82 + 1;
+  if (_44 > i_50)
+    goto <bb 17>;
+  else
+    goto <bb 26>;
+
+  <bb 20>:
+  LUNA::log (5, "doCreateOSThreads - Could not add the OSThread to the output set.\n");
+  _27 = MEM[(struct OSThread *)_20].D.79733.D.79676.D.35164._vptr.Uncopyable;
+  _28 = MEM[(int (*__vtbl_ptr_type) () *)_27 + 4B];
+  OBJ_TYPE_REF(_28;(struct OSThread)_20->1) (_20);
+
+  <bb 21>:
+  i_30 = i_72 + 1;
+  if (prephitmp_23 > i_30)
+    goto <bb 22>;
+  else
+    goto <bb 10>;
+
+  <bb 22>:
+  goto <bb 12>;
+
+  <bb 23>:
+  return;
+
+  # _74 = PHI <_20(12)>
+<L22>:
+  operator delete (_74);
+  resx 1
+
+  <bb 25>:
+  LUNA::log (5, "doCreateOSThreads - Cannot resize the output set. Threads not created.\n");
+  goto <bb 23>;
+
+  <bb 26>:
+  _54 = _44 * 4;
+  _55 = _45 + _54;
+  *_55 = _20;
+  _56 = _44 + 1;
+  output_9(D)->m_count = _56;
+  goto <bb 21>;
+
+}
+
+
+
+;; Function void LUNA::Threading::joinThreads(LUNA::Utility::Set<InputType*>*) [with ThreadType = LUNA::Threading::OSThread] (_ZN4LUNA9Threading11joinThreadsINS0_8OSThreadEEEvPNS_7Utility3SetIPT_EE, funcdef_no=4364, decl_uid=84028, symbol_order=1382)
+
+void LUNA::Threading::joinThreads(LUNA::Utility::Set<InputType*>*) [with ThreadType = LUNA::Threading::OSThread] (struct Set * input)
+{
+  unsigned int i;
+  bool D.97479;
+  void * D.97475;
+  struct AutoLock * D.97471;
+  struct AutoLock l;
+  long unsigned int D.97468;
+  void * D.97465;
+  void * D.97463;
+  struct AutoLock * D.97459;
+  struct AutoLock l;
+  thread_t stopid;
+  int D.97456;
+  void * outp;
+  struct OSThread * temp;
+  const unsigned int _6;
+  struct OSThread * * _7;
+  int (*__vtbl_ptr_type) () * _9;
+  int (*__vtbl_ptr_type) () _10;
+  struct BasicOSThread * _11;
+  int (*__vtbl_ptr_type) () * _14;
+  int (*__vtbl_ptr_type) () _15;
+  long unsigned int _17;
+  int (*__vtbl_ptr_type) () * _20;
+  int (*__vtbl_ptr_type) () _21;
+  void * PROF_24;
+  int _26;
+  void * PROF_28;
+  long unsigned int _30;
+  struct OSThread * * _31;
+  bool _32;
+  struct LockType * _33;
+  long unsigned int _35;
+  int _36;
+  long unsigned int _37;
+  int (*__vtbl_ptr_type) () * _39;
+  int (*__vtbl_ptr_type) () _40;
+  int _41;
+  int (*__vtbl_ptr_type) () * _43;
+  int (*__vtbl_ptr_type) () _44;
+  int _45;
+  int (*__vtbl_ptr_type) () * _47;
+  int (*__vtbl_ptr_type) () _48;
+  int _49;
+  struct LockType * _50;
+  ThreadState _51;
+  long unsigned int iftmp.138_52;
+  long unsigned int iftmp.138_53;
+  int (*__vtbl_ptr_type) () * _54;
+  int (*__vtbl_ptr_type) () _55;
+  int _56;
+  int (*__vtbl_ptr_type) () * _58;
+  int (*__vtbl_ptr_type) () _59;
+  int _60;
+  const unsigned int _61;
+  unsigned int _64;
+  struct OSThread * * _65;
+  struct OSThread * _66;
+  unsigned int _67;
+  unsigned int _70;
+  struct OSThread * * _71;
+  struct OSThread * _72;
+  struct OSThread * * _75;
+  struct OSThread * _77;
+  struct OSThread * * prephitmp_99;
+  unsigned int prephitmp_102;
+  const unsigned int _105;
+  unsigned int pretmp_110;
+  const unsigned int _113;
+  const unsigned int _121;
+  struct OSThread * * _123;
+  struct OSThread * * pretmp_135;
+  struct OSThread * * _142;
+
+  <bb 2>:
+  _105 = MEM[(unsigned int *)input_5(D) + 8B];
+  if (_105 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  return;
+
+  <bb 4>:
+
+  <bb 5>:
+  _7 = MEM[(struct OSThread * * *)input_5(D)];
+  temp_8 = *_7;
+  _9 = temp_8->D.79733.D.79676.D.35164._vptr.Uncopyable;
+  _10 = MEM[(int (*__vtbl_ptr_type) () *)_9 + 44B];
+  _11 = &temp_8->D.79733;
+  PROF_24 = [obj_type_ref] OBJ_TYPE_REF(_10;(struct BasicOSThread)_11->11);
+  if (PROF_24 == join)
+    goto <bb 6>;
+  else
+    goto <bb 23>;
+
+  <bb 6>:
+  _32 = MEM[(struct BasicOSThread *)temp_8].m_attr.joinable;
+  if (_32 != 0)
+    goto <bb 8>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  LUNA::log (5, "%s - Called for a detached thread.\n");
+  goto <bb 50>;
+
+  <bb 8>:
+  _33 = &MEM[(struct BasicOSThread *)temp_8].m_lock;
+  _39 = MEM[(struct Mutex *)temp_8 + 68B].D.41844._vptr.Uncopyable;
+  _40 = MEM[(int (*__vtbl_ptr_type) () *)_39 + 8B];
+  _41 = OBJ_TYPE_REF(_40;(struct Mutex)_33->2) (_33);
+
+  <bb 9>:
+  if (_41 != 0)
+    goto <bb 11>;
+  else
+    goto <bb 10>;
+
+  <bb 10>:
+  stopid_34 = MEM[(struct BasicOSThread *)temp_8].m_thread;
+  if (stopid_34 == 4294967295)
+    goto <bb 15>;
+  else
+    goto <bb 18>;
+
+  <bb 11>:
+  LUNA::log (0, "AutoLock couldn\'t acquire the lock.\n");
+  goto <bb 10>;
+
+<L21>:
+  goto <bb 14> (<L17>);
+
+<L20>:
+
+<L17>:
+  resx 3
+
+  <bb 15>:
+  outp = 0B;
+  _43 = MEM[(struct Mutex *)temp_8 + 68B].D.41844._vptr.Uncopyable;
+  _44 = MEM[(int (*__vtbl_ptr_type) () *)_43 + 12B];
+  _45 = OBJ_TYPE_REF(_44;(struct Mutex)_33->3) (_33);
+  if (_45 != 0)
+    goto <bb 16>;
+  else
+    goto <bb 17>;
+
+  <bb 16>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 17>:
+  l ={v} {CLOBBER};
+  l ={v} {CLOBBER};
+  goto <bb 51>;
+
+  <bb 18>:
+  _47 = MEM[(struct Mutex *)temp_8 + 68B].D.41844._vptr.Uncopyable;
+  _48 = MEM[(int (*__vtbl_ptr_type) () *)_47 + 12B];
+  _49 = OBJ_TYPE_REF(_48;(struct Mutex)_33->3) (_33);
+  if (_49 != 0)
+    goto <bb 19>;
+  else
+    goto <bb 20>;
+
+  <bb 19>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 20>:
+  l ={v} {CLOBBER};
+  l ={v} {CLOBBER};
+  _35 = pthread_self ();
+  if (stopid_34 != _35)
+    goto <bb 21>;
+  else
+    goto <bb 50>;
+
+  <bb 21>:
+  _36 = pthread_join (stopid_34, &outp);
+  if (_36 != 0)
+    goto <bb 22>;
+  else
+    goto <bb 51>;
+
+  <bb 22>:
+  _37 = MEM[(struct BasicOSThread *)temp_8].m_thread;
+  LUNA::log (0, "BasicOSThread::join() thread_impl::join failed, thread id %d.\n", _37);
+  goto <bb 50>;
+
+  <bb 23>:
+  _26 = OBJ_TYPE_REF(_10;(struct BasicOSThread)_11->11) (_11, &outp);
+  if (_26 != 0)
+    goto <bb 24>;
+  else
+    goto <bb 52>;
+
+  <bb 24>:
+  _14 = temp_8->D.79733.D.79676.D.35164._vptr.Uncopyable;
+  _15 = MEM[(int (*__vtbl_ptr_type) () *)_14 + 8B];
+  PROF_28 = [obj_type_ref] OBJ_TYPE_REF(_15;(struct BasicOSThread)_11->2);
+  if (PROF_28 == getId)
+    goto <bb 25>;
+  else
+    goto <bb 36>;
+
+  <bb 25>:
+  _50 = &MEM[(struct BasicOSThread *)temp_8].m_lock;
+  _54 = MEM[(struct Mutex *)temp_8 + 68B].D.41844._vptr.Uncopyable;
+  _55 = MEM[(int (*__vtbl_ptr_type) () *)_54 + 8B];
+  _56 = OBJ_TYPE_REF(_55;(struct Mutex)_50->2) (_50);
+
+  <bb 26>:
+  if (_56 != 0)
+    goto <bb 28>;
+  else
+    goto <bb 27>;
+
+  <bb 27>:
+  _51 ={v} MEM[(struct BasicOSThread *)temp_8].m_state;
+  if (_51 == 0)
+    goto <bb 32>;
+  else
+    goto <bb 33>;
+
+  <bb 28>:
+  LUNA::log (0, "AutoLock couldn\'t acquire the lock.\n");
+  goto <bb 27>;
+
+<L23>:
+  goto <bb 31> (<L19>);
+
+<L22>:
+
+<L19>:
+  resx 6
+
+  <bb 32>:
+  iftmp.138_52 = MEM[(struct BasicOSThread *)temp_8].m_thread;
+
+  <bb 33>:
+  # iftmp.138_53 = PHI <1000(27), iftmp.138_52(32)>
+  _58 = MEM[(struct Mutex *)temp_8 + 68B].D.41844._vptr.Uncopyable;
+  _59 = MEM[(int (*__vtbl_ptr_type) () *)_58 + 12B];
+  _60 = OBJ_TYPE_REF(_59;(struct Mutex)_50->3) (_50);
+  if (_60 != 0)
+    goto <bb 34>;
+  else
+    goto <bb 35>;
+
+  <bb 34>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 35>:
+  l ={v} {CLOBBER};
+  l ={v} {CLOBBER};
+  goto <bb 37>;
+
+  <bb 36>:
+  _30 = OBJ_TYPE_REF(_15;(struct BasicOSThread)_11->2) (_11);
+
+  <bb 37>:
+  # _17 = PHI <_30(36), iftmp.138_53(35)>
+  LUNA::log (5, "joinThreads - Could not join the IThread (p: %p) (id: %d).\n", temp_8, _17);
+  goto <bb 52>;
+
+  <bb 38>:
+  _64 = i_76 * 4;
+  _65 = _142 + _64;
+  _66 = *_65;
+  if (temp_8 == _66)
+    goto <bb 39>;
+  else
+    goto <bb 44>;
+
+  <bb 39>:
+  # _123 = PHI <_65(38)>
+  # i_122 = PHI <i_76(38)>
+
+  <bb 40>:
+  # i_38 = PHI <i_122(39), 0(53)>
+  # _31 = PHI <_123(39), _142(53)>
+  _67 = _121 + 4294967295;
+  input_5(D)->m_count = _67;
+  if (i_38 != _67)
+    goto <bb 42>;
+  else
+    goto <bb 41>;
+
+  <bb 41>:
+  pretmp_110 = _67 * 4;
+  goto <bb 43>;
+
+  <bb 42>:
+  _70 = _67 * 4;
+  _71 = _142 + _70;
+  _72 = *_71;
+  *_31 = _72;
+  pretmp_135 = input_5(D)->m_set;
+
+  <bb 43>:
+  # prephitmp_102 = PHI <pretmp_110(41), _70(42)>
+  # prephitmp_99 = PHI <_142(41), pretmp_135(42)>
+  _75 = prephitmp_99 + prephitmp_102;
+  memset (_75, 0, 4);
+  goto <bb 47>;
+
+  <bb 44>:
+
+  <bb 45>:
+  # i_78 = PHI <0(54), i_76(44)>
+  i_76 = i_78 + 1;
+  if (_121 > i_76)
+    goto <bb 38>;
+  else
+    goto <bb 46>;
+
+  <bb 46>:
+
+  <bb 47>:
+
+  <bb 48>:
+  _20 = temp_8->D.79733.D.79676.D.35164._vptr.Uncopyable;
+  _21 = MEM[(int (*__vtbl_ptr_type) () *)_20 + 4B];
+  OBJ_TYPE_REF(_21;(struct OSThread)temp_8->1) (temp_8);
+  outp ={v} {CLOBBER};
+  _6 = MEM[(unsigned int *)input_5(D) + 8B];
+  if (_6 != 0)
+    goto <bb 49>;
+  else
+    goto <bb 3>;
+
+  <bb 49>:
+  goto <bb 5>;
+
+  <bb 50>:
+  goto <bb 24>;
+
+  <bb 51>:
+  _61 = MEM[(unsigned int *)input_5(D) + 8B];
+  if (_61 != 0)
+    goto <bb 53>;
+  else
+    goto <bb 46>;
+
+  <bb 52>:
+  _113 = MEM[(unsigned int *)input_5(D) + 8B];
+  if (_113 != 0)
+    goto <bb 53>;
+  else
+    goto <bb 48>;
+
+  <bb 53>:
+  # _121 = PHI <_113(52), _61(51)>
+  _142 = input_5(D)->m_set;
+  _77 = *_142;
+  if (temp_8 == _77)
+    goto <bb 40>;
+  else
+    goto <bb 54>;
+
+  <bb 54>:
+  goto <bb 45>;
+
+}
+
+
+
+;; Function std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<int, LUNA::Threading::IThreadBlocker* (*)()>; _Key = int; _Val = std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>; _KeyOfValue = std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >] (_ZNSt8_Rb_treeIiSt4pairIKiPFPN4LUNA9Threading14IThreadBlockerEvEESt10_Select1stIS8_ESt4lessIiESaIS8_EE16_M_insert_uniqueIS0_IiS7_EEES0_ISt17_Rb_tree_iteratorIS8_EbEOT_, funcdef_no=4551, decl_uid=88134, symbol_order=1577)
+
+std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<int, LUNA::Threading::IThreadBlocker* (*)()>; _Key = int; _Val = std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>; _KeyOfValue = std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >] (struct _Rb_tree * const this, struct pair & __v)
+{
+  struct _Rb_tree_node_base * SR.651;
+  struct _Rb_tree_node_base * SR.650;
+  struct _Rb_tree_node_base * __res$second;
+  struct _Rb_tree_node_base * __res$first;
+  struct _Rb_tree_node * D.97525;
+  struct iterator D.97523;
+  bool __insert_left;
+  struct _Rb_tree_node * __y;
+  bool __comp;
+  struct _Rb_tree_node_base * __j;
+  struct _Rb_tree_node_base * __res$second;
+  struct _Rb_tree_node_base * __res$first;
+  struct pair __res;
+  struct iterator D.89626;
+  const int pretmp_5;
+  const int prephitmp_10;
+  const int _19;
+  const int prephitmp_20;
+  struct _Rb_tree_node_base * _26;
+  const int _36;
+  const int _37;
+  int _40;
+  struct IThreadBlocker * (*<T8397>) (void) _41;
+  unsigned int _44;
+  unsigned int _45;
+  struct _Rb_tree_node * _46;
+  const int _50;
+  const int pretmp_51;
+  const int _53;
+  const int pretmp_77;
+
+  <bb 2>:
+  __res$second_15 = MEM[(struct _Rb_tree_node_base * *)this_4(D) + 8B];
+  __res$second_16 = &this_4(D)->_M_impl._M_header;
+  if (__res$second_15 != 0B)
+    goto <bb 3>;
+  else
+    goto <bb 10>;
+
+  <bb 3>:
+  pretmp_51 = MEM[(const int &)__v_2(D)];
+
+  <bb 4>:
+  # __res$second_63 = PHI <__res$second_15(3), __res$second_42(8)>
+  _19 = MEM[(const int &)__res$second_63 + 16];
+  if (_19 > pretmp_51)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  __res$second_21 = MEM[(struct _Rb_tree_node_base * *)__res$second_63 + 8B];
+  goto <bb 7>;
+
+  <bb 6>:
+  __res$second_22 = MEM[(struct _Rb_tree_node_base * *)__res$second_63 + 12B];
+
+  <bb 7>:
+  # __comp_35 = PHI <1(5), 0(6)>
+  # __res$second_42 = PHI <__res$second_21(5), __res$second_22(6)>
+  if (__res$second_42 != 0B)
+    goto <bb 8>;
+  else
+    goto <bb 9>;
+
+  <bb 8>:
+  goto <bb 4>;
+
+  <bb 9>:
+  # _50 = PHI <pretmp_51(7)>
+  # _53 = PHI <_19(7)>
+  # __comp_34 = PHI <__comp_35(7)>
+  # __res$second_52 = PHI <__res$second_63(7)>
+  if (__comp_34 != 0)
+    goto <bb 10>;
+  else
+    goto <bb 12>;
+
+  <bb 10>:
+  # __res$second_67 = PHI <__res$second_52(9), __res$second_16(2)>
+  _26 = MEM[(struct _Rb_tree_node_base * *)this_4(D) + 12B];
+  if (__res$second_67 == _26)
+    goto <bb 13>;
+  else
+    goto <bb 11>;
+
+  <bb 11>:
+  __res$second_29 = std::_Rb_tree_decrement (__res$second_67);
+  pretmp_5 = MEM[(const int &)__res$second_29 + 16];
+  pretmp_77 = MEM[(const int &)__v_2(D)];
+
+  <bb 12>:
+  # __res$second_30 = PHI <__res$second_52(9), __res$second_29(11)>
+  # __res$second_64 = PHI <__res$second_52(9), __res$second_67(11)>
+  # prephitmp_20 = PHI <_53(9), pretmp_5(11)>
+  # prephitmp_10 = PHI <_50(9), pretmp_77(11)>
+  if (prephitmp_10 > prephitmp_20)
+    goto <bb 13>;
+  else
+    goto <bb 17>;
+
+  <bb 13>:
+  # __res$second_62 = PHI <__res$second_64(12), __res$second_67(10)>
+  if (__res$second_62 != 0B)
+    goto <bb 14>;
+  else
+    goto <bb 17>;
+
+  <bb 14>:
+  if (__res$second_16 == __res$second_62)
+    goto <bb 16>;
+  else
+    goto <bb 15>;
+
+  <bb 15>:
+  _36 = MEM[(const int &)__v_2(D)];
+  _37 = MEM[(const int &)__res$second_62 + 16];
+  __insert_left_39 = _36 < _37;
+
+  <bb 16>:
+  # __insert_left_43 = PHI <__insert_left_39(15), 1(14)>
+  _46 = operator new (24);
+  _40 = MEM[(int &)__v_2(D)];
+  MEM[(struct pair *)_46 + 16B].first = _40;
+  _41 = MEM[(struct IThreadBlocker * (*<T8397>) (void) &)__v_2(D) + 4];
+  MEM[(struct pair *)_46 + 16B].second = _41;
+  std::_Rb_tree_insert_and_rebalance (__insert_left_43, _46, __res$second_62, __res$second_16);
+  _44 = this_4(D)->_M_impl._M_node_count;
+  _45 = _44 + 1;
+  this_4(D)->_M_impl._M_node_count = _45;
+  MEM[(struct pair *)&<retval>] = _46;
+  <retval>.second = 1;
+  goto <bb 18>;
+
+  <bb 17>:
+  # __res$second_78 = PHI <0B(13), __res$second_30(12)>
+  MEM[(struct pair *)&<retval>] = __res$second_78;
+  <retval>.second = 0;
+
+  <bb 18>:
+  return <retval>;
+
+}
+
+
+
+;; Function void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_erase(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type) [with _Key = int; _Val = std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>; _KeyOfValue = std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type = std::_Rb_tree_node<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >*] (_ZNSt8_Rb_treeIiSt4pairIKiPFPN4LUNA9Threading14IThreadBlockerEvEESt10_Select1stIS8_ESt4lessIiESaIS8_EE8_M_eraseEPSt13_Rb_tree_nodeIS8_E, funcdef_no=4585, decl_uid=43876, symbol_order=1606)
+
+void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_erase(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type) [with _Key = int; _Val = std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>; _KeyOfValue = std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type = std::_Rb_tree_node<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >*] (struct _Rb_tree * const this, struct _Rb_tree_node * __x)
+{
+  struct _Rb_tree_node_base * _5;
+
+  <bb 2>:
+  if (__x_3(D) != 0B)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  return;
+
+  <bb 4>:
+
+  <bb 5>:
+  # __x_12 = PHI <__x_3(D)(4), __x_8(6)>
+  _5 = MEM[(struct _Rb_tree_node_base * *)__x_12 + 12B];
+  std::_Rb_tree<int, std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>, std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >, std::less<int>, std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> > >::_M_erase (this_6(D), _5);
+  __x_8 = MEM[(struct _Rb_tree_node_base * *)__x_12 + 8B];
+  operator delete (__x_12);
+  if (__x_8 != 0B)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  goto <bb 3>;
+
+  <bb 6>:
+  goto <bb 5>;
+
+}
+
+
+
+;; Function static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::Utility::GenericFactory<LUNA::Threading::IThreadBlocker, int>] (_ZN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE16DestroySingletonEv, funcdef_no=4414, decl_uid=42532, symbol_order=1432)
+
+static void LUNA::Utility::SingletonHolder<T>::DestroySingleton() [with T = LUNA::Utility::GenericFactory<LUNA::Threading::IThreadBlocker, int>] ()
+{
+  bool m_destroyed.52_3;
+  struct GenericFactory * m_instance.53_4;
+  struct _Rep_type * _10;
+  struct _Rb_tree_node_base * _11;
+
+  <bb 2>:
+  m_destroyed.52_3 = m_destroyed;
+  if (m_destroyed.52_3 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  __assert_fail ("!m_destroyed", "/home/rtsd/RTSD/LUNA/luna-xenomai-arm-v7-Posix/include/utility/Singleton.h", 152, &__PRETTY_FUNCTION__);
+
+  <bb 4>:
+  m_instance.53_4 ={v} m_instance;
+  if (m_instance.53_4 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _10 = &MEM[(struct map *)m_instance.53_4]._M_t;
+  _11 = MEM[(struct _Rb_tree_node_base * *)m_instance.53_4 + 8B];
+  std::_Rb_tree<int, std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>, std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >, std::less<int>, std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> > >::_M_erase (_10, _11);
+  *m_instance.53_4 ={v} {CLOBBER};
+  operator delete (m_instance.53_4);
+
+  <bb 6>:
+  m_instance ={v} 0B;
+  m_destroyed = 1;
+  return;
+
+}
+
+
+
+;; Function static T* LUNA::Utility::SingletonHolder<T>::Instance() [with T = LUNA::Utility::GenericFactory<LUNA::Threading::IThreadBlocker, int>] (_ZN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE8InstanceEv, funcdef_no=4264, decl_uid=42526, symbol_order=1282)
+
+static T* LUNA::Utility::SingletonHolder<T>::Instance() [with T = LUNA::Utility::GenericFactory<LUNA::Threading::IThreadBlocker, int>] ()
+{
+  struct GenericFactory * m_instance.47_5;
+  struct GenericFactory * m_instance.49_7;
+  bool m_destroyed.50_8;
+  void * _12;
+  struct GenericFactory * _17;
+  struct _Rb_tree_node_base * _18;
+
+  <bb 2>:
+  m_instance.47_5 ={v} m_instance;
+  if (m_instance.47_5 == 0B)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 3>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.49_7 ={v} m_instance;
+  if (m_instance.49_7 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 7>;
+
+  <bb 4>:
+  m_destroyed.50_8 = m_destroyed;
+  if (m_destroyed.50_8 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 6>:
+  _12 = operator new (24);
+  MEM[(struct _Rb_tree_impl *)_12]._M_header._M_color = 0;
+  MEM[(struct _Rb_tree_impl *)_12]._M_header._M_parent = 0B;
+  MEM[(struct _Rb_tree_impl *)_12]._M_node_count = 0;
+  _18 = &MEM[(struct _Rb_tree_impl *)_12]._M_header;
+  MEM[(struct _Rb_tree_impl *)_12]._M_header._M_left = _18;
+  MEM[(struct _Rb_tree_impl *)_12]._M_header._M_right = _18;
+  m_instance ={v} _12;
+  atexit (DestroySingleton);
+
+  <bb 7>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 8>:
+  _17 ={v} m_instance;
+  return _17;
+
+}
+
+
+
+;; Function (static initializers for src/main.cpp) (_GLOBAL__sub_I_term, funcdef_no=4722, decl_uid=92746, symbol_order=2582) (executed once)
+
+(static initializers for src/main.cpp) ()
+{
+  struct pair D.97563;
+  struct pair D.97562;
+  struct pair D.97561;
+  struct pair D.97560;
+  struct GenericFactory * _3;
+  struct _Rep_type * _4;
+  bool _5;
+  struct GenericFactory * _6;
+  struct _Rep_type * _7;
+  bool _8;
+  int _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE.141_9;
+  int _10;
+  int _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE.142_11;
+  int _12;
+  int _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE.143_13;
+  int _14;
+
+  <bb 2>:
+  std::ios_base::Init::Init (&__ioinit);
+  __aeabi_atexit (&__ioinit, __comp_dtor , &__dso_handle);
+  _3 = LUNA::Utility::SingletonHolder<LUNA::Utility::GenericFactory<LUNA::Threading::IThreadBlocker, int> >::Instance ();
+  D.97561.first = 10;
+  D.97561.second = CreateOSThreadBlocker;
+  _4 = &MEM[(struct map *)_3]._M_t;
+  D.97560 = std::_Rb_tree<int, std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>, std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >, std::less<int>, std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> > >::_M_insert_unique<std::pair<int, LUNA::Threading::IThreadBlocker* (*)()> > (_4, &D.97561); [return slot optimization]
+  _5 = D.97560.second;
+  D.97560 ={v} {CLOBBER};
+  D.97561 ={v} {CLOBBER};
+  isRegistered_NONRT_OS_THREAD = _5;
+  _6 = LUNA::Utility::SingletonHolder<LUNA::Utility::GenericFactory<LUNA::Threading::IThreadBlocker, int> >::Instance ();
+  D.97563.first = 20;
+  D.97563.second = CreateOSThreadBlocker;
+  _7 = &MEM[(struct map *)_6]._M_t;
+  D.97562 = std::_Rb_tree<int, std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()>, std::_Select1st<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> >, std::less<int>, std::allocator<std::pair<const int, LUNA::Threading::IThreadBlocker* (*)()> > >::_M_insert_unique<std::pair<int, LUNA::Threading::IThreadBlocker* (*)()> > (_7, &D.97563); [return slot optimization]
+  _8 = D.97562.second;
+  D.97562 ={v} {CLOBBER};
+  D.97563 ={v} {CLOBBER};
+  isRegistered_RT_OS_THREAD = _8;
+  _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE.141_9 = _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE;
+  _10 = _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE.141_9 & 1;
+  if (_10 == 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS0_14GenericFactoryINS_9Threading14IThreadBlockerEiPFPS4_vEEEE6m_lockE = 1;
+  LUNA::locksync::Mutex::Mutex (&m_lock, 1, 0);
+  __aeabi_atexit (&m_lock, __comp_dtor , &__dso_handle);
+
+  <bb 4>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE.142_11 = _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE;
+  _12 = _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE.142_11 & 1;
+  if (_12 == 0)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_16EmergencyManagerEE6m_lockE = 1;
+  LUNA::locksync::Mutex::Mutex (&m_lock, 1, 0);
+  __aeabi_atexit (&m_lock, __comp_dtor , &__dso_handle);
+
+  <bb 6>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE.143_13 = _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE;
+  _14 = _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE.143_13 & 1;
+  if (_14 == 0)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+  <bb 7>:
+  _ZGVN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE6m_lockE = 1;
+  LUNA::locksync::Mutex::Mutex (&m_lock, 1, 0);
+  __aeabi_atexit (&m_lock, __comp_dtor , &__dso_handle);
+
+  <bb 8>:
+  return;
+
+}
+
+
+
+;; Function static T* LUNA::Utility::SingletonHolder<T>::Instance() [with T = LUNA::Threading::OSScheduler] (_ZN4LUNA7Utility15SingletonHolderINS_9Threading11OSSchedulerEE8InstanceEv, funcdef_no=4338, decl_uid=79268, symbol_order=1356)
+
+static T* LUNA::Utility::SingletonHolder<T>::Instance() [with T = LUNA::Threading::OSScheduler] ()
+{
+  struct OSScheduler * m_instance.66_5;
+  struct OSScheduler * m_instance.68_7;
+  bool m_destroyed.69_8;
+  void * _12;
+  struct OSScheduler * _18;
+
+  <bb 2>:
+  m_instance.66_5 ={v} m_instance;
+  if (m_instance.66_5 == 0B)
+    goto <bb 3>;
+  else
+    goto <bb 9>;
+
+  <bb 3>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.68_7 ={v} m_instance;
+  if (m_instance.68_7 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 8>;
+
+  <bb 4>:
+  m_destroyed.69_8 = m_destroyed;
+  if (m_destroyed.69_8 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 6>:
+  _12 = operator new (16);
+  LUNA::Threading::OSScheduler::OSScheduler (_12);
+
+  <bb 7>:
+  m_instance ={v} _12;
+  atexit (DestroySingleton);
+
+  <bb 8>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 9>:
+  _18 ={v} m_instance;
+  return _18;
+
+<L10>:
+  operator delete (_12);
+  resx 1
+
+}
+
+
+
+;; Function LUNA::Threading::IScheduler* LUNA::Threading::BasicOSThread<impl>::getScheduler() [with ThreadImpl = LUNA::Threading::PThreadImplementation] (_ZN4LUNA9Threading13BasicOSThreadINS0_21PThreadImplementationEE12getSchedulerEv, funcdef_no=4633, decl_uid=79599, symbol_order=1656)
+
+LUNA::Threading::IScheduler* LUNA::Threading::BasicOSThread<impl>::getScheduler() [with ThreadImpl = LUNA::Threading::PThreadImplementation] (struct BasicOSThread * const this)
+{
+  struct OSScheduler * D.97586;
+  struct OSScheduler * m_instance.66_4;
+  struct OSScheduler * m_instance.68_5;
+  bool m_destroyed.69_6;
+  void * _7;
+  struct OSScheduler * _8;
+
+  <bb 2>:
+  m_instance.66_4 ={v} m_instance;
+  if (m_instance.66_4 == 0B)
+    goto <bb 3>;
+  else
+    goto <bb 9>;
+
+  <bb 3>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.68_5 ={v} m_instance;
+  if (m_instance.68_5 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 8>;
+
+  <bb 4>:
+  m_destroyed.69_6 = m_destroyed;
+  if (m_destroyed.69_6 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 6>:
+  _7 = operator new (16);
+  LUNA::Threading::OSScheduler::OSScheduler (_7);
+
+  <bb 7>:
+  m_instance ={v} _7;
+  atexit (DestroySingleton);
+
+  <bb 8>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 9>:
+  _8 ={v} m_instance;
+  return _8;
+
+<L1>:
+  operator delete (_7);
+  resx 1
+
+}
+
+
+
+;; Function int LUNA::Threading::BasicOSThread<impl>::setPriority(LUNA::Threading::priority_t) [with ThreadImpl = LUNA::Threading::PThreadImplementation; LUNA::Threading::priority_t = int] (_ZN4LUNA9Threading13BasicOSThreadINS0_21PThreadImplementationEE11setPriorityEi, funcdef_no=4575, decl_uid=79611, symbol_order=1596)
+
+int LUNA::Threading::BasicOSThread<impl>::setPriority(LUNA::Threading::priority_t) [with ThreadImpl = LUNA::Threading::PThreadImplementation; LUNA::Threading::priority_t = int] (struct BasicOSThread * const this, priority_t priority)
+{
+  struct OSScheduler * D.97603;
+  struct IScheduler * D.97602;
+  int policy;
+  struct sched_param param;
+  int result;
+  static const char __FUNCTION__[12] = "setPriority";
+  int _1;
+  int (*__vtbl_ptr_type) () * _6;
+  int (*__vtbl_ptr_type) () _7;
+  bool _9;
+  unsigned int priority.42_11;
+  unsigned int _12;
+  unsigned int priority.42_14;
+  unsigned int _15;
+  int (*__vtbl_ptr_type) () * _17;
+  int (*__vtbl_ptr_type) () _18;
+  struct IScheduler * _20;
+  long unsigned int _21;
+  long unsigned int _24;
+  void * PROF_29;
+  struct IScheduler * _31;
+  struct OSScheduler * m_instance.66_34;
+  struct OSScheduler * m_instance.68_35;
+  bool m_destroyed.69_36;
+  void * _37;
+  struct OSScheduler * _38;
+
+  <bb 2>:
+  _6 = this_5(D)->D.79676.D.35164._vptr.Uncopyable;
+  _7 = MEM[(int (*__vtbl_ptr_type) () *)_6 + 36B];
+  _9 = OBJ_TYPE_REF(_7;(struct BasicOSThread)this_5(D)->9) (this_5(D));
+  if (_9 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+  <bb 3>:
+  priority.42_11 = (unsigned int) priority_10(D);
+  _12 = priority.42_11 + 4294967285;
+  if (_12 > 88)
+    goto <bb 4>;
+  else
+    goto <bb 7>;
+
+  <bb 4>:
+  LUNA::log (5, "%s - Cannot set the RT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 20>;
+
+  <bb 5>:
+  priority.42_14 = (unsigned int) priority_10(D);
+  _15 = priority.42_14 + 4294967295;
+  if (_15 > 9)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 6>:
+  LUNA::log (5, "%s - Cannot set the NonRT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 20>;
+
+  <bb 7>:
+  _17 = this_5(D)->D.79676.D.35164._vptr.Uncopyable;
+  _18 = MEM[(int (*__vtbl_ptr_type) () *)_17 + 56B];
+  PROF_29 = [obj_type_ref] OBJ_TYPE_REF(_18;(struct BasicOSThread)this_5(D)->14);
+  if (PROF_29 == getScheduler)
+    goto <bb 8>;
+  else
+    goto <bb 17>;
+
+  <bb 8>:
+  m_instance.66_34 ={v} m_instance;
+  if (m_instance.66_34 == 0B)
+    goto <bb 9>;
+  else
+    goto <bb 15>;
+
+  <bb 9>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.68_35 ={v} m_instance;
+  if (m_instance.68_35 == 0B)
+    goto <bb 10>;
+  else
+    goto <bb 14>;
+
+  <bb 10>:
+  m_destroyed.69_36 = m_destroyed;
+  if (m_destroyed.69_36 != 0)
+    goto <bb 11>;
+  else
+    goto <bb 12>;
+
+  <bb 11>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 12>:
+  _37 = operator new (16);
+  LUNA::Threading::OSScheduler::OSScheduler (_37);
+
+  <bb 13>:
+  m_instance ={v} _37;
+  atexit (DestroySingleton);
+
+  <bb 14>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 15>:
+  _38 ={v} m_instance;
+  goto <bb 18>;
+
+<L13>:
+  operator delete (_37);
+  resx 3
+
+  <bb 17>:
+  _31 = OBJ_TYPE_REF(_18;(struct BasicOSThread)this_5(D)->14) (this_5(D));
+
+  <bb 18>:
+  # _20 = PHI <_31(17), _38(15)>
+  _21 = this_5(D)->m_thread;
+  result_23 = LUNA::Threading::OSScheduler::setThreadPriority (_20, _21, priority_10(D));
+  _24 = this_5(D)->m_thread;
+  pthread_getschedparam (_24, &policy, &param);
+  if (result_23 == 0)
+    goto <bb 19>;
+  else
+    goto <bb 20>;
+
+  <bb 19>:
+  this_5(D)->m_attr.priority = priority_10(D);
+
+  <bb 20>:
+  # _1 = PHI <1001(4), 1001(6), result_23(19), result_23(18)>
+  param ={v} {CLOBBER};
+  policy ={v} {CLOBBER};
+  return _1;
+
+}
+
+
+
+;; Function virtual int LUNA::CSP::CSProcess::setPriority(LUNA::Threading::priority_t) (_ZN4LUNA3CSP9CSProcess11setPriorityEi, funcdef_no=1976, decl_uid=42448, symbol_order=471)
+
+virtual int LUNA::CSP::CSProcess::setPriority(LUNA::Threading::priority_t) (struct CSProcess * const this, priority_t priority)
+{
+  struct OSScheduler * D.97626;
+  struct IScheduler * D.97625;
+  int policy;
+  struct sched_param param;
+  int result;
+  int D.97623;
+  int ret;
+  struct IThread * _4;
+  int (*__vtbl_ptr_type) () * _5;
+  int (*__vtbl_ptr_type) () _6;
+  void * PROF_11;
+  int (*__vtbl_ptr_type) () _16;
+  bool _17;
+  unsigned int priority.42_18;
+  unsigned int _19;
+  unsigned int priority.42_20;
+  unsigned int _21;
+  int (*__vtbl_ptr_type) () * _22;
+  int (*__vtbl_ptr_type) () _23;
+  struct IScheduler * _24;
+  long unsigned int _25;
+  long unsigned int _27;
+  void * PROF_29;
+  struct IScheduler * _31;
+  struct OSScheduler * m_instance.66_34;
+  struct OSScheduler * m_instance.68_35;
+  bool m_destroyed.69_36;
+  void * _37;
+  struct OSScheduler * _38;
+
+  <bb 2>:
+  _4 = this_3(D)->D.42484.m_thread;
+  _5 = _4->D.35164._vptr.Uncopyable;
+  _6 = MEM[(int (*__vtbl_ptr_type) () *)_5 + 12B];
+  PROF_11 = [obj_type_ref] OBJ_TYPE_REF(_6;(struct IThread)_4->3);
+  if (PROF_11 == setPriority)
+    goto <bb 3>;
+  else
+    goto <bb 22>;
+
+  <bb 3>:
+  _16 = MEM[(int (*__vtbl_ptr_type) () *)_5 + 36B];
+  _17 = OBJ_TYPE_REF(_16;(struct BasicOSThread)_4->9) (_4);
+  if (_17 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+  <bb 4>:
+  priority.42_18 = (unsigned int) priority_7(D);
+  _19 = priority.42_18 + 4294967285;
+  if (_19 > 88)
+    goto <bb 5>;
+  else
+    goto <bb 8>;
+
+  <bb 5>:
+  LUNA::log (5, "%s - Cannot set the RT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 21>;
+
+  <bb 6>:
+  priority.42_20 = (unsigned int) priority_7(D);
+  _21 = priority.42_20 + 4294967295;
+  if (_21 > 9)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+  <bb 7>:
+  LUNA::log (5, "%s - Cannot set the NonRT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 21>;
+
+  <bb 8>:
+  _22 = MEM[(struct BasicOSThread *)_4].D.79676.D.35164._vptr.Uncopyable;
+  _23 = MEM[(int (*__vtbl_ptr_type) () *)_22 + 56B];
+  PROF_29 = [obj_type_ref] OBJ_TYPE_REF(_23;(struct BasicOSThread)_4->14);
+  if (PROF_29 == getScheduler)
+    goto <bb 9>;
+  else
+    goto <bb 18>;
+
+  <bb 9>:
+  m_instance.66_34 ={v} m_instance;
+  if (m_instance.66_34 == 0B)
+    goto <bb 10>;
+  else
+    goto <bb 16>;
+
+  <bb 10>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.68_35 ={v} m_instance;
+  if (m_instance.68_35 == 0B)
+    goto <bb 11>;
+  else
+    goto <bb 15>;
+
+  <bb 11>:
+  m_destroyed.69_36 = m_destroyed;
+  if (m_destroyed.69_36 != 0)
+    goto <bb 12>;
+  else
+    goto <bb 13>;
+
+  <bb 12>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 13>:
+  _37 = operator new (16);
+  LUNA::Threading::OSScheduler::OSScheduler (_37);
+
+  <bb 14>:
+  m_instance ={v} _37;
+  atexit (DestroySingleton);
+
+  <bb 15>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 16>:
+  _38 ={v} m_instance;
+  goto <bb 19>;
+
+<L4>:
+  operator delete (_37);
+  resx 1
+
+  <bb 18>:
+  _31 = OBJ_TYPE_REF(_23;(struct BasicOSThread)_4->14) (_4);
+
+  <bb 19>:
+  # _24 = PHI <_31(18), _38(16)>
+  _25 = MEM[(struct BasicOSThread *)_4].m_thread;
+  result_26 = LUNA::Threading::OSScheduler::setThreadPriority (_24, _25, priority_7(D));
+  _27 = MEM[(struct BasicOSThread *)_4].m_thread;
+  pthread_getschedparam (_27, &policy, &param);
+  if (result_26 == 0)
+    goto <bb 20>;
+  else
+    goto <bb 21>;
+
+  <bb 20>:
+  MEM[(struct BasicOSThread *)_4].m_attr.priority = priority_7(D);
+
+  <bb 21>:
+  # ret_28 = PHI <1001(5), 1001(7), result_26(20), result_26(19)>
+  param ={v} {CLOBBER};
+  policy ={v} {CLOBBER};
+  goto <bb 23>;
+
+  <bb 22>:
+  ret_13 = OBJ_TYPE_REF(_6;(struct IThread)_4->3) (_4, priority_7(D));
+
+  <bb 23>:
+  # ret_9 = PHI <ret_13(22), ret_28(21)>
+  if (ret_9 == 0)
+    goto <bb 24>;
+  else
+    goto <bb 25>;
+
+  <bb 24>:
+  this_3(D)->D.42485.m_priority = priority_7(D);
+
+  <bb 25>:
+  return ret_9;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::CSProcess::preRun() (_ZN4LUNA3CSP9CSProcess6preRunEv, funcdef_no=1975, decl_uid=42445, symbol_order=470)
+
+virtual void LUNA::CSP::CSProcess::preRun() (struct CSProcess * const this)
+{
+  struct _Rb_tree_node_base * SR.671;
+  struct _Rb_tree_node_base * SR.670;
+  struct OSScheduler * D.97681;
+  struct IScheduler * D.97680;
+  int policy;
+  struct sched_param param;
+  int result;
+  int D.97678;
+  struct EmergencyManager * D.97671;
+  struct IThreadBlocker * D.97658;
+  struct iterator D.97654;
+  struct _Rb_tree_node * __y;
+  struct iterator D.97650;
+  struct _Rb_tree_node_base * SR.469;
+  struct IThreadBlocker * D.97648;
+  struct GenericFactory * D.97645;
+  static const char __FUNCTION__[7] = "preRun";
+  const int D.44663;
+  struct IThread * _10;
+  int (*__vtbl_ptr_type) () * _11;
+  int (*__vtbl_ptr_type) () _12;
+  int _14;
+  const char * _20;
+  int _25;
+  struct IThread * _26;
+  int (*__vtbl_ptr_type) () * _27;
+  int (*__vtbl_ptr_type) () _28;
+  int _30;
+  int _31;
+  void * PROF_34;
+  int _36;
+  struct GenericFactory * m_instance.47_38;
+  struct GenericFactory * m_instance.49_39;
+  bool m_destroyed.50_40;
+  void * _41;
+  struct _Rb_tree_node_base * _42;
+  struct GenericFactory * _43;
+  struct IThreadBlocker * (*<T8397>) (void) _46;
+  struct IThreadBlocker * _47;
+  const int _52;
+  const int _59;
+  struct EmergencyManager * m_instance.58_63;
+  struct EmergencyManager * m_instance.60_64;
+  bool m_destroyed.61_65;
+  void * _66;
+  struct EmergencyManager * _67;
+  int (*__vtbl_ptr_type) () _68;
+  bool _69;
+  unsigned int priority.42_70;
+  unsigned int _71;
+  unsigned int priority.42_72;
+  unsigned int _73;
+  int (*__vtbl_ptr_type) () * _74;
+  int (*__vtbl_ptr_type) () _75;
+  struct IScheduler * _76;
+  long unsigned int _77;
+  long unsigned int _79;
+  int _80;
+  void * PROF_81;
+  struct IScheduler * _83;
+  struct OSScheduler * m_instance.66_86;
+  struct OSScheduler * m_instance.68_87;
+  bool m_destroyed.69_88;
+  void * _89;
+  struct OSScheduler * _90;
+  struct IThread * _91;
+  int (*__vtbl_ptr_type) () * _92;
+  int (*__vtbl_ptr_type) () _93;
+  int _94;
+
+  <bb 2>:
+  __builtin_puts (&"Setting thread mode for mode switches"[0]);
+  pthread_setmode_np (16384, 0, 0B);
+  m_instance.47_38 ={v} m_instance;
+  if (m_instance.47_38 == 0B)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 3>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.49_39 ={v} m_instance;
+  if (m_instance.49_39 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 7>;
+
+  <bb 4>:
+  m_destroyed.50_40 = m_destroyed;
+  if (m_destroyed.50_40 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 6>:
+  _41 = operator new (24);
+  MEM[(struct _Rb_tree_impl *)_41]._M_header._M_color = 0;
+  MEM[(struct _Rb_tree_impl *)_41]._M_header._M_parent = 0B;
+  MEM[(struct _Rb_tree_impl *)_41]._M_node_count = 0;
+  _42 = &MEM[(struct _Rb_tree_impl *)_41]._M_header;
+  MEM[(struct _Rb_tree_impl *)_41]._M_header._M_left = _42;
+  MEM[(struct _Rb_tree_impl *)_41]._M_header._M_right = _42;
+  m_instance ={v} _41;
+  atexit (DestroySingleton);
+
+  <bb 7>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 8>:
+  _43 ={v} m_instance;
+  _10 = this_9(D)->D.42484.m_thread;
+  _11 = _10->D.35164._vptr.Uncopyable;
+  _12 = MEM[(int (*__vtbl_ptr_type) () *)_11 + 28B];
+  _14 = OBJ_TYPE_REF(_12;(struct IThread)_10->7) (_10);
+  __y_16 = MEM[(struct _Rb_tree_node_base * *)_43 + 8B];
+  __y_50 = &MEM[(struct _Rb_tree *)_43]._M_impl._M_header;
+  if (__y_16 != 0B)
+    goto <bb 9>;
+  else
+    goto <bb 18>;
+
+  <bb 9>:
+
+  <bb 10>:
+  # __y_85 = PHI <__y_16(9), __y_61(14)>
+  # __y_154 = PHI <__y_50(9), __y_60(14)>
+  _52 = MEM[(const int &)__y_85 + 16];
+  if (_14 <= _52)
+    goto <bb 11>;
+  else
+    goto <bb 12>;
+
+  <bb 11>:
+  __y_54 = MEM[(struct _Rb_tree_node_base * *)__y_85 + 8B];
+  goto <bb 13>;
+
+  <bb 12>:
+  __y_55 = MEM[(struct _Rb_tree_node_base * *)__y_85 + 12B];
+
+  <bb 13>:
+  # __y_61 = PHI <__y_54(11), __y_55(12)>
+  # __y_60 = PHI <__y_85(11), __y_154(12)>
+  if (__y_61 != 0B)
+    goto <bb 14>;
+  else
+    goto <bb 15>;
+
+  <bb 14>:
+  goto <bb 10>;
+
+  <bb 15>:
+  # __y_127 = PHI <__y_60(13)>
+  if (__y_50 == __y_127)
+    goto <bb 18>;
+  else
+    goto <bb 16>;
+
+  <bb 16>:
+  _59 = MEM[(const int &)__y_127 + 16];
+  if (_14 < _59)
+    goto <bb 18>;
+  else
+    goto <bb 17>;
+
+  <bb 17>:
+  _46 = MEM[(struct pair *)__y_127 + 16B].second;
+  _47 = _46 ();
+  this_9(D)->m_activate = _47;
+  if (_47 == 0B)
+    goto <bb 19>;
+  else
+    goto <bb 28>;
+
+  <bb 18>:
+  LUNA::log (5, "GenericFactory::CreateObject - identifier type not known.\n");
+  this_9(D)->m_activate = 0B;
+
+  <bb 19>:
+  _20 = MEM[(const char * *)this_9(D) + 48B];
+  LUNA::log (5, "[%s]::%s - createThreadBlocker failed.\n", _20, &__FUNCTION__);
+  m_instance.58_63 ={v} m_instance;
+  if (m_instance.58_63 == 0B)
+    goto <bb 20>;
+  else
+    goto <bb 26>;
+
+  <bb 20>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.60_64 ={v} m_instance;
+  if (m_instance.60_64 == 0B)
+    goto <bb 21>;
+  else
+    goto <bb 25>;
+
+  <bb 21>:
+  m_destroyed.61_65 = m_destroyed;
+  if (m_destroyed.61_65 != 0)
+    goto <bb 22>;
+  else
+    goto <bb 23>;
+
+  <bb 22>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 23>:
+  _66 = operator new (72);
+  LUNA::EmergencyManager::EmergencyManager (_66);
+
+  <bb 24>:
+  m_instance ={v} _66;
+  atexit (DestroySingleton);
+
+  <bb 25>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 26>:
+  _67 ={v} m_instance;
+  LUNA::EmergencyManager::emergencyShutdown (_67);
+  goto <bb 28>;
+
+<L17>:
+  operator delete (_66);
+  resx 3
+
+  <bb 28>:
+  _25 = this_9(D)->D.42485.m_priority;
+  if (_25 != -1)
+    goto <bb 29>;
+  else
+    goto <bb 51>;
+
+  <bb 29>:
+  _26 = this_9(D)->D.42484.m_thread;
+  _27 = _26->D.35164._vptr.Uncopyable;
+  _28 = MEM[(int (*__vtbl_ptr_type) () *)_27 + 12B];
+  PROF_34 = [obj_type_ref] OBJ_TYPE_REF(_28;(struct IThread)_26->3);
+  if (PROF_34 == setPriority)
+    goto <bb 30>;
+  else
+    goto <bb 49>;
+
+  <bb 30>:
+  _68 = MEM[(int (*__vtbl_ptr_type) () *)_27 + 36B];
+  _69 = OBJ_TYPE_REF(_68;(struct BasicOSThread)_26->9) (_26);
+  if (_69 != 0)
+    goto <bb 31>;
+  else
+    goto <bb 33>;
+
+  <bb 31>:
+  priority.42_70 = (unsigned int) _25;
+  _71 = priority.42_70 + 4294967285;
+  if (_71 > 88)
+    goto <bb 32>;
+  else
+    goto <bb 35>;
+
+  <bb 32>:
+  LUNA::log (5, "%s - Cannot set the RT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 48>;
+
+  <bb 33>:
+  priority.42_72 = (unsigned int) _25;
+  _73 = priority.42_72 + 4294967295;
+  if (_73 > 9)
+    goto <bb 34>;
+  else
+    goto <bb 35>;
+
+  <bb 34>:
+  LUNA::log (5, "%s - Cannot set the NonRT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 48>;
+
+  <bb 35>:
+  _74 = MEM[(struct BasicOSThread *)_26].D.79676.D.35164._vptr.Uncopyable;
+  _75 = MEM[(int (*__vtbl_ptr_type) () *)_74 + 56B];
+  PROF_81 = [obj_type_ref] OBJ_TYPE_REF(_75;(struct BasicOSThread)_26->14);
+  if (PROF_81 == getScheduler)
+    goto <bb 36>;
+  else
+    goto <bb 45>;
+
+  <bb 36>:
+  m_instance.66_86 ={v} m_instance;
+  if (m_instance.66_86 == 0B)
+    goto <bb 37>;
+  else
+    goto <bb 43>;
+
+  <bb 37>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.68_87 ={v} m_instance;
+  if (m_instance.68_87 == 0B)
+    goto <bb 38>;
+  else
+    goto <bb 42>;
+
+  <bb 38>:
+  m_destroyed.69_88 = m_destroyed;
+  if (m_destroyed.69_88 != 0)
+    goto <bb 39>;
+  else
+    goto <bb 40>;
+
+  <bb 39>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 40>:
+  _89 = operator new (16);
+  LUNA::Threading::OSScheduler::OSScheduler (_89);
+
+  <bb 41>:
+  m_instance ={v} _89;
+  atexit (DestroySingleton);
+
+  <bb 42>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 43>:
+  _90 ={v} m_instance;
+  goto <bb 46>;
+
+<L18>:
+  operator delete (_89);
+  resx 4
+
+  <bb 45>:
+  _83 = OBJ_TYPE_REF(_75;(struct BasicOSThread)_26->14) (_26);
+
+  <bb 46>:
+  # _76 = PHI <_83(45), _90(43)>
+  _77 = MEM[(struct BasicOSThread *)_26].m_thread;
+  result_78 = LUNA::Threading::OSScheduler::setThreadPriority (_76, _77, _25);
+  _79 = MEM[(struct BasicOSThread *)_26].m_thread;
+  pthread_getschedparam (_79, &policy, &param);
+  if (result_78 == 0)
+    goto <bb 47>;
+  else
+    goto <bb 48>;
+
+  <bb 47>:
+  MEM[(struct BasicOSThread *)_26].m_attr.priority = _25;
+
+  <bb 48>:
+  # _80 = PHI <1001(32), 1001(34), result_78(47), result_78(46)>
+  param ={v} {CLOBBER};
+  policy ={v} {CLOBBER};
+  goto <bb 50>;
+
+  <bb 49>:
+  _36 = OBJ_TYPE_REF(_28;(struct IThread)_26->3) (_26, _25);
+
+  <bb 50>:
+  # _30 = PHI <_36(49), _80(48)>
+  if (_30 != 0)
+    goto <bb 52>;
+  else
+    goto <bb 53>;
+
+  <bb 51>:
+  _91 = this_9(D)->D.42484.m_thread;
+  _92 = _91->D.35164._vptr.Uncopyable;
+  _93 = MEM[(int (*__vtbl_ptr_type) () *)_92 + 16B];
+  _94 = OBJ_TYPE_REF(_93;(struct IThread)_91->4) (_91);
+  this_9(D)->D.42485.m_priority = _94;
+
+  <bb 52>:
+  return;
+
+  <bb 53>:
+  _31 = this_9(D)->D.42485.m_priority;
+  if (_31 == -1)
+    goto <bb 51>;
+  else
+    goto <bb 52>;
+
+}
+
+
+
+;; Function virtual void LUNA::CSP::Terminator::preRun() (_ZN4LUNA3CSP10Terminator6preRunEv, funcdef_no=3931, decl_uid=74973, symbol_order=1051)
+
+virtual void LUNA::CSP::Terminator::preRun() (struct Terminator * const this)
+{
+  struct _Rb_tree_node_base * SR.677;
+  struct _Rb_tree_node_base * SR.676;
+  struct _Rb_tree_node_base * SR.675;
+  struct _Rb_tree_node_base * SR.674;
+  struct EmergencyManager * D.97781;
+  struct IThreadBlocker * D.97766;
+  struct iterator D.97762;
+  struct _Rb_tree_node * __y;
+  struct iterator D.97758;
+  struct _Rb_tree_node_base * SR.469;
+  struct IThreadBlocker * D.97756;
+  struct GenericFactory * D.97753;
+  struct OSScheduler * D.97748;
+  struct IScheduler * D.97747;
+  int policy;
+  struct sched_param param;
+  int result;
+  int D.97745;
+  struct EmergencyManager * D.97738;
+  struct IThreadBlocker * D.97725;
+  struct iterator D.97721;
+  struct _Rb_tree_node * __y;
+  struct iterator D.97717;
+  struct _Rb_tree_node_base * SR.469;
+  struct IThreadBlocker * D.97715;
+  struct GenericFactory * D.97712;
+  const int D.97711;
+  const int D.75025;
+  struct GenericFactory * m_instance.47_4;
+  struct EmergencyManager * m_instance.58_13;
+  struct IThread * _15;
+  int (*__vtbl_ptr_type) () * _16;
+  int (*__vtbl_ptr_type) () _17;
+  int _18;
+  const char * _20;
+  int _22;
+  struct IThread * _23;
+  int (*__vtbl_ptr_type) () * _24;
+  int (*__vtbl_ptr_type) () _25;
+  int _26;
+  int _28;
+  void * PROF_29;
+  int _31;
+  struct GenericFactory * m_instance.49_33;
+  bool m_destroyed.50_34;
+  void * _35;
+  struct _Rb_tree_node_base * _36;
+  struct GenericFactory * _37;
+  struct IThreadBlocker * (*<T8397>) (void) _41;
+  struct IThreadBlocker * _42;
+  const int _48;
+  const int _55;
+  struct EmergencyManager * m_instance.58_59;
+  struct EmergencyManager * m_instance.60_60;
+  bool m_destroyed.61_61;
+  void * _62;
+  struct EmergencyManager * _63;
+  int (*__vtbl_ptr_type) () _65;
+  bool _66;
+  unsigned int priority.42_67;
+  unsigned int _68;
+  unsigned int priority.42_69;
+  unsigned int _70;
+  int (*__vtbl_ptr_type) () * _71;
+  int (*__vtbl_ptr_type) () _72;
+  struct IScheduler * _73;
+  long unsigned int _74;
+  long unsigned int _76;
+  int _77;
+  void * PROF_78;
+  struct IScheduler * _80;
+  struct OSScheduler * m_instance.66_83;
+  struct OSScheduler * m_instance.68_84;
+  bool m_destroyed.69_85;
+  void * _86;
+  struct OSScheduler * _87;
+  struct IThread * _88;
+  int (*__vtbl_ptr_type) () * _89;
+  int (*__vtbl_ptr_type) () _90;
+  int _91;
+  struct GenericFactory * m_instance.47_92;
+  struct GenericFactory * m_instance.49_93;
+  bool m_destroyed.50_94;
+  void * _95;
+  struct _Rb_tree_node_base * _96;
+  struct GenericFactory * _97;
+  struct IThreadBlocker * (*<T8397>) (void) _100;
+  struct IThreadBlocker * _101;
+  const int _106;
+  const int _113;
+  struct EmergencyManager * m_instance.60_118;
+  bool m_destroyed.61_119;
+  void * _120;
+  struct EmergencyManager * _121;
+
+  <bb 2>:
+  __builtin_puts (&"Setting thread mode for mode switches"[0]);
+  pthread_setmode_np (16384, 0, 0B);
+  m_instance.47_4 ={v} m_instance;
+  if (m_instance.47_4 == 0B)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 3>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.49_33 ={v} m_instance;
+  if (m_instance.49_33 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 7>;
+
+  <bb 4>:
+  m_destroyed.50_34 = m_destroyed;
+  if (m_destroyed.50_34 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 6>:
+  _35 = operator new (24);
+  MEM[(struct _Rb_tree_impl *)_35]._M_header._M_color = 0;
+  MEM[(struct _Rb_tree_impl *)_35]._M_header._M_parent = 0B;
+  MEM[(struct _Rb_tree_impl *)_35]._M_node_count = 0;
+  _36 = &MEM[(struct _Rb_tree_impl *)_35]._M_header;
+  MEM[(struct _Rb_tree_impl *)_35]._M_header._M_left = _36;
+  MEM[(struct _Rb_tree_impl *)_35]._M_header._M_right = _36;
+  m_instance ={v} _35;
+  atexit (DestroySingleton);
+
+  <bb 7>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 8>:
+  _37 ={v} m_instance;
+  _15 = MEM[(struct CSProcess *)this_1(D)].D.42484.m_thread;
+  _16 = _15->D.35164._vptr.Uncopyable;
+  _17 = MEM[(int (*__vtbl_ptr_type) () *)_16 + 28B];
+  _18 = OBJ_TYPE_REF(_17;(struct IThread)_15->7) (_15);
+  __y_45 = MEM[(struct _Rb_tree_node_base * *)_37 + 8B];
+  __y_46 = &MEM[(struct _Rb_tree *)_37]._M_impl._M_header;
+  if (__y_45 != 0B)
+    goto <bb 9>;
+  else
+    goto <bb 18>;
+
+  <bb 9>:
+
+  <bb 10>:
+  # __y_19 = PHI <__y_45(9), __y_115(14)>
+  # __y_11 = PHI <__y_46(9), __y_114(14)>
+  _48 = MEM[(const int &)__y_19 + 16];
+  if (_18 <= _48)
+    goto <bb 11>;
+  else
+    goto <bb 12>;
+
+  <bb 11>:
+  __y_50 = MEM[(struct _Rb_tree_node_base * *)__y_19 + 8B];
+  goto <bb 13>;
+
+  <bb 12>:
+  __y_51 = MEM[(struct _Rb_tree_node_base * *)__y_19 + 12B];
+
+  <bb 13>:
+  # __y_115 = PHI <__y_50(11), __y_51(12)>
+  # __y_114 = PHI <__y_19(11), __y_11(12)>
+  if (__y_115 != 0B)
+    goto <bb 14>;
+  else
+    goto <bb 15>;
+
+  <bb 14>:
+  goto <bb 10>;
+
+  <bb 15>:
+  # __y_79 = PHI <__y_114(13)>
+  if (__y_46 == __y_79)
+    goto <bb 18>;
+  else
+    goto <bb 16>;
+
+  <bb 16>:
+  _55 = MEM[(const int &)__y_79 + 16];
+  if (_18 < _55)
+    goto <bb 18>;
+  else
+    goto <bb 17>;
+
+  <bb 17>:
+  _41 = MEM[(struct pair *)__y_79 + 16B].second;
+  _42 = _41 ();
+  MEM[(struct CSProcess *)this_1(D)].m_activate = _42;
+  if (_42 == 0B)
+    goto <bb 19>;
+  else
+    goto <bb 28>;
+
+  <bb 18>:
+  LUNA::log (5, "GenericFactory::CreateObject - identifier type not known.\n");
+  MEM[(struct CSProcess *)this_1(D)].m_activate = 0B;
+
+  <bb 19>:
+  _20 = MEM[(const char * *)this_1(D) + 48B];
+  LUNA::log (5, "[%s]::%s - createThreadBlocker failed.\n", _20, &__FUNCTION__);
+  m_instance.58_59 ={v} m_instance;
+  if (m_instance.58_59 == 0B)
+    goto <bb 20>;
+  else
+    goto <bb 26>;
+
+  <bb 20>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.60_60 ={v} m_instance;
+  if (m_instance.60_60 == 0B)
+    goto <bb 21>;
+  else
+    goto <bb 25>;
+
+  <bb 21>:
+  m_destroyed.61_61 = m_destroyed;
+  if (m_destroyed.61_61 != 0)
+    goto <bb 22>;
+  else
+    goto <bb 23>;
+
+  <bb 22>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 23>:
+  _62 = operator new (72);
+  LUNA::EmergencyManager::EmergencyManager (_62);
+
+  <bb 24>:
+  m_instance ={v} _62;
+  atexit (DestroySingleton);
+
+  <bb 25>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 26>:
+  _63 ={v} m_instance;
+  LUNA::EmergencyManager::emergencyShutdown (_63);
+  goto <bb 28>;
+
+<L4>:
+  operator delete (_62);
+  resx 3
+
+  <bb 28>:
+  _22 = MEM[(struct CSProcess *)this_1(D)].D.42485.m_priority;
+  if (_22 != -1)
+    goto <bb 29>;
+  else
+    goto <bb 51>;
+
+  <bb 29>:
+  _23 = MEM[(struct CSProcess *)this_1(D)].D.42484.m_thread;
+  _24 = _23->D.35164._vptr.Uncopyable;
+  _25 = MEM[(int (*__vtbl_ptr_type) () *)_24 + 12B];
+  PROF_29 = [obj_type_ref] OBJ_TYPE_REF(_25;(struct IThread)_23->3);
+  if (PROF_29 == setPriority)
+    goto <bb 30>;
+  else
+    goto <bb 49>;
+
+  <bb 30>:
+  _65 = MEM[(int (*__vtbl_ptr_type) () *)_24 + 36B];
+  _66 = OBJ_TYPE_REF(_65;(struct BasicOSThread)_23->9) (_23);
+  if (_66 != 0)
+    goto <bb 31>;
+  else
+    goto <bb 33>;
+
+  <bb 31>:
+  priority.42_67 = (unsigned int) _22;
+  _68 = priority.42_67 + 4294967285;
+  if (_68 > 88)
+    goto <bb 32>;
+  else
+    goto <bb 35>;
+
+  <bb 32>:
+  LUNA::log (5, "%s - Cannot set the RT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 48>;
+
+  <bb 33>:
+  priority.42_69 = (unsigned int) _22;
+  _70 = priority.42_69 + 4294967295;
+  if (_70 > 9)
+    goto <bb 34>;
+  else
+    goto <bb 35>;
+
+  <bb 34>:
+  LUNA::log (5, "%s - Cannot set the NonRT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 48>;
+
+  <bb 35>:
+  _71 = MEM[(struct BasicOSThread *)_23].D.79676.D.35164._vptr.Uncopyable;
+  _72 = MEM[(int (*__vtbl_ptr_type) () *)_71 + 56B];
+  PROF_78 = [obj_type_ref] OBJ_TYPE_REF(_72;(struct BasicOSThread)_23->14);
+  if (PROF_78 == getScheduler)
+    goto <bb 36>;
+  else
+    goto <bb 45>;
+
+  <bb 36>:
+  m_instance.66_83 ={v} m_instance;
+  if (m_instance.66_83 == 0B)
+    goto <bb 37>;
+  else
+    goto <bb 43>;
+
+  <bb 37>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.68_84 ={v} m_instance;
+  if (m_instance.68_84 == 0B)
+    goto <bb 38>;
+  else
+    goto <bb 42>;
+
+  <bb 38>:
+  m_destroyed.69_85 = m_destroyed;
+  if (m_destroyed.69_85 != 0)
+    goto <bb 39>;
+  else
+    goto <bb 40>;
+
+  <bb 39>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 40>:
+  _86 = operator new (16);
+  LUNA::Threading::OSScheduler::OSScheduler (_86);
+
+  <bb 41>:
+  m_instance ={v} _86;
+  atexit (DestroySingleton);
+
+  <bb 42>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 43>:
+  _87 ={v} m_instance;
+  goto <bb 46>;
+
+<L5>:
+  operator delete (_86);
+  resx 4
+
+  <bb 45>:
+  _80 = OBJ_TYPE_REF(_72;(struct BasicOSThread)_23->14) (_23);
+
+  <bb 46>:
+  # _73 = PHI <_80(45), _87(43)>
+  _74 = MEM[(struct BasicOSThread *)_23].m_thread;
+  result_75 = LUNA::Threading::OSScheduler::setThreadPriority (_73, _74, _22);
+  _76 = MEM[(struct BasicOSThread *)_23].m_thread;
+  pthread_getschedparam (_76, &policy, &param);
+  if (result_75 == 0)
+    goto <bb 47>;
+  else
+    goto <bb 48>;
+
+  <bb 47>:
+  MEM[(struct BasicOSThread *)_23].m_attr.priority = _22;
+
+  <bb 48>:
+  # _77 = PHI <1001(32), 1001(34), result_75(47), result_75(46)>
+  param ={v} {CLOBBER};
+  policy ={v} {CLOBBER};
+  goto <bb 50>;
+
+  <bb 49>:
+  _31 = OBJ_TYPE_REF(_25;(struct IThread)_23->3) (_23, _22);
+
+  <bb 50>:
+  # _26 = PHI <_31(49), _77(48)>
+  if (_26 != 0)
+    goto <bb 52>;
+  else
+    goto <bb 79>;
+
+  <bb 51>:
+  _88 = MEM[(struct CSProcess *)this_1(D)].D.42484.m_thread;
+  _89 = _88->D.35164._vptr.Uncopyable;
+  _90 = MEM[(int (*__vtbl_ptr_type) () *)_89 + 16B];
+  _91 = OBJ_TYPE_REF(_90;(struct IThread)_88->4) (_88);
+  MEM[(struct CSProcess *)this_1(D)].D.42485.m_priority = _91;
+
+  <bb 52>:
+  m_instance.47_92 ={v} m_instance;
+  if (m_instance.47_92 == 0B)
+    goto <bb 53>;
+  else
+    goto <bb 58>;
+
+  <bb 53>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.49_93 ={v} m_instance;
+  if (m_instance.49_93 == 0B)
+    goto <bb 54>;
+  else
+    goto <bb 57>;
+
+  <bb 54>:
+  m_destroyed.50_94 = m_destroyed;
+  if (m_destroyed.50_94 != 0)
+    goto <bb 55>;
+  else
+    goto <bb 56>;
+
+  <bb 55>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 56>:
+  _95 = operator new (24);
+  MEM[(struct _Rb_tree_impl *)_95]._M_header._M_color = 0;
+  MEM[(struct _Rb_tree_impl *)_95]._M_header._M_parent = 0B;
+  MEM[(struct _Rb_tree_impl *)_95]._M_node_count = 0;
+  _96 = &MEM[(struct _Rb_tree_impl *)_95]._M_header;
+  MEM[(struct _Rb_tree_impl *)_95]._M_header._M_left = _96;
+  MEM[(struct _Rb_tree_impl *)_95]._M_header._M_right = _96;
+  m_instance ={v} _95;
+  atexit (DestroySingleton);
+
+  <bb 57>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 58>:
+  _97 ={v} m_instance;
+  __y_8 = MEM[(struct _Rb_tree_node_base * *)_97 + 8B];
+  __y_104 = &MEM[(struct _Rb_tree *)_97]._M_impl._M_header;
+  if (__y_8 != 0B)
+    goto <bb 59>;
+  else
+    goto <bb 68>;
+
+  <bb 59>:
+
+  <bb 60>:
+  # __y_229 = PHI <__y_8(59), __y_57(64)>
+  # __y_161 = PHI <__y_104(59), __y_56(64)>
+  _106 = MEM[(const int &)__y_229 + 16];
+  if (_106 > 9)
+    goto <bb 61>;
+  else
+    goto <bb 62>;
+
+  <bb 61>:
+  __y_108 = MEM[(struct _Rb_tree_node_base * *)__y_229 + 8B];
+  goto <bb 63>;
+
+  <bb 62>:
+  __y_109 = MEM[(struct _Rb_tree_node_base * *)__y_229 + 12B];
+
+  <bb 63>:
+  # __y_57 = PHI <__y_108(61), __y_109(62)>
+  # __y_56 = PHI <__y_229(61), __y_161(62)>
+  if (__y_57 != 0B)
+    goto <bb 64>;
+  else
+    goto <bb 65>;
+
+  <bb 64>:
+  goto <bb 60>;
+
+  <bb 65>:
+  # __y_169 = PHI <__y_56(63)>
+  if (__y_104 == __y_169)
+    goto <bb 68>;
+  else
+    goto <bb 66>;
+
+  <bb 66>:
+  _113 = MEM[(const int &)__y_169 + 16];
+  if (_113 > 10)
+    goto <bb 68>;
+  else
+    goto <bb 67>;
+
+  <bb 67>:
+  _100 = MEM[(struct pair *)__y_169 + 16B].second;
+  _101 = _100 ();
+  this_1(D)->m_wait_for_done = _101;
+  if (_101 == 0B)
+    goto <bb 69>;
+  else
+    goto <bb 78>;
+
+  <bb 68>:
+  LUNA::log (5, "GenericFactory::CreateObject - identifier type not known.\n");
+  this_1(D)->m_wait_for_done = 0B;
+
+  <bb 69>:
+  LUNA::log (5, "Terminator::preRun - ThreadBlocker is NULL.\n");
+  m_instance.58_13 ={v} m_instance;
+  if (m_instance.58_13 == 0B)
+    goto <bb 70>;
+  else
+    goto <bb 76>;
+
+  <bb 70>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  m_instance.60_118 ={v} m_instance;
+  if (m_instance.60_118 == 0B)
+    goto <bb 71>;
+  else
+    goto <bb 75>;
+
+  <bb 71>:
+  m_destroyed.61_119 = m_destroyed;
+  if (m_destroyed.61_119 != 0)
+    goto <bb 72>;
+  else
+    goto <bb 73>;
+
+  <bb 72>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  m_destroyed = 0;
+
+  <bb 73>:
+  _120 = operator new (72);
+  LUNA::EmergencyManager::EmergencyManager (_120);
+
+  <bb 74>:
+  m_instance ={v} _120;
+  atexit (DestroySingleton);
+
+  <bb 75>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+
+  <bb 76>:
+  _121 ={v} m_instance;
+  LUNA::EmergencyManager::emergencyShutdown (_121);
+  goto <bb 78>;
+
+<L6>:
+  operator delete (_120);
+  resx 5
+
+  <bb 78>:
+  return;
+
+  <bb 79>:
+  _28 = MEM[(struct CSProcess *)this_1(D)].D.42485.m_priority;
+  if (_28 == -1)
+    goto <bb 51>;
+  else
+    goto <bb 52>;
+
+}
+
+
+
+;; Function void LUNA::Threading::startThreads(LUNA::Utility::Set<InputType*>*) [with ThreadType = LUNA::Threading::OSThread] (_ZN4LUNA9Threading12startThreadsINS0_8OSThreadEEEvPNS_7Utility3SetIPT_EE, funcdef_no=4363, decl_uid=84026, symbol_order=1381)
+
+void LUNA::Threading::startThreads(LUNA::Utility::Set<InputType*>*) [with ThreadType = LUNA::Threading::OSThread] (struct Set * input)
+{
+  unsigned int i;
+  bool D.97848;
+  void * D.97844;
+  struct OSScheduler * D.97841;
+  struct IScheduler * D.97840;
+  int policy;
+  struct sched_param param;
+  int result;
+  int D.97838;
+  int err;
+  struct thread_start_tuple * D.97831;
+  int D.97828;
+  int D.97823;
+  static const char __FUNCTION__[20] = "setThreadAttributes";
+  struct AutoLock * D.97818;
+  struct AutoLock l;
+  int result;
+  struct thread_start_tuple tuple;
+  int ret;
+  int ret;
+  int D.97813;
+  static const char __FUNCTION__[6] = "start";
+  unsigned int i;
+  const unsigned int _8;
+  struct OSThread * * _9;
+  struct OSThread * _10;
+  struct BasicOSThread * _11;
+  int (*__vtbl_ptr_type) () * _12;
+  int (*__vtbl_ptr_type) () _13;
+  int _15;
+  struct OSThread * * _16;
+  struct OSThread * _17;
+  struct OSThread * * _19;
+  struct OSThread * _20;
+  int (*__vtbl_ptr_type) () * _24;
+  int (*__vtbl_ptr_type) () _25;
+  unsigned int _29;
+  struct OSThread * & _30;
+  struct OSThread * & _31;
+  struct OSThread * & _32;
+  void * PROF_34;
+  int _36;
+  struct LockType * _38;
+  struct _IO_FILE * stdout.93_39;
+  struct Runnable * _40;
+  struct IThread * _41;
+  struct Runnable * _42;
+  ThreadState _44;
+  union thread_attr * _45;
+  thread_t * _48;
+  int _49;
+  int _50;
+  int (*__vtbl_ptr_type) () * _51;
+  int (*__vtbl_ptr_type) () _52;
+  bool g_stop_on_setPriority_error.99_54;
+  struct OSThread * pretmp_55;
+  bool g_stop_on_setPriority_error.99_56;
+  unsigned int ret.131_58;
+  unsigned int _59;
+  struct OSThread * * pretmp_60;
+  unsigned int ret.131_62;
+  unsigned int _63;
+  unsigned int prephitmp_64;
+  int _65;
+  int _66;
+  void * PROF_67;
+  int (*__vtbl_ptr_type) () * _71;
+  int (*__vtbl_ptr_type) () _72;
+  int _73;
+  int _74;
+  int _75;
+  bool _76;
+  int _78;
+  int _79;
+  unsigned int pretmp_80;
+  unsigned int _81;
+  int _82;
+  struct OSThread * * _89;
+  int (*__vtbl_ptr_type) () _90;
+  bool _91;
+  unsigned int priority.42_92;
+  unsigned int _93;
+  unsigned int priority.42_94;
+  unsigned int _95;
+  int (*__vtbl_ptr_type) () * _96;
+  int (*__vtbl_ptr_type) () _97;
+  struct IScheduler * _98;
+  long unsigned int _99;
+  long unsigned int _101;
+  void * PROF_103;
+  struct IScheduler * _105;
+  struct OSScheduler * m_instance.66_108;
+  struct OSScheduler * m_instance.68_109;
+  bool m_destroyed.69_110;
+  void * _111;
+  struct OSScheduler * _112;
+  struct Mutex * _113;
+  int (*__vtbl_ptr_type) () * _114;
+  int (*__vtbl_ptr_type) () _115;
+  int _116;
+  const unsigned int _117;
+  struct OSThread * * pretmp_118;
+  unsigned int _120;
+  struct OSThread * * _121;
+  struct OSThread * _122;
+  unsigned int _123;
+  unsigned int _126;
+  struct OSThread * * _127;
+  struct OSThread * _128;
+  struct OSThread * * _131;
+  struct OSThread * * _133;
+  struct OSThread * prephitmp_137;
+  void * _145;
+  bool _161;
+  struct OSThread * * pretmp_232;
+  int _238;
+  int _241;
+  struct OSThread * * prephitmp_248;
+  struct OSThread * _252;
+
+  <bb 2>:
+  _8 = MEM[(unsigned int *)input_7(D) + 8B];
+  if (_8 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  return;
+
+  <bb 4>:
+
+  <bb 5>:
+  # i_251 = PHI <0(4), i_28(109)>
+  _9 = MEM[(struct OSThread * * *)input_7(D)];
+  _29 = i_251 * 4;
+  _30 = _9 + _29;
+  _10 = *_30;
+  _11 = &_10->D.79733;
+  _12 = MEM[(struct BasicOSThread *)_10].D.79676.D.35164._vptr.Uncopyable;
+  _13 = MEM[(int (*__vtbl_ptr_type) () *)_12 + 52B];
+  PROF_34 = [obj_type_ref] OBJ_TYPE_REF(_13;(struct BasicOSThread)_11->13);
+  if (PROF_34 == start)
+    goto <bb 6>;
+  else
+    goto <bb 92>;
+
+  <bb 6>:
+  _38 = &MEM[(struct BasicOSThread *)_10].m_lock;
+  l.D.88684._vptr.Uncopyable = &MEM[(void *)&_ZTVN4LUNA8locksync8AutoLockINS0_5MutexEEE + 8B];
+  l.m_lock = _38;
+  _71 = MEM[(struct Mutex *)_10 + 68B].D.41844._vptr.Uncopyable;
+  _72 = MEM[(int (*__vtbl_ptr_type) () *)_71 + 8B];
+  _73 = OBJ_TYPE_REF(_72;(struct Mutex)_38->2) (_38);
+
+  <bb 7>:
+  if (_73 != 0)
+    goto <bb 9>;
+  else
+    goto <bb 8>;
+
+  <bb 8>:
+  stdout.93_39 = stdout;
+  fflush (stdout.93_39);
+  goto <bb 13>;
+
+  <bb 9>:
+  LUNA::log (0, "AutoLock couldn\'t acquire the lock.\n");
+  goto <bb 8>;
+
+<L19>:
+  goto <bb 12> (<L15>);
+
+<L18>:
+
+<L15>:
+  resx 3
+
+  <bb 13>:
+  _40 = MEM[(struct BasicOSThread *)_10].m_run;
+  _41 = LUNA::Runnable::getIThread (_40);
+  goto <bb 15>;
+
+<L21>:
+  goto <bb 91> (<L13>);
+
+  <bb 15>:
+  if (_41 != 0B)
+    goto <bb 16>;
+  else
+    goto <bb 18>;
+
+  <bb 16>:
+  LUNA::log (5, "%s - Cannot start the IThread, because the attached Runnable already belongs to another IThread.\n", &__FUNCTION__);
+  goto <bb 84>;
+
+<L22>:
+  goto <bb 91> (<L13>);
+
+  <bb 18>:
+  _42 = MEM[(struct BasicOSThread *)_10].m_run;
+  LUNA::Runnable::setIThread (_42, _11);
+  goto <bb 20>;
+
+<L23>:
+  goto <bb 91> (<L13>);
+
+  <bb 20>:
+  _44 ={v} MEM[(struct BasicOSThread *)_10].m_state;
+  if (_44 != 1)
+    goto <bb 21>;
+  else
+    goto <bb 23>;
+
+  <bb 21>:
+  LUNA::log (5, "%s - Cannot start the IThread, because the IThread is not in the STOPPED state.\n", &__FUNCTION__);
+  goto <bb 84>;
+
+<L24>:
+  goto <bb 91> (<L13>);
+
+  <bb 23>:
+  MEM[(struct BasicOSThread *)_10].m_stop ={v} 0;
+  _45 = &MEM[(struct BasicOSThread *)_10].m_thread_attr;
+  _74 = pthread_attr_init (_45);
+  if (_74 != 0)
+    goto <bb 110>;
+  else
+    goto <bb 24>;
+
+  <bb 24>:
+  _75 = pthread_attr_setinheritsched (_45, 0);
+  if (_75 != 0)
+    goto <bb 110>;
+  else
+    goto <bb 25>;
+
+  <bb 25>:
+  _76 = MEM[(struct Thread_attr &)_10 + 4].joinable;
+  _161 = ~_76;
+  _238 = (int) _161;
+  _78 = pthread_attr_setdetachstate (_45, _238);
+  if (_78 != 0)
+    goto <bb 110>;
+  else
+    goto <bb 26>;
+
+  <bb 26>:
+  _79 = pthread_attr_setscope (_45, 0);
+  if (_79 != 0)
+    goto <bb 110>;
+  else
+    goto <bb 112>;
+
+  <bb 27>:
+  if (_81 > 16384)
+    goto <bb 28>;
+  else
+    goto <bb 115>;
+
+  <bb 28>:
+  _82 = pthread_attr_setstacksize (_45, _81);
+  if (_82 != 0)
+    goto <bb 113>;
+  else
+    goto <bb 115>;
+
+  <bb 29>:
+  MEM[(struct BasicOSThread *)_10].m_state ={v} -1;
+  goto <bb 84>;
+
+  <bb 30>:
+  tuple.thread = 0B;
+  err_88 = pthread_barrier_init (&tuple.barrier, 0B, 2);
+  if (err_88 != 0)
+    goto <bb 31>;
+  else
+    goto <bb 34> (<L16>);
+
+  <bb 31>:
+  # err_156 = PHI <err_88(30)>
+  LUNA::log (5, "thread_start_tuple::thread_start_tuple - Cannot initialize the barrier (Error:%d).\n", err_156);
+  goto <bb 33>;
+
+<L25>:
+  goto <bb 91> (<L13>);
+
+  <bb 33>:
+  exit (-1);
+
+<L16>:
+  tuple.thread = _11;
+  _48 = &MEM[(struct BasicOSThread *)_10].m_thread;
+  _49 = pthread_create (_48, _45, internalRun, &tuple);
+  if (_49 != 0)
+    goto <bb 35>;
+  else
+    goto <bb 37>;
+
+  <bb 35>:
+  LUNA::log (0, "%s - Cannot start the thread, thread canceled (error: %d).\n", &__FUNCTION__, _49);
+
+  <bb 36>:
+  MEM[(struct BasicOSThread *)_10].m_state ={v} -1;
+  goto <bb 83>;
+
+  <bb 37>:
+  MEM[(struct BasicOSThread *)_10].m_state ={v} 0;
+  _50 = MEM[(struct BasicOSThread *)_10].m_attr.priority;
+  if (_50 != -1)
+    goto <bb 38>;
+  else
+    goto <bb 82>;
+
+  <bb 38>:
+  _51 = MEM[(struct BasicOSThread *)_10].D.79676.D.35164._vptr.Uncopyable;
+  _52 = MEM[(int (*__vtbl_ptr_type) () *)_51 + 12B];
+  PROF_67 = [obj_type_ref] OBJ_TYPE_REF(_52;(struct BasicOSThread)_11->3);
+  if (PROF_67 == setPriority)
+    goto <bb 39>;
+  else
+    goto <bb 74>;
+
+  <bb 39>:
+  _90 = MEM[(int (*__vtbl_ptr_type) () *)_51 + 36B];
+  _91 = OBJ_TYPE_REF(_90;(struct BasicOSThread)_11->9) (_11);
+  goto <bb 41>;
+
+<L27>:
+  goto <bb 88> (<L12>);
+
+  <bb 41>:
+  if (_91 != 0)
+    goto <bb 42>;
+  else
+    goto <bb 46>;
+
+  <bb 42>:
+  priority.42_92 = (unsigned int) _50;
+  _93 = priority.42_92 + 4294967285;
+  if (_93 > 88)
+    goto <bb 43>;
+  else
+    goto <bb 49>;
+
+  <bb 43>:
+  LUNA::log (5, "%s - Cannot set the RT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 45>;
+
+<L28>:
+  goto <bb 88> (<L12>);
+
+  <bb 45>:
+  goto <bb 73>;
+
+  <bb 46>:
+  priority.42_94 = (unsigned int) _50;
+  _95 = priority.42_94 + 4294967295;
+  if (_95 > 9)
+    goto <bb 47>;
+  else
+    goto <bb 49>;
+
+  <bb 47>:
+  LUNA::log (5, "%s - Cannot set the NonRT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 45>;
+
+<L29>:
+  goto <bb 88> (<L12>);
+
+  <bb 49>:
+  _96 = MEM[(struct BasicOSThread *)_10].D.79676.D.35164._vptr.Uncopyable;
+  _97 = MEM[(int (*__vtbl_ptr_type) () *)_96 + 56B];
+  PROF_103 = [obj_type_ref] OBJ_TYPE_REF(_97;(struct BasicOSThread)_11->14);
+  if (PROF_103 == getScheduler)
+    goto <bb 50>;
+  else
+    goto <bb 67>;
+
+  <bb 50>:
+  m_instance.66_108 ={v} m_instance;
+  if (m_instance.66_108 == 0B)
+    goto <bb 52>;
+  else
+    goto <bb 51>;
+
+  <bb 51>:
+  _112 ={v} m_instance;
+  goto <bb 69>;
+
+  <bb 52>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  goto <bb 54>;
+
+<L30>:
+  goto <bb 88> (<L12>);
+
+  <bb 54>:
+  m_instance.68_109 ={v} m_instance;
+  if (m_instance.68_109 == 0B)
+    goto <bb 55>;
+  else
+    goto <bb 63>;
+
+  <bb 55>:
+  m_destroyed.69_110 = m_destroyed;
+  if (m_destroyed.69_110 != 0)
+    goto <bb 56>;
+  else
+    goto <bb 59>;
+
+  <bb 56>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  goto <bb 58>;
+
+<L31>:
+  goto <bb 88> (<L12>);
+
+  <bb 58>:
+  m_destroyed = 0;
+
+  <bb 59>:
+  _111 = operator new (16);
+  goto <bb 61>;
+
+<L32>:
+  goto <bb 88> (<L12>);
+
+  <bb 61>:
+  LUNA::Threading::OSScheduler::OSScheduler (_111);
+
+  <bb 62>:
+  m_instance ={v} _111;
+  atexit (DestroySingleton);
+
+  <bb 63>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+  goto <bb 51>;
+
+<L34>:
+  goto <bb 88> (<L12>);
+
+  # _145 = PHI <_111(61)>
+<L33>:
+  operator delete (_145);
+  resx 4
+
+<L35>:
+  goto <bb 88> (<L12>);
+
+  <bb 67>:
+  _105 = OBJ_TYPE_REF(_97;(struct BasicOSThread)_11->14) (_11);
+  goto <bb 69>;
+
+<L36>:
+  goto <bb 88> (<L12>);
+
+  <bb 69>:
+  # _98 = PHI <_105(67), _112(51)>
+  _99 = MEM[(struct BasicOSThread *)_10].m_thread;
+  result_100 = LUNA::Threading::OSScheduler::setThreadPriority (_98, _99, _50);
+  goto <bb 71>;
+
+<L37>:
+  goto <bb 88> (<L12>);
+
+  <bb 71>:
+  _101 = MEM[(struct BasicOSThread *)_10].m_thread;
+  pthread_getschedparam (_101, &policy, &param);
+  if (result_100 == 0)
+    goto <bb 72>;
+  else
+    goto <bb 73>;
+
+  <bb 72>:
+  MEM[(struct BasicOSThread *)_10].m_attr.priority = _50;
+
+  <bb 73>:
+  # result_102 = PHI <1001(45), result_100(71), result_100(72)>
+  param ={v} {CLOBBER};
+  policy ={v} {CLOBBER};
+  goto <bb 76>;
+
+  <bb 74>:
+  result_69 = OBJ_TYPE_REF(_52;(struct BasicOSThread)_11->3) (_11, _50);
+  goto <bb 76>;
+
+<L38>:
+  goto <bb 88> (<L12>);
+
+  <bb 76>:
+  # result_53 = PHI <result_69(74), result_102(73)>
+  if (result_53 != 0)
+    goto <bb 77>;
+  else
+    goto <bb 82>;
+
+  <bb 77>:
+  g_stop_on_setPriority_error.99_54 = g_stop_on_setPriority_error;
+  if (g_stop_on_setPriority_error.99_54 != 0)
+    goto <bb 78>;
+  else
+    goto <bb 82>;
+
+  <bb 78>:
+  LUNA::log (5, "%s - Couldn\'t set thread priority (error: %d).\n", &__FUNCTION__, result_53);
+  goto <bb 80>;
+
+<L39>:
+  goto <bb 88> (<L12>);
+
+  <bb 80>:
+  g_stop_on_setPriority_error.99_56 = g_stop_on_setPriority_error;
+  if (g_stop_on_setPriority_error.99_56 != 0)
+    goto <bb 81>;
+  else
+    goto <bb 82>;
+
+  <bb 81>:
+  MEM[(struct BasicOSThread *)_10].m_state ={v} -1;
+  goto <bb 83>;
+
+  <bb 82>:
+  ret_57 = pthread_barrier_wait (&tuple.barrier);
+  ret.131_58 = (unsigned int) ret_57;
+  _59 = ret.131_58 + 1;
+  if (_59 > 1)
+    goto <bb 119>;
+  else
+    goto <bb 118>;
+
+  <bb 83>:
+  # _66 = PHI <_49(36), result_53(81), ret_57(119), 0(118), ret_61(121)>
+  pthread_barrier_destroy (&tuple.barrier);
+  tuple ={v} {CLOBBER};
+
+  <bb 84>:
+  # _65 = PHI <1001(16), 1002(21), _241(29), _66(83)>
+  l.D.88684._vptr.Uncopyable = &MEM[(void *)&_ZTVN4LUNA8locksync8AutoLockINS0_5MutexEEE + 8B];
+  _113 = l.m_lock;
+  _114 = _113->D.41844._vptr.Uncopyable;
+  _115 = MEM[(int (*__vtbl_ptr_type) () *)_114 + 12B];
+  _116 = OBJ_TYPE_REF(_115;(struct Mutex)_113->3) (_113);
+  if (_116 != 0)
+    goto <bb 85>;
+  else
+    goto <bb 86>;
+
+  <bb 85>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 86>:
+  l ={v} {CLOBBER};
+  l ={v} {CLOBBER};
+  tuple ={v} {CLOBBER};
+  goto <bb 93>;
+
+<L26>:
+
+<L12>:
+  pthread_barrier_destroy (&tuple.barrier);
+  tuple ={v} {CLOBBER};
+  resx 2
+
+<L40>:
+  goto <bb 91> (<L13>);
+
+<L20>:
+
+<L13>:
+  LUNA::locksync::AutoLock<LUNA::locksync::Mutex>::~AutoLock (&l);
+  resx 1
+
+  <bb 92>:
+  _36 = OBJ_TYPE_REF(_13;(struct BasicOSThread)_11->13) (_11);
+
+  <bb 93>:
+  # _15 = PHI <_36(92), _65(86)>
+  if (_15 != 0)
+    goto <bb 94>;
+  else
+    goto <bb 108>;
+
+  <bb 94>:
+  _16 = MEM[(struct OSThread * * *)input_7(D)];
+  _31 = _16 + _29;
+  _17 = *_31;
+  LUNA::log (5, "startThreads - Could not start the OSThread (%p).\n", _17);
+  _19 = MEM[(struct OSThread * * *)input_7(D)];
+  _32 = _19 + _29;
+  _20 = *_32;
+  _117 = MEM[(unsigned int *)input_7(D) + 8B];
+  if (_117 != 0)
+    goto <bb 95>;
+  else
+    goto <bb 105>;
+
+  <bb 95>:
+  _252 = *_19;
+  if (_20 == _252)
+    goto <bb 99>;
+  else
+    goto <bb 103>;
+
+  <bb 96>:
+  _120 = i_132 * 4;
+  _121 = _19 + _120;
+  _122 = *_121;
+  if (_20 == _122)
+    goto <bb 98>;
+  else
+    goto <bb 97>;
+
+  <bb 97>:
+  goto <bb 104>;
+
+  <bb 98>:
+  # _133 = PHI <_121(96)>
+  # i_125 = PHI <i_132(96)>
+
+  <bb 99>:
+  # i_106 = PHI <i_125(98), 0(95)>
+  # _89 = PHI <_133(98), _19(95)>
+  _123 = _117 + 4294967295;
+  input_7(D)->m_count = _123;
+  if (i_106 != _123)
+    goto <bb 101>;
+  else
+    goto <bb 100>;
+
+  <bb 100>:
+  pretmp_80 = _123 * 4;
+  goto <bb 102>;
+
+  <bb 101>:
+  _126 = _123 * 4;
+  _127 = _19 + _126;
+  _128 = *_127;
+  *_89 = _128;
+  pretmp_60 = input_7(D)->m_set;
+
+  <bb 102>:
+  # prephitmp_64 = PHI <pretmp_80(100), _126(101)>
+  # prephitmp_248 = PHI <_19(100), pretmp_60(101)>
+  _131 = prephitmp_248 + prephitmp_64;
+  memset (_131, 0, 4);
+  pretmp_232 = MEM[(struct OSThread * * *)input_7(D)];
+  pretmp_118 = pretmp_232 + _29;
+  pretmp_55 = *pretmp_118;
+  goto <bb 105>;
+
+  <bb 103>:
+
+  <bb 104>:
+  # i_256 = PHI <0(103), i_132(97)>
+  i_132 = i_256 + 1;
+  if (_117 > i_132)
+    goto <bb 96>;
+  else
+    goto <bb 105>;
+
+  <bb 105>:
+  # prephitmp_137 = PHI <_20(94), pretmp_55(102), _20(104)>
+  if (prephitmp_137 != 0B)
+    goto <bb 106>;
+  else
+    goto <bb 107>;
+
+  <bb 106>:
+  _24 = prephitmp_137->D.79733.D.79676.D.35164._vptr.Uncopyable;
+  _25 = MEM[(int (*__vtbl_ptr_type) () *)_24 + 4B];
+  OBJ_TYPE_REF(_25;(struct OSThread)prephitmp_137->1) (prephitmp_137);
+
+  <bb 107>:
+  i_27 = i_251 + 4294967295;
+
+  <bb 108>:
+  # i_1 = PHI <i_251(93), i_27(107)>
+  i_28 = i_1 + 1;
+  if (_8 > i_28)
+    goto <bb 109>;
+  else
+    goto <bb 3>;
+
+  <bb 109>:
+  goto <bb 5>;
+
+  <bb 110>:
+  LUNA::log (0, "%s - pthread_attr_init - pthread_attr_setscope failed.\n", &__FUNCTION__);
+  goto <bb 116>;
+
+<L41>:
+  goto <bb 91> (<L13>);
+
+  <bb 112>:
+  _81 = MEM[(struct Thread_attr &)_10 + 4].stack_size;
+  if (_81 != 0)
+    goto <bb 27>;
+  else
+    goto <bb 30>;
+
+  <bb 113>:
+  LUNA::log (0, "%s - pthread_attr_setstacksize failed.\n", &__FUNCTION__);
+  goto <bb 116>;
+
+<L42>:
+  goto <bb 91> (<L13>);
+
+  <bb 115>:
+  goto <bb 30>;
+
+  <bb 116>:
+  # _241 = PHI <-3(113), -1(110)>
+  LUNA::log (0, "%s - setThreadAttributes failed (error: %d).\n", &__FUNCTION__, _241);
+  goto <bb 29>;
+
+<L43>:
+  goto <bb 91> (<L13>);
+
+  <bb 118>:
+  ret_61 = pthread_barrier_wait (&tuple.barrier);
+  ret.131_62 = (unsigned int) ret_61;
+  _63 = ret.131_62 + 1;
+  if (_63 > 1)
+    goto <bb 121>;
+  else
+    goto <bb 83>;
+
+  <bb 119>:
+  LUNA::log (5, "%s - Could not sync with the starting thread (error: %d).\n", &__FUNCTION__, ret_57);
+  goto <bb 83>;
+
+<L44>:
+  goto <bb 88> (<L12>);
+
+  <bb 121>:
+  LUNA::log (5, "%s - Could not sync with the starting thread (error: %d).\n", &__FUNCTION__, ret_61);
+  goto <bb 83>;
+
+<L45>:
+  goto <bb 88> (<L12>);
+
+}
+
+
+
+;; Function int main(int, char**) (main, funcdef_no=4193, decl_uid=83538, symbol_order=1195) (executed once)
+
+int main(int, char**) (int argc, char * * argv)
+{
+  struct Set * D.97932;
+  struct CSProcess * D.97929;
+  struct Terminator * D.97927;
+  unsigned int ret;
+  struct tree_node_t * pos;
+  struct Set modelThreads_out;
+  struct Set modelThreads;
+  struct sigaction handler;
+  struct depth_first_iterator D.83913;
+  struct Set D.84015;
+  int _1;
+  struct OSScheduler * _11;
+  int _17;
+  void * _20;
+  void * _23;
+  struct CSPConstruct * iftmp.6_24;
+  struct Runnable * _25;
+  struct CSPConstruct * * _28;
+  struct OSThread * * _31;
+  struct Terminator * term.9_37;
+  int (*__vtbl_ptr_type) () * _38;
+  int (*__vtbl_ptr_type) () _39;
+  struct Terminator * term.9_42;
+  int (*__vtbl_ptr_type) () * _43;
+  int (*__vtbl_ptr_type) () _44;
+  int (*__vtbl_ptr_type) () * _46;
+  int (*__vtbl_ptr_type) () _47;
+  struct CSProcess * * _49;
+  struct CSPConstruct * * _50;
+  struct CSProcess * * _51;
+  struct OSThread * * _53;
+  pthread_t _60;
+  struct CSPConstruct * _90;
+  void * _93;
+  unsigned int _94;
+  unsigned int _95;
+
+  <bb 2>:
+  _60 = pthread_self ();
+  _11 = LUNA::Utility::SingletonHolder<LUNA::Threading::OSScheduler>::Instance ();
+  LUNA::Threading::OSScheduler::setThreadPriority (_11, _60, 11);
+  memset (&handler, 0, 140);
+  handler.__sigaction_handler.sa_handler = signalHandler;
+  sigemptyset (&handler.sa_mask);
+  _17 = sigaction (2, &handler, 0B);
+  if (_17 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  LUNA::log_local (5, "Error: sigaction failed.\n");
+  goto <bb 29>;
+
+  <bb 4>:
+  _20 = operator new (124);
+  MainModel::MainModel::MainModel (_20);
+
+  <bb 5>:
+  _23 = operator new (72);
+  iftmp.6_24 = &MEM[(struct MainModel *)_20].D.83448.D.83404.D.42485;
+  _25 = &MEM[(struct CSProcess *)_23].D.42484;
+  LUNA::Runnable::Runnable (_25);
+
+  <bb 6>:
+  _90 = &MEM[(struct CSProcess *)_23].D.42485;
+  MEM[(struct TreeNode *)_23 + 8B].parent = 0B;
+  MEM[(struct TreeNode *)_23 + 8B].first_child = 0B;
+  MEM[(struct TreeNode *)_23 + 8B].last_child = 0B;
+  MEM[(struct TreeNode *)_23 + 8B].prev_sibling = 0B;
+  MEM[(struct TreeNode *)_23 + 8B].next_sibling = 0B;
+  MEM[(struct TreeNode *)_23 + 8B].data = _90;
+  MEM[(struct CSPConstruct *)_23 + 8B].m_guard = 0B;
+  MEM[(struct CSPConstruct *)_23 + 8B].m_exit = 0;
+  MEM[(struct CSPConstruct *)_23 + 8B].m_priority = -1;
+  MEM[(struct Terminator *)_23].D.75006.D.42484._vptr.Runnable = &MEM[(void *)&_ZTVN4LUNA3CSP10TerminatorE + 8B];
+  MEM[(struct Terminator *)_23].D.75006.D.42485.D.35429._vptr.TreeNode = &MEM[(void *)&_ZTVN4LUNA3CSP10TerminatorE + 68B];
+  MEM[(struct Terminator *)_23].m_process = iftmp.6_24;
+  MEM[(const char * *)_23 + 48B] = "Terminator";
+  MEM[(const char * *)_23 + 52B] = "Terminator";
+  LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>::append_child (_90, iftmp.6_24);
+  term = _23;
+  MEM[(struct iterator_base *)&D.83913].node = _90;
+  pos_61 = MEM[(struct TreeNode * *)_23 + 12B];
+  if (pos_61 != 0B)
+    goto <bb 7>;
+  else
+    goto <bb 11>;
+
+  <bb 7>:
+
+  <bb 8>:
+  # ret_34 = PHI <0(7), ret_63(9)>
+  # pos_3 = PHI <pos_61(7), pos_65(9)>
+  ret_63 = ret_34 + 1;
+  pos_65 = pos_3->parent;
+  if (pos_65 != 0B)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 9>:
+  goto <bb 8>;
+
+  <bb 10>:
+  # ret_91 = PHI <ret_63(8)>
+
+  <bb 11>:
+  # ret_89 = PHI <ret_91(10), 0(6)>
+  D.83913.current_depth = ret_89;
+  D.84015 = LUNA::Utility::collectValues<LUNA::Utility::TreeNode<LUNA::CSP::CSPConstruct*>::depth_first_iterator> (D.83913); [return slot optimization]
+  modelThreads = LUNA::CSP::filterCSProcesses (&D.84015); [return slot optimization]
+
+  <bb 12>:
+  _28 = D.84015.m_set;
+  if (_28 != 0B)
+    goto <bb 13>;
+  else
+    goto <bb 14>;
+
+  <bb 13>:
+  operator delete [] (_28);
+
+  <bb 14>:
+  D.84015 ={v} {CLOBBER};
+  D.84015 ={v} {CLOBBER};
+  D.83913 ={v} {CLOBBER};
+  modelThreads_out.m_size = 0;
+  modelThreads_out.m_count = 0;
+  _93 = operator new [] (0);
+
+  <bb 15>:
+  modelThreads_out.m_set = _93;
+  _94 = modelThreads_out.m_size;
+  _95 = _94 * 4;
+  memset (_93, 0, _95);
+  LUNA::Threading::createThreads<LUNA::CSP::CSProcess> (&modelThreads, &modelThreads_out, 0B);
+
+  <bb 16>:
+  LUNA::Threading::startThreads<LUNA::Threading::OSThread> (&modelThreads_out);
+  goto <bb 18>;
+
+<L53>:
+  goto <bb 36> (<L46>);
+
+  <bb 18>:
+  term.9_37 = term;
+  _38 = term.9_37->D.75006.D.42484._vptr.Runnable;
+  _39 = MEM[(int (*__vtbl_ptr_type) () *)_38 + 32B];
+  OBJ_TYPE_REF(_39;(struct Terminator)term.9_37->8) (term.9_37);
+  goto <bb 20>;
+
+<L54>:
+  goto <bb 36> (<L46>);
+
+  <bb 20>:
+  LUNA::Threading::joinThreads<LUNA::Threading::OSThread> (&modelThreads_out);
+  goto <bb 22>;
+
+<L55>:
+  goto <bb 36> (<L46>);
+
+  <bb 22>:
+  term.9_42 = term;
+  if (term.9_42 != 0B)
+    goto <bb 23>;
+  else
+    goto <bb 24>;
+
+  <bb 23>:
+  _43 = term.9_42->D.75006.D.42484._vptr.Runnable;
+  _44 = MEM[(int (*__vtbl_ptr_type) () *)_43 + 16B];
+  OBJ_TYPE_REF(_44;(struct Terminator)term.9_42->4) (term.9_42);
+
+  <bb 24>:
+  _46 = MEM[(struct MainModel *)_20].D.83448.D.83404.D.42484._vptr.Runnable;
+  _47 = MEM[(int (*__vtbl_ptr_type) () *)_46 + 16B];
+  OBJ_TYPE_REF(_47;(struct MainModel)_20->4) (_20);
+  _31 = modelThreads_out.m_set;
+  if (_31 != 0B)
+    goto <bb 25>;
+  else
+    goto <bb 26>;
+
+  <bb 25>:
+  operator delete [] (_31);
+
+  <bb 26>:
+  modelThreads_out ={v} {CLOBBER};
+  _49 = modelThreads.m_set;
+  if (_49 != 0B)
+    goto <bb 27>;
+  else
+    goto <bb 28>;
+
+  <bb 27>:
+  operator delete [] (_49);
+
+  <bb 28>:
+  modelThreads ={v} {CLOBBER};
+
+  <bb 29>:
+  # _1 = PHI <-1(3), 0(28)>
+  handler ={v} {CLOBBER};
+  modelThreads ={v} {CLOBBER};
+  modelThreads_out ={v} {CLOBBER};
+  return _1;
+
+<L42>:
+  operator delete (_20);
+  resx 2
+
+<L43>:
+  operator delete (_23);
+  resx 4
+
+<L44>:
+  _50 = D.84015.m_set;
+  if (_50 != 0B)
+    goto <bb 33>;
+  else
+    goto <bb 34>;
+
+  <bb 33>:
+  operator delete [] (_50);
+
+  <bb 34>:
+  D.84015 ={v} {CLOBBER};
+  D.84015 ={v} {CLOBBER};
+  resx 7
+
+<L52>:
+
+<L46>:
+  _53 = modelThreads_out.m_set;
+  if (_53 != 0B)
+    goto <bb 37>;
+  else
+    goto <bb 38>;
+
+  <bb 37>:
+  operator delete [] (_53);
+
+  <bb 38>:
+  modelThreads_out ={v} {CLOBBER};
+  resx 13
+
+<L56>:
+  goto <bb 41> (<L47>);
+
+<L51>:
+
+<L47>:
+  _51 = modelThreads.m_set;
+  if (_51 != 0B)
+    goto <bb 42>;
+  else
+    goto <bb 43>;
+
+  <bb 42>:
+  operator delete [] (_51);
+
+  <bb 43>:
+  modelThreads ={v} {CLOBBER};
+  resx 12
+
+}
+
+
+
+;; Function int LUNA::Threading::BasicOSThread<impl>::start() [with ThreadImpl = LUNA::Threading::PThreadImplementation] (_ZN4LUNA9Threading13BasicOSThreadINS0_21PThreadImplementationEE5startEv, funcdef_no=4482, decl_uid=79614, symbol_order=1502)
+
+int LUNA::Threading::BasicOSThread<impl>::start() [with ThreadImpl = LUNA::Threading::PThreadImplementation] (struct BasicOSThread * const this)
+{
+  void * D.97994;
+  struct OSScheduler * D.97991;
+  struct IScheduler * D.97990;
+  int policy;
+  struct sched_param param;
+  int result;
+  int D.97988;
+  int err;
+  struct thread_start_tuple * D.97981;
+  int D.97978;
+  int D.97973;
+  static const char __FUNCTION__[20] = "setThreadAttributes";
+  struct AutoLock * D.97968;
+  int ret;
+  int ret;
+  struct thread_start_tuple tuple;
+  int result;
+  struct AutoLock l;
+  static const char __FUNCTION__[6] = "start";
+  int _1;
+  int _2;
+  struct LockType * _11;
+  int _13;
+  struct _IO_FILE * stdout.93_14;
+  struct Runnable * _16;
+  struct IThread * _18;
+  struct Runnable * _20;
+  struct IThread * _21;
+  ThreadState _23;
+  union thread_attr * _26;
+  thread_t * _34;
+  int _38;
+  int (*__vtbl_ptr_type) () * _39;
+  int (*__vtbl_ptr_type) () _40;
+  bool g_stop_on_setPriority_error.99_43;
+  bool g_stop_on_setPriority_error.99_45;
+  int _54;
+  unsigned int ret.131_56;
+  unsigned int _57;
+  unsigned int ret.131_60;
+  unsigned int _61;
+  void * PROF_69;
+  int _75;
+  int _76;
+  bool _77;
+  int _79;
+  int _80;
+  unsigned int _82;
+  int _83;
+  bool _86;
+  int _87;
+  int (*__vtbl_ptr_type) () _89;
+  bool _90;
+  unsigned int priority.42_91;
+  unsigned int _92;
+  unsigned int priority.42_93;
+  unsigned int _94;
+  int (*__vtbl_ptr_type) () * _95;
+  int (*__vtbl_ptr_type) () _96;
+  struct IScheduler * _97;
+  long unsigned int _98;
+  long unsigned int _100;
+  void * PROF_102;
+  struct IScheduler * _104;
+  struct OSScheduler * m_instance.66_107;
+  struct OSScheduler * m_instance.68_108;
+  bool m_destroyed.69_109;
+  void * _110;
+  struct OSScheduler * _111;
+  struct Mutex * _112;
+  int (*__vtbl_ptr_type) () * _113;
+  int (*__vtbl_ptr_type) () _114;
+  int _115;
+  int _166;
+
+  <bb 2>:
+  _11 = &this_10(D)->m_lock;
+  l.D.88684._vptr.Uncopyable = &MEM[(void *)&_ZTVN4LUNA8locksync8AutoLockINS0_5MutexEEE + 8B];
+  l.m_lock = _11;
+  _75 = LUNA::locksync::Mutex::lock (_11);
+
+  <bb 3>:
+  if (_75 != 0)
+    goto <bb 5>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  stdout.93_14 = stdout;
+  fflush (stdout.93_14);
+  goto <bb 9>;
+
+  <bb 5>:
+  LUNA::log (0, "AutoLock couldn\'t acquire the lock.\n");
+  goto <bb 4>;
+
+<L50>:
+  goto <bb 8> (<L46>);
+
+<L49>:
+
+<L46>:
+  resx 7
+
+  <bb 9>:
+  _16 = this_10(D)->m_run;
+  _18 = LUNA::Runnable::getIThread (_16);
+  goto <bb 11>;
+
+<L52>:
+  goto <bb 87> (<L43>);
+
+  <bb 11>:
+  if (_18 != 0B)
+    goto <bb 12>;
+  else
+    goto <bb 14>;
+
+  <bb 12>:
+  LUNA::log (5, "%s - Cannot start the IThread, because the attached Runnable already belongs to another IThread.\n", &__FUNCTION__);
+  goto <bb 80>;
+
+<L53>:
+  goto <bb 87> (<L43>);
+
+  <bb 14>:
+  _20 = this_10(D)->m_run;
+  _21 = &this_10(D)->D.79676;
+  LUNA::Runnable::setIThread (_20, _21);
+  goto <bb 16>;
+
+<L54>:
+  goto <bb 87> (<L43>);
+
+  <bb 16>:
+  _23 ={v} this_10(D)->m_state;
+  if (_23 != 1)
+    goto <bb 17>;
+  else
+    goto <bb 19>;
+
+  <bb 17>:
+  LUNA::log (5, "%s - Cannot start the IThread, because the IThread is not in the STOPPED state.\n", &__FUNCTION__);
+  goto <bb 80>;
+
+<L55>:
+  goto <bb 87> (<L43>);
+
+  <bb 19>:
+  this_10(D)->m_stop ={v} 0;
+  _26 = &this_10(D)->m_thread_attr;
+  _13 = pthread_attr_init (_26);
+  if (_13 != 0)
+    goto <bb 88>;
+  else
+    goto <bb 20>;
+
+  <bb 20>:
+  _76 = pthread_attr_setinheritsched (_26, 0);
+  if (_76 != 0)
+    goto <bb 88>;
+  else
+    goto <bb 21>;
+
+  <bb 21>:
+  _77 = MEM[(struct Thread_attr &)this_10(D) + 4].joinable;
+  _86 = ~_77;
+  _166 = (int) _86;
+  _79 = pthread_attr_setdetachstate (_26, _166);
+  if (_79 != 0)
+    goto <bb 88>;
+  else
+    goto <bb 22>;
+
+  <bb 22>:
+  _80 = pthread_attr_setscope (_26, 0);
+  if (_80 != 0)
+    goto <bb 88>;
+  else
+    goto <bb 90>;
+
+  <bb 23>:
+  if (_82 > 16384)
+    goto <bb 24>;
+  else
+    goto <bb 91>;
+
+  <bb 24>:
+  _83 = pthread_attr_setstacksize (_26, _82);
+  if (_83 != 0)
+    goto <bb 92>;
+  else
+    goto <bb 91>;
+
+  <bb 25>:
+  this_10(D)->m_state ={v} -1;
+  goto <bb 80>;
+
+  <bb 26>:
+  tuple.thread = 0B;
+  err_88 = pthread_barrier_init (&tuple.barrier, 0B, 2);
+  if (err_88 != 0)
+    goto <bb 27>;
+  else
+    goto <bb 30> (<L47>);
+
+  <bb 27>:
+  LUNA::log (5, "thread_start_tuple::thread_start_tuple - Cannot initialize the barrier (Error:%d).\n", err_88);
+  goto <bb 29>;
+
+<L56>:
+  goto <bb 87> (<L43>);
+
+  <bb 29>:
+  exit (-1);
+
+<L47>:
+  tuple.thread = this_10(D);
+  _34 = &this_10(D)->m_thread;
+  _54 = pthread_create (_34, _26, internalRun, &tuple);
+  if (_54 != 0)
+    goto <bb 31>;
+  else
+    goto <bb 33>;
+
+  <bb 31>:
+  LUNA::log (0, "%s - Cannot start the thread, thread canceled (error: %d).\n", &__FUNCTION__, _54);
+
+  <bb 32>:
+  this_10(D)->m_state ={v} -1;
+  goto <bb 79>;
+
+  <bb 33>:
+  this_10(D)->m_state ={v} 0;
+  _38 = this_10(D)->m_attr.priority;
+  if (_38 != -1)
+    goto <bb 34>;
+  else
+    goto <bb 78>;
+
+  <bb 34>:
+  _39 = this_10(D)->D.79676.D.35164._vptr.Uncopyable;
+  _40 = MEM[(int (*__vtbl_ptr_type) () *)_39 + 12B];
+  PROF_69 = [obj_type_ref] OBJ_TYPE_REF(_40;(struct BasicOSThread)this_10(D)->3);
+  if (PROF_69 == setPriority)
+    goto <bb 35>;
+  else
+    goto <bb 70>;
+
+  <bb 35>:
+  _89 = MEM[(int (*__vtbl_ptr_type) () *)_39 + 36B];
+  _90 = OBJ_TYPE_REF(_89;(struct BasicOSThread)this_10(D)->9) (this_10(D));
+  goto <bb 37>;
+
+<L58>:
+  goto <bb 84> (<L42>);
+
+  <bb 37>:
+  if (_90 != 0)
+    goto <bb 38>;
+  else
+    goto <bb 42>;
+
+  <bb 38>:
+  priority.42_91 = (unsigned int) _38;
+  _92 = priority.42_91 + 4294967285;
+  if (_92 > 88)
+    goto <bb 39>;
+  else
+    goto <bb 45>;
+
+  <bb 39>:
+  LUNA::log (5, "%s - Cannot set the RT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 41>;
+
+<L59>:
+  goto <bb 84> (<L42>);
+
+  <bb 41>:
+  goto <bb 69>;
+
+  <bb 42>:
+  priority.42_93 = (unsigned int) _38;
+  _94 = priority.42_93 + 4294967295;
+  if (_94 > 9)
+    goto <bb 43>;
+  else
+    goto <bb 45>;
+
+  <bb 43>:
+  LUNA::log (5, "%s - Cannot set the NonRT thread priority to an invalid priority for its respective real-timeness.\n", &__FUNCTION__);
+  goto <bb 41>;
+
+<L60>:
+  goto <bb 84> (<L42>);
+
+  <bb 45>:
+  _95 = this_10(D)->D.79676.D.35164._vptr.Uncopyable;
+  _96 = MEM[(int (*__vtbl_ptr_type) () *)_95 + 56B];
+  PROF_102 = [obj_type_ref] OBJ_TYPE_REF(_96;(struct BasicOSThread)this_10(D)->14);
+  if (PROF_102 == getScheduler)
+    goto <bb 46>;
+  else
+    goto <bb 63>;
+
+  <bb 46>:
+  m_instance.66_107 ={v} m_instance;
+  if (m_instance.66_107 == 0B)
+    goto <bb 48>;
+  else
+    goto <bb 47>;
+
+  <bb 47>:
+  _111 ={v} m_instance;
+  goto <bb 65>;
+
+  <bb 48>:
+  LUNA::locksync::Mutex::lock (&m_lock);
+  goto <bb 50>;
+
+<L61>:
+  goto <bb 84> (<L42>);
+
+  <bb 50>:
+  m_instance.68_108 ={v} m_instance;
+  if (m_instance.68_108 == 0B)
+    goto <bb 51>;
+  else
+    goto <bb 59>;
+
+  <bb 51>:
+  m_destroyed.69_109 = m_destroyed;
+  if (m_destroyed.69_109 != 0)
+    goto <bb 52>;
+  else
+    goto <bb 55>;
+
+  <bb 52>:
+  LUNA::log (0, "Singleton object was already destroyed, creating new (note: this might destroy timing requirements!).\n");
+  goto <bb 54>;
+
+<L62>:
+  goto <bb 84> (<L42>);
+
+  <bb 54>:
+  m_destroyed = 0;
+
+  <bb 55>:
+  _110 = operator new (16);
+  goto <bb 57>;
+
+<L63>:
+  goto <bb 84> (<L42>);
+
+  <bb 57>:
+  LUNA::Threading::OSScheduler::OSScheduler (_110);
+
+  <bb 58>:
+  m_instance ={v} _110;
+  atexit (DestroySingleton);
+
+  <bb 59>:
+  LUNA::locksync::Mutex::unlock (&m_lock);
+  goto <bb 47>;
+
+<L64>:
+  goto <bb 84> (<L42>);
+
+<L48>:
+  operator delete (_110);
+  resx 8
+
+<L65>:
+  goto <bb 84> (<L42>);
+
+  <bb 63>:
+  _104 = OBJ_TYPE_REF(_96;(struct BasicOSThread)this_10(D)->14) (this_10(D));
+  goto <bb 65>;
+
+<L66>:
+  goto <bb 84> (<L42>);
+
+  <bb 65>:
+  # _97 = PHI <_104(63), _111(47)>
+  _98 = this_10(D)->m_thread;
+  result_99 = LUNA::Threading::OSScheduler::setThreadPriority (_97, _98, _38);
+  goto <bb 67>;
+
+<L67>:
+  goto <bb 84> (<L42>);
+
+  <bb 67>:
+  _100 = this_10(D)->m_thread;
+  pthread_getschedparam (_100, &policy, &param);
+  if (result_99 == 0)
+    goto <bb 68>;
+  else
+    goto <bb 69>;
+
+  <bb 68>:
+  this_10(D)->m_attr.priority = _38;
+
+  <bb 69>:
+  # result_101 = PHI <1001(41), result_99(67), result_99(68)>
+  param ={v} {CLOBBER};
+  policy ={v} {CLOBBER};
+  goto <bb 72>;
+
+  <bb 70>:
+  result_71 = OBJ_TYPE_REF(_40;(struct BasicOSThread)this_10(D)->3) (this_10(D), _38);
+  goto <bb 72>;
+
+<L68>:
+  goto <bb 84> (<L42>);
+
+  <bb 72>:
+  # result_42 = PHI <result_71(70), result_101(69)>
+  if (result_42 != 0)
+    goto <bb 73>;
+  else
+    goto <bb 78>;
+
+  <bb 73>:
+  g_stop_on_setPriority_error.99_43 = g_stop_on_setPriority_error;
+  if (g_stop_on_setPriority_error.99_43 != 0)
+    goto <bb 74>;
+  else
+    goto <bb 78>;
+
+  <bb 74>:
+  LUNA::log (5, "%s - Couldn\'t set thread priority (error: %d).\n", &__FUNCTION__, result_42);
+  goto <bb 76>;
+
+<L69>:
+  goto <bb 84> (<L42>);
+
+  <bb 76>:
+  g_stop_on_setPriority_error.99_45 = g_stop_on_setPriority_error;
+  if (g_stop_on_setPriority_error.99_45 != 0)
+    goto <bb 77>;
+  else
+    goto <bb 78>;
+
+  <bb 77>:
+  this_10(D)->m_state ={v} -1;
+  goto <bb 79>;
+
+  <bb 78>:
+  ret_55 = pthread_barrier_wait (&tuple.barrier);
+  ret.131_56 = (unsigned int) ret_55;
+  _57 = ret.131_56 + 1;
+  if (_57 > 1)
+    goto <bb 96>;
+  else
+    goto <bb 98>;
+
+  <bb 79>:
+  # _1 = PHI <_54(32), result_42(77), ret_55(96), ret_59(99), 0(98)>
+  pthread_barrier_destroy (&tuple.barrier);
+  tuple ={v} {CLOBBER};
+
+  <bb 80>:
+  # _2 = PHI <1001(12), 1002(17), _87(25), _1(79)>
+  l.D.88684._vptr.Uncopyable = &MEM[(void *)&_ZTVN4LUNA8locksync8AutoLockINS0_5MutexEEE + 8B];
+  _112 = l.m_lock;
+  _113 = _112->D.41844._vptr.Uncopyable;
+  _114 = MEM[(int (*__vtbl_ptr_type) () *)_113 + 12B];
+  _115 = OBJ_TYPE_REF(_114;(struct Mutex)_112->3) (_112);
+  if (_115 != 0)
+    goto <bb 81>;
+  else
+    goto <bb 82>;
+
+  <bb 81>:
+  LUNA::log (0, "AutoLock couldn\'t release the lock.\n");
+
+  <bb 82>:
+  l ={v} {CLOBBER};
+  l ={v} {CLOBBER};
+  tuple ={v} {CLOBBER};
+  return _2;
+
+<L57>:
+
+<L42>:
+  pthread_barrier_destroy (&tuple.barrier);
+  tuple ={v} {CLOBBER};
+  resx 3
+
+<L70>:
+  goto <bb 87> (<L43>);
+
+<L51>:
+
+<L43>:
+  LUNA::locksync::AutoLock<LUNA::locksync::Mutex>::~AutoLock (&l);
+  resx 2
+
+  <bb 88>:
+  LUNA::log (0, "%s - pthread_attr_init - pthread_attr_setscope failed.\n", &__FUNCTION__);
+  goto <bb 94>;
+
+<L71>:
+  goto <bb 87> (<L43>);
+
+  <bb 90>:
+  _82 = MEM[(struct Thread_attr &)this_10(D) + 4].stack_size;
+  if (_82 != 0)
+    goto <bb 23>;
+  else
+    goto <bb 26>;
+
+  <bb 91>:
+  goto <bb 26>;
+
+  <bb 92>:
+  LUNA::log (0, "%s - pthread_attr_setstacksize failed.\n", &__FUNCTION__);
+  goto <bb 94>;
+
+<L72>:
+  goto <bb 87> (<L43>);
+
+  <bb 94>:
+  # _87 = PHI <-3(92), -1(88)>
+  LUNA::log (0, "%s - setThreadAttributes failed (error: %d).\n", &__FUNCTION__, _87);
+  goto <bb 25>;
+
+<L73>:
+  goto <bb 87> (<L43>);
+
+  <bb 96>:
+  LUNA::log (5, "%s - Could not sync with the starting thread (error: %d).\n", &__FUNCTION__, ret_55);
+  goto <bb 79>;
+
+<L74>:
+  goto <bb 84> (<L42>);
+
+  <bb 98>:
+  ret_59 = pthread_barrier_wait (&tuple.barrier);
+  ret.131_60 = (unsigned int) ret_59;
+  _61 = ret.131_60 + 1;
+  if (_61 > 1)
+    goto <bb 99>;
+  else
+    goto <bb 79>;
+
+  <bb 99>:
+  LUNA::log (5, "%s - Could not sync with the starting thread (error: %d).\n", &__FUNCTION__, ret_59);
+  goto <bb 79>;
+
+<L75>:
+  goto <bb 84> (<L42>);
+
+}
+
+

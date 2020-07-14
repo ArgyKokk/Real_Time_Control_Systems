@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI file-version="3" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:csp="http:///nl/utwente/ce/terra/csp/model/csp.ecore" xmlns:fmi="http:///nl/utwente/ce/terra/fmi/model/fmi.ecore">
+  <csp:CSPDiagram>
+    <objects xsi:type="csp:CSPPort" link="/0/@links.0" name="JoyStickPan" constraints="75,75,10,10"/>
+    <objects xsi:type="csp:CSPWriter" name="w_JoyStickPan" constraints="140,60,30,30" compositionalRelations="/0/@compositionalRelations.0" link="/0/@links.0" variable="/0/@properties.2/@variables.0"/>
+    <objects xsi:type="csp:CSPPort" link="/0/@links.1" name="JoyStickTilt" constraints="75,155,10,10"/>
+    <objects xsi:type="csp:CSPWriter" name="w_JoyStickTilt" constraints="140,140,30,30" compositionalRelations="/0/@compositionalRelations.0" link="/0/@links.1" variable="/0/@properties.2/@variables.1"/>
+    <objects xsi:type="csp:CSPCompositionalGroup" name="FMUSEQ" constraints="100,20,440,200" relations="/0/@compositionalRelations.1"/>
+    <objects xsi:type="csp:CSPCompositionalGroup" name="IO" constraints="120,40,80,160" compositionalRelations="/0/@compositionalRelations.1" relations="/0/@compositionalRelations.0"/>
+    <objects xsi:type="csp:CSPModel" name="FMI_JoyStick" constraints="285,95,70,50" compositionalRelations="/0/@compositionalRelations.1">
+      <submodel xsi:type="csp:CSPDiagram">
+        <properties xsi:type="csp:CSPVariablesProperty">
+          <variables name="JoyStickPan" linkedParent="/0/@properties.2/@variables.0"/>
+          <variables name="JoyStickTilt" linkedParent="/0/@properties.2/@variables.1"/>
+        </properties>
+      </submodel>
+      <configuration xsi:type="fmi:FMIModel" callbackFunctions="/1">
+        <headerFiles>fmi2Functions.h</headerFiles>
+        <headerFiles>logger.h</headerFiles>
+        <sourceFiles>src/logger.cpp</sourceFiles>
+        <portMapping name="JoyStickPan" direction="OUTPUT" dataType="REAL" reference="10"/>
+        <portMapping name="JoyStickTilt" direction="OUTPUT" dataType="REAL" reference="11"/>
+        <parameterRealMapping name="PulsePan_start_time" value="1.0"/>
+        <parameterRealMapping name="PulsePan_stop_time" reference="1" value="5.0"/>
+        <parameterRealMapping name="PulsePan_amplitude" reference="2" value="1.0"/>
+        <parameterRealMapping name="PulseTilt_start_time" reference="3" value="2.0"/>
+        <parameterRealMapping name="PulseTilt_stop_time" reference="4" value="6.0"/>
+        <parameterRealMapping name="PulseTilt_amplitude" reference="5" value="-1.0"/>
+        <modelDescription modelName="JoyStick" guid="{60e2b061-6309-416d-a849-b430948dc8ae}" generationTool="20-sim 4.7.0"/>
+        <simulationProperties stopTime="20.0" stepSize="0.01"/>
+        <FMUProperties modelIdentifier="JoyStick" canHandleVariableCommunicationStepSize="true" canNotUseMemoryManagementFunctions="true" canGetAndSetFMUstate="true"/>
+      </configuration>
+    </objects>
+    <properties xsi:type="cpc:CPCSharedDiagramProperty" componentName="JoyStick"/>
+    <properties xsi:type="cpc:CPCUnitsProperty">
+      <units name="IO_Real" type="real" unit="fmi_Real"/>
+      <units name="IO_boolean" type="boolean" unit="fmi_boolean"/>
+      <units name="IO_integer" type="integer" unit="fmi_integer"/>
+    </properties>
+    <properties xsi:type="csp:CSPVariablesProperty">
+      <variables name="v_JoyStickPan" type="/0/@properties.1/@units.0"/>
+      <variables name="v_JoyStickTilt" type="/0/@properties.1/@units.0"/>
+    </properties>
+    <links xsi:type="csp:CSPChannel" ports="/0/@objects.0 /0/@objects.1"/>
+    <links xsi:type="csp:CSPChannel" ports="/0/@objects.2 /0/@objects.3"/>
+    <compositionalRelations compositeObjects="/0/@objects.1 /0/@objects.3" compositionalGroup="/0/@objects.5"/>
+    <compositionalRelations compositeObjects="/0/@objects.5 /0/@objects.6" type="SEQUENTIAL" compositionalGroup="/0/@objects.4"/>
+  </csp:CSPDiagram>
+  <fmi:FMICallbackFunctions/>
+</xmi:XMI>

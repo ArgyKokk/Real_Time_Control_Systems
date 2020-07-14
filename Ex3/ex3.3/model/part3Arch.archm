@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arch:ArchitectureDiagram file-version="0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arch="http:///nl/utwente/ce/terra/arch/model/architecture.ecore" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:hwanyio="http:///nl/utwente/ce/terra/arch/model/hw/anyio/hwanyio.ecore" xmlns:hwtimer="http:///nl/utwente/ce/terra/arch/model/hw/timer/hwtimer.ecore">
+  <objects xsi:type="arch:ArchExternalModel" name="EncoderH" constraints="283,41,97,50" externalSubmodel="/ex3.3/model/EncoderHorizontal.cspm">
+    <objects xsi:type="arch:ArchPort" link="//@links.0" unitType="//@properties.0/@units.1" name="encoder_pt" constraints="36,0,10,10"/>
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.1" name="pt_encoderH_out" constraints="37,40,10,10"/>
+  </objects>
+  <objects xsi:type="arch:ArchExternalModel" name="EncoderV" constraints="278,248,94,50" externalSubmodel="/ex3.3/model/EncoderV.cspm">
+    <objects xsi:type="arch:ArchPort" link="//@links.3" unitType="//@properties.0/@units.1" name="pt_encoderV_in" constraints="42,40,10,10"/>
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.2" unitType="//@properties.0/@units.0" name="pt_encoderV_out" constraints="43,0,10,10"/>
+  </objects>
+  <objects xsi:type="arch:ArchHWPort" direction="OUTGOING" link="//@links.0" name="pt_encoder_h" constraints="317,10,10,10">
+    <configuration xsi:type="hwanyio:RaMstixEncConfiguration" nr="3"/>
+  </objects>
+  <objects xsi:type="arch:ArchHWPort" direction="OUTGOING" link="//@links.3" name="pt_encoder_v" constraints="329,328,10,10">
+    <configuration xsi:type="hwanyio:RaMstixEncConfiguration" nr="4"/>
+  </objects>
+  <objects xsi:type="arch:ArchHWPort" link="//@links.5" unitType="//@properties.0/@units.3" name="pwm_robot_h" constraints="614,137,10,10">
+    <configuration xsi:type="hwanyio:RaMstixPWMConfiguration" nr="3" brakingMode="0"/>
+  </objects>
+  <objects xsi:type="arch:ArchHWPort" link="//@links.4" unitType="//@properties.0/@units.3" name="pwm_robot_v" constraints="616,183,10,10">
+    <configuration xsi:type="hwanyio:RaMstixPWMConfiguration" nr="4" brakingMode="0"/>
+  </objects>
+  <objects xsi:type="arch:ArchExternalModel" name="JIWY" constraints="287,124,85,81" externalSubmodel="/ex3.3/model/JIWY.cspm">
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.7" unitType="//@properties.0/@units.0" name="pwm_horizontal_in" constraints="75,16,10,10"/>
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.6" unitType="//@properties.0/@units.0" name="pwm_vertical_in" constraints="75,50,10,10"/>
+    <objects xsi:type="arch:ArchPort" link="//@links.9" unitType="//@properties.0/@units.0" name="joystick_h_in" constraints="0,15,10,10"/>
+    <objects xsi:type="arch:ArchPort" link="//@links.8" unitType="//@properties.0/@units.0" name="joystick_v_in" constraints="0,48,10,10"/>
+    <objects xsi:type="arch:ArchPort" link="//@links.1" unitType="//@properties.0/@units.0" name="encoder_h_out" constraints="37,0,10,10"/>
+    <objects xsi:type="arch:ArchPort" link="//@links.2" name="encoder_v_out" constraints="39,71,10,10"/>
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.10" unitType="//@properties.0/@units.5" name="pt_timer" constraints="14,71,10,10"/>
+  </objects>
+  <objects xsi:type="arch:ArchExternalModel" name="PWM" constraints="481,127,72,73" externalSubmodel="/ex3.3/model/PWM.cspm">
+    <objects xsi:type="arch:ArchPort" link="//@links.7" name="pwm_in_horizontal" constraints="0,9,10,10"/>
+    <objects xsi:type="arch:ArchPort" link="//@links.6" name="pwm_in_vertical" constraints="0,45,10,10"/>
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.5" name="pwm_out_horizontal" constraints="62,10,10,10"/>
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.4" name="pwm_out_vertical" constraints="62,52,10,10"/>
+  </objects>
+  <objects xsi:type="arch:ArchExternalModel" name="Joystick" constraints="150,133,60,63" externalSubmodel="/ex3.3/model/joystick.cspm">
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.8" name="joystick_ver" constraints="50,43,10,10"/>
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.9" name="joystick_hor" constraints="50,15,10,10"/>
+  </objects>
+  <objects xsi:type="arch:ArchHWPort" link="//@links.10" name="timer_pt" constraints="204,241,10,10">
+    <configuration xsi:type="hwtimer:TimerPeriodicConfiguration"/>
+  </objects>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="IO" type="real" unit="xxsim"/>
+    <units name="encoder" unit="int"/>
+    <units name="in" unit="int"/>
+    <units name="PWM" type="real" unit="real"/>
+    <units name="joystick" type="real" unit="real"/>
+    <units name="time" type="time period" unit=""/>
+  </properties>
+  <links xsi:type="arch:ArchLink" ports="//@objects.2 //@objects.0/@objects.0"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.0/@objects.1 //@objects.6/@objects.4"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.1/@objects.1 //@objects.6/@objects.5"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.3 //@objects.1/@objects.0"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.7/@objects.3 //@objects.5"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.7/@objects.2 //@objects.4"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.6/@objects.1 //@objects.7/@objects.1"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.6/@objects.0 //@objects.7/@objects.0"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.8/@objects.0 //@objects.6/@objects.3"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.8/@objects.1 //@objects.6/@objects.2"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.6/@objects.6 //@objects.9"/>
+</arch:ArchitectureDiagram>

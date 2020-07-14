@@ -1,0 +1,1626 @@
+
+;; Function virtual void Submodel20sim::CalculateDynamic() (_ZN13Submodel20sim16CalculateDynamicEv, funcdef_no=36, decl_uid=7790, symbol_order=36)
+
+virtual void Submodel20sim::CalculateDynamic() (struct Submodel20sim * const this)
+{
+  <bb 2>:
+  return;
+
+}
+
+
+
+;; Function Submodel20sim::~Submodel20sim() (_ZN13Submodel20simD2Ev, funcdef_no=38, decl_uid=7833, symbol_order=38)
+
+Submodel20sim::~Submodel20sim() (struct Submodel20sim * const this)
+{
+  <bb 2>:
+  *this_2(D) ={v} {CLOBBER};
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual void ControllerPan::ControllerPanModel::CalculateDynamic() (_ZN13ControllerPan18ControllerPanModel16CalculateDynamicEv, funcdef_no=939, decl_uid=22290, symbol_order=214)
+
+virtual void ControllerPan::ControllerPanModel::CalculateDynamic() (struct ControllerPanModel * const this)
+{
+  XXDouble iftmp.65_1;
+  int (*__vtbl_ptr_type) () * _5;
+  int _6;
+  sizetype _7;
+  struct Submodel20sim * _8;
+  XXDouble * _9;
+  double _10;
+  XXDouble * _11;
+  double _12;
+  double _13;
+  double _14;
+  double _15;
+  double _16;
+  double _18;
+  double _20;
+  double _22;
+  double _23;
+  XXDouble * _25;
+  double _26;
+  double _28;
+  double _29;
+  XXDouble * _30;
+  double _31;
+  double _32;
+  double _33;
+  double _34;
+  double _35;
+  double _36;
+  double _37;
+  double _38;
+  double _39;
+  double _40;
+  double _41;
+  double _42;
+  double _43;
+  double _44;
+  double _45;
+  double _47;
+  double _48;
+  double _49;
+  double _50;
+  double _51;
+  double _52;
+  double _54;
+  double _56;
+  double _57;
+
+  <bb 2>:
+  _5 = this_4(D)->_vptr.ControllerPanModel;
+  _6 = MEM[(int *)_5 + 4294967284B];
+  _7 = (sizetype) _6;
+  _8 = this_4(D) + _7;
+  _9 = _8->V;
+  _10 = _8->step_size;
+  _11 = _8->P;
+  _12 = MEM[(XXDouble *)_11 + 8B];
+  _13 = MEM[(XXDouble *)_11 + 16B];
+  _14 = _12 * _13;
+  _15 = _10 + _14;
+  _16 = 1.0e+0 / _15;
+  MEM[(XXDouble *)_9 + 8B] = _16;
+  _18 = MEM[(XXDouble *)_9 + 56B];
+  MEM[(XXDouble *)_9 + 40B] = _18;
+  _20 = MEM[(XXDouble *)_9 + 64B];
+  MEM[(XXDouble *)_9 + 16B] = _20;
+  _22 = MEM[(XXDouble *)_11 + 32B];
+  _23 = _18 * _22;
+  MEM[(XXDouble *)_9 + 24B] = _23;
+  _25 = _8->R;
+  _26 = _20 - _23;
+  MEM[(XXDouble *)_25 + 8B] = _26;
+  _28 = MEM[(XXDouble *)_9 + 8B];
+  _29 = MEM[(XXDouble *)_11 + 8B];
+  _30 = _8->s;
+  _31 = *_30;
+  _32 = _29 * _31;
+  _33 = MEM[(XXDouble *)_11 + 16B];
+  _34 = _32 * _33;
+  _35 = *_11;
+  _36 = _29 * _35;
+  _37 = MEM[(XXDouble *)_30 + 8B];
+  _38 = _26 - _37;
+  _39 = _36 * _38;
+  _40 = _34 + _39;
+  _41 = _8->step_size;
+  _42 = _35 * _41;
+  _43 = _26 * _42;
+  _44 = _40 + _43;
+  _45 = _28 * _44;
+  *_25 = _45;
+  _47 = MEM[(XXDouble *)_30 + 16B];
+  _48 = _8->step_size;
+  _49 = _45 * _48;
+  _50 = MEM[(XXDouble *)_11 + 24B];
+  _51 = _49 / _50;
+  _52 = _47 + _51;
+  MEM[(XXDouble *)_25 + 16B] = _52;
+  _54 = _45 + _52;
+  *_9 = _54;
+  _56 = MEM[(XXDouble *)_11 + 48B];
+  if (_54 < _56)
+    goto <bb 5>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _57 = MEM[(XXDouble *)_11 + 40B];
+  if (_54 > _57)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+
+  <bb 5>:
+  # iftmp.65_1 = PHI <_56(2), _54(3), _57(4)>
+  MEM[(XXDouble *)_9 + 32B] = iftmp.65_1;
+  return;
+
+}
+
+
+
+;; Function virtual Submodel20sim::~Submodel20sim() (_ZN13Submodel20simD0Ev, funcdef_no=40, decl_uid=7827, symbol_order=40)
+
+virtual Submodel20sim::~Submodel20sim() (struct Submodel20sim * const this)
+{
+  <bb 2>:
+  *this_2(D) ={v} {CLOBBER};
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual void ControllerPan::ControllerPanModel::_ZTv0_n12_N13ControllerPan18ControllerPanModel16CalculateDynamicEv() (_ZTv0_n12_N13ControllerPan18ControllerPanModel16CalculateDynamicEv, funcdef_no=1008, decl_uid=22344, symbol_order=216)
+
+virtual void ControllerPan::ControllerPanModel::_ZTv0_n12_N13ControllerPan18ControllerPanModel16CalculateDynamicEv() (struct ControllerPanModel * const this)
+{
+  int (*<T4b6c>) () vcalloffset.69;
+  int (*<T4b6c>) () * vtableaddr.68;
+  sizetype _1;
+  struct ControllerPanModel * _2;
+  int (*__vtbl_ptr_type) () * _8;
+  int _9;
+  sizetype _10;
+  struct Submodel20sim * _11;
+  XXDouble * _12;
+  double _13;
+  XXDouble * _14;
+  double _15;
+  double _16;
+  double _17;
+  double _18;
+  double _19;
+  double _20;
+  double _21;
+  double _22;
+  double _23;
+  XXDouble * _24;
+  double _25;
+  double _26;
+  double _27;
+  XXDouble * _28;
+  double _29;
+  double _30;
+  double _31;
+  double _32;
+  double _33;
+  double _34;
+  double _35;
+  double _36;
+  double _37;
+  double _38;
+  double _39;
+  double _40;
+  double _41;
+  double _42;
+  double _43;
+  double _44;
+  double _45;
+  double _46;
+  double _47;
+  double _48;
+  double _49;
+  double _50;
+  double _51;
+  double _52;
+  XXDouble iftmp.65_53;
+
+  <bb 2>:
+  vtableaddr.68_5 = MEM[(int (*<T4b6c>) () * *)this_3(D)];
+  vcalloffset.69_6 = MEM[(int (*<T4b6c>) () *)vtableaddr.68_5 + 4294967284B];
+  _1 = (sizetype) vcalloffset.69_6;
+  _2 = this_3(D) + _1;
+  _8 = _2->_vptr.ControllerPanModel;
+  _9 = MEM[(int *)_8 + 4294967284B];
+  _10 = (sizetype) _9;
+  _11 = _2 + _10;
+  _12 = _11->V;
+  _13 = _11->step_size;
+  _14 = _11->P;
+  _15 = MEM[(XXDouble *)_14 + 8B];
+  _16 = MEM[(XXDouble *)_14 + 16B];
+  _17 = _15 * _16;
+  _18 = _13 + _17;
+  _19 = 1.0e+0 / _18;
+  MEM[(XXDouble *)_12 + 8B] = _19;
+  _20 = MEM[(XXDouble *)_12 + 56B];
+  MEM[(XXDouble *)_12 + 40B] = _20;
+  _21 = MEM[(XXDouble *)_12 + 64B];
+  MEM[(XXDouble *)_12 + 16B] = _21;
+  _22 = MEM[(XXDouble *)_14 + 32B];
+  _23 = _20 * _22;
+  MEM[(XXDouble *)_12 + 24B] = _23;
+  _24 = _11->R;
+  _25 = _21 - _23;
+  MEM[(XXDouble *)_24 + 8B] = _25;
+  _26 = MEM[(XXDouble *)_12 + 8B];
+  _27 = MEM[(XXDouble *)_14 + 8B];
+  _28 = _11->s;
+  _29 = *_28;
+  _30 = _27 * _29;
+  _31 = MEM[(XXDouble *)_14 + 16B];
+  _32 = _30 * _31;
+  _33 = *_14;
+  _34 = _27 * _33;
+  _35 = MEM[(XXDouble *)_28 + 8B];
+  _36 = _25 - _35;
+  _37 = _34 * _36;
+  _38 = _32 + _37;
+  _39 = _11->step_size;
+  _40 = _33 * _39;
+  _41 = _25 * _40;
+  _42 = _38 + _41;
+  _43 = _26 * _42;
+  *_24 = _43;
+  _44 = MEM[(XXDouble *)_28 + 16B];
+  _45 = _11->step_size;
+  _46 = _43 * _45;
+  _47 = MEM[(XXDouble *)_14 + 24B];
+  _48 = _46 / _47;
+  _49 = _44 + _48;
+  MEM[(XXDouble *)_24 + 16B] = _49;
+  _50 = _43 + _49;
+  *_12 = _50;
+  _51 = MEM[(XXDouble *)_14 + 48B];
+  if (_50 < _51)
+    goto <bb 5>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  _52 = MEM[(XXDouble *)_14 + 40B];
+  if (_50 > _52)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+
+  <bb 5>:
+  # iftmp.65_53 = PHI <_51(2), _50(3), _52(4)>
+  MEM[(XXDouble *)_12 + 32B] = iftmp.65_53;
+  return;
+
+}
+
+
+
+;; Function void ControllerPan::ControllerPanModel::setupComputation() (_ZN13ControllerPan18ControllerPanModel16setupComputationEv, funcdef_no=929, decl_uid=20691, symbol_order=204)
+
+void ControllerPan::ControllerPanModel::setupComputation() (struct ControllerPanModel * const this)
+{
+  int (*__vtbl_ptr_type) () * _3;
+  int _4;
+  sizetype _5;
+  struct Submodel20sim * _6;
+  int _13;
+  sizetype _14;
+  struct Submodel20sim * _15;
+  int _17;
+  sizetype _18;
+  struct Submodel20sim * _19;
+  int _21;
+  sizetype _22;
+  struct Submodel20sim * _23;
+  int _25;
+  sizetype _26;
+  struct Submodel20sim * _27;
+  int _29;
+  sizetype _30;
+  struct Submodel20sim * _31;
+  int _33;
+  sizetype _34;
+  struct Submodel20sim * _35;
+  int _37;
+  sizetype _38;
+  struct Submodel20sim * _39;
+  int _41;
+  sizetype _42;
+  struct Submodel20sim * _43;
+  void * _45;
+  int (*__vtbl_ptr_type) () * _47;
+  int _48;
+  sizetype _49;
+  struct Submodel20sim * _50;
+  void * _52;
+  int (*__vtbl_ptr_type) () * _54;
+  int _55;
+  sizetype _56;
+  struct Submodel20sim * _57;
+  void * _59;
+  int (*__vtbl_ptr_type) () * _61;
+  int _62;
+  sizetype _63;
+  struct Submodel20sim * _64;
+  void * _66;
+  int (*__vtbl_ptr_type) () * _68;
+  int _69;
+  sizetype _70;
+  struct Submodel20sim * _71;
+  void * _73;
+  int (*__vtbl_ptr_type) () * _75;
+  int _76;
+  sizetype _77;
+  struct Submodel20sim * _78;
+  void * _80;
+  int (*__vtbl_ptr_type) () * _82;
+  int _83;
+  sizetype _84;
+  struct Submodel20sim * _85;
+  void * _87;
+  int (*__vtbl_ptr_type) () * _89;
+  int _90;
+  sizetype _91;
+  struct Submodel20sim * _92;
+  void * _94;
+  int (*__vtbl_ptr_type) () * _96;
+  int _97;
+  sizetype _98;
+  struct Submodel20sim * _99;
+  void * _101;
+
+  <bb 2>:
+  _3 = this_2(D)->_vptr.ControllerPanModel;
+  _4 = MEM[(int *)_3 + 4294967284B];
+  _5 = (sizetype) _4;
+  _6 = this_2(D) + _5;
+  _6->start_time = 0.0;
+  _6->finish_time = 0.0;
+  _6->step_size = 5.00000000000000010408340855860842566471546888351440429688e-3;
+  _6->time = 0.0;
+  _6->major = 1;
+  _6->number_constants = 0;
+  _13 = MEM[(int *)_3 + 4294967284B];
+  _14 = (sizetype) _13;
+  _15 = this_2(D) + _14;
+  _15->number_parameters = 7;
+  _17 = MEM[(int *)_3 + 4294967284B];
+  _18 = (sizetype) _17;
+  _19 = this_2(D) + _18;
+  _19->number_initialvalues = 3;
+  _21 = MEM[(int *)_3 + 4294967284B];
+  _22 = (sizetype) _21;
+  _23 = this_2(D) + _22;
+  _23->number_variables = 9;
+  _25 = MEM[(int *)_3 + 4294967284B];
+  _26 = (sizetype) _25;
+  _27 = this_2(D) + _26;
+  _27->number_states = 3;
+  _29 = MEM[(int *)_3 + 4294967284B];
+  _30 = (sizetype) _29;
+  _31 = this_2(D) + _30;
+  _31->number_rates = 3;
+  _33 = MEM[(int *)_3 + 4294967284B];
+  _34 = (sizetype) _33;
+  _35 = this_2(D) + _34;
+  _35->number_matrices = 0;
+  _37 = MEM[(int *)_3 + 4294967284B];
+  _38 = (sizetype) _37;
+  _39 = this_2(D) + _38;
+  _39->number_unnamed = 0;
+  _41 = MEM[(int *)_3 + 4294967284B];
+  _42 = (sizetype) _41;
+  _43 = this_2(D) + _42;
+  _45 = operator new [] (8);
+  _43->C = _45;
+  _47 = this_2(D)->_vptr.ControllerPanModel;
+  _48 = MEM[(int *)_47 + 4294967284B];
+  _49 = (sizetype) _48;
+  _50 = this_2(D) + _49;
+  _52 = operator new [] (64);
+  _50->P = _52;
+  _54 = this_2(D)->_vptr.ControllerPanModel;
+  _55 = MEM[(int *)_54 + 4294967284B];
+  _56 = (sizetype) _55;
+  _57 = this_2(D) + _56;
+  _59 = operator new [] (32);
+  _57->I = _59;
+  _61 = this_2(D)->_vptr.ControllerPanModel;
+  _62 = MEM[(int *)_61 + 4294967284B];
+  _63 = (sizetype) _62;
+  _64 = this_2(D) + _63;
+  _66 = operator new [] (80);
+  _64->V = _66;
+  _68 = this_2(D)->_vptr.ControllerPanModel;
+  _69 = MEM[(int *)_68 + 4294967284B];
+  _70 = (sizetype) _69;
+  _71 = this_2(D) + _70;
+  _73 = operator new [] (32);
+  _71->s = _73;
+  _75 = this_2(D)->_vptr.ControllerPanModel;
+  _76 = MEM[(int *)_75 + 4294967284B];
+  _77 = (sizetype) _76;
+  _78 = this_2(D) + _77;
+  _80 = operator new [] (32);
+  _78->R = _80;
+  _82 = this_2(D)->_vptr.ControllerPanModel;
+  _83 = MEM[(int *)_82 + 4294967284B];
+  _84 = (sizetype) _83;
+  _85 = this_2(D) + _84;
+  _87 = operator new [] (12);
+  _85->M = _87;
+  _89 = this_2(D)->_vptr.ControllerPanModel;
+  _90 = MEM[(int *)_89 + 4294967284B];
+  _91 = (sizetype) _90;
+  _92 = this_2(D) + _91;
+  _94 = operator new [] (8);
+  _92->U = _94;
+  _96 = this_2(D)->_vptr.ControllerPanModel;
+  _97 = MEM[(int *)_96 + 4294967284B];
+  _98 = (sizetype) _97;
+  _99 = this_2(D) + _98;
+  _101 = operator new [] (8);
+  _99->workarray = _101;
+  return;
+
+}
+
+
+
+;; Function void ControllerPan::ControllerPanModel::CopyInputsToVariables() (_ZN13ControllerPan18ControllerPanModel21CopyInputsToVariablesEv, funcdef_no=931, decl_uid=22302, symbol_order=206)
+
+void ControllerPan::ControllerPanModel::CopyInputsToVariables() (struct ControllerPanModel * const this)
+{
+  unsigned int i;
+  struct IAdapter20Sim * * const _5;
+  struct IAdapter20Sim * * const _6;
+  struct IAdapter20Sim * _7;
+  int (*__vtbl_ptr_type) () * _8;
+  int (*__vtbl_ptr_type) () _9;
+  unsigned int _12;
+  struct IAdapter20Sim * & _13;
+  int _14;
+  int _15;
+  int _16;
+  int _17;
+  size_type _18;
+  struct IAdapter20Sim * * const _19;
+  struct IAdapter20Sim * * const _22;
+  int _23;
+  int _24;
+  int _25;
+  int _26;
+  struct IAdapter20Sim * * const _31;
+
+  <bb 2>:
+  _19 = MEM[(struct IAdapter20Sim * * *)this_4(D) + 4B];
+  _22 = MEM[(struct IAdapter20Sim * * *)this_4(D) + 8B];
+  _23 = (int) _22;
+  _24 = (int) _19;
+  _25 = _23 - _24;
+  _26 = _25 /[ex] 4;
+  if (_26 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  return;
+
+  <bb 4>:
+
+  <bb 5>:
+  # i_28 = PHI <0(4), i_11(6)>
+  # _31 = PHI <_19(4), _5(6)>
+  _12 = i_28 * 4;
+  _13 = _31 + _12;
+  _7 = *_13;
+  _8 = _7->_vptr.IAdapter20Sim;
+  _9 = *_8;
+  OBJ_TYPE_REF(_9;(struct IAdapter20Sim)_7->0) (_7);
+  i_11 = i_28 + 1;
+  _5 = MEM[(struct IAdapter20Sim * * *)this_4(D) + 4B];
+  _6 = MEM[(struct IAdapter20Sim * * *)this_4(D) + 8B];
+  _14 = (int) _6;
+  _15 = (int) _5;
+  _16 = _14 - _15;
+  _17 = _16 /[ex] 4;
+  _18 = (size_type) _17;
+  if (i_11 < _18)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  goto <bb 3>;
+
+  <bb 6>:
+  goto <bb 5>;
+
+}
+
+
+
+;; Function void ControllerPan::ControllerPanModel::CopyVariablesToOutputs() (_ZN13ControllerPan18ControllerPanModel22CopyVariablesToOutputsEv, funcdef_no=932, decl_uid=22304, symbol_order=207)
+
+void ControllerPan::ControllerPanModel::CopyVariablesToOutputs() (struct ControllerPanModel * const this)
+{
+  unsigned int i;
+  struct IAdapter20Sim * * const _5;
+  struct IAdapter20Sim * * const _6;
+  struct IAdapter20Sim * _7;
+  int (*__vtbl_ptr_type) () * _8;
+  int (*__vtbl_ptr_type) () _9;
+  unsigned int _12;
+  struct IAdapter20Sim * & _13;
+  int _14;
+  int _15;
+  int _16;
+  int _17;
+  size_type _18;
+  struct IAdapter20Sim * * const _19;
+  struct IAdapter20Sim * * const _22;
+  int _23;
+  int _24;
+  int _25;
+  int _26;
+  struct IAdapter20Sim * * const _31;
+
+  <bb 2>:
+  _19 = MEM[(struct IAdapter20Sim * * *)this_4(D) + 16B];
+  _22 = MEM[(struct IAdapter20Sim * * *)this_4(D) + 20B];
+  _23 = (int) _22;
+  _24 = (int) _19;
+  _25 = _23 - _24;
+  _26 = _25 /[ex] 4;
+  if (_26 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  return;
+
+  <bb 4>:
+
+  <bb 5>:
+  # i_28 = PHI <0(4), i_11(6)>
+  # _31 = PHI <_19(4), _5(6)>
+  _12 = i_28 * 4;
+  _13 = _31 + _12;
+  _7 = *_13;
+  _8 = _7->_vptr.IAdapter20Sim;
+  _9 = MEM[(int (*__vtbl_ptr_type) () *)_8 + 4B];
+  OBJ_TYPE_REF(_9;(struct IAdapter20Sim)_7->1) (_7);
+  i_11 = i_28 + 1;
+  _5 = MEM[(struct IAdapter20Sim * * *)this_4(D) + 16B];
+  _6 = MEM[(struct IAdapter20Sim * * *)this_4(D) + 20B];
+  _14 = (int) _6;
+  _15 = (int) _5;
+  _16 = _14 - _15;
+  _17 = _16 /[ex] 4;
+  _18 = (size_type) _17;
+  if (i_11 < _18)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  goto <bb 3>;
+
+  <bb 6>:
+  goto <bb 5>;
+
+}
+
+
+
+;; Function void ControllerPan::ControllerPanModel::stop() (_ZN13ControllerPan18ControllerPanModel4stopEv, funcdef_no=935, decl_uid=20671, symbol_order=210)
+
+void ControllerPan::ControllerPanModel::stop() (struct ControllerPanModel * const this)
+{
+  <bb 2>:
+  ControllerPan::ControllerPanModel::CopyInputsToVariables (this_2(D));
+  ControllerPan::ControllerPanModel::CopyVariablesToOutputs (this_2(D));
+  return;
+
+}
+
+
+
+;; Function ControllerPan::ControllerPanModel::ControllerPanModel() (_ZN13ControllerPan18ControllerPanModelC2Ev, funcdef_no=923, decl_uid=22315, symbol_order=194)
+
+ControllerPan::ControllerPanModel::ControllerPanModel() (struct ControllerPanModel * const this, const void * * __vtt_parm)
+{
+  int (*__vtbl_ptr_type) () * iftmp.0_4;
+  int _7;
+  sizetype iftmp.1_8;
+  struct Submodel20sim * _9;
+  int (*__vtbl_ptr_type) () * iftmp.2_10;
+  struct IAdapter20Sim * * _13;
+  struct Discrete * _14;
+  struct IAdapter20Sim * * _18;
+
+  <bb 2>:
+  iftmp.0_4 = *__vtt_parm_3(D);
+  this_5(D)->_vptr.ControllerPanModel = iftmp.0_4;
+  _7 = MEM[(int *)iftmp.0_4 + 4294967284B];
+  iftmp.1_8 = (sizetype) _7;
+  _9 = this_5(D) + iftmp.1_8;
+  iftmp.2_10 = MEM[(const void * *)__vtt_parm_3(D) + 4B];
+  _9->_vptr.Submodel20sim = iftmp.2_10;
+  MEM[(struct _Vector_impl *)this_5(D) + 4B]._M_start = 0B;
+  MEM[(struct _Vector_impl *)this_5(D) + 4B]._M_finish = 0B;
+  MEM[(struct _Vector_impl *)this_5(D) + 4B]._M_end_of_storage = 0B;
+  MEM[(struct _Vector_impl *)this_5(D) + 16B]._M_start = 0B;
+  MEM[(struct _Vector_impl *)this_5(D) + 16B]._M_finish = 0B;
+  MEM[(struct _Vector_impl *)this_5(D) + 16B]._M_end_of_storage = 0B;
+  _14 = &this_5(D)->myintegmethod;
+  Discrete::Discrete (_14);
+
+  <bb 3>:
+  ControllerPan::ControllerPanModel::setupComputation (this_5(D));
+
+<L12>:
+  return this_5(D);
+
+<L14>:
+  Discrete::~Discrete (_14);
+  resx 4
+
+<L22>:
+  goto <bb 8> (<L15>);
+
+<L21>:
+
+<L15>:
+  _13 = MEM[(struct _Vector_base *)this_5(D) + 16B]._M_impl._M_start;
+  if (_13 != 0B)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 9>:
+  operator delete (_13);
+
+  <bb 10>:
+  MEM[(struct vector *)this_5(D) + 16B] ={v} {CLOBBER};
+  resx 3
+
+<L16>:
+  _18 = MEM[(struct _Vector_base *)this_5(D) + 4B]._M_impl._M_start;
+  if (_18 != 0B)
+    goto <bb 12>;
+  else
+    goto <bb 13>;
+
+  <bb 12>:
+  operator delete (_18);
+
+  <bb 13>:
+  MEM[(struct vector *)this_5(D) + 4B] ={v} {CLOBBER};
+  resx 2
+
+}
+
+
+
+;; Function ControllerPan::ControllerPanModel::ControllerPanModel() (_ZN13ControllerPan18ControllerPanModelC1Ev, funcdef_no=924, decl_uid=22311, symbol_order=195)
+
+ControllerPan::ControllerPanModel::ControllerPanModel() (struct ControllerPanModel * const this)
+{
+  struct IAdapter20Sim * * _7;
+  struct Discrete * _8;
+  struct IAdapter20Sim * * _12;
+
+  <bb 2>:
+  this_2(D)->_vptr.ControllerPanModel = &MEM[(void *)&_ZTVN13ControllerPan18ControllerPanModelE + 12B];
+  MEM[(struct Submodel20sim *)this_2(D) + 40B]._vptr.Submodel20sim = &MEM[(void *)&_ZTVN13ControllerPan18ControllerPanModelE + 40B];
+  MEM[(struct _Vector_impl *)this_2(D) + 4B]._M_start = 0B;
+  MEM[(struct _Vector_impl *)this_2(D) + 4B]._M_finish = 0B;
+  MEM[(struct _Vector_impl *)this_2(D) + 4B]._M_end_of_storage = 0B;
+  MEM[(struct _Vector_impl *)this_2(D) + 16B]._M_start = 0B;
+  MEM[(struct _Vector_impl *)this_2(D) + 16B]._M_finish = 0B;
+  MEM[(struct _Vector_impl *)this_2(D) + 16B]._M_end_of_storage = 0B;
+  _8 = &this_2(D)->myintegmethod;
+  Discrete::Discrete (_8);
+
+  <bb 3>:
+  ControllerPan::ControllerPanModel::setupComputation (this_2(D));
+
+<L12>:
+  return this_2(D);
+
+<L14>:
+  Discrete::~Discrete (_8);
+  resx 4
+
+<L22>:
+  goto <bb 8> (<L15>);
+
+<L21>:
+
+<L15>:
+  _7 = MEM[(struct _Vector_base *)this_2(D) + 16B]._M_impl._M_start;
+  if (_7 != 0B)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 9>:
+  operator delete (_7);
+
+  <bb 10>:
+  MEM[(struct vector *)this_2(D) + 16B] ={v} {CLOBBER};
+  resx 3
+
+<L16>:
+  _12 = MEM[(struct _Vector_base *)this_2(D) + 4B]._M_impl._M_start;
+  if (_12 != 0B)
+    goto <bb 12>;
+  else
+    goto <bb 13>;
+
+  <bb 12>:
+  operator delete (_12);
+
+  <bb 13>:
+  MEM[(struct vector *)this_2(D) + 4B] ={v} {CLOBBER};
+  resx 2
+
+<L17>:
+  MEM[(struct Submodel20sim *)this_2(D) + 40B] ={v} {CLOBBER};
+  resx 1
+
+}
+
+
+
+;; Function ControllerPan::ControllerPanModel::~ControllerPanModel() (_ZN13ControllerPan18ControllerPanModelD2Ev, funcdef_no=926, decl_uid=22327, symbol_order=197)
+
+ControllerPan::ControllerPanModel::~ControllerPanModel() (struct ControllerPanModel * const this, const void * * __vtt_parm)
+{
+  struct IAdapter20Sim * a;
+  struct IAdapter20Sim * a;
+  int (*__vtbl_ptr_type) () * iftmp.6_14;
+  int _17;
+  sizetype iftmp.7_18;
+  struct Submodel20sim * _19;
+  int (*__vtbl_ptr_type) () * iftmp.8_20;
+  int (*__vtbl_ptr_type) () * _24;
+  int (*__vtbl_ptr_type) () _25;
+  int (*__vtbl_ptr_type) () * _29;
+  int (*__vtbl_ptr_type) () _30;
+  int (*__vtbl_ptr_type) () * _32;
+  int _33;
+  sizetype iftmp.11_34;
+  struct Submodel20sim * _35;
+  XXDouble * _36;
+  XXDouble * _42;
+  XXDouble * _48;
+  XXDouble * _54;
+  XXDouble * _60;
+  XXDouble * _66;
+  struct XXMatrix * _72;
+  XXDouble * _78;
+  XXDouble * _84;
+  struct Discrete * _86;
+  struct IAdapter20Sim * * _89;
+  struct IAdapter20Sim * * _95;
+  struct IAdapter20Sim * * _97;
+  struct IAdapter20Sim * * _99;
+  struct IAdapter20Sim * * const pretmp_154;
+  struct IAdapter20Sim * * const pretmp_156;
+  struct IAdapter20Sim * * const prephitmp_157;
+  struct IAdapter20Sim * * const pretmp_158;
+  struct IAdapter20Sim * * const pretmp_160;
+  struct IAdapter20Sim * * const prephitmp_161;
+  int (*__vtbl_ptr_type) () * pretmp_162;
+  int pretmp_164;
+  sizetype pretmp_166;
+  struct ControllerPanModel * const pretmp_168;
+  struct ControllerPanModel * const prephitmp_169;
+  int (*__vtbl_ptr_type) () * pretmp_170;
+  int pretmp_172;
+  sizetype pretmp_174;
+  struct ControllerPanModel * const pretmp_176;
+  struct ControllerPanModel * const prephitmp_177;
+  int (*__vtbl_ptr_type) () * pretmp_178;
+  int pretmp_180;
+  sizetype pretmp_182;
+  struct ControllerPanModel * const pretmp_184;
+  struct ControllerPanModel * const prephitmp_185;
+  int (*__vtbl_ptr_type) () * pretmp_186;
+  int pretmp_188;
+  sizetype pretmp_190;
+  struct ControllerPanModel * const pretmp_192;
+  struct ControllerPanModel * const prephitmp_193;
+  int (*__vtbl_ptr_type) () * pretmp_194;
+  int pretmp_196;
+  sizetype pretmp_198;
+  struct ControllerPanModel * const pretmp_200;
+  struct ControllerPanModel * const prephitmp_201;
+  int (*__vtbl_ptr_type) () * pretmp_202;
+  int pretmp_204;
+  sizetype pretmp_206;
+  struct ControllerPanModel * const pretmp_208;
+  struct ControllerPanModel * const prephitmp_209;
+  int (*__vtbl_ptr_type) () * pretmp_210;
+  int pretmp_212;
+  sizetype pretmp_214;
+  struct ControllerPanModel * const pretmp_216;
+  struct ControllerPanModel * const prephitmp_217;
+  int (*__vtbl_ptr_type) () * pretmp_218;
+  int pretmp_220;
+  sizetype pretmp_222;
+  struct ControllerPanModel * const pretmp_224;
+  struct ControllerPanModel * const prephitmp_225;
+
+  <bb 2>:
+  iftmp.6_14 = *__vtt_parm_13(D);
+  this_15(D)->_vptr.ControllerPanModel = iftmp.6_14;
+  _17 = MEM[(int *)iftmp.6_14 + 4294967284B];
+  iftmp.7_18 = (sizetype) _17;
+  _19 = this_15(D) + iftmp.7_18;
+  iftmp.8_20 = MEM[(const void * *)__vtt_parm_13(D) + 4B];
+  _19->_vptr.Submodel20sim = iftmp.8_20;
+  goto <bb 7>;
+
+  <bb 3>:
+  a_22 = MEM[(struct IAdapter20Sim * &)prephitmp_157 + 4294967292];
+  _95 = prephitmp_157 + 4294967292;
+  MEM[(struct IAdapter20Sim * * *)this_15(D) + 8B] = _95;
+  if (a_22 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  goto <bb 8>;
+
+  <bb 5>:
+  # a_153 = PHI <a_22(3)>
+
+  <bb 6>:
+  _24 = a_153->_vptr.IAdapter20Sim;
+  _25 = MEM[(int (*__vtbl_ptr_type) () *)_24 + 12B];
+  OBJ_TYPE_REF(_25;(struct IAdapter20Sim)a_153->3) (a_153);
+
+  <bb 7>:
+  pretmp_154 = MEM[(struct IAdapter20Sim * * *)this_15(D) + 4B];
+  pretmp_156 = MEM[(struct IAdapter20Sim * * *)this_15(D) + 8B];
+
+  <bb 8>:
+  # prephitmp_157 = PHI <pretmp_156(7), _95(4)>
+  if (pretmp_154 != prephitmp_157)
+    goto <bb 3>;
+  else
+    goto <bb 9>;
+
+  <bb 9>:
+  goto <bb 14>;
+
+  <bb 10>:
+  a_27 = MEM[(struct IAdapter20Sim * &)prephitmp_161 + 4294967292];
+  _97 = prephitmp_161 + 4294967292;
+  MEM[(struct IAdapter20Sim * * *)this_15(D) + 20B] = _97;
+  if (a_27 != 0B)
+    goto <bb 12>;
+  else
+    goto <bb 11>;
+
+  <bb 11>:
+  goto <bb 15>;
+
+  <bb 12>:
+  # a_152 = PHI <a_27(10)>
+
+  <bb 13>:
+  _29 = a_152->_vptr.IAdapter20Sim;
+  _30 = MEM[(int (*__vtbl_ptr_type) () *)_29 + 12B];
+  OBJ_TYPE_REF(_30;(struct IAdapter20Sim)a_152->3) (a_152);
+
+  <bb 14>:
+  pretmp_158 = MEM[(struct IAdapter20Sim * * *)this_15(D) + 16B];
+  pretmp_160 = MEM[(struct IAdapter20Sim * * *)this_15(D) + 20B];
+
+  <bb 15>:
+  # prephitmp_161 = PHI <pretmp_160(14), _97(11)>
+  if (pretmp_158 != prephitmp_161)
+    goto <bb 10>;
+  else
+    goto <bb 16>;
+
+  <bb 16>:
+  _32 = this_15(D)->_vptr.ControllerPanModel;
+  _33 = MEM[(int *)_32 + 4294967284B];
+  iftmp.11_34 = (sizetype) _33;
+  _35 = this_15(D) + iftmp.11_34;
+  _36 = _35->C;
+  if (_36 != 0B)
+    goto <bb 17>;
+  else
+    goto <bb 18>;
+
+  <bb 17>:
+  operator delete [] (_36);
+  pretmp_162 = this_15(D)->_vptr.ControllerPanModel;
+  pretmp_164 = MEM[(int *)pretmp_162 + 4294967284B];
+  pretmp_166 = (sizetype) pretmp_164;
+  pretmp_168 = this_15(D) + pretmp_166;
+
+  <bb 18>:
+  # prephitmp_169 = PHI <pretmp_168(17), _35(16)>
+  _42 = MEM[(struct Submodel20sim *)prephitmp_169].P;
+  if (_42 != 0B)
+    goto <bb 19>;
+  else
+    goto <bb 20>;
+
+  <bb 19>:
+  operator delete [] (_42);
+  pretmp_170 = this_15(D)->_vptr.ControllerPanModel;
+  pretmp_172 = MEM[(int *)pretmp_170 + 4294967284B];
+  pretmp_174 = (sizetype) pretmp_172;
+  pretmp_176 = this_15(D) + pretmp_174;
+
+  <bb 20>:
+  # prephitmp_177 = PHI <pretmp_176(19), prephitmp_169(18)>
+  _48 = MEM[(struct Submodel20sim *)prephitmp_177].I;
+  if (_48 != 0B)
+    goto <bb 21>;
+  else
+    goto <bb 22>;
+
+  <bb 21>:
+  operator delete [] (_48);
+  pretmp_178 = this_15(D)->_vptr.ControllerPanModel;
+  pretmp_180 = MEM[(int *)pretmp_178 + 4294967284B];
+  pretmp_182 = (sizetype) pretmp_180;
+  pretmp_184 = this_15(D) + pretmp_182;
+
+  <bb 22>:
+  # prephitmp_185 = PHI <pretmp_184(21), prephitmp_177(20)>
+  _54 = MEM[(struct Submodel20sim *)prephitmp_185].V;
+  if (_54 != 0B)
+    goto <bb 23>;
+  else
+    goto <bb 24>;
+
+  <bb 23>:
+  operator delete [] (_54);
+  pretmp_186 = this_15(D)->_vptr.ControllerPanModel;
+  pretmp_188 = MEM[(int *)pretmp_186 + 4294967284B];
+  pretmp_190 = (sizetype) pretmp_188;
+  pretmp_192 = this_15(D) + pretmp_190;
+
+  <bb 24>:
+  # prephitmp_193 = PHI <pretmp_192(23), prephitmp_185(22)>
+  _60 = MEM[(struct Submodel20sim *)prephitmp_193].s;
+  if (_60 != 0B)
+    goto <bb 25>;
+  else
+    goto <bb 26>;
+
+  <bb 25>:
+  operator delete [] (_60);
+  pretmp_194 = this_15(D)->_vptr.ControllerPanModel;
+  pretmp_196 = MEM[(int *)pretmp_194 + 4294967284B];
+  pretmp_198 = (sizetype) pretmp_196;
+  pretmp_200 = this_15(D) + pretmp_198;
+
+  <bb 26>:
+  # prephitmp_201 = PHI <pretmp_200(25), prephitmp_193(24)>
+  _66 = MEM[(struct Submodel20sim *)prephitmp_201].R;
+  if (_66 != 0B)
+    goto <bb 27>;
+  else
+    goto <bb 28>;
+
+  <bb 27>:
+  operator delete [] (_66);
+  pretmp_202 = this_15(D)->_vptr.ControllerPanModel;
+  pretmp_204 = MEM[(int *)pretmp_202 + 4294967284B];
+  pretmp_206 = (sizetype) pretmp_204;
+  pretmp_208 = this_15(D) + pretmp_206;
+
+  <bb 28>:
+  # prephitmp_209 = PHI <pretmp_208(27), prephitmp_201(26)>
+  _72 = MEM[(struct Submodel20sim *)prephitmp_209].M;
+  if (_72 != 0B)
+    goto <bb 29>;
+  else
+    goto <bb 30>;
+
+  <bb 29>:
+  operator delete [] (_72);
+  pretmp_210 = this_15(D)->_vptr.ControllerPanModel;
+  pretmp_212 = MEM[(int *)pretmp_210 + 4294967284B];
+  pretmp_214 = (sizetype) pretmp_212;
+  pretmp_216 = this_15(D) + pretmp_214;
+
+  <bb 30>:
+  # prephitmp_217 = PHI <pretmp_216(29), prephitmp_209(28)>
+  _78 = MEM[(struct Submodel20sim *)prephitmp_217].U;
+  if (_78 != 0B)
+    goto <bb 31>;
+  else
+    goto <bb 32>;
+
+  <bb 31>:
+  operator delete [] (_78);
+  pretmp_218 = this_15(D)->_vptr.ControllerPanModel;
+  pretmp_220 = MEM[(int *)pretmp_218 + 4294967284B];
+  pretmp_222 = (sizetype) pretmp_220;
+  pretmp_224 = this_15(D) + pretmp_222;
+
+  <bb 32>:
+  # prephitmp_225 = PHI <pretmp_224(31), prephitmp_217(30)>
+  _84 = MEM[(struct Submodel20sim *)prephitmp_225].workarray;
+  if (_84 != 0B)
+    goto <bb 33>;
+  else
+    goto <bb 34>;
+
+  <bb 33>:
+  operator delete [] (_84);
+
+  <bb 34>:
+  _86 = &this_15(D)->myintegmethod;
+  Discrete::~Discrete (_86);
+  _99 = MEM[(struct _Vector_base *)this_15(D) + 16B]._M_impl._M_start;
+  if (_99 != 0B)
+    goto <bb 35>;
+  else
+    goto <bb 36>;
+
+  <bb 35>:
+  operator delete (_99);
+
+  <bb 36>:
+  MEM[(struct vector *)this_15(D) + 16B] ={v} {CLOBBER};
+  _89 = MEM[(struct _Vector_base *)this_15(D) + 4B]._M_impl._M_start;
+  if (_89 != 0B)
+    goto <bb 37>;
+  else
+    goto <bb 38>;
+
+  <bb 37>:
+  operator delete (_89);
+
+  <bb 38>:
+  *this_15(D) ={v} {CLOBBER};
+  return this_15(D);
+
+}
+
+
+
+;; Function virtual ControllerPan::ControllerPanModel::~ControllerPanModel() (_ZN13ControllerPan18ControllerPanModelD1Ev, funcdef_no=927, decl_uid=22323, symbol_order=198)
+
+virtual ControllerPan::ControllerPanModel::~ControllerPanModel() (struct ControllerPanModel * const this)
+{
+  struct IAdapter20Sim * a;
+  struct IAdapter20Sim * a;
+  int (*__vtbl_ptr_type) () * _18;
+  int (*__vtbl_ptr_type) () _19;
+  int (*__vtbl_ptr_type) () * _23;
+  int (*__vtbl_ptr_type) () _24;
+  XXDouble * _26;
+  XXDouble * _28;
+  XXDouble * _30;
+  XXDouble * _32;
+  XXDouble * _34;
+  XXDouble * _36;
+  struct XXMatrix * _38;
+  XXDouble * _40;
+  XXDouble * _42;
+  struct Discrete * _44;
+  struct IAdapter20Sim * * _46;
+  struct IAdapter20Sim * * _53;
+  struct IAdapter20Sim * * _55;
+  struct IAdapter20Sim * * _57;
+  struct IAdapter20Sim * * const pretmp_61;
+  struct IAdapter20Sim * * const pretmp_63;
+  struct IAdapter20Sim * * const prephitmp_64;
+  struct IAdapter20Sim * * const pretmp_67;
+  struct IAdapter20Sim * * const pretmp_69;
+  struct IAdapter20Sim * * const prephitmp_70;
+
+  <bb 2>:
+  this_13(D)->_vptr.ControllerPanModel = &MEM[(void *)&_ZTVN13ControllerPan18ControllerPanModelE + 12B];
+  MEM[(struct Submodel20sim *)this_13(D) + 40B]._vptr.Submodel20sim = &MEM[(void *)&_ZTVN13ControllerPan18ControllerPanModelE + 40B];
+  goto <bb 7>;
+
+  <bb 3>:
+  a_16 = MEM[(struct IAdapter20Sim * &)prephitmp_64 + 4294967292];
+  _53 = prephitmp_64 + 4294967292;
+  MEM[(struct IAdapter20Sim * * *)this_13(D) + 8B] = _53;
+  if (a_16 != 0B)
+    goto <bb 5>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  goto <bb 8>;
+
+  <bb 5>:
+  # a_68 = PHI <a_16(3)>
+
+  <bb 6>:
+  _18 = a_68->_vptr.IAdapter20Sim;
+  _19 = MEM[(int (*__vtbl_ptr_type) () *)_18 + 12B];
+  OBJ_TYPE_REF(_19;(struct IAdapter20Sim)a_68->3) (a_68);
+
+  <bb 7>:
+  pretmp_61 = MEM[(struct IAdapter20Sim * * *)this_13(D) + 4B];
+  pretmp_63 = MEM[(struct IAdapter20Sim * * *)this_13(D) + 8B];
+
+  <bb 8>:
+  # prephitmp_64 = PHI <pretmp_63(7), _53(4)>
+  if (pretmp_61 != prephitmp_64)
+    goto <bb 3>;
+  else
+    goto <bb 9>;
+
+  <bb 9>:
+  goto <bb 14>;
+
+  <bb 10>:
+  a_21 = MEM[(struct IAdapter20Sim * &)prephitmp_70 + 4294967292];
+  _55 = prephitmp_70 + 4294967292;
+  MEM[(struct IAdapter20Sim * * *)this_13(D) + 20B] = _55;
+  if (a_21 != 0B)
+    goto <bb 12>;
+  else
+    goto <bb 11>;
+
+  <bb 11>:
+  goto <bb 15>;
+
+  <bb 12>:
+  # a_62 = PHI <a_21(10)>
+
+  <bb 13>:
+  _23 = a_62->_vptr.IAdapter20Sim;
+  _24 = MEM[(int (*__vtbl_ptr_type) () *)_23 + 12B];
+  OBJ_TYPE_REF(_24;(struct IAdapter20Sim)a_62->3) (a_62);
+
+  <bb 14>:
+  pretmp_67 = MEM[(struct IAdapter20Sim * * *)this_13(D) + 16B];
+  pretmp_69 = MEM[(struct IAdapter20Sim * * *)this_13(D) + 20B];
+
+  <bb 15>:
+  # prephitmp_70 = PHI <pretmp_69(14), _55(11)>
+  if (pretmp_67 != prephitmp_70)
+    goto <bb 10>;
+  else
+    goto <bb 16>;
+
+  <bb 16>:
+  _26 = MEM[(struct Submodel20sim *)this_13(D) + 40B].C;
+  if (_26 != 0B)
+    goto <bb 17>;
+  else
+    goto <bb 18>;
+
+  <bb 17>:
+  operator delete [] (_26);
+
+  <bb 18>:
+  _28 = MEM[(struct Submodel20sim *)this_13(D) + 40B].P;
+  if (_28 != 0B)
+    goto <bb 19>;
+  else
+    goto <bb 20>;
+
+  <bb 19>:
+  operator delete [] (_28);
+
+  <bb 20>:
+  _30 = MEM[(struct Submodel20sim *)this_13(D) + 40B].I;
+  if (_30 != 0B)
+    goto <bb 21>;
+  else
+    goto <bb 22>;
+
+  <bb 21>:
+  operator delete [] (_30);
+
+  <bb 22>:
+  _32 = MEM[(struct Submodel20sim *)this_13(D) + 40B].V;
+  if (_32 != 0B)
+    goto <bb 23>;
+  else
+    goto <bb 24>;
+
+  <bb 23>:
+  operator delete [] (_32);
+
+  <bb 24>:
+  _34 = MEM[(struct Submodel20sim *)this_13(D) + 40B].s;
+  if (_34 != 0B)
+    goto <bb 25>;
+  else
+    goto <bb 26>;
+
+  <bb 25>:
+  operator delete [] (_34);
+
+  <bb 26>:
+  _36 = MEM[(struct Submodel20sim *)this_13(D) + 40B].R;
+  if (_36 != 0B)
+    goto <bb 27>;
+  else
+    goto <bb 28>;
+
+  <bb 27>:
+  operator delete [] (_36);
+
+  <bb 28>:
+  _38 = MEM[(struct Submodel20sim *)this_13(D) + 40B].M;
+  if (_38 != 0B)
+    goto <bb 29>;
+  else
+    goto <bb 30>;
+
+  <bb 29>:
+  operator delete [] (_38);
+
+  <bb 30>:
+  _40 = MEM[(struct Submodel20sim *)this_13(D) + 40B].U;
+  if (_40 != 0B)
+    goto <bb 31>;
+  else
+    goto <bb 32>;
+
+  <bb 31>:
+  operator delete [] (_40);
+
+  <bb 32>:
+  _42 = MEM[(struct Submodel20sim *)this_13(D) + 40B].workarray;
+  if (_42 != 0B)
+    goto <bb 33>;
+  else
+    goto <bb 34>;
+
+  <bb 33>:
+  operator delete [] (_42);
+
+  <bb 34>:
+  _44 = &this_13(D)->myintegmethod;
+  Discrete::~Discrete (_44);
+  _57 = MEM[(struct _Vector_base *)this_13(D) + 16B]._M_impl._M_start;
+  if (_57 != 0B)
+    goto <bb 35>;
+  else
+    goto <bb 36>;
+
+  <bb 35>:
+  operator delete (_57);
+
+  <bb 36>:
+  MEM[(struct vector *)this_13(D) + 16B] ={v} {CLOBBER};
+  _46 = MEM[(struct _Vector_base *)this_13(D) + 4B]._M_impl._M_start;
+  if (_46 != 0B)
+    goto <bb 37>;
+  else
+    goto <bb 38>;
+
+  <bb 37>:
+  operator delete (_46);
+
+  <bb 38>:
+  *this_13(D) ={v} {CLOBBER};
+  return this_13(D);
+
+}
+
+
+
+;; Function virtual ControllerPan::ControllerPanModel::~ControllerPanModel() (_ZN13ControllerPan18ControllerPanModelD0Ev, funcdef_no=928, decl_uid=22319, symbol_order=201)
+
+virtual ControllerPan::ControllerPanModel::~ControllerPanModel() (struct ControllerPanModel * const this)
+{
+  <bb 2>:
+  ControllerPan::ControllerPanModel::~ControllerPanModel (this_2(D));
+  operator delete (this_2(D));
+  return this_2(D);
+
+}
+
+
+
+;; Function virtual void* ControllerPan::ControllerPanModel::_ZTv0_n16_N13ControllerPan18ControllerPanModelD0Ev() (_ZTv0_n16_N13ControllerPan18ControllerPanModelD0Ev, funcdef_no=1007, decl_uid=22346, symbol_order=203)
+
+virtual void* ControllerPan::ControllerPanModel::_ZTv0_n16_N13ControllerPan18ControllerPanModelD0Ev() (struct ControllerPanModel * const this)
+{
+  int (*<T4b6c>) () vcalloffset.61;
+  int (*<T4b6c>) () * vtableaddr.60;
+  sizetype _1;
+  struct ControllerPanModel * _2;
+
+  <bb 2>:
+  vtableaddr.60_5 = MEM[(int (*<T4b6c>) () * *)this_3(D)];
+  vcalloffset.61_6 = MEM[(int (*<T4b6c>) () *)vtableaddr.60_5 + 4294967280B];
+  _1 = (sizetype) vcalloffset.61_6;
+  _2 = this_3(D) + _1;
+  ControllerPan::ControllerPanModel::~ControllerPanModel (_2);
+  operator delete (_2);
+  return _2;
+
+}
+
+
+
+;; Function virtual void* ControllerPan::ControllerPanModel::_ZTv0_n16_N13ControllerPan18ControllerPanModelD1Ev() (_ZTv0_n16_N13ControllerPan18ControllerPanModelD1Ev, funcdef_no=1006, decl_uid=22345, symbol_order=200)
+
+virtual void* ControllerPan::ControllerPanModel::_ZTv0_n16_N13ControllerPan18ControllerPanModelD1Ev() (struct ControllerPanModel * const this)
+{
+  int (*<T4b6c>) () vcalloffset.56;
+  int (*<T4b6c>) () * vtableaddr.55;
+  void * retval.53;
+  sizetype _1;
+  struct ControllerPanModel * _2;
+
+  <bb 2>:
+  vtableaddr.55_5 = MEM[(int (*<T4b6c>) () * *)this_3(D)];
+  vcalloffset.56_6 = MEM[(int (*<T4b6c>) () *)vtableaddr.55_5 + 4294967280B];
+  _1 = (sizetype) vcalloffset.56_6;
+  _2 = this_3(D) + _1;
+  retval.53_8 = ControllerPan::ControllerPanModel::~ControllerPanModel (_2); [tail call]
+  return retval.53_8;
+
+}
+
+
+
+;; Function bool ControllerPan::ControllerPanModel::initializeComputation() (_ZN13ControllerPan18ControllerPanModel21initializeComputationEv, funcdef_no=930, decl_uid=20693, symbol_order=205)
+
+bool ControllerPan::ControllerPanModel::initializeComputation() (struct ControllerPanModel * const this)
+{
+  struct Discrete * _2;
+  int (*__vtbl_ptr_type) () * _4;
+  int _5;
+  sizetype _6;
+  struct Submodel20sim * _7;
+  int (*__vtbl_ptr_type) () * _9;
+  int _10;
+  sizetype _11;
+  struct Submodel20sim * _12;
+  XXDouble * _14;
+  XXDouble * _22;
+  XXDouble * _26;
+  double _28;
+  double _30;
+
+  <bb 2>:
+  _2 = &this_1(D)->myintegmethod;
+  _4 = this_1(D)->_vptr.ControllerPanModel;
+  _5 = MEM[(int *)_4 + 4294967284B];
+  _6 = (sizetype) _5;
+  _7 = this_1(D) + _6;
+  Discrete::Initialize (_2, _7);
+  _9 = this_1(D)->_vptr.ControllerPanModel;
+  _10 = MEM[(int *)_9 + 4294967284B];
+  _11 = (sizetype) _10;
+  _12 = this_1(D) + _11;
+  _14 = _12->P;
+  *_14 = 5.0e-1;
+  MEM[(XXDouble *)_14 + 8B] = 1.0e+1;
+  MEM[(XXDouble *)_14 + 16B] = 1.000000000000000055511151231257827021181583404541015625e-1;
+  MEM[(XXDouble *)_14 + 24B] = 5.0e+0;
+  MEM[(XXDouble *)_14 + 32B] = 3.14159199999999990890464651727143063908442854881286621094e-3;
+  MEM[(XXDouble *)_14 + 40B] = 1.0e+0;
+  MEM[(XXDouble *)_14 + 48B] = -1.0e+0;
+  _22 = _12->I;
+  *_22 = 0.0;
+  MEM[(XXDouble *)_22 + 8B] = 0.0;
+  MEM[(XXDouble *)_22 + 16B] = 0.0;
+  _26 = _12->s;
+  *_26 = 0.0;
+  _28 = MEM[(XXDouble *)_22 + 8B];
+  MEM[(XXDouble *)_26 + 8B] = _28;
+  _30 = MEM[(XXDouble *)_22 + 16B];
+  MEM[(XXDouble *)_26 + 16B] = _30;
+  _12->initialize = 0;
+  return 0;
+
+}
+
+
+
+;; Function void ControllerPan::ControllerPanModel::start() (_ZN13ControllerPan18ControllerPanModel5startEv, funcdef_no=933, decl_uid=20667, symbol_order=208)
+
+void ControllerPan::ControllerPanModel::start() (struct ControllerPanModel * const this)
+{
+  int (*__vtbl_ptr_type) () * _5;
+  int (*__vtbl_ptr_type) () _6;
+  void * PROF_16;
+  int _19;
+  sizetype _20;
+  struct Submodel20sim * _21;
+  XXDouble * _22;
+  double _23;
+  XXDouble * _24;
+  double _25;
+  double _26;
+  double _27;
+  double _28;
+  double _29;
+  double _30;
+  double _31;
+  double _32;
+  double _33;
+  XXDouble * _34;
+  double _35;
+  double _36;
+  double _37;
+  XXDouble * _38;
+  double _39;
+  double _40;
+  double _41;
+  double _42;
+  double _43;
+  double _44;
+  double _45;
+  double _46;
+  double _47;
+  double _48;
+  double _49;
+  double _50;
+  double _51;
+  double _52;
+  double _53;
+  double _54;
+  double _55;
+  double _56;
+  double _57;
+  double _58;
+  double _59;
+  double _60;
+  double _61;
+  double _62;
+  XXDouble iftmp.65_63;
+  int pretmp_64;
+  int (*__vtbl_ptr_type) () * pretmp_76;
+  sizetype pretmp_82;
+  struct ControllerPanModel * const pretmp_84;
+  XXDouble * pretmp_86;
+  XXDouble * prephitmp_87;
+  XXDouble pretmp_88;
+  XXDouble prephitmp_89;
+
+  <bb 2>:
+  ControllerPan::ControllerPanModel::initializeComputation (this_2(D));
+  ControllerPan::ControllerPanModel::CopyInputsToVariables (this_2(D));
+  _5 = this_2(D)->_vptr.ControllerPanModel;
+  _6 = MEM[(int (*__vtbl_ptr_type) () *)_5 + 8B];
+  PROF_16 = [obj_type_ref] OBJ_TYPE_REF(_6;(struct ControllerPanModel)this_2(D)->2);
+  if (PROF_16 == CalculateDynamic)
+    goto <bb 3>;
+  else
+    goto <bb 7>;
+
+  <bb 3>:
+  _19 = MEM[(int *)_5 + 4294967284B];
+  _20 = (sizetype) _19;
+  _21 = this_2(D) + _20;
+  _22 = _21->V;
+  _23 = _21->step_size;
+  _24 = _21->P;
+  _25 = MEM[(XXDouble *)_24 + 8B];
+  _26 = MEM[(XXDouble *)_24 + 16B];
+  _27 = _25 * _26;
+  _28 = _23 + _27;
+  _29 = 1.0e+0 / _28;
+  MEM[(XXDouble *)_22 + 8B] = _29;
+  _30 = MEM[(XXDouble *)_22 + 56B];
+  MEM[(XXDouble *)_22 + 40B] = _30;
+  _31 = MEM[(XXDouble *)_22 + 64B];
+  MEM[(XXDouble *)_22 + 16B] = _31;
+  _32 = MEM[(XXDouble *)_24 + 32B];
+  _33 = _30 * _32;
+  MEM[(XXDouble *)_22 + 24B] = _33;
+  _34 = _21->R;
+  _35 = _31 - _33;
+  MEM[(XXDouble *)_34 + 8B] = _35;
+  _36 = MEM[(XXDouble *)_22 + 8B];
+  _37 = MEM[(XXDouble *)_24 + 8B];
+  _38 = _21->s;
+  _39 = *_38;
+  _40 = _37 * _39;
+  _41 = MEM[(XXDouble *)_24 + 16B];
+  _42 = _40 * _41;
+  _43 = *_24;
+  _44 = _37 * _43;
+  _45 = MEM[(XXDouble *)_38 + 8B];
+  _46 = _35 - _45;
+  _47 = _44 * _46;
+  _48 = _42 + _47;
+  _49 = _21->step_size;
+  _50 = _43 * _49;
+  _51 = _35 * _50;
+  _52 = _48 + _51;
+  _53 = _36 * _52;
+  *_34 = _53;
+  _54 = MEM[(XXDouble *)_38 + 16B];
+  _55 = _21->step_size;
+  _56 = _53 * _55;
+  _57 = MEM[(XXDouble *)_24 + 24B];
+  _58 = _56 / _57;
+  _59 = _54 + _58;
+  MEM[(XXDouble *)_34 + 16B] = _59;
+  _60 = _53 + _59;
+  *_22 = _60;
+  _61 = MEM[(XXDouble *)_24 + 48B];
+  if (_60 < _61)
+    goto <bb 6>;
+  else
+    goto <bb 4>;
+
+  <bb 4>:
+  _62 = MEM[(XXDouble *)_24 + 40B];
+  if (_60 > _62)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+
+  <bb 6>:
+  # iftmp.65_63 = PHI <_61(3), _60(4), _62(5)>
+  MEM[(XXDouble *)_22 + 32B] = iftmp.65_63;
+  goto <bb 8>;
+
+  <bb 7>:
+  OBJ_TYPE_REF(_6;(struct ControllerPanModel)this_2(D)->2) (this_2(D));
+  pretmp_76 = this_2(D)->_vptr.ControllerPanModel;
+  pretmp_64 = MEM[(int *)pretmp_76 + 4294967284B];
+  pretmp_82 = (sizetype) pretmp_64;
+  pretmp_84 = this_2(D) + pretmp_82;
+  pretmp_86 = MEM[(struct Submodel20sim *)pretmp_84].V;
+  pretmp_88 = MEM[(XXDouble *)pretmp_86 + 32B];
+
+  <bb 8>:
+  # prephitmp_87 = PHI <pretmp_86(7), _22(6)>
+  # prephitmp_89 = PHI <pretmp_88(7), iftmp.65_63(6)>
+  MEM[(XXDouble *)prephitmp_87 + 48B] = prephitmp_89;
+  ControllerPan::ControllerPanModel::CopyVariablesToOutputs (this_2(D));
+  return;
+
+}
+
+
+
+;; Function void ControllerPan::ControllerPanModel::step() (_ZN13ControllerPan18ControllerPanModel4stepEv, funcdef_no=934, decl_uid=20669, symbol_order=209)
+
+void ControllerPan::ControllerPanModel::step() (struct ControllerPanModel * const this)
+{
+  struct Discrete * _4;
+  int (*__vtbl_ptr_type) () * _8;
+  int _9;
+  sizetype _10;
+  struct Submodel20sim * _11;
+  XXDouble * _12;
+  double _13;
+
+  <bb 2>:
+  ControllerPan::ControllerPanModel::CopyInputsToVariables (this_2(D));
+  _4 = &this_2(D)->myintegmethod;
+  Discrete::Step (_4);
+  _8 = this_2(D)->_vptr.ControllerPanModel;
+  _9 = MEM[(int *)_8 + 4294967284B];
+  _10 = (sizetype) _9;
+  _11 = this_2(D) + _10;
+  _12 = _11->V;
+  _13 = MEM[(XXDouble *)_12 + 32B];
+  MEM[(XXDouble *)_12 + 48B] = _13;
+  ControllerPan::ControllerPanModel::CopyVariablesToOutputs (this_2(D));
+  return;
+
+}
+
+

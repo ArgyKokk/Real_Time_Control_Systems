@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<csp:CSPDiagram file-version="3" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:csp="http:///nl/utwente/ce/terra/csp/model/csp.ecore" xmlns:xxsim="http:///nl/utwente/ce/terra/xxsim/model/xxsim.ecore">
+  <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.0" name="SP" constraints="75,75,10,10"/>
+  <objects xsi:type="csp:CSPReader" name="r_SP" constraints="140,60,30,30" compositionalRelations="//@compositionalRelations.0" link="//@links.0" variable="//@properties.2/@variables.0"/>
+  <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.1" name="MV" constraints="75,155,10,10"/>
+  <objects xsi:type="csp:CSPReader" name="r_MV" constraints="140,140,30,30" compositionalRelations="//@compositionalRelations.0" link="//@links.1" variable="//@properties.2/@variables.1"/>
+  <objects xsi:type="csp:CSPPort" link="//@links.2" name="output" constraints="555,75,10,10"/>
+  <objects xsi:type="csp:CSPWriter" name="w_output" constraints="460,60,30,30" compositionalRelations="//@compositionalRelations.2" link="//@links.2" variable="//@properties.2/@variables.2"/>
+  <objects xsi:type="csp:CSPCompositionalGroup" name="INS" constraints="120,40,80,160" compositionalRelations="//@compositionalRelations.1" relations="//@compositionalRelations.0"/>
+  <objects xsi:type="csp:CSPModel" name="XXControllerModel" constraints="285,95,70,50" compositionalRelations="//@compositionalRelations.1 //@compositionalRelations.2">
+    <submodel xsi:type="csp:CSPDiagram">
+      <properties xsi:type="csp:CSPVariablesProperty">
+        <variables name="SP" linkedParent="//@properties.2/@variables.0"/>
+        <variables name="MV" linkedParent="//@properties.2/@variables.1"/>
+        <variables name="output" linkedParent="//@properties.2/@variables.2"/>
+      </properties>
+    </submodel>
+    <configuration xsi:type="xxsim:XXSimCPPCodeBlockConfiguration" xxsimName="ControllerModel">
+      <headerFiles>xxsim/ControllerModel.hpp</headerFiles>
+      <sourceFiles>src/xxsim/ControllerModel.cpp</sourceFiles>
+      <mapping name="SP" size="1,1"/>
+      <mapping name="MV" size="1,1" index="1"/>
+      <mapping name="output" size="1,1" index="2" io="OUTPUT"/>
+    </configuration>
+  </objects>
+  <objects xsi:type="csp:CSPCompositionalGroup" name="SEQUENTIAL" constraints="95,15,420,210" relations="//@compositionalRelations.2 //@compositionalRelations.1"/>
+  <properties xsi:type="cpc:CPCSharedDiagramProperty" componentName="Controller"/>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="IO" type="real" unit="xxsim"/>
+  </properties>
+  <properties xsi:type="csp:CSPVariablesProperty">
+    <variables name="v_SP" type="//@properties.1/@units.0"/>
+    <variables name="v_MV" type="//@properties.1/@units.0"/>
+    <variables name="v_output" type="//@properties.1/@units.0"/>
+  </properties>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.0 //@objects.1"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.2 //@objects.3"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.4 //@objects.5"/>
+  <compositionalRelations compositeObjects="//@objects.1 //@objects.3" compositionalGroup="//@objects.6"/>
+  <compositionalRelations compositeObjects="//@objects.6 //@objects.7" type="SEQUENTIAL" compositionalGroup="//@objects.8"/>
+  <compositionalRelations compositeObjects="//@objects.7 //@objects.5" type="SEQUENTIAL" compositionalGroup="//@objects.8"/>
+</csp:CSPDiagram>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http:///nl/utwente/ram/xxsim/xml/model/xml.ecore">
+<modelConfiguration>
+	<schemeVersion>
+		<major>1</major>
+		<minor>0</minor>
+		<revision>0</revision>
+		<patch>3</patch>
+	</schemeVersion>
+	<general>
+		<name>LinearSystem</name>
+		<description></description>
+		<creationDate>2019-05-26T19:04:04.0Z</creationDate>
+		<modelDir></modelDir>
+		<originalModel>C:\Program Files (x86)\20-sim 4.7\ex2.emx</originalModel>
+		<additional>Universiteit Twente, 20-sim 4.7 Campus License</additional>
+			<version>
+				<major>4</major>
+				<minor>7</minor>
+				<revision>0</revision>
+				<patch>8692</patch>
+			</version>
+	</general>
+	<run>
+		<startTime>2.0</startTime>
+		<finishTime>10.0</finishTime>
+		<stepSize>0.01</stepSize>
+	</run>
+	<modelVariables count="4">
+		<modelVariable id="1">
+			<name>u</name>
+			<kind>input</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>V</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="2">
+			<name>y</name>
+			<kind>output</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>V</name>
+				<index>1</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="3">
+			<name>x_dot</name>
+			<kind>rate</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<pair>x</pair>
+			<storage>
+				<name>R</name>
+				<index>0</index>
+			</storage>
+		</modelVariable>
+		<modelVariable id="4">
+			<name>x</name>
+			<kind>state</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<pair>x_dot</pair>
+			<storage>
+				<name>s</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+	</modelVariables>
+	<storage>
+		<name>ivc_ex2</name>
+		<size>64</size>
+		<tables>
+			<table>
+				<name>R</name>
+				<size>8</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>1</count>
+			</table>
+			<table>
+				<name>I</name>
+				<size>8</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>1</count>
+			</table>
+			<table>
+				<name>V</name>
+				<size>16</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>2</count>
+			</table>
+			<table>
+				<name>P</name>
+				<size>24</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>3</count>
+			</table>
+			<table>
+				<name>s</name>
+				<size>8</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>1</count>
+			</table>
+		</tables>
+	</storage>
+	<icons>
+		<icon>89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff6100000006624b474400ff00ff00ffa0bda793000000097048597300000ec400000ec401952b0e1b0000022749444154388d95933d4e23411085bf9a1fdb23adb03313918003120ee1c0e2048464068900328b08523801310902811c218188e002045c801f098110d8581e3c8c67ba8ba06db3ec26bb1575b754afdf57af5b5455019224e17f2b8a2202630ce7e7e73c3e3e02a00abe0f22608cdb7b1ef8bea22a18e39a45846ab54a90a629b7b7b7349b4dacb5934663a058046b5d431cbb75b5aa0c064210f8ecedede189086118628cc1184310e46c6ffb341a4592c4502ae5b4db42b319b2b5157070e0512ce6186308c3d00900586b0943e5e9092e2e7c9e9fe1eccc43c4d0e9c0ebabd0efc3fd3d88287664cd73dc8aaa5228588e8f43aa55cbd252c6c94908389c3485e110f2dc098c7b82f1445595cf4f656e2e676727a35633b4db218301d4eb43a2c8396c3472e2580105f8299024cae26206b81b979753dedf855acdb0b09003d0ef0b79ee529920fc5ed62a71ec6c0f06df672f2f4292b824dccbe1dbc198278a2c9797214747454494f5f54fe6e70d2b2bbf28972da512b45a0941e086aeaadf0eacb54491657fbf48a562d9dd8d999ab26499727ded53af0f393d0db9bb1382c05df803611c4bb96c797b83abab906ed7b166193c3c780401140a8ab57f088c11ba5d6563e383d959c3cd8d4fb9ec1cacae26f47a42abf5c1cc4c4e9ada09c2240570394f4f1b3637e3d1c43d9204d6d63e50056b853896d15f180d5155c9b26c72986542af27135111e8f5fe0a0b1121cb3224cf733d3c3ca4d3e94cb8fea544844aa5c217885f49479acb319a0000000049454e44ae426082</icon>
+	</icons>
+</modelConfiguration>
+</DocumentRoot>
+

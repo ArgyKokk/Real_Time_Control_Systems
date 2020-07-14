@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tokens>
+	<token name="MODEL_NAME"><![CDATA[JIWY-co-sim]]></token>
+	<token name="20SIM_DIR"><![CDATA[C:\Program Files (x86)\20-sim 4.7]]></token>
+	<token name="SUBMODEL_NAME"><![CDATA[JoyStick]]></token>
+	<token name="ALGLOOP_NAMES"><![CDATA[	NULL]]></token>
+	<token name="ALGLOOP_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="ALGLOOP_NAMES3"><![CDATA[]]></token>
+	<token name="ALGLOOP_UNITS"><![CDATA[]]></token>
+	<token name="ALIAS_EQUATIONS"><![CDATA[]]></token>
+	<token name="ALIAS_MATRIX_NAMES"><![CDATA[	NULL
+]]></token>
+	<token name="ALIAS_MATRIX_NAMES2"><![CDATA[	NULL
+]]></token>
+	<token name="ALIAS_MATRIX_NAMES3"><![CDATA[
+]]></token>
+	<token name="ALIAS_MATRIX_UNITS"><![CDATA[]]></token>
+	<token name="ALIAS_VARIABLE_INDICES"><![CDATA[	-1]]></token>
+	<token name="ALIAS_VARIABLE_NAMES"><![CDATA[	NULL]]></token>
+	<token name="ALIAS_VARIABLE_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="ALIAS_VARIABLE_NAMES3"><![CDATA[]]></token>
+	<token name="ALIAS_VARIABLE_UNITS"><![CDATA[]]></token>
+	<token name="COMPANY_NAME"><![CDATA[20-sim 4.7 Campus License]]></token>
+	<token name="CONSTANT_NAMES"><![CDATA[	NULL]]></token>
+	<token name="CONSTANT_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="CONSTANT_NAMES3"><![CDATA[]]></token>
+	<token name="CONSTANT_UNITS"><![CDATA[]]></token>
+	<token name="CONSTANT_VALUES"><![CDATA[]]></token>
+	<token name="CONSTRAINT_NAMES"><![CDATA[	NULL]]></token>
+	<token name="CONSTRAINT_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="CONSTRAINT_NAMES3"><![CDATA[]]></token>
+	<token name="CONSTRAINT_UNITS"><![CDATA[]]></token>
+	<token name="DEPRATE_NAMES"><![CDATA[	NULL]]></token>
+	<token name="DEPRATE_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="DEPRATE_NAMES3"><![CDATA[]]></token>
+	<token name="DEPRATE_UNITS"><![CDATA[]]></token>
+	<token name="DEPSTATE_NAMES"><![CDATA[	NULL]]></token>
+	<token name="DEPSTATE_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="DEPSTATE_NAMES3"><![CDATA[]]></token>
+	<token name="DEPSTATE_UNITS"><![CDATA[]]></token>
+	<token name="DIRECT_FEEDTHROUGH"><![CDATA[XXFALSE]]></token>
+	<token name="DYNAMIC_EQUATIONS"><![CDATA[	/* PulsePan\change = timeevent (PulsePan\start_time) or timeevent (PulsePan\stop_time); */
+	xx_V[1] = XXTimeEvent (xx_P[0], 0) || XXTimeEvent (xx_P[1], 1);
+
+	/* PulsePan\output = PulsePan\amplitude * (step (PulsePan\start_time) - step (PulsePan\stop_time)); */
+	xx_V[0] = xx_P[2] * (XXStep (xx_P[0], xx_time) - XXStep (xx_P[1], xx_time));
+
+	/* PulseTilt\change = timeevent (PulseTilt\start_time) or timeevent (PulseTilt\stop_time); */
+	xx_V[3] = XXTimeEvent (xx_P[3], 2) || XXTimeEvent (xx_P[4], 3);
+
+	/* PulseTilt\output = PulseTilt\amplitude * (step (PulseTilt\start_time) - step (PulseTilt\stop_time)); */
+	xx_V[2] = xx_P[5] * (XXStep (xx_P[3], xx_time) - XXStep (xx_P[4], xx_time));
+
+	/* JoyStickPan = PulsePan\output; */
+	xx_V[4] = xx_V[0];
+
+	/* JoyStickTilt = PulseTilt\output; */
+	xx_V[5] = xx_V[2];
+]]></token>
+	<token name="EXPERIMENT_NAME"><![CDATA[JIWY-co-sim]]></token>
+	<token name="EXPORT_NAMES"><![CDATA[	NULL]]></token>
+	<token name="EXPORT_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="EXPORT_NAMES3"><![CDATA[]]></token>
+	<token name="EXPORT_UNITS"><![CDATA[]]></token>
+	<token name="FAVORITE_PARAMETER_NAMES"><![CDATA[	NULL]]></token>
+	<token name="FAVORITE_PARAMETER_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="FAVORITE_PARAMETER_NAMES3"><![CDATA[]]></token>
+	<token name="FAVORITE_PARAMETER_UNITS"><![CDATA[]]></token>
+	<token name="FAVORITE_PARS_EQUATIONS"><![CDATA[]]></token>
+	<token name="FAVORITE_VARIABLE_NAMES"><![CDATA[	NULL]]></token>
+	<token name="FAVORITE_VARIABLE_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="FAVORITE_VARIABLE_NAMES3"><![CDATA[]]></token>
+	<token name="FAVORITE_VARIABLE_UNITS"><![CDATA[]]></token>
+	<token name="FAVORITE_VARS_EQUATIONS"><![CDATA[]]></token>
+	<token name="FILE_NAME"><![CDATA[]]></token>
+	<token name="FINAL_EQUATIONS"><![CDATA[]]></token>
+	<token name="FINISH_TIME"><![CDATA[20.0]]></token>
+	<token name="GENERATION_BUILD"><![CDATA[4.7.0.8692]]></token>
+	<token name="GENERATION_DATE"><![CDATA[May 31, 2019]]></token>
+	<token name="GENERATION_DIR"><![CDATA[c:\temp\JoyStick]]></token>
+	<token name="GENERATION_TIME"><![CDATA[7:02:08 PM]]></token>
+	<token name="HIERARCHICAL_SUBMODEL_NAME"><![CDATA[JIWYController\JoyStick]]></token>
+	<token name="IMPORT_NAMES"><![CDATA[	NULL]]></token>
+	<token name="IMPORT_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="IMPORT_NAMES3"><![CDATA[]]></token>
+	<token name="IMPORT_UNITS"><![CDATA[]]></token>
+	<token name="INITIAL_EQUATIONS"><![CDATA[]]></token>
+	<token name="INITIAL_VALUE_NAMES"><![CDATA[	NULL]]></token>
+	<token name="INITIAL_VALUE_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="INITIAL_VALUE_NAMES3"><![CDATA[]]></token>
+	<token name="INITIAL_VALUE_UNITS"><![CDATA[]]></token>
+	<token name="INITIAL_VALUE_VALUES"><![CDATA[]]></token>
+	<token name="INITIALIZE_ALIAS_MATRICES"><![CDATA[]]></token>
+	<token name="INITIALIZE_CONSTANTS"><![CDATA[]]></token>
+	<token name="INITIALIZE_FAVORITE_PARS"><![CDATA[]]></token>
+	<token name="INITIALIZE_FAVORITE_VARS"><![CDATA[]]></token>
+	<token name="INITIALIZE_INITIAL_VALUES"><![CDATA[]]></token>
+	<token name="INITIALIZE_INPUTS"><![CDATA[]]></token>
+	<token name="INITIALIZE_MATRICES"><![CDATA[]]></token>
+	<token name="INITIALIZE_OUTPUTS"><![CDATA[	y[0] = 0.0;		/* JoyStickPan */
+	y[1] = 0.0;		/* JoyStickTilt */
+]]></token>
+	<token name="INITIALIZE_PARAMETERS"><![CDATA[	xx_P[0] = 1.0;		/* PulsePan\start_time {s} */
+	xx_P[1] = 5.0;		/* PulsePan\stop_time {s} */
+	xx_P[2] = 1.0;		/* PulsePan\amplitude {} */
+	xx_P[3] = 2.0;		/* PulseTilt\start_time {s} */
+	xx_P[4] = 6.0;		/* PulseTilt\stop_time {s} */
+	xx_P[5] = -1.0;		/* PulseTilt\amplitude {} */
+]]></token>
+	<token name="INITIALIZE_PARAMETERS2"><![CDATA[		1.0 /* PulsePan\start_time {s} */, 
+		5.0 /* PulsePan\stop_time {s} */, 
+		1.0 /* PulsePan\amplitude {} */, 
+		2.0 /* PulseTilt\start_time {s} */, 
+		6.0 /* PulseTilt\stop_time {s} */, 
+		-1.0 /* PulseTilt\amplitude {} */]]></token>
+	<token name="INITIALIZE_STATES"><![CDATA[]]></token>
+	<token name="INPUT_EQUATIONS"><![CDATA[]]></token>
+	<token name="INPUT_NAMES"><![CDATA[	NULL]]></token>
+	<token name="INPUT_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="INPUT_NAMES3"><![CDATA[]]></token>
+	<token name="INPUT_TO_VARIABLE_EQUATIONS"><![CDATA[]]></token>
+	<token name="INPUT_UNITS"><![CDATA[]]></token>
+	<token name="MATRIX_NAMES"><![CDATA[	NULL
+]]></token>
+	<token name="MATRIX_NAMES2"><![CDATA[	NULL
+]]></token>
+	<token name="MATRIX_NAMES3"><![CDATA[
+]]></token>
+	<token name="MATRIX_UNITS"><![CDATA[]]></token>
+	<token name="MODEL_CONFIGURATION"><![CDATA[<modelConfiguration>
+	<schemeVersion>
+		<major>1</major>
+		<minor>0</minor>
+		<revision>0</revision>
+		<patch>3</patch>
+	</schemeVersion>
+	<general>
+		<name>JoyStick</name>
+		<hierarchicalName>JIWYController\JoyStick</hierarchicalName>
+		<description></description>
+		<creationDate>2019-05-31T19:02:02.0Z</creationDate>
+		<modelDir></modelDir>
+		<originalModel>C:\users\rtsd\Desktop\RTSD2018-Ex2-ExtraMaterials\RTSD2018-Ex2-ExtraMaterials\JIWY-co-sim.emx</originalModel>
+		<additional>Universiteit Twente, 20-sim 4.7 Campus License</additional>
+		<creator>
+			<name>20-sim</name>
+			<version>
+				<major>4</major>
+				<minor>7</minor>
+				<revision>0</revision>
+				<patch>8692</patch>
+			</version>
+		</creator>
+	</general>
+	<run>
+		<startTime>0.0</startTime>
+		<finishTime>20.0</finishTime>
+		<stepSize>0.01</stepSize>
+	</run>
+	<modelVariables count="10">
+		<modelVariable id="1">
+			<name>PulsePan\output</name>
+			<kind>variable</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>xx_V</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>2</iconIndex>
+		</modelVariable>
+		<modelVariable id="2">
+			<name>PulsePan\start_time</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>1.0</value>
+			<physical>
+				<unit>
+					<name>s</name>
+				</unit>
+				<quantity>time</quantity>
+			</physical>
+			<storage>
+				<name>xx_P</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>2</iconIndex>
+		</modelVariable>
+		<modelVariable id="3">
+			<name>PulsePan\stop_time</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>5.0</value>
+			<physical>
+				<unit>
+					<name>s</name>
+				</unit>
+				<quantity>time</quantity>
+			</physical>
+			<storage>
+				<name>xx_P</name>
+				<index>1</index>
+			</storage>
+			<iconIndex>2</iconIndex>
+		</modelVariable>
+		<modelVariable id="4">
+			<name>PulsePan\amplitude</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>1.0</value>
+			<physical>
+				<unit>
+					<name></name>
+				</unit>
+				<quantity>magnitude</quantity>
+			</physical>
+			<storage>
+				<name>xx_P</name>
+				<index>2</index>
+			</storage>
+			<iconIndex>2</iconIndex>
+		</modelVariable>
+		<modelVariable id="5">
+			<name>PulseTilt\output</name>
+			<kind>variable</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>xx_V</name>
+				<index>2</index>
+			</storage>
+			<iconIndex>3</iconIndex>
+		</modelVariable>
+		<modelVariable id="6">
+			<name>PulseTilt\start_time</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>2.0</value>
+			<physical>
+				<unit>
+					<name>s</name>
+				</unit>
+				<quantity>time</quantity>
+			</physical>
+			<storage>
+				<name>xx_P</name>
+				<index>3</index>
+			</storage>
+			<iconIndex>3</iconIndex>
+		</modelVariable>
+		<modelVariable id="7">
+			<name>PulseTilt\stop_time</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>6.0</value>
+			<physical>
+				<unit>
+					<name>s</name>
+				</unit>
+				<quantity>time</quantity>
+			</physical>
+			<storage>
+				<name>xx_P</name>
+				<index>4</index>
+			</storage>
+			<iconIndex>3</iconIndex>
+		</modelVariable>
+		<modelVariable id="8">
+			<name>PulseTilt\amplitude</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>-1.0</value>
+			<physical>
+				<unit>
+					<name></name>
+				</unit>
+				<quantity>magnitude</quantity>
+			</physical>
+			<storage>
+				<name>xx_P</name>
+				<index>5</index>
+			</storage>
+			<iconIndex>3</iconIndex>
+		</modelVariable>
+		<modelVariable id="9">
+			<name>JoyStickPan</name>
+			<kind>output</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>xx_V</name>
+				<index>4</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="10">
+			<name>JoyStickTilt</name>
+			<kind>output</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>xx_V</name>
+				<index>5</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+	</modelVariables>
+	<storage>
+		<name>ivc_JIWY-co-sim</name>
+		<size>96</size>
+		<tables>
+			<table>
+				<name>xx_P</name>
+				<size>48</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>6</count>
+			</table>
+			<table>
+				<name>xx_V</name>
+				<size>48</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>6</count>
+			</table>
+		</tables>
+	</storage>
+	<icons>
+		<icon>89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff6100000006624b474400ff00ff00ffa0bda793000000097048597300000ec400000ec401952b0e1b0000010e49444154388da593c18a83301086bf8c494b513cd422d21efb2c7dff77a87811722a82464d7a6a96ee6add657f984b26f926f933a34208016018069aa64144d892f79ecbe5c27ebf47bf1645842ccb28cb12effdea6111a16ddb582802acb538e770ce314dd32a406b4ddff7586ba9aaea0b0030cf738c3529a5def26f8010428c357dcf2f02945228a562c5d7baf77e1b00f0783c98a609116118068c311863381c0edb802449b0d652d735f7fb9dd3e91441b7db0dadf53a00601c47cee733c7e391ebf54a9ee7841070ce21223ffc59f4404448d3943ccfa3e3699a32cff3ef4c7c35d2d2777e042c6d58ca6f3ee1df7df017c0f6e86d28dea0280abaaec318f371a4932461b7db511405004f52d0d45b104f93de0000000049454e44ae426082</icon>
+		<icon>89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff6100000006624b474400ff00ff00ffa0bda793000000097048597300000ec400000ec401952b0e1b000001cd49444154388d95933d4b634114869f3933f76e1289a4104b150b09ec2f107bc176fd0382b5ffc64ab00fd682b565b04d25cb1ab7f50b2326b973ef3dc7e2ee3509bb42f685296638f39ef7990f6795188d46fcaf565757093146aeaeae188d46a8ead29bbdf7acacac10c6e3318f8f8f1c1f1f93e7f9d20649927076764670cee1bd27c6488c11e71c66b6944908a1320016e2ab2af5fa573233cc0ca927699a32180ce8f7fb349bcdcf82af46dd30d48e22c2c3c303afafaf78ef11515aad0a653a75c4b898405531b3caa0661611bcf780f2f4e4e8f5be51968ebdbdc8e66649512c220015c2bc9c0311383f6f707313180e1da7a74d541df257f59cc13c1f18cfcf8ea3a309272763b20c62fcf7597c22d44cb54108c6fb3bbcbdd59deb4d8b089f87e89c2349121a8daa3849c0fb40084a0846ab652489a10a451100992510115e5e9eb9bbfbc970d8a1dd56068340b7fb8b2c9b727bfb9dcbcb2a95aa636ded373b3b1d446496a02c15b38cebeb84fbfb94763b677d3da3d1886c6c145c5c3471ce30731c1e1add6e5921a82a5996d1e9743838f8c1fefe84adad096519298a6dcc1cbbbb5354672f53751b91503dfd18a3f57a3d269309221e11c8f3fccf9f985dedbccc2aec344df900dc59222b000e32480000000049454e44ae426082</icon>
+		<icon>89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff6100000006624b474400ff00ff00ffa0bda793000000097048597300000ec400000ec401952b0e1b000001cd49444154388d95933d4b634114869f3933f76e1289a4104b150b09ec2f107bc176fd0382b5ffc64ab00fd682b565b04d25cb1ab7f50b2326b973ef3dc7e2ee3509bb42f685296638f39ef7990f6795188d46fcaf565757093146aeaeae188d46a8ead29bbdf7acacac10c6e3318f8f8f1c1f1f93e7f9d20649927076764670cee1bd27c6488c11e71c66b6944908a1320016e2ab2af5fa573233cc0ca927699a32180ce8f7fb349bcdcf82af46dd30d48e22c2c3c303afafaf78ef11515aad0a653a75c4b898405531b3caa0661611bcf780f2f4e4e8f5be51968ebdbdc8e66649512c220015c2bc9c0311383f6f707313180e1da7a74d541df257f59cc13c1f18cfcf8ea3a309272763b20c62fcf7597c22d44cb54108c6fb3bbcbdd59deb4d8b089f87e89c2349121a8daa3849c0fb40084a0846ab652489a10a451100992510115e5e9eb9bbfbc970d8a1dd56068340b7fb8b2c9b727bfb9dcbcb2a95aa636ded373b3b1d446496a02c15b38cebeb84fbfb94763b677d3da3d1886c6c145c5c3471ce30731c1e1add6e5921a82a5996d1e9743838f8c1fefe84adad096519298a6dcc1cbbbb5354672f53751b91503dfd18a3f57a3d269309221e11c8f3fccf9f985dedbccc2aec344df900dc59222b000e32480000000049454e44ae426082</icon>
+	</icons>
+</modelConfiguration>]]></token>
+	<token name="MODEL_DESCRIPTION"><![CDATA[]]></token>
+	<token name="MODEL_FILE"><![CDATA[C:\users\rtsd\Desktop\RTSD2018-Ex2-ExtraMaterials\RTSD2018-Ex2-ExtraMaterials\JIWY-co-sim.emx]]></token>
+	<token name="MODEL_FUNCTION_NAME"><![CDATA[JIWYcosim]]></token>
+	<token name="MODEL_IS_DISCRETE"><![CDATA[1]]></token>
+	<token name="NUMBER_ALGLOOPS"><![CDATA[0]]></token>
+	<token name="NUMBER_ALIAS_MATRICES"><![CDATA[0]]></token>
+	<token name="NUMBER_ALIAS_VARIABLES"><![CDATA[0]]></token>
+	<token name="NUMBER_CONSTANTS"><![CDATA[0]]></token>
+	<token name="NUMBER_CONSTRAINTS"><![CDATA[0]]></token>
+	<token name="NUMBER_DEPSTATES"><![CDATA[0]]></token>
+	<token name="NUMBER_EXPORTS"><![CDATA[0]]></token>
+	<token name="NUMBER_FAVORITE_PARAMETERS"><![CDATA[0]]></token>
+	<token name="NUMBER_FAVORITE_VARIABLES"><![CDATA[0]]></token>
+	<token name="NUMBER_IMPORTS"><![CDATA[0]]></token>
+	<token name="NUMBER_INITIAL_VALUES"><![CDATA[0]]></token>
+	<token name="NUMBER_INPUTS"><![CDATA[0]]></token>
+	<token name="NUMBER_MATRICES"><![CDATA[0]]></token>
+	<token name="NUMBER_OUTPUTS"><![CDATA[2]]></token>
+	<token name="NUMBER_PARAMETERS"><![CDATA[6]]></token>
+	<token name="NUMBER_STATES"><![CDATA[0]]></token>
+	<token name="NUMBER_UNNAMED"><![CDATA[0]]></token>
+	<token name="NUMBER_VARIABLES"><![CDATA[6]]></token>
+	<token name="NUMBEROF_ABSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ADJOINTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ALGEBRAICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ALGLOOPIN"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ALGLOOPOUT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_AND"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ANTISYMMETRICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ARCCOSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ARCCOSHYPERBOLICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ARCSINFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ARCSINHYPERBOLICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ARCTANFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ARCTANHYPERBOLICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ASSIGNMENT"><![CDATA[2]]></token>
+	<token name="NUMBEROF_ATAN2FUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BACKDIVISION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BITAND"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BITCLEAR"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BITCMP"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BITGET"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BITOR"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BITSET"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BITSHIFT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BITSWAPBYTES"><![CDATA[0]]></token>
+	<token name="NUMBEROF_BITXOR"><![CDATA[0]]></token>
+	<token name="NUMBEROF_CASESTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_CEILFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_CODESTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_COLUMNSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_CONDITIONAL"><![CDATA[0]]></token>
+	<token name="NUMBEROF_CONSTANT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_CONSTRAINTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_CONSTRAINTIN"><![CDATA[0]]></token>
+	<token name="NUMBEROF_CONSTRAINTOUT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_COSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_COSHYPERBOLICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_CROSSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DATAFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DDTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DEFAULTCASESTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DELAYFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DEPENDENTRATE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DEPENDENTSTATE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DEPENDENTSTATERATE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DERIVATIVEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DETFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DIAGFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DISCRETERATE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DISCRETESTATE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DISCRETESTATERATE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DISCRETETIME"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DISCRETETIMENODEWITHOUT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DIV"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DIVISION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DLLDYNAMICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DLLFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_DOMATLABSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EFFORTCAUSALITYSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ELEMENTDIV"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ELEMENTMUL"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ELEMENTPOWER"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ENERGYFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EQUAL"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EQUALSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EQUATION"><![CDATA[4]]></token>
+	<token name="NUMBEROF_EVENTDOWNFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EVENTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EVENTUPFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXP10FUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXP2FUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXPANDEDCAUSALITYFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXPANDEDCOLLECTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXPANDEDDIRECTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXPANDEDFIRSTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXPANDEDMULFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXPANDEDSUMFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXPFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXTERNALINPUT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EXTERNALOUTPUT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_EYEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_FALSE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_FINALSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_FINISHTIME"><![CDATA[0]]></token>
+	<token name="NUMBEROF_FLOORFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_FLOWCAUSALITYSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_FORSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_FREQUENCYEVENTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_FROMMATLABSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_GAUSSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_GREATER"><![CDATA[0]]></token>
+	<token name="NUMBEROF_GREATEREQUAL"><![CDATA[0]]></token>
+	<token name="NUMBEROF_HOLDFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_HOMOGENEOUSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_IFSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_IMPULSEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_INITIALFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_INITIALSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_INITIALVALUE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_INNERFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_INTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_INVERSEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_INVERSEHOMOGENEOUSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_JACOBIAN"><![CDATA[0]]></token>
+	<token name="NUMBEROF_LESS"><![CDATA[0]]></token>
+	<token name="NUMBEROF_LESSEQUAL"><![CDATA[0]]></token>
+	<token name="NUMBEROF_LIMINTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_LIMITFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_LINEARSOLVEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_LITERAL"><![CDATA[0]]></token>
+	<token name="NUMBEROF_LOG10FUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_LOG2FUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_LOGFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_MAJOR"><![CDATA[0]]></token>
+	<token name="NUMBEROF_MAJORADJOINTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_MAXFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_MIN"><![CDATA[2]]></token>
+	<token name="NUMBEROF_MINFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_MODELVARIABLES"><![CDATA[10]]></token>
+	<token name="NUMBEROF_MODULO"><![CDATA[0]]></token>
+	<token name="NUMBEROF_MUL"><![CDATA[2]]></token>
+	<token name="NUMBEROF_MULTIPLYHOMOGENEOUSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_NEXTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_NONLINEARFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_NORMFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_NORMINFFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_NOTEQUAL"><![CDATA[0]]></token>
+	<token name="NUMBEROF_OR"><![CDATA[2]]></token>
+	<token name="NUMBEROF_PARAMETER"><![CDATA[6]]></token>
+	<token name="NUMBEROF_PLUS"><![CDATA[0]]></token>
+	<token name="NUMBEROF_PORT"><![CDATA[4]]></token>
+	<token name="NUMBEROF_PORTVARIABLE"><![CDATA[4]]></token>
+	<token name="NUMBEROF_POWER"><![CDATA[0]]></token>
+	<token name="NUMBEROF_PREFIXMIN"><![CDATA[0]]></token>
+	<token name="NUMBEROF_PREFIXNOT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_PREFIXPLUS"><![CDATA[0]]></token>
+	<token name="NUMBEROF_PREVIOUSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_RAMPFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_RANDOM"><![CDATA[0]]></token>
+	<token name="NUMBEROF_RANDOMFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_RATE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_REALTIME"><![CDATA[0]]></token>
+	<token name="NUMBEROF_REPEATSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_RESETFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_RESINTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_RETURNSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ROUNDFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_ROWSFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SAMPLEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SAMPLETIME"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SETTOOLSETTINGFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SIGNFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SINFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SINHYPERBOLICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SKEWFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SQRFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SQRTFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_STARTTIME"><![CDATA[0]]></token>
+	<token name="NUMBEROF_STATE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_STATERATE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_STEPFUNCTION"><![CDATA[4]]></token>
+	<token name="NUMBEROF_STEPSIZE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_STOPSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SUMFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SWITCHSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SYMMETRICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_SYSTEMVARIABLE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TABLEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TANFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TANHYPERBOLICFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TDELAYFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TILDEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TIME"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TIMEEVENTFUNCTION"><![CDATA[4]]></token>
+	<token name="NUMBEROF_TIMENODEWITHOUT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TIMETRIGGERFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TOMATLABSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TRACEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TRANSPOSEFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TRIGGERDOWNFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TRIGGERFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TRIGGERUPFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TRUE"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TRUNCFUNCTION"><![CDATA[0]]></token>
+	<token name="NUMBEROF_TYPEPARAMETER"><![CDATA[0]]></token>
+	<token name="NUMBEROF_UNNAMED"><![CDATA[2]]></token>
+	<token name="NUMBEROF_VARIABLE"><![CDATA[2]]></token>
+	<token name="NUMBEROF_WARNSTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_WHILESTATEMENT"><![CDATA[0]]></token>
+	<token name="NUMBEROF_XOR"><![CDATA[0]]></token>
+	<token name="OUTPUT_EQUATIONS"><![CDATA[]]></token>
+	<token name="OUTPUT_NAMES"><![CDATA[	"JoyStickPan",
+	"JoyStickTilt"
+]]></token>
+	<token name="OUTPUT_NAMES2"><![CDATA[	"JoyStickPan",
+	"JoyStickTilt"
+]]></token>
+	<token name="OUTPUT_NAMES3"><![CDATA[JoyStickPan
+JoyStickTilt
+]]></token>
+	<token name="OUTPUT_UNITS"><![CDATA[
+
+]]></token>
+	<token name="OUTPUT2_EQUATIONS"><![CDATA[	/* JoyStickPan = JoyStickPan; */
+	xx_V[4] = xx_V[4];
+
+	/* JoyStickTilt = JoyStickTilt; */
+	xx_V[5] = xx_V[5];
+]]></token>
+	<token name="PARAMETER_NAMES"><![CDATA[	"PulsePan\\start_time",
+	"PulsePan\\stop_time",
+	"PulsePan\\amplitude",
+	"PulseTilt\\start_time",
+	"PulseTilt\\stop_time",
+	"PulseTilt\\amplitude"
+]]></token>
+	<token name="PARAMETER_NAMES2"><![CDATA[	"PulsePan_start_time",
+	"PulsePan_stop_time",
+	"PulsePan_amplitude",
+	"PulseTilt_start_time",
+	"PulseTilt_stop_time",
+	"PulseTilt_amplitude"
+]]></token>
+	<token name="PARAMETER_NAMES3"><![CDATA[PulsePan\start_time
+PulsePan\stop_time
+PulsePan\amplitude
+PulseTilt\start_time
+PulseTilt\stop_time
+PulseTilt\amplitude
+]]></token>
+	<token name="PARAMETER_UNITS"><![CDATA[s
+s
+
+s
+s
+
+]]></token>
+	<token name="PARAMETER_VALUES"><![CDATA[1.0
+5.0
+1.0
+2.0
+6.0
+-1.0
+]]></token>
+	<token name="RATE_NAMES"><![CDATA[	NULL]]></token>
+	<token name="RATE_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="RATE_NAMES3"><![CDATA[]]></token>
+	<token name="RATE_UNITS"><![CDATA[]]></token>
+	<token name="SIMULINK_MODEL"><![CDATA[Model {
+  Name			  "JIWY-co-sim_"
+  System {
+    Name		    "JIWY-co-sim_"
+    Open		    on
+    Block {
+      BlockType		      SubSystem
+      Name		      "SubSystem"
+      Ports		      [0, 2]
+      Position		      [100, 100, 300, 160]
+      ShowPortLabels	      on
+	  MaskType		      "20-sim 4.7 S-Function block"
+	  MaskDescription	      "This block is generated by the 20-sim Matlab Code Generator. 
+
+* look under the mask to get information on the ports
+* press Help for more detailed information
+* the parameters of this block are:
+
+"
+	  MaskHelp	      "This block is generated by the 20-sim Matlab Code Generator<br>
+The block parameters are:<br><blockquote></blockquote>
+Generated at:<br>
+<blockquote><b>date:  </b>May 31, 2019<br>
+<b>time:  </b>7:02:08 PM<br></blockquote>
+From the following 20-sim model:<br>
+<blockquote><b>submodel:  </b>JoyStick<br>
+<b>model:  </b>JIWY-co-sim<br>
+<b>file:  </b>C:\\users\\rtsd\\Desktop\\RTSD2018-Ex2-ExtraMaterials\\RTSD2018-Ex2-ExtraMaterials\\JIWY-co-sim.emx<br>
+<b>experiment:  </b>C:\\users\\rtsd\\Desktop\\RTSD2018-Ex2-ExtraMaterials\\RTSD2018-Ex2-ExtraMaterials\\JIWY-co-sim.emx<br></blockquote>
+Using the following 20-sim license:<br>
+<blockquote><b>user:  </b>Universiteit Twente<br>
+<b>from:  </b>20-sim 4.7 Campus License<br>
+<b>build: </b>4.7.0.8692<br></blockquote>"
+	  MaskPromptString	      ""
+	  MaskVariables	      ";"
+	  MaskDisplay		  ""
+	  MaskIconFrame		  off
+	  MaskValueString	      ""
+      System {
+        Name			"SubSystem"
+        Location		[478, 83, 978, 384]
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  Ports			  [1, 2]
+		  Position		  [290, 30, 295, 70]
+		  Outputs		  "[1 1 ]"
+		  DisplayOption		  "bar"
+		  BusSelectionMode    off
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function"
+		  Ports			  [0, 1]
+		  Position		  [170, 30, 250, 70]
+		  FunctionName		  "JIWY-co-sim"
+		  Parameters	      ""
+		}
+        Block {
+              BlockType		  Outport
+		  Name			  "JoyStickPan"
+		  Position		  [380, 20, 400, 40]
+		  Port			  "1"
+        }
+        Block {
+              BlockType		  Outport
+		  Name			  "JoyStickTilt"
+		  Position		  [380, 60, 400, 80]
+		  Port			  "2"
+        }
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  DstBlock		  "JoyStickPan"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  DstBlock		  "JoyStickTilt"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  1
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+      }
+    }
+  }
+}
+]]></token>
+	<token name="SIMULINK_SUBMODEL"><![CDATA[Model {
+  Name			  "JoyStick_"
+  System {
+    Name		    "JoyStick_"
+    Open		    on
+    Block {
+      BlockType		      SubSystem
+      Name		      "JoyStick"
+      Ports		      [0, 2]
+      Position		      [159, 143, 241, 257]
+
+      ShowPortLabels	      on
+	  MaskType		      "20-sim 4.7 S-Function block"
+	  MaskDescription	      "This block is generated by the 20-sim Matlab Code Generator. 
+
+* look under the mask to get information on the ports
+* press Help for more detailed information
+* the parameters of this block are:
+
+"
+	  MaskHelp	      "This block is generated by the 20-sim Matlab Code Generator<br>
+The block parameters are:<br><blockquote></blockquote>
+Generated at:<br>
+<blockquote><b>date:  </b>May 31, 2019<br>
+<b>time:  </b>7:02:08 PM<br></blockquote>
+From the following 20-sim model:<br>
+<blockquote><b>submodel:  </b>JoyStick<br>
+<b>model:  </b>JIWY-co-sim<br>
+<b>file:  </b>C:\\users\\rtsd\\Desktop\\RTSD2018-Ex2-ExtraMaterials\\RTSD2018-Ex2-ExtraMaterials\\JIWY-co-sim.emx<br>
+<b>experiment:  </b>C:\\users\\rtsd\\Desktop\\RTSD2018-Ex2-ExtraMaterials\\RTSD2018-Ex2-ExtraMaterials\\JIWY-co-sim.emx<br></blockquote>
+Using the following 20-sim license:<br>
+<blockquote><b>user:  </b>Universiteit Twente<br>
+<b>from:  </b>20-sim 4.7 Campus License<br>
+<b>build: </b>4.7.0.8692<br></blockquote>"
+	  MaskPromptString	      ""
+	  MaskVariables	      ";"
+	  MaskDisplay		  "patch ([88 168 168 88 88 ], [56 56 168 168 56 ], [0.901965 0.901965 0.901965] )
+color ('black ')
+plot ([88 168 168 88 88 ], [56 56 168 168 56 ])
+color ('black')
+text (128,120,'JoyStick','hor','center')"
+	  MaskIconFrame		  off
+	  MaskValueString	      ""
+      System {
+        Name			"JoyStick"
+        Location		[478, 83, 978, 384]
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  Ports			  [1, 2]
+		  Position		  [290, 30, 295, 70]
+		  Outputs		  "[1 1 ]"
+		  DisplayOption		  "bar"
+		  BusSelectionMode    off
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function"
+		  Ports			  [0, 1]
+		  Position		  [170, 30, 250, 70]
+		  FunctionName		  "JoyStick"
+		  Parameters	      ""
+		}
+        Block {
+              BlockType		  Outport
+		  Name			  "JoyStickPan"
+		  Position		  [380, 20, 400, 40]
+		  Port			  "1"
+        }
+        Block {
+              BlockType		  Outport
+		  Name			  "JoyStickTilt"
+		  Position		  [380, 60, 400, 80]
+		  Port			  "2"
+        }
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  DstBlock		  "JoyStickPan"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  DstBlock		  "JoyStickTilt"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  1
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+      }
+    }
+  }
+}
+]]></token>
+	<token name="START_TIME"><![CDATA[0.0]]></token>
+	<token name="STATE_NAMES"><![CDATA[	NULL]]></token>
+	<token name="STATE_NAMES2"><![CDATA[	NULL]]></token>
+	<token name="STATE_NAMES3"><![CDATA[]]></token>
+	<token name="STATE_UNITS"><![CDATA[]]></token>
+	<token name="STATIC_EQUATIONS"><![CDATA[]]></token>
+	<token name="TIME_STEP_SIZE"><![CDATA[0.01]]></token>
+	<token name="USER_NAME"><![CDATA[Universiteit Twente]]></token>
+	<token name="VARIABLE_NAMES"><![CDATA[	"PulsePan\\output",
+	"",
+	"PulseTilt\\output",
+	"",
+	"JoyStickPan",
+	"JoyStickTilt"
+]]></token>
+	<token name="VARIABLE_NAMES2"><![CDATA[	"PulsePan_output",
+	"",
+	"PulseTilt_output",
+	"",
+	"JoyStickPan",
+	"JoyStickTilt"
+]]></token>
+	<token name="VARIABLE_NAMES3"><![CDATA[PulsePan\output
+
+PulseTilt\output
+
+JoyStickPan
+JoyStickTilt
+]]></token>
+	<token name="VARIABLE_TO_OUTPUT_EQUATIONS"><![CDATA[	y[0] = 	xx_V[4];		/* JoyStickPan */
+	y[1] = 	xx_V[5];		/* JoyStickTilt */
+]]></token>
+	<token name="VARIABLE_UNITS"><![CDATA[
+
+
+
+
+
+]]></token>
+	<token name="WORK_ARRAY_SIZE"><![CDATA[0]]></token>
+	<token name="XX_ALG_IN_ARRAY_NAME"><![CDATA[A]]></token>
+	<token name="XX_ALG_OUT_ARRAY_NAME"><![CDATA[a]]></token>
+	<token name="XX_DEP_RATE_ARRAY_NAME"><![CDATA[r]]></token>
+	<token name="XX_DEP_STATE_ARRAY_NAME"><![CDATA[S]]></token>
+	<token name="XX_EXT_IN_ARRAY_NAME"><![CDATA[e]]></token>
+	<token name="XX_EXT_OUT_ARRAY_NAME"><![CDATA[E]]></token>
+	<token name="XX_FAVORITE_PARS_ARRAY_NAME"><![CDATA[F]]></token>
+	<token name="XX_FAVORITE_VARS_ARRAY_NAME"><![CDATA[f]]></token>
+	<token name="XX_INITIAL_VALUE_ARRAY_NAME"><![CDATA[I]]></token>
+	<token name="INTEGRATION_METHOD_NAME"><![CDATA[Discrete]]></token>
+	<token name="VARPREFIX"><![CDATA[xx_]]></token>
+	<token name="FUNCTIONPREFIX"><![CDATA[XX]]></token>
+	<token name="XX_TIME"><![CDATA[time]]></token>
+	<token name="XX_INITIALIZE"><![CDATA[initialize]]></token>
+	<token name="XX_VARIABLE_ARRAY_NAME"><![CDATA[V]]></token>
+	<token name="XX_PARAMETER_ARRAY_NAME"><![CDATA[P]]></token>
+	<token name="XX_CONSTANT_ARRAY_NAME"><![CDATA[C]]></token>
+	<token name="XX_STATE_ARRAY_NAME"><![CDATA[s]]></token>
+	<token name="XX_RATE_ARRAY_NAME"><![CDATA[R]]></token>
+	<token name="XX_MATRIX_ARRAY_NAME"><![CDATA[M]]></token>
+	<token name="XX_UNNAMED_ARRAY_NAME"><![CDATA[U]]></token>
+	<token name="ABSOLUTE_TOLERANCE"><![CDATA[1e-005]]></token>
+	<token name="RELATIVE_TOLERANCE"><![CDATA[1e-005]]></token>
+	<token name="INITIAL_STEPSIZE"><![CDATA[0.001]]></token>
+	<token name="MAXIMUM_STEPSIZE"><![CDATA[0.1]]></token>
+	<token name="EVENT_DELTA"><![CDATA[1e-006]]></token>
+	<token name="FORMAJORVERSION"><![CDATA[4]]></token>
+	<token name="FORMINORVERSION"><![CDATA[6]]></token>
+	<token name="FORMAJORBUILD"><![CDATA[0]]></token>
+	<token name="FORMINORBUILD"><![CDATA[0]]></token>
+	<token name="MAJORVERSION"><![CDATA[4]]></token>
+	<token name="MINORVERSION"><![CDATA[7]]></token>
+	<token name="MAJORBUILD"><![CDATA[0]]></token>
+	<token name="MINORBUILD"><![CDATA[8692]]></token>
+	<token name="FMIVERSION"><![CDATA[2.0]]></token>
+	<token name="FMI2"><![CDATA[fmi2]]></token>
+	<token name="FMI_PREFIX"><![CDATA[fmi2]]></token>
+	<token name="TEMPLATENAME"><![CDATA[StandaloneFMU 2.0]]></token>
+	<token name="TEMPLATEDIR"><![CDATA[C:\Program Files (x86)\20-sim 4.7\Ccode\TERRA20FMU]]></token>
+	<token name="TEMPLATE_DIR"><![CDATA[C:\Program Files (x86)\20-sim 4.7\Ccode\TERRA20FMU]]></token>
+	<token name="TOKENNAMES"><![CDATA[MODEL_NAME
+20SIM_DIR
+SUBMODEL_NAME
+ALGLOOP_NAMES
+ALGLOOP_NAMES2
+ALGLOOP_NAMES3
+ALGLOOP_UNITS
+ALIAS_EQUATIONS
+ALIAS_MATRIX_NAMES
+ALIAS_MATRIX_NAMES2
+ALIAS_MATRIX_NAMES3
+ALIAS_MATRIX_UNITS
+ALIAS_VARIABLE_INDICES
+ALIAS_VARIABLE_NAMES
+ALIAS_VARIABLE_NAMES2
+ALIAS_VARIABLE_NAMES3
+ALIAS_VARIABLE_UNITS
+COMPANY_NAME
+CONSTANT_NAMES
+CONSTANT_NAMES2
+CONSTANT_NAMES3
+CONSTANT_UNITS
+CONSTANT_VALUES
+CONSTRAINT_NAMES
+CONSTRAINT_NAMES2
+CONSTRAINT_NAMES3
+CONSTRAINT_UNITS
+DEPRATE_NAMES
+DEPRATE_NAMES2
+DEPRATE_NAMES3
+DEPRATE_UNITS
+DEPSTATE_NAMES
+DEPSTATE_NAMES2
+DEPSTATE_NAMES3
+DEPSTATE_UNITS
+DIRECT_FEEDTHROUGH
+DYNAMIC_EQUATIONS
+EXPERIMENT_NAME
+EXPORT_NAMES
+EXPORT_NAMES2
+EXPORT_NAMES3
+EXPORT_UNITS
+FAVORITE_PARAMETER_NAMES
+FAVORITE_PARAMETER_NAMES2
+FAVORITE_PARAMETER_NAMES3
+FAVORITE_PARAMETER_UNITS
+FAVORITE_PARS_EQUATIONS
+FAVORITE_VARIABLE_NAMES
+FAVORITE_VARIABLE_NAMES2
+FAVORITE_VARIABLE_NAMES3
+FAVORITE_VARIABLE_UNITS
+FAVORITE_VARS_EQUATIONS
+FILE_NAME
+FINAL_EQUATIONS
+FINISH_TIME
+GENERATION_BUILD
+GENERATION_DATE
+GENERATION_DIR
+GENERATION_TIME
+HIERARCHICAL_SUBMODEL_NAME
+IMPORT_NAMES
+IMPORT_NAMES2
+IMPORT_NAMES3
+IMPORT_UNITS
+INITIAL_EQUATIONS
+INITIAL_VALUE_NAMES
+INITIAL_VALUE_NAMES2
+INITIAL_VALUE_NAMES3
+INITIAL_VALUE_UNITS
+INITIAL_VALUE_VALUES
+INITIALIZE_ALIAS_MATRICES
+INITIALIZE_CONSTANTS
+INITIALIZE_FAVORITE_PARS
+INITIALIZE_FAVORITE_VARS
+INITIALIZE_INITIAL_VALUES
+INITIALIZE_INPUTS
+INITIALIZE_MATRICES
+INITIALIZE_OUTPUTS
+INITIALIZE_PARAMETERS
+INITIALIZE_PARAMETERS2
+INITIALIZE_STATES
+INPUT_EQUATIONS
+INPUT_NAMES
+INPUT_NAMES2
+INPUT_NAMES3
+INPUT_TO_VARIABLE_EQUATIONS
+INPUT_UNITS
+MATRIX_NAMES
+MATRIX_NAMES2
+MATRIX_NAMES3
+MATRIX_UNITS
+MODEL_CONFIGURATION
+MODEL_DESCRIPTION
+MODEL_FILE
+MODEL_FUNCTION_NAME
+MODEL_IS_DISCRETE
+NUMBER_ALGLOOPS
+NUMBER_ALIAS_MATRICES
+NUMBER_ALIAS_VARIABLES
+NUMBER_CONSTANTS
+NUMBER_CONSTRAINTS
+NUMBER_DEPSTATES
+NUMBER_EXPORTS
+NUMBER_FAVORITE_PARAMETERS
+NUMBER_FAVORITE_VARIABLES
+NUMBER_IMPORTS
+NUMBER_INITIAL_VALUES
+NUMBER_INPUTS
+NUMBER_MATRICES
+NUMBER_OUTPUTS
+NUMBER_PARAMETERS
+NUMBER_STATES
+NUMBER_UNNAMED
+NUMBER_VARIABLES
+NUMBEROF_ABSFUNCTION
+NUMBEROF_ADJOINTFUNCTION
+NUMBEROF_ALGEBRAICFUNCTION
+NUMBEROF_ALGLOOPIN
+NUMBEROF_ALGLOOPOUT
+NUMBEROF_AND
+NUMBEROF_ANTISYMMETRICFUNCTION
+NUMBEROF_ARCCOSFUNCTION
+NUMBEROF_ARCCOSHYPERBOLICFUNCTION
+NUMBEROF_ARCSINFUNCTION
+NUMBEROF_ARCSINHYPERBOLICFUNCTION
+NUMBEROF_ARCTANFUNCTION
+NUMBEROF_ARCTANHYPERBOLICFUNCTION
+NUMBEROF_ASSIGNMENT
+NUMBEROF_ATAN2FUNCTION
+NUMBEROF_BACKDIVISION
+NUMBEROF_BITAND
+NUMBEROF_BITCLEAR
+NUMBEROF_BITCMP
+NUMBEROF_BITGET
+NUMBEROF_BITOR
+NUMBEROF_BITSET
+NUMBEROF_BITSHIFT
+NUMBEROF_BITSWAPBYTES
+NUMBEROF_BITXOR
+NUMBEROF_CASESTATEMENT
+NUMBEROF_CEILFUNCTION
+NUMBEROF_CODESTATEMENT
+NUMBEROF_COLUMNSFUNCTION
+NUMBEROF_CONDITIONAL
+NUMBEROF_CONSTANT
+NUMBEROF_CONSTRAINTFUNCTION
+NUMBEROF_CONSTRAINTIN
+NUMBEROF_CONSTRAINTOUT
+NUMBEROF_COSFUNCTION
+NUMBEROF_COSHYPERBOLICFUNCTION
+NUMBEROF_CROSSFUNCTION
+NUMBEROF_DATAFUNCTION
+NUMBEROF_DDTFUNCTION
+NUMBEROF_DEFAULTCASESTATEMENT
+NUMBEROF_DELAYFUNCTION
+NUMBEROF_DEPENDENTRATE
+NUMBEROF_DEPENDENTSTATE
+NUMBEROF_DEPENDENTSTATERATE
+NUMBEROF_DERIVATIVEFUNCTION
+NUMBEROF_DETFUNCTION
+NUMBEROF_DIAGFUNCTION
+NUMBEROF_DISCRETERATE
+NUMBEROF_DISCRETESTATE
+NUMBEROF_DISCRETESTATERATE
+NUMBEROF_DISCRETETIME
+NUMBEROF_DISCRETETIMENODEWITHOUT
+NUMBEROF_DIV
+NUMBEROF_DIVISION
+NUMBEROF_DLLDYNAMICFUNCTION
+NUMBEROF_DLLFUNCTION
+NUMBEROF_DOMATLABSTATEMENT
+NUMBEROF_EFFORTCAUSALITYSTATEMENT
+NUMBEROF_ELEMENTDIV
+NUMBEROF_ELEMENTMUL
+NUMBEROF_ELEMENTPOWER
+NUMBEROF_ENERGYFUNCTION
+NUMBEROF_EQUAL
+NUMBEROF_EQUALSTATEMENT
+NUMBEROF_EQUATION
+NUMBEROF_EVENTDOWNFUNCTION
+NUMBEROF_EVENTFUNCTION
+NUMBEROF_EVENTUPFUNCTION
+NUMBEROF_EXP10FUNCTION
+NUMBEROF_EXP2FUNCTION
+NUMBEROF_EXPANDEDCAUSALITYFUNCTION
+NUMBEROF_EXPANDEDCOLLECTFUNCTION
+NUMBEROF_EXPANDEDDIRECTFUNCTION
+NUMBEROF_EXPANDEDFIRSTFUNCTION
+NUMBEROF_EXPANDEDMULFUNCTION
+NUMBEROF_EXPANDEDSUMFUNCTION
+NUMBEROF_EXPFUNCTION
+NUMBEROF_EXTERNALINPUT
+NUMBEROF_EXTERNALOUTPUT
+NUMBEROF_EYEFUNCTION
+NUMBEROF_FALSE
+NUMBEROF_FINALSTATEMENT
+NUMBEROF_FINISHTIME
+NUMBEROF_FLOORFUNCTION
+NUMBEROF_FLOWCAUSALITYSTATEMENT
+NUMBEROF_FORSTATEMENT
+NUMBEROF_FREQUENCYEVENTFUNCTION
+NUMBEROF_FROMMATLABSTATEMENT
+NUMBEROF_GAUSSFUNCTION
+NUMBEROF_GREATER
+NUMBEROF_GREATEREQUAL
+NUMBEROF_HOLDFUNCTION
+NUMBEROF_HOMOGENEOUSFUNCTION
+NUMBEROF_IFSTATEMENT
+NUMBEROF_IMPULSEFUNCTION
+NUMBEROF_INITIALFUNCTION
+NUMBEROF_INITIALSTATEMENT
+NUMBEROF_INITIALVALUE
+NUMBEROF_INNERFUNCTION
+NUMBEROF_INTFUNCTION
+NUMBEROF_INVERSEFUNCTION
+NUMBEROF_INVERSEHOMOGENEOUSFUNCTION
+NUMBEROF_JACOBIAN
+NUMBEROF_LESS
+NUMBEROF_LESSEQUAL
+NUMBEROF_LIMINTFUNCTION
+NUMBEROF_LIMITFUNCTION
+NUMBEROF_LINEARSOLVEFUNCTION
+NUMBEROF_LITERAL
+NUMBEROF_LOG10FUNCTION
+NUMBEROF_LOG2FUNCTION
+NUMBEROF_LOGFUNCTION
+NUMBEROF_MAJOR
+NUMBEROF_MAJORADJOINTFUNCTION
+NUMBEROF_MAXFUNCTION
+NUMBEROF_MIN
+NUMBEROF_MINFUNCTION
+NUMBEROF_MODELVARIABLES
+NUMBEROF_MODULO
+NUMBEROF_MUL
+NUMBEROF_MULTIPLYHOMOGENEOUSFUNCTION
+NUMBEROF_NEXTFUNCTION
+NUMBEROF_NONLINEARFUNCTION
+NUMBEROF_NORMFUNCTION
+NUMBEROF_NORMINFFUNCTION
+NUMBEROF_NOTEQUAL
+NUMBEROF_OR
+NUMBEROF_PARAMETER
+NUMBEROF_PLUS
+NUMBEROF_PORT
+NUMBEROF_PORTVARIABLE
+NUMBEROF_POWER
+NUMBEROF_PREFIXMIN
+NUMBEROF_PREFIXNOT
+NUMBEROF_PREFIXPLUS
+NUMBEROF_PREVIOUSFUNCTION
+NUMBEROF_RAMPFUNCTION
+NUMBEROF_RANDOM
+NUMBEROF_RANDOMFUNCTION
+NUMBEROF_RATE
+NUMBEROF_REALTIME
+NUMBEROF_REPEATSTATEMENT
+NUMBEROF_RESETFUNCTION
+NUMBEROF_RESINTFUNCTION
+NUMBEROF_RETURNSTATEMENT
+NUMBEROF_ROUNDFUNCTION
+NUMBEROF_ROWSFUNCTION
+NUMBEROF_SAMPLEFUNCTION
+NUMBEROF_SAMPLETIME
+NUMBEROF_SETTOOLSETTINGFUNCTION
+NUMBEROF_SIGNFUNCTION
+NUMBEROF_SINFUNCTION
+NUMBEROF_SINHYPERBOLICFUNCTION
+NUMBEROF_SKEWFUNCTION
+NUMBEROF_SQRFUNCTION
+NUMBEROF_SQRTFUNCTION
+NUMBEROF_STARTTIME
+NUMBEROF_STATE
+NUMBEROF_STATERATE
+NUMBEROF_STEPFUNCTION
+NUMBEROF_STEPSIZE
+NUMBEROF_STOPSTATEMENT
+NUMBEROF_SUMFUNCTION
+NUMBEROF_SWITCHSTATEMENT
+NUMBEROF_SYMMETRICFUNCTION
+NUMBEROF_SYSTEMVARIABLE
+NUMBEROF_TABLEFUNCTION
+NUMBEROF_TANFUNCTION
+NUMBEROF_TANHYPERBOLICFUNCTION
+NUMBEROF_TDELAYFUNCTION
+NUMBEROF_TILDEFUNCTION
+NUMBEROF_TIME
+NUMBEROF_TIMEEVENTFUNCTION
+NUMBEROF_TIMENODEWITHOUT
+NUMBEROF_TIMETRIGGERFUNCTION
+NUMBEROF_TOMATLABSTATEMENT
+NUMBEROF_TRACEFUNCTION
+NUMBEROF_TRANSPOSEFUNCTION
+NUMBEROF_TRIGGERDOWNFUNCTION
+NUMBEROF_TRIGGERFUNCTION
+NUMBEROF_TRIGGERUPFUNCTION
+NUMBEROF_TRUE
+NUMBEROF_TRUNCFUNCTION
+NUMBEROF_TYPEPARAMETER
+NUMBEROF_UNNAMED
+NUMBEROF_VARIABLE
+NUMBEROF_WARNSTATEMENT
+NUMBEROF_WHILESTATEMENT
+NUMBEROF_XOR
+OUTPUT_EQUATIONS
+OUTPUT_NAMES
+OUTPUT_NAMES2
+OUTPUT_NAMES3
+OUTPUT_UNITS
+OUTPUT2_EQUATIONS
+PARAMETER_NAMES
+PARAMETER_NAMES2
+PARAMETER_NAMES3
+PARAMETER_UNITS
+PARAMETER_VALUES
+RATE_NAMES
+RATE_NAMES2
+RATE_NAMES3
+RATE_UNITS
+SIMULINK_MODEL
+SIMULINK_SUBMODEL
+START_TIME
+STATE_NAMES
+STATE_NAMES2
+STATE_NAMES3
+STATE_UNITS
+STATIC_EQUATIONS
+TIME_STEP_SIZE
+USER_NAME
+VARIABLE_NAMES
+VARIABLE_NAMES2
+VARIABLE_NAMES3
+VARIABLE_TO_OUTPUT_EQUATIONS
+VARIABLE_UNITS
+WORK_ARRAY_SIZE
+XX_ALG_IN_ARRAY_NAME
+XX_ALG_OUT_ARRAY_NAME
+XX_DEP_RATE_ARRAY_NAME
+XX_DEP_STATE_ARRAY_NAME
+XX_EXT_IN_ARRAY_NAME
+XX_EXT_OUT_ARRAY_NAME
+XX_FAVORITE_PARS_ARRAY_NAME
+XX_FAVORITE_VARS_ARRAY_NAME
+XX_INITIAL_VALUE_ARRAY_NAME
+INTEGRATION_METHOD_NAME
+VARPREFIX
+FUNCTIONPREFIX
+XX_TIME
+XX_INITIALIZE
+XX_VARIABLE_ARRAY_NAME
+XX_PARAMETER_ARRAY_NAME
+XX_CONSTANT_ARRAY_NAME
+XX_STATE_ARRAY_NAME
+XX_RATE_ARRAY_NAME
+XX_MATRIX_ARRAY_NAME
+XX_UNNAMED_ARRAY_NAME
+ABSOLUTE_TOLERANCE
+RELATIVE_TOLERANCE
+INITIAL_STEPSIZE
+MAXIMUM_STEPSIZE
+EVENT_DELTA
+FORMAJORVERSION
+FORMINORVERSION
+FORMAJORBUILD
+FORMINORBUILD
+MAJORVERSION
+MINORVERSION
+MAJORBUILD
+MINORBUILD
+FMIVERSION
+FMI2
+FMI_PREFIX
+TEMPLATENAME
+TEMPLATEDIR
+TEMPLATE_DIR
+]]></token>
+</tokens>
+
+

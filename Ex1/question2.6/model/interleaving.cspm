@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csp:CSPDiagram file-version="3" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:csp="http:///nl/utwente/ce/terra/csp/model/csp.ecore">
+  <objects xsi:type="csp:CSPModel" name="A" constraints="288,104,50,50" compositionalRelations="//@compositionalRelations.0">
+    <submodel xsi:type="csp:CSPDiagram"/>
+  </objects>
+  <objects xsi:type="csp:CSPModel" name="B" constraints="485,105,50,50" compositionalRelations="//@compositionalRelations.0 //@compositionalRelations.1">
+    <submodel xsi:type="csp:CSPDiagram"/>
+  </objects>
+  <objects xsi:type="csp:CSPModel" name="C" constraints="641,105,50,50" compositionalRelations="//@compositionalRelations.1 //@compositionalRelations.2">
+    <submodel xsi:type="csp:CSPDiagram"/>
+  </objects>
+  <objects xsi:type="csp:CSPModel" name="D" constraints="806,103,50,50" compositionalRelations="//@compositionalRelations.2">
+    <submodel xsi:type="csp:CSPDiagram"/>
+  </objects>
+  <objects xsi:type="csp:CSPCompositionalGroup" name="PARALLEL" constraints="263,78,618,102" relations="//@compositionalRelations.0 //@compositionalRelations.1 //@compositionalRelations.2">
+    <properties xsi:type="csp:CSPRecursionProperty"/>
+  </objects>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="unit1" unit="int"/>
+  </properties>
+  <compositionalRelations compositeObjects="//@objects.0 //@objects.1" compositionalGroup="//@objects.4"/>
+  <compositionalRelations compositeObjects="//@objects.1 //@objects.2" compositionalGroup="//@objects.4"/>
+  <compositionalRelations compositeObjects="//@objects.2 //@objects.3" compositionalGroup="//@objects.4"/>
+</csp:CSPDiagram>

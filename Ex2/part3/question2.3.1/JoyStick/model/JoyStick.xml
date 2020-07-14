@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fmiModelDescription fmiVersion="2.0" modelName="JoyStick" guid="{60e2b061-6309-416d-a849-b430948dc8ae}" generationTool="20-sim 4.7.0" numberOfEventIndicators="0" variableNamingConvention="structured" copyright="Controllab Products B.V." license="-">
+<CoSimulation modelIdentifier="JoyStick" needsExecutionTool="false" canHandleVariableCommunicationStepSize="true" canInterpolateInputs="false" maxOutputDerivativeOrder="0" canRunAsynchronuously="false" canBeInstantiatedOnlyOncePerProcess="false" canNotUseMemoryManagementFunctions="true" canGetAndSetFMUstate="true" canSerializeFMUstate="false" providesDirectionalDerivative="false">
+<SourceFiles>
+<File name="EulerAngles.c" />
+<File name="fmi2Functions.c" />
+<File name="MotionProfiles.c" />
+<File name="xxfuncs.c" />
+<File name="xxinteg.c" />
+<File name="xxinverse.c" />
+<File name="xxmatrix.c" />
+<File name="xxmodel.c" />
+<File name="xxsubmod.c" />
+<File name="xxTable2D.c" />
+</SourceFiles>
+</CoSimulation>
+<DefaultExperiment startTime="0.0" stopTime="20.0" stepSize="0.01" />
+<ModelVariables>
+<ScalarVariable name="PulsePan.output" valueReference="6" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="PulsePan.start_time" valueReference="0" variability="tunable" causality="parameter">
+<Real start="1.0" />
+</ScalarVariable>
+<ScalarVariable name="PulsePan.stop_time" valueReference="1" variability="tunable" causality="parameter">
+<Real start="5.0" />
+</ScalarVariable>
+<ScalarVariable name="PulsePan.amplitude" valueReference="2" variability="tunable" causality="parameter">
+<Real start="1.0" />
+</ScalarVariable>
+<ScalarVariable name="PulseTilt.output" valueReference="8" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="PulseTilt.start_time" valueReference="3" variability="tunable" causality="parameter">
+<Real start="2.0" />
+</ScalarVariable>
+<ScalarVariable name="PulseTilt.stop_time" valueReference="4" variability="tunable" causality="parameter">
+<Real start="6.0" />
+</ScalarVariable>
+<ScalarVariable name="PulseTilt.amplitude" valueReference="5" variability="tunable" causality="parameter">
+<Real start="-1.0" />
+</ScalarVariable>
+<ScalarVariable name="JoyStickPan" valueReference="10" variability="continuous" causality="output">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="JoyStickTilt" valueReference="11" variability="continuous" causality="output">
+<Real />
+</ScalarVariable>
+</ModelVariables>
+<ModelStructure>
+<Outputs>
+<Unknown index="9" />
+<Unknown index="10" />
+</Outputs>
+</ModelStructure>
+</fmiModelDescription>

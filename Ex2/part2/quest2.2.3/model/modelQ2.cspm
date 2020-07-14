@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csp:CSPDiagram file-version="3" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:csp="http:///nl/utwente/ce/terra/csp/model/csp.ecore" xmlns:xxsim="http:///nl/utwente/ce/terra/xxsim/model/xxsim.ecore">
+  <objects xsi:type="csp:CSPExternalModel" name="SeqCon" constraints="126,110,81,50" compositionalRelations="//@compositionalRelations.0" externalSubmodel="/quest2/Step/model/Step.cspm">
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.0" unitType="//@properties.0/@units.0" name="output" constraints="71,22,10,10"/>
+    <configuration xsi:type="xxsim:XXSimConfiguration"/>
+  </objects>
+  <objects xsi:type="csp:CSPExternalModel" name="LoopCon" constraints="380,114,79,50" compositionalRelations="//@compositionalRelations.0 //@compositionalRelations.1" externalSubmodel="/quest2/Controller/model/Controller.cspm">
+    <objects xsi:type="csp:CSPPort" link="//@links.0" unitType="//@properties.0/@units.0" name="SP"/>
+    <objects xsi:type="csp:CSPPort" link="//@links.2" unitType="//@properties.0/@units.0" name="MV" constraints="0,31,10,10"/>
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.1" unitType="//@properties.0/@units.0" name="output" constraints="69,22,10,10"/>
+    <configuration xsi:type="xxsim:XXSimConfiguration"/>
+  </objects>
+  <objects xsi:type="csp:CSPExternalModel" name="Plant" constraints="623,112,89,50" compositionalRelations="//@compositionalRelations.1" externalSubmodel="/quest2/LinearSystem/model/LinearSystem.cspm">
+    <objects xsi:type="csp:CSPPort" link="//@links.1" unitType="//@properties.0/@units.0" name="u" constraints="0,18,10,10"/>
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.2" unitType="//@properties.0/@units.0" name="y" constraints="34,40,10,10"/>
+    <configuration xsi:type="xxsim:XXSimConfiguration"/>
+  </objects>
+  <objects xsi:type="csp:CSPCompositionalGroup" name="PARALLEL" constraints="101,85,636,104" relations="//@compositionalRelations.1 //@compositionalRelations.0">
+    <properties xsi:type="csp:CSPRecursionProperty"/>
+  </objects>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="IO" type="real" unit="xxsim"/>
+  </properties>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.0/output //@objects.1/SP"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.1/output //@objects.2/u"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.2/y //@objects.1/MV">
+    <bendpoints>664,219</bendpoints>
+    <bendpoints>521,221</bendpoints>
+    <bendpoints>383,222</bendpoints>
+    <bendpoints>309,222</bendpoints>
+    <bendpoints>309,154</bendpoints>
+    <bendpoints>343,152</bendpoints>
+  </links>
+  <compositionalRelations compositeObjects="//@objects.0 //@objects.1" compositionalGroup="//@objects.3">
+    <bendpoints>296,80</bendpoints>
+  </compositionalRelations>
+  <compositionalRelations compositeObjects="//@objects.1 //@objects.2" compositionalGroup="//@objects.3">
+    <bendpoints>539,84</bendpoints>
+  </compositionalRelations>
+</csp:CSPDiagram>

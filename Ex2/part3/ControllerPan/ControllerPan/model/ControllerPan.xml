@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fmiModelDescription fmiVersion="2.0" modelName="ControllerPan" guid="{dcca97bd-14bb-4b74-a62c-9203e2f1173b}" generationTool="20-sim 4.7.0" numberOfEventIndicators="0" variableNamingConvention="structured" copyright="Controllab Products B.V." license="-">
+<CoSimulation modelIdentifier="ControllerPan" needsExecutionTool="false" canHandleVariableCommunicationStepSize="true" canInterpolateInputs="false" maxOutputDerivativeOrder="0" canRunAsynchronuously="false" canBeInstantiatedOnlyOncePerProcess="false" canNotUseMemoryManagementFunctions="true" canGetAndSetFMUstate="true" canSerializeFMUstate="false" providesDirectionalDerivative="false">
+<SourceFiles>
+<File name="EulerAngles.c" />
+<File name="fmi2Functions.c" />
+<File name="MotionProfiles.c" />
+<File name="xxfuncs.c" />
+<File name="xxinteg.c" />
+<File name="xxinverse.c" />
+<File name="xxmatrix.c" />
+<File name="xxmodel.c" />
+<File name="xxsubmod.c" />
+<File name="xxTable2D.c" />
+</SourceFiles>
+</CoSimulation>
+<DefaultExperiment startTime="0.0" stopTime="20.0" stepSize="0.01" />
+<ModelVariables>
+<ScalarVariable name="ControllerPan.PID_Pan.output" valueReference="10" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.kp" valueReference="0" description="Proportional gain" variability="tunable" causality="parameter">
+<Real start="10.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.tauD" valueReference="1" description="Derivative time constant: tauD &gt; 0" variability="tunable" causality="parameter">
+<Real start="5.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.beta" valueReference="2" description="Tameness constant: 0 &lt; beta &lt;&lt; 1" variability="tunable" causality="parameter">
+<Real start="0.1" />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.tauI" valueReference="3" description="Integral time constant: tauI &gt; 0" variability="tunable" causality="parameter">
+<Real start="1000.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PlusMinus1.output" valueReference="23" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PlusMinus1.plus1" valueReference="12" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PlusMinus1.minus1" valueReference="13" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.MeasuredPan" valueReference="13" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.SteeringPan" valueReference="10" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.SetPointPan" valueReference="12" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.Conversion.input" valueReference="15" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.Conversion.output" valueReference="13" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.Conversion.K" valueReference="4" description="gain" variability="tunable" causality="parameter">
+<Real start="0.003141592" />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.Limit.input" valueReference="10" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.Limit.output" valueReference="14" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.Limit.maximum" valueReference="5" variability="tunable" causality="parameter">
+<Real start="1.0" />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.Limit.minimum" valueReference="6" variability="tunable" causality="parameter">
+<Real start="-1.0" />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.measIO" valueReference="15" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.steerIO" valueReference="14" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.measLC" valueReference="13" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="MA_Pan.steerLC" valueReference="10" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="steerIO" valueReference="16" variability="continuous" causality="output">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="measIO" valueReference="17" variability="continuous" causality="input">
+<Real start="0.0" />
+</ScalarVariable>
+<ScalarVariable name="SetPointPan" valueReference="18" variability="continuous" causality="input">
+<Real start="0.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.uD_previous" valueReference="19" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.uD_previous_initial" valueReference="7" variability="fixed" causality="parameter">
+<Real start="0.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.error" valueReference="23" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.error_previous" valueReference="20" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.error_previous_initial" valueReference="8" variability="fixed" causality="parameter">
+<Real start="0.0" />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.uI_previous" valueReference="21" variability="continuous" causality="local">
+<Real />
+</ScalarVariable>
+<ScalarVariable name="ControllerPan.PID_Pan.uI_previous_initial" valueReference="9" variability="fixed" causality="parameter">
+<Real start="0.0" />
+</ScalarVariable>
+</ModelVariables>
+<ModelStructure>
+<Outputs>
+<Unknown index="23" />
+</Outputs>
+</ModelStructure>
+</fmiModelDescription>

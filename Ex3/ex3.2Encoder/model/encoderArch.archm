@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arch:ArchitectureDiagram file-version="0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arch="http:///nl/utwente/ce/terra/arch/model/architecture.ecore" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:hwanyio="http:///nl/utwente/ce/terra/arch/model/hw/anyio/hwanyio.ecore" xmlns:hwtimer="http:///nl/utwente/ce/terra/arch/model/hw/timer/hwtimer.ecore">
+  <objects xsi:type="arch:ArchExternalModel" name="encoder" constraints="290,111,112,50" externalSubmodel="/ex3.2Encoder/model/ModelEn.cspm">
+    <objects xsi:type="arch:ArchPort" link="//@links.1" unitType="//@properties.0/@units.2" name="pt_out" constraints="102,12,10,10"/>
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.0" unitType="//@properties.0/@units.1" name="pt_timer" constraints="67,0,10,10"/>
+  </objects>
+  <objects xsi:type="arch:ArchHWPort" link="//@links.0" name="timer" constraints="357,40,10,10">
+    <configuration xsi:type="hwtimer:TimerPeriodicConfiguration"/>
+  </objects>
+  <objects xsi:type="arch:ArchHWPort" direction="OUTGOING" link="//@links.1" name="encoder_pt" constraints="506,121,10,10">
+    <configuration xsi:type="hwanyio:RaMstixEncConfiguration" nr="3"/>
+  </objects>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="out" unit=""/>
+    <units name="time" type="time period"/>
+    <units name="encoder" type="integer" unit=""/>
+    <units name="encoder" type="unsigned 32-bit" unit=""/>
+  </properties>
+  <links xsi:type="arch:ArchLink" ports="//@objects.0/@objects.1 //@objects.1"/>
+  <links xsi:type="arch:ArchLink" ports="//@objects.2 //@objects.0/@objects.0"/>
+</arch:ArchitectureDiagram>

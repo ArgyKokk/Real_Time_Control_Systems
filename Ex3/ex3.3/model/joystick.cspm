@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csp:CSPDiagram file-version="3" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:cpp="http:///nl/utwente/ce/terra/cpp/model/cpp.ecore" xmlns:csp="http:///nl/utwente/ce/terra/csp/model/csp.ecore">
+  <objects xsi:type="csp:CSPModel" name="joy_code" constraints="123,162,50,50" compositionalRelations="//@compositionalRelations.1">
+    <submodel xsi:type="csp:CSPDiagram">
+      <properties xsi:type="csp:CSPVariablesProperty">
+        <variables name="x" linkedParent="//@properties.2/@variables.0"/>
+        <variables name="y" linkedParent="//@properties.2/@variables.1"/>
+      </properties>
+    </submodel>
+    <configuration xsi:type="cpp:CPPCodeBlockConfiguration"/>
+  </objects>
+  <objects xsi:type="csp:CSPWriter" name="x_writer" constraints="263,164,30,30" compositionalRelations="//@compositionalRelations.0" link="//@links.0" variable="//@properties.2/@variables.0"/>
+  <objects xsi:type="csp:CSPPort" link="//@links.1" name="joystick_ver" constraints="393,321,10,10"/>
+  <objects xsi:type="csp:CSPWriter" name="y_writer" constraints="272,309,30,30" compositionalRelations="//@compositionalRelations.0" link="//@links.1" variable="//@properties.2/@variables.1"/>
+  <objects xsi:type="csp:CSPPort" link="//@links.0" name="joystick_hor" constraints="391,173,10,10"/>
+  <objects xsi:type="csp:CSPCompositionalGroup" name="PARALLEL" constraints="238,139,89,225" compositionalRelations="//@compositionalRelations.1" relations="//@compositionalRelations.0"/>
+  <objects xsi:type="csp:CSPCompositionalGroup" name="SEQUENTIAL" constraints="98,114,254,275" relations="//@compositionalRelations.1"/>
+  <properties xsi:type="cpc:CPCSharedDiagramProperty" componentName="joystick"/>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="IO" type="real" unit="xxsim"/>
+  </properties>
+  <properties xsi:type="csp:CSPVariablesProperty">
+    <variables name="x" type="//@properties.1/@units.0"/>
+    <variables name="y" type="//@properties.1/@units.0"/>
+  </properties>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.1 //@objects.4"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.3 //@objects.2"/>
+  <compositionalRelations compositeObjects="//@objects.1 //@objects.3" compositionalGroup="//@objects.5"/>
+  <compositionalRelations compositeObjects="//@objects.0 //@objects.5" type="SEQUENTIAL" compositionalGroup="//@objects.6"/>
+</csp:CSPDiagram>

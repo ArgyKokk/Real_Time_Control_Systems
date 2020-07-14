@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arch:ArchitectureDiagram file-version="0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arch="http:///nl/utwente/ce/terra/arch/model/architecture.ecore" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:hwtimer="http:///nl/utwente/ce/terra/arch/model/hw/timer/hwtimer.ecore">
+  <objects xsi:type="arch:ArchExternalModel" name="timerExample" constraints="141,138,157,50" externalSubmodel="/timer/model/example.cspm">
+    <objects xsi:type="arch:ArchPort" direction="OUTGOING" link="//@links.0" unitType="//@properties.0/@units.0" name="pt_time" constraints="147,25,10,10"/>
+  </objects>
+  <objects xsi:type="arch:ArchHWPort" link="//@links.0" name="pt__periodic_time" constraints="370,164,10,10">
+    <configuration xsi:type="hwtimer:TimerPeriodicConfiguration" nanoseconds="250000000"/>
+  </objects>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="Time" type="time period" unit=""/>
+  </properties>
+  <links xsi:type="arch:ArchLink" ports="//@objects.0/@objects.0 //@objects.1"/>
+</arch:ArchitectureDiagram>
